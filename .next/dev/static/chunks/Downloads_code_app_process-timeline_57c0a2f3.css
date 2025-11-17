@@ -1,0 +1,148 @@
+/* [project]/Downloads/code/app/process-timeline.css [app-client] (css) */
+:root {
+  --magenta: #a0216f;
+  --blue: #004b7b;
+  --dark-text: #1b2a3b;
+  --body-text: #555e6b;
+  --bg: #f5f7fa;
+  --border-dashed: #d2d6de;
+}
+
+.timeline-section {
+  background: var(--bg);
+}
+
+.timeline-steps {
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 10px 70px;
+  display: flex;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  z-index: 1;
+  flex: 18%;
+  min-width: 170px;
+  position: relative;
+}
+
+.step-top {
+  transform: translateY(-55px);
+}
+
+.step-bottom {
+  transform: translateY(55px);
+}
+
+.icon-outer {
+  background: radial-gradient(circle at 30% 10%, #fff, #f0f2f7);
+  border: 2px dashed #004b7b;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px;
+  display: flex;
+  box-shadow: 0 16px 30px #0000001f;
+}
+
+.icon-inner {
+  z-index: 1;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-inner:before {
+  content: "";
+  background: var(--accent-color);
+  border-radius: 50%;
+  width: 160%;
+  height: 160%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-inner i {
+  z-index: 1;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+.step-title {
+  color: var(--magenta);
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.step-title.blue {
+  color: var(--blue);
+}
+
+.step-desc {
+  color: var(--body-text);
+  max-width: 230px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.step-desc b {
+  font-weight: 700;
+}
+
+.line, .line1 {
+  z-index: 0;
+  border: 1px dashed #004b7b;
+  width: 2px;
+  height: 200px;
+  margin-bottom: 75px;
+}
+
+.line {
+  transform: rotate(-55deg);
+}
+
+.line1 {
+  transform: rotate(55deg);
+}
+
+@media (max-width: 920px) {
+  .timeline-steps {
+    justify-content: center;
+    row-gap: 60px;
+  }
+
+  .step-top, .step-bottom {
+    transform: translateY(0);
+  }
+
+  .line, .line1 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .step {
+    flex: 100%;
+  }
+
+  .icon-outer {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=Downloads_code_app_process-timeline_57c0a2f3.css.map*/
