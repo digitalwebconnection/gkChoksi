@@ -1,76 +1,95 @@
-// Navbar.jsx
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
-import logo from "../../src/assets/logo.png";
+// Navbar.tsx
+import React, { useEffect, useRef, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { NavLink, useLocation } from "react-router-dom"
+import logo from "../../src/assets/logo.png"
 
-const SERVICES = [
+interface ServiceItem {
+  label: string
+  slug: string
+}
+
+const SERVICES: ServiceItem[] = [
   { label: "Management Consulting", slug: "management-consulting" },
   { label: "Business Advisory", slug: "business-advisory" },
   { label: "Audit & Assurance", slug: "audit-assurance" },
   { label: "Taxation", slug: "taxation" },
   { label: "Regulatory", slug: "regulatory" },
   { label: "M&A", slug: "m-and-a" },
-];
+]
 
-const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
+const Navbar: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(true)
+  const [lastScrollY, setLastScrollY] = useState<number>(0)
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
-  // dropdown state
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const servicesRef = useRef<HTMLDivElement | null>(null);
+  const [servicesOpen, setServicesOpen] = useState<boolean>(false)
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false)
+
+  const servicesRef = useRef<HTMLDivElement | null>(null)
+
+  const location = useLocation()
 
   // Show nav on scroll-up, hide on scroll-down + detect scroll for bg
   useEffect(() => {
     const handleScroll = () => {
-      const current = window.scrollY;
+      const current = window.scrollY
 
       // show/hide navbar
       if (current < 10 || current < lastScrollY) {
-        setIsVisible(true);
+        setIsVisible(true)
       } else {
-        setIsVisible(false);
+        setIsVisible(false)
       }
 
       // navbar background change
-      if (current > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(current > 50)
 
-      setLastScrollY(current);
-    };
+      setLastScrollY(current)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [lastScrollY])
 
   // close dropdown on outside click
   useEffect(() => {
-    function onDocClick(e: MouseEvent) {
+    function handleClickOutside(e: MouseEvent) {
       if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
+        setServicesOpen(false)
       }
     }
-    document.addEventListener("mousedown", onDocClick);
-    return () => document.removeEventListener("mousedown", onDocClick);
-  }, []);
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
-  // keyboard handling for accessibility
+  // close menus on Esc
   useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setServicesOpen(false);
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setServicesOpen(false)
+        setMobileOpen(false)
+      }
     }
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, []);
+    document.addEventListener("keydown", handleKey)
+    return () => document.removeEventListener("keydown", handleKey)
+  }, [])
 
-  const linkBaseClasses = "text-lg text-white/90 hover:text-white transition";
-  const getLinkClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? `${linkBaseClasses} border-b border-white` : linkBaseClasses;
+  // Close menus when route changes
+  useEffect(() => {
+    setServicesOpen(false)
+    setMobileOpen(false)
+  }, [location.pathname])
+
+  const linkBaseClasses = "text-lg text-white/90 hover:text-white transition"
+  const getLinkClass = ({
+    isActive,
+  }: {
+    isActive: boolean
+    isPending: boolean
+    isTransitioning: boolean
+  }): string =>
+    isActive ? `${linkBaseClasses} border-b border-white` : linkBaseClasses
 
   return (
     <motion.nav
@@ -79,9 +98,10 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`
         fixed top-0 left-0 z-50 w-full
-         text-white transition-all duration-300
+        text-white transition-all duration-300
         ${isScrolled ? "bg-black/95 shadow-lg" : "bg-black/20"}
       `}
+      aria-label="Main navigation"
     >
       {/* ===== TOP CONTACT BAR ===== */}
       <div className="hidden border-b border-white/10 bg-black/30 text-[11px] text-white/80 sm:block">
@@ -124,7 +144,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 220, damping: 16 }}
         >
-          <NavLink to="/">
+          <NavLink to="/" aria-label="Home">
             <img
               src={logo}
               alt="GKCCO Logo"
@@ -139,58 +159,73 @@ const Navbar = () => {
             About Us
           </NavLink>
 
-          {/* Services dropdown wrapper */}
-          <div
-            className="relative"
-            ref={servicesRef}
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            {/* Services toggle (acts as both a link and toggle) */}
+          {/* Services Dropdown (click only) */}
+          <div className="relative" ref={servicesRef}>
             <button
+              onClick={() => setServicesOpen((prev) => !prev)}
               aria-haspopup="menu"
               aria-expanded={servicesOpen}
-              onClick={() => setServicesOpen((s) => !s)}
               className="flex items-center gap-2 text-lg text-white/90 hover:text-white transition focus:outline-none"
             >
               <span>Services</span>
               <svg
-                className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : "rotate-0"}`}
+                className={`w-4 h-4 transition-transform ${
+                  servicesOpen ? "rotate-180" : "rotate-0"
+                }`}
                 viewBox="0 0 20 20"
                 fill="none"
                 aria-hidden
               >
-                <path d="M5 8l5 5 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M5 8l5 5 5-5"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </button>
 
-            {/* Dropdown menu */}
-            <motion.div
-              initial={{ opacity: 0, y: -6 }}
-              animate={servicesOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -6 }}
-              transition={{ duration: 0.18 }}
-              className={`absolute right-0 mt-3 w-64 rounded-lg bg-white/95 text-slate-900 shadow-2xl ring-1 ring-black/8 backdrop-blur-sm z-50`}
-              role="menu"
-              aria-label="Services menu"
-              style={{ display: servicesOpen ? "block" : "none" }}
-            >
-              <ul className="py-2">
-                {SERVICES.map((s) => (
-                  <li key={s.slug}>
-                    <NavLink
-                      to={`/services/${s.slug}`}
-                      className={({ isActive }) =>
-                        `block px-4 py-3 text-sm hover:bg-slate-100 ${isActive ? "font-semibold bg-slate-100" : "font-normal"}`
-                      }
-                      onClick={() => setServicesOpen(false)}
-                      role="menuitem"
-                    >
-                      {s.label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <AnimatePresence>
+              {servicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.18 }}
+                  className="absolute left-0 mt-3 w-64 rounded-lg bg-white text-slate-900 shadow-2xl ring-1 ring-black/8 backdrop-blur-sm z-50"
+                  role="menu"
+                  aria-label="Services menu"
+                >
+                  <ul className="py-2">
+                    {SERVICES.map((s) => (
+                      <li key={s.slug}>
+                        <NavLink
+                          to={`/services/${s.slug}`}
+                          className={({
+                            isActive,
+                          }: {
+                            isActive: boolean
+                            isPending: boolean
+                            isTransitioning: boolean
+                          }) =>
+                            `block px-4 py-3 text-sm hover:bg-slate-100 ${
+                              isActive
+                                ? "font-semibold bg-slate-100"
+                                : "font-normal"
+                            }`
+                          }
+                          onClick={() => setServicesOpen(false)}
+                          role="menuitem"
+                        >
+                          {s.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <NavLink to="/news" className={getLinkClass}>
@@ -207,15 +242,182 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Mobile hint: keep Services accessible via main nav link on mobile; you can add a mobile menu for full UX */}
-        <div className="md:hidden">
-          <NavLink to="/services" className="text-lg text-white/90 hover:text-white transition">
+        {/* Mobile: hamburger / quick Services link */}
+        <div className="md:hidden flex items-center gap-3">
+          <NavLink
+            to="/services"
+            className="text-lg text-white/90 hover:text-white transition hidden sm:block"
+          >
             Services
           </NavLink>
+
+          <button
+            onClick={() => setMobileOpen((s) => !s)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            className="inline-flex items-center justify-center rounded-lg p-2 bg-white/10 hover:bg-white/20"
+          >
+            <svg
+              className="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-    </motion.nav>
-  );
-};
 
-export default Navbar;
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18 }}
+            className="md:hidden bg-black/95 border-t border-white/5"
+          >
+            <div className="max-w-7xl mx-auto px-4 py-4">
+              <div className="flex flex-col gap-3">
+                <NavLink
+                  to="/about"
+                  className={({
+                    isActive,
+                  }: {
+                    isActive: boolean
+                    isPending: boolean
+                    isTransitioning: boolean
+                  }) => `py-2 ${isActive ? "font-semibold" : ""}`}
+                >
+                  About Us
+                </NavLink>
+
+                <MobileServicesSection
+                  onNavigate={() => setMobileOpen(false)}
+                />
+
+                <NavLink
+                  to="/news"
+                  className={({
+                    isActive,
+                  }: {
+                    isActive: boolean
+                    isPending: boolean
+                    isTransitioning: boolean
+                  }) => `py-2 ${isActive ? "font-semibold" : ""}`}
+                >
+                  News
+                </NavLink>
+                <NavLink
+                  to="/careers"
+                  className={({
+                    isActive,
+                  }: {
+                    isActive: boolean
+                    isPending: boolean
+                    isTransitioning: boolean
+                  }) => `py-2 ${isActive ? "font-semibold" : ""}`}
+                >
+                  Careers
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  className={({
+                    isActive,
+                  }: {
+                    isActive: boolean
+                    isPending: boolean
+                    isTransitioning: boolean
+                  }) => `py-2 ${isActive ? "font-semibold" : ""}`}
+                >
+                  Contact
+                </NavLink>
+                <NavLink
+                  to="/csr"
+                  className={({
+                    isActive,
+                  }: {
+                    isActive: boolean
+                    isPending: boolean
+                    isTransitioning: boolean
+                  }) => `py-2 ${isActive ? "font-semibold" : ""}`}
+                >
+                  CSR
+                </NavLink>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  )
+}
+
+interface MobileServicesSectionProps {
+  onNavigate: () => void
+}
+
+const MobileServicesSection: React.FC<MobileServicesSectionProps> = ({
+  onNavigate,
+}) => {
+  const [open, setOpen] = useState<boolean>(false)
+
+  return (
+    <div className="border-t border-white/5 pt-3">
+      <button
+        className="w-full flex items-center justify-between py-2"
+        onClick={() => setOpen((s) => !s)}
+        aria-expanded={open}
+      >
+        <span className="font-medium">Services</span>
+        <svg
+          className={`w-4 h-4 transition-transform ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+          viewBox="0 0 20 20"
+          fill="none"
+          aria-hidden
+        >
+          <path
+            d="M5 8l5 5 5-5"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="mt-2 ml-2 flex flex-col">
+          {SERVICES.map((s) => (
+            <NavLink
+              key={s.slug}
+              to={`/services/${s.slug}`}
+              className={({
+                isActive,
+              }: {
+                isActive: boolean
+                isPending: boolean
+                isTransitioning: boolean
+              }) => `py-2 pl-3 ${isActive ? "font-semibold" : "font-normal"}`}
+              onClick={onNavigate}
+            >
+              {s.label}
+            </NavLink>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default Navbar
