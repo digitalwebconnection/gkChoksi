@@ -1,12 +1,15 @@
+// HeroSection.tsx
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import "./heroAnimations.css"; // <- external CSS with keyframes
-const images = [
-  "../../src/assets/3.jpeg",
-  "../../src/assets/5.jpeg",
-  "../../src/assets/21.jpeg",
-];
+import "./heroAnimations.css"; // external keyframes / helpers
+
+// import images so the bundler returns proper URLs
+import img3 from "/src/assets/3.jpeg";
+import img5 from "/src/assets/5.jpeg";
+import img21 from "/src/assets/21.jpeg";
+
+const images = [img3, img5, img21];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 25 },
@@ -17,18 +20,18 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollY, setScrollY] = useState(0);
 
-  // Auto-slide images
+  // Auto-slide images (5s)
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = window.setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 5000); // 8s per slide – matches Ken Burns length nicely
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   // Track scroll for subtle parallax
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY || 0);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -39,24 +42,22 @@ const HeroSection = () => {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1500 ease-out hero-bg
-            ${index === currentSlide ? "opacity-100 hero-kenburns" : "opacity-0"}
+            ${index === currentSlide ? "opacity-100 hero-kenburns" : "opacity-0 pointer-events-none"}
           `}
           style={{
-            backgroundImage: `url('${img}')`,
+            backgroundImage: `url(${img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
+          aria-hidden
         >
-          <div className="absolute inset-0 bg-[#000000cc]" />
+          {/* dark overlay */}
+          <div className="absolute inset-0 bg-black/70" />
         </div>
       ))}
 
-      {/* Floating Glow Orbs */}
-      {/* <div className="hero-orb absolute -top-20 -left-20 h-96 w-96 rounded-full bg-emerald-400/25 blur-[140px]" /> */}
-      {/* <div className="hero-orb-slow absolute bottom-0 right-0 h-[380px] w-[380px] rounded-full bg-white/15 blur-[200px]" /> */}
-
       {/* Parallax Spotlight Overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-black/40 mix-blend-overlay" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/5 via-transparent to-black/40 mix-blend-overlay" />
 
       {/* Content Wrapper (centered) */}
       <motion.div
@@ -65,38 +66,32 @@ const HeroSection = () => {
         variants={fadeIn}
         transition={{ duration: 0.8 }}
         className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-20 text-left sm:px-6 lg:px-8"
-        style={{ transform: `translateY(${scrollY * 0.05}px)` }} // subtle parallax
+        style={{ transform: `translateY(${scrollY * 0.05}px)` }}
       >
-        
+        <div className="text-center mb-8">
+          <h1 className="text-white text-5xl font-bold font-serif">G.K. Choksi &amp; Co</h1>
+          <p className="text-white text-xl font-semibold font-serif py-1">Chartered Accountants</p>
+        </div>
 
-        {/* Main Title */}
-
-        <div className=" text-center mb-30">
-          {/* <img src={logo} alt="" /> */}
-          <h1 className="text-white text-5xl font-bold font-serif">G.K. Choksi & Co  </h1>
-          <p className="font- text-white text-xl py-1 font-serif font-semibold text-center">Chartered Accountants</p>
-          </div>
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.15 }}
           className="mb-6 max-w-4xl mx-auto text-center font-serif text-2xl font-bold leading-tight text-white drop-shadow-xl sm:text-3xl lg:text-4xl"
         >
           Strategic Financial Excellence
-        </motion.h1>
+        </motion.h2>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="mb-10 max-w-6xl mx-auto text-center text-md leading-relaxed text-white/90 drop-shadow-lg sm:text-lg"
         >
-          Expert chartered accountants dedicated to optimizing your business
-          finances, minimizing tax liability, and driving sustainable growth.
+          Expert chartered accountants dedicated to optimizing your business finances, minimizing tax liability,
+          and driving sustainable growth.
         </motion.p>
 
-        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -128,10 +123,9 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "w-10 bg-emerald-400"
-                : "w-3 bg-white/40 hover:bg-white/60"
+              index === currentSlide ? "w-10 bg-emerald-400" : "w-3 bg-white/40 hover:bg-white/60"
             }`}
           />
         ))}
