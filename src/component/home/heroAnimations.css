@@ -1,0 +1,236 @@
+/* base helper for BG layers */
+.hero-bg {
+  will-change: transform, opacity;
+}
+
+/* Ken Burns zoom + slight vertical move */
+.hero-kenburns {
+  animation: kenburns 8s ease-out forwards;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1.05) translateY(0);
+  }
+  100% {
+    transform: scale(1.15) translateY(-3%);
+  }
+}
+
+/* Floating glow blobs */
+.hero-orb {
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-orb-slow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Optional line-grow animation if you need it somewhere */
+.hero-growline {
+  animation: growline 1.5s ease-out forwards;
+}
+
+@keyframes growline {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+:root {
+  --magenta: #a0216f;
+  --blue: #004b7b;
+  --dark-text: #1b2a3b;
+  --body-text: #555e6b;
+  --bg: #f5f7fa;
+  --border-dashed: #d2d6de;
+}
+
+.timeline-section {
+  background: var(--bg);
+}
+
+/* Flex wrapper for steps */
+.timeline-steps {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 10px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Each step */
+.step {
+  flex: 1 1 18%;
+  min-width: 170px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Alternate up/down placement */
+.step-top {
+  transform: translateY(-55px);
+}
+
+.step-bottom {
+  transform: translateY(55px);
+}
+
+/* Outer dashed circle */
+.icon-outer {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  border: 2px dashed #004b7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 10%, #ffffff, #f0f2f7);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* White inner circle with colored arc */
+.icon-inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.icon-inner::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+ 
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+.icon-inner i {
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: 10px; /* pull slightly into the arc */
+}
+
+/* Titles & descriptions – Tailwind will also help for font sizes */
+.step-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--magenta);
+  margin-bottom: 4px;
+}
+
+.step-title.blue {
+  color: var(--blue);
+}
+
+.step-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body-text);
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+.step-desc b {
+  font-weight: 700;
+}
+
+/* Diagonal dashed connector lines */
+.line,
+.line1 {
+  height: 200px;
+  width: 2px;
+  border: 1px dashed #004b7b;
+  margin-bottom: 75px;
+  z-index: 0;
+
+}
+
+.line {
+  transform: rotate(-55deg);
+}
+
+.line1 {
+  transform: rotate(55deg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 920px) {
+  .timeline-steps {
+    row-gap: 60px;
+    justify-content: center;
+  }
+
+  .step-top,
+  .step-bottom {
+    transform: translateY(0);
+  }
+
+  .line,
+  .line1 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .step {
+    flex: 1 1 100%;
+  }
+
+  .icon-outer {
+    margin-bottom: 10px;
+  }
+}
