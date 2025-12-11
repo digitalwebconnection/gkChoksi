@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 import "./heroAnimations.css"; // external keyframes / helpers
 
 // import images so the bundler returns proper URLs
-import img3 from "/src/assets/3.jpeg";
-import img5 from "/src/assets/5.jpeg";
-import img21 from "/src/assets/21.jpeg";
+import img3 from "/src/assets/25.jpg";
+import img5 from "/src/assets/8.jpeg";
+import img21 from "/src/assets/3.jpeg";
 
 const images = [img3, img5, img21];
 
