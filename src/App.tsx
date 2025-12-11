@@ -5,6 +5,7 @@ import Footer from "./component/Footer";
 import HomeMain from "./component/home/HomeMain";
 import Navbar from "./component/Navbar";
 import AboutUsMain from "./component/aboutus/AboutUsMain";
+import ManagementMain from "./component/ManagementConsulting/ManagementMain";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />
+          <Route path="/services/management-consulting" element={<ManagementMain />} />
           {/* <Route path="/services" element={<ServicesPage />} /> */}
           {/* <Route path="/news" element={<NewsPage />} /> */}
           {/* <Route path="/careers" element={<CareersPage />} /> */}

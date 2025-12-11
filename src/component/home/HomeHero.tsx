@@ -52,7 +52,7 @@ const HeroSection = () => {
           aria-hidden
         >
           {/* dark overlay */}
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
       ))}
 
