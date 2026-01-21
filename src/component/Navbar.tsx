@@ -103,38 +103,7 @@ const Navbar: React.FC = () => {
       `}
       aria-label="Main navigation"
     >
-      {/* ===== TOP CONTACT BAR ===== */}
-      <div className="hidden border-b border-white/10 bg-black/30 text-[11px] text-white/80 sm:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 sm:px-6 lg:px-8">
-          {/* Left side */}
-          <div className="flex flex-wrap text-lg items-center gap-6">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-white/50 text-[9px]">
-                ☎
-              </span>
-              <span>+91 79 2644 8877</span>
-            </div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-xs">✉</span>
-              <span>info@GkChoksi.com</span>
-            </div>
-          </div>
-
-          {/* Right side: social icons */}
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-white text-xl" aria-label="facebook">
-              f
-            </a>
-            <a href="#" className="hover:text-white text-xl" aria-label="linkedin">
-              in
-            </a>
-            <a href="#" className="hover:text-white text-xl" aria-label="twitter">
-              t
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* ===== MAIN NAVBAR ROW ===== */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">

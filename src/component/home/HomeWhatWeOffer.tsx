@@ -36,6 +36,14 @@ const services = [
     note: "Statutory, internal & special audits",
     color: "violet",
   },
+  {
+    title: "Audit and Assurance",
+    icon: ShieldCheck,
+    description:
+      "Ensuring robust financial reporting and compliance through statutory, internal, and special audits aligned with global standards.",
+    note: "Statutory, internal & special audits",
+    color: "blue",
+  },
 ];
 
 // --- Framer Motion Variants for the new design ---
@@ -88,6 +96,13 @@ const colorMap: { [key: string]: { border: string; bg: string; text: string; sha
     text: "text-violet-700",
     shadow: "shadow-violet-300/40",
   },
+  blue: {
+    border: "border-blue-500/80",
+    bg: "bg-blue-50/70",
+    text: "text-blue-700",
+    shadow: "shadow-blue-300/40",
+  },
+  
 };
 
 const WhatWeOffer = () => {
@@ -99,7 +114,7 @@ const WhatWeOffer = () => {
       {/* Background radial gradient spotlight */}
       <div className="pointer-events-none absolute inset-0 [background:radial-gradient(ellipse_at_top_right,var(--tw-color-emerald-50)_0%,transparent_50%),radial-gradient(ellipse_at_bottom_left,var(--tw-color-cyan-50)_0%,transparent_50%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
         {/* --- CENTERED INTRO --- */}
         <div className="mx-auto mb-12 max-w-7xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-900">
@@ -116,7 +131,7 @@ const WhatWeOffer = () => {
 
         {/* --- SERVICE GRID - NEW STRUCTURE --- */}
         <motion.div
-          className="relative mx-auto max-w-6xl grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4" // Simple 4-column grid for clarity
+          className="relative mx-auto max-w-7xl grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5" // Simple 4-column grid for clarity
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

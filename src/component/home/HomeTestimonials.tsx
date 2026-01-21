@@ -121,7 +121,7 @@ const HomeTestimonials = () => {
             <div className="icon-outer">
               <div className="icon-inner ">
                 <img
-                  src="https://rayhannoman.com/storage/posts/Sv7t0WMngC2nOXAo8ENbUhPDfSC7mAFTnrjf7WZW.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwI_0jN25jaejTOy-yfIdQ2DNttxXEnElQng&s"
                   alt=""
                   className="h-full w-full"
                 />
@@ -144,7 +144,7 @@ const HomeTestimonials = () => {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5, delay: 0.17 }}
           >
-            <div className="icon-outer">
+               <div className="icon-outer">
               <div className="icon-inner ">
                 <img
                   src="https://www.investopedia.com/thmb/vfl0lrU4M1P3Zsnbyf5jDL4W0-4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1803777103-03b3b05e0ff542f6bcf7e4070fb37b09.jpg"
