@@ -6,10 +6,13 @@ import HomeMain from "./component/home/HomeMain";
 import Navbar from "./component/Navbar";
 import AboutUsMain from "./component/aboutus/AboutUsMain";
 import ManagementMain from "./component/ManagementConsulting/ManagementMain";
+import ContactMain from "./component/Contact/ContactMain";
+import DisclaimerModal from "./component/DisclaimerModal";
 
 function App() {
   return (
     <Router>
+      <DisclaimerModal/>
       {/* Fixed navbar at top */}
       <Navbar />
 
@@ -22,7 +25,7 @@ function App() {
           {/* <Route path="/services" element={<ServicesPage />} /> */}
           {/* <Route path="/news" element={<NewsPage />} /> */}
           {/* <Route path="/careers" element={<CareersPage />} /> */}
-          {/* <Route path="/contact" element={<ContactPage />} /> */}
+          <Route path="/contact" element={<ContactMain />} />
           {/* <Route path="/csr" element={<CSRPage />} /> */}
         </Routes>
       </div>

@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
     setMobileOpen(false)
   }, [location.pathname])
 
-  const linkBaseClasses = "text-lg text-white/90 hover:text-white transition"
+  const linkBaseClasses = "text-lg text-black/90 hover:text-black  transition"
   const getLinkClass = ({
     isActive,
   }: {
@@ -98,8 +98,8 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`
         fixed top-0 left-0 z-50 w-full
-        text-white transition-all duration-300
-        ${isScrolled ? "bg-black/95 shadow-lg" : "bg-black/20"}
+        text-black transition-all duration-300
+        ${isScrolled ? "bg-white/95 shadow-lg" : "bg-white"}
       `}
       aria-label="Main navigation"
     >
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo – link to Home */}
         <motion.div
-          className="text-2xl font-bold text-white"
+          className="text-2xl font-bold text-black"
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 220, damping: 16 }}
         >
@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
               onClick={() => setServicesOpen((prev) => !prev)}
               aria-haspopup="menu"
               aria-expanded={servicesOpen}
-              className="flex items-center gap-2 text-lg text-white/90 hover:text-white transition focus:outline-none"
+              className="flex items-center gap-2 text-lg text-black/90 hover:text-black transition focus:outline-none"
             >
               <span>Services</span>
               <svg
@@ -197,8 +197,8 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <NavLink to="/news" className={getLinkClass}>
-            News
+          <NavLink to="/blog" className={getLinkClass}>
+            Blog
           </NavLink>
           <NavLink to="/careers" className={getLinkClass}>
             Careers
@@ -206,8 +206,8 @@ const Navbar: React.FC = () => {
           <NavLink to="/contact" className={getLinkClass}>
             Contact
           </NavLink>
-          <NavLink to="/csr" className={getLinkClass}>
-            CSR
+          <NavLink to="/alumni" className={getLinkClass}>
+            Alumni
           </NavLink>
         </div>
 

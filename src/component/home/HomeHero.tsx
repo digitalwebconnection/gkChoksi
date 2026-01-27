@@ -52,7 +52,7 @@ const HeroSection = () => {
           aria-hidden
         >
           {/* dark overlay */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
 
@@ -82,16 +82,7 @@ const HeroSection = () => {
           Strategic Financial Excellence
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="mb-10 max-w-6xl mx-auto text-center text-md leading-relaxed text-white/90 drop-shadow-lg sm:text-lg"
-        >
-          Expert chartered accountants dedicated to optimizing your business finances, minimizing tax liability,
-          and driving sustainable growth.
-        </motion.p>
-
+      
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
