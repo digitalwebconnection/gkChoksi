@@ -375,7 +375,7 @@ const ContactSection: React.FC = () => {
               variants={card}
               whileHover={{ y: -12 }}
               className="relative rounded-3xl p-8 bg-white/70 backdrop-blur-xl
-                         border border-white/60 shadow-xl hover:shadow-2xl
+                         border border-white/60  hover:shadow-2xl
                          transition-all duration-500"
             >
               {/* Top animated accent */}
