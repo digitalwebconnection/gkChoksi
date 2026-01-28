@@ -34,7 +34,7 @@ const timeline = [
       "With evolving regulations and global standards, we strengthened our focus on risk, governance, compliance and internal control frameworks.",
     meta: "Listed entities, regulatory assignments and complex group audits.",
     side: "right",
-    image: "https://lh4.googleusercontent.com/proxy/OIAncajJoHyFHQ1ClRFcJRtrB_jmQj7hlUzPoSKW2MvuPhDbmAOg3bSylxiEBlFujkDWaeMvXijcq9mANyeV7J2DLp6yuBuF7_Vrdz2b3xOyXPkiwLn75Z8",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSko2M7te0So4PgD3HmdqFqGo3uHPmBorSEQ&s",
   },
   {
     icon: Globe2,

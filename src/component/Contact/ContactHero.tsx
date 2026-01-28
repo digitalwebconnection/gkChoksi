@@ -39,13 +39,20 @@ const ContactHeroSection = () => {
   const bgX = useTransform(mouseX, [0, 1], ["-2%", "2%"]);
   const bgY = useTransform(mouseY, [0, 1], ["-2%", "2%"]);
 
+  /* ================= MAGNETIC BUTTON ================= */
+  const btnX = useMotionValue(0);
+  const btnY = useMotionValue(0);
+
+  const btnTransformX = useTransform(btnX, [-50, 50], [-12, 12]);
+  const btnTransformY = useTransform(btnY, [-50, 50], [-12, 12]);
+
   return (
     <section
       onMouseMove={(e) => {
         mouseX.set(e.clientX / window.innerWidth);
         mouseY.set(e.clientY / window.innerHeight);
       }}
-      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black"
     >
       {/* ================= BACKGROUND SLIDER ================= */}
       <AnimatePresence>
@@ -95,7 +102,7 @@ const ContactHeroSection = () => {
             transition={{ duration: 1, repeat: Infinity }}
             className="inline-block ml-1 text-sky-400"
           >
-           .
+            .
           </motion.span>
         </motion.h1>
 
@@ -110,36 +117,71 @@ const ContactHeroSection = () => {
           every financial move.
         </motion.p>
 
+        {/* ================= MAGNETIC CTA ================= */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8 }}
-          className="mt-10"
+          className="mt-10 flex justify-center"
         >
           <motion.button
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              btnX.set(e.clientX - rect.left - rect.width / 2);
+              btnY.set(e.clientY - rect.top - rect.height / 2);
+            }}
+            onMouseLeave={() => {
+              btnX.set(0);
+              btnY.set(0);
+            }}
+            style={{
+              x: btnTransformX,
+              y: btnTransformY,
+            }}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-sky-600 hover:bg-sky-500 text-white px-10 py-4 rounded-full font-semibold transition-all shadow-xl shadow-sky-900/30"
+            className="relative bg-sky-600 hover:bg-sky-500 text-white px-12 py-4 rounded-full font-semibold shadow-xl shadow-sky-900/30 overflow-hidden"
           >
-            Schedule a Consultation
+            <span className="relative z-10">Schedule a Consultation</span>
+            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity" />
           </motion.button>
         </motion.div>
+
+        {/* ================= SLIDE INDICATOR ================= */}
+        <div className="mt-12 flex justify-center gap-3">
+          {images.map((_, i) => (
+            <motion.span
+              key={i}
+              className="h-1 rounded-full bg-white/40"
+              animate={{
+                width: current === i ? 32 : 12,
+                opacity: current === i ? 1 : 0.4,
+              }}
+              transition={{ duration: 0.4 }}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* ================= SCROLL HINT ================= */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70"
+      >
+        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="mt-2 w-0.5 h-10 bg-white/50 rounded-full"
+        />
+      </motion.div>
 
       {/* ================= GRAIN OVERLAY ================= */}
-      {/* Optional: add /public/grain.png */}
       <div className="absolute inset-0 bg-[url('/grain.png')] opacity-[0.04] pointer-events-none" />
 
-      {/* ================= BOTTOM WAVE ================= */}
-      <div className="absolute bottom-0 left-0 w-full leading-0 rotate-180">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="w-full h-[60px] fill-white"
-        >
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" />
-        </svg>
-      </div>
+      
     </section>
   );
 };

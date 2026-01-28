@@ -28,7 +28,7 @@ const AboutUsSection = () => {
       {/* background accents */}
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-emerald-200/40 blur-3xl" />
-        <div className="absolute right-[-80px] bottom-[-40px] h-72 w-72 rounded-full bg-amber-200/40 blur-3xl" />
+        <div className="absolute -right-20 -bottom-10 h-72 w-72 rounded-full bg-amber-200/40 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

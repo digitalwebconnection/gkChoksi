@@ -25,25 +25,22 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-              Why work with us
+
             </p>
 
             <h2 className="mb-6 text-balance font-serif text-4xl font-bold text-slate-900 sm:text-5xl">
-              Why{" "}
+              Welcome to{" "}
               <span className="inline-block rounded-lg bg-lime-300 px-2 text-slate-900">
-                Choose
-              </span>{" "}
-              Us
+                G. K. Choksi & Co
+              </span>
+
             </h2>
 
             <p className="mb-4 leading-relaxed text-slate-600">
-              With over two decades of experience, our team of qualified
-              chartered accountants brings expertise across diverse industries
-              and business models.
+              Established in 1970 by CA Gautam K. Choksi, our Firm is built upon a distinguished legacy of professional integrity, independent judgment, and unwavering client trust. Conceived by a visionary founder, it has matured into a prominent Chartered Accountancy practice.
             </p>
             <p className="mb-6 leading-relaxed text-slate-600">
-              We combine traditional accounting excellence with modern financial
-              technology to deliver results that exceed expectations.
+              Headquartered in Ahmedabad, with presence in New Delhi, Mumbai, and Petlad, the Firm delivers high-impact services nationwide with deep contextual insight.
             </p>
 
             <ul className="mb-8 space-y-3">
@@ -74,7 +71,7 @@ const AboutSection = () => {
 
           {/* RIGHT: IMAGE CLUSTER */}
           <motion.div
-            className="relative h-[360px] sm:h-[420px] md:h-[440px]"
+            className="relative h-[360px] sm:h-[420px] md:h-[540px]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
@@ -84,7 +81,7 @@ const AboutSection = () => {
             <div className="absolute -right-10 -top-10 h-64 w-64 rounded-[40px] bg-emerald-500/15 blur-3xl" />
 
             {/* Top image card */}
-            <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.35)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] sm:h-44">
+            <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.35)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] sm:h-56">
               <img
                 src={img}
                 alt="Team at work"
@@ -93,7 +90,7 @@ const AboutSection = () => {
             </div>
 
             {/* Main large card */}
-            <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-slate-200 shadow-[0_26px_80px_rgba(15,23,42,0.45)] transition-transform duration-500 ease-out hover:-translate-y-3 hover:scale-[1.02] sm:h-[290px] sm:w-[88%]">
+            <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-slate-200 shadow-[0_26px_80px_rgba(15,23,42,0.45)] transition-transform duration-500 ease-out hover:-translate-y-3 hover:scale-[1.02] sm:h-[350px] sm:w-[88%]">
               <img
                 src={img1}
                 alt="Financial advisory meeting"
@@ -112,7 +109,7 @@ const AboutSection = () => {
 
             {/* Bottom-left mini card */}
             <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,23,42,0.32)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.03]">
-              <div className="h-[60%] w-full">
+              <div className="h-[70%] w-full">
                 <img
                   src={img2}
                   alt="Audit & review"
@@ -130,7 +127,7 @@ const AboutSection = () => {
             </div>
 
             {/* Stat pill (top-right) */}
-            <div className="absolute -right-1.5 top-16 w-40 rounded-3xl bg-slate-900 px-4 py-4 text-white shadow-[0_20px_60px_rgba(15,23,42,0.6)] transition-transform duration-500 ease-out hover:-translate-y-2">
+            <div className="absolute -right-14.5 top-22 w-40 rounded-3xl bg-slate-900 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.6)] transition-transform duration-500 ease-out hover:-translate-y-2">
               <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-slate-400">
                 Trusted Since
               </p>
