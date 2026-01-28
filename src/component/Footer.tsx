@@ -58,7 +58,7 @@ const Footer = () => {
 
             {/* Locations strip (optional, but looks premium) */}
             <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-slate-400">
-              Mumbai &nbsp;·&nbsp; Ahmedabad &nbsp;·&nbsp; Delhi NCR &nbsp;·&nbsp; Pan-India
+              Mumbai &nbsp;·&nbsp; Ahmedabad &nbsp;·&nbsp; Delhi NCR &nbsp;·&nbsp;  Petlad, Gujarat
             </p>
 
             {/* Social icons */}
