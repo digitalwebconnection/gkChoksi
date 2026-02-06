@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { NavLink, useLocation } from "react-router-dom"
-import logo from "../../src/assets/logo.png"
+import logo from "../assets/logo.png"
 
 interface ServiceItem {
   label: string
