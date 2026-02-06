@@ -8,6 +8,8 @@ import AboutUsMain from "./component/aboutus/AboutUsMain";
 import ManagementMain from "./component/ManagementConsulting/ManagementMain";
 import ContactMain from "./component/Contact/ContactMain";
 import DisclaimerModal from "./component/DisclaimerModal";
+import TeamSection from "./component/aboutus/TeamMember/TeamMain";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />
           <Route path="/services/management-consulting" element={<ManagementMain />} />
+          <Route path="/about/team" element={<TeamSection/>} />
           {/* <Route path="/services" element={<ServicesPage />} /> */}
           {/* <Route path="/news" element={<NewsPage />} /> */}
           {/* <Route path="/careers" element={<CareersPage />} /> */}

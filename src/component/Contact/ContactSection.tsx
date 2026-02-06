@@ -2,7 +2,9 @@ import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
-
+/* =========================
+   Branch Data
+========================= */
 const branches = [
     {
         city: "New Delhi",
@@ -32,6 +34,9 @@ Petlad – 388450`,
     },
 ];
 
+/* =========================
+   Animations
+========================= */
 const container = {
     hidden: {},
     visible: {
@@ -49,6 +54,16 @@ const card = {
     },
 };
 
+/* =========================
+   Map Helper
+========================= */
+const openMap = (address: string) => {
+    const encodedAddress = encodeURIComponent(address.replace(/\n/g, " "));
+    window.open(
+        `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`,
+        "_blank"
+    );
+};
 
 
 const ContactSection: React.FC = () => {
@@ -337,7 +352,7 @@ const ContactSection: React.FC = () => {
             {/* Branches Section */}
             <section className="relative pt-12 bg-linear-to-b from-slate-50 via-white to-slate-100 overflow-hidden">
 
-                {/* Decorative background blobs */}
+                {/* Decorative blobs */}
                 <div className="absolute -top-24 -left-24 w-96 h-96 bg-green-200/30 rounded-full blur-3xl" />
                 <div className="absolute top-1/3 -right-24 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl" />
 
@@ -351,7 +366,6 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-
                         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
                             Our Branches Across India
                         </h2>
@@ -375,22 +389,24 @@ const ContactSection: React.FC = () => {
                                 variants={card}
                                 whileHover={{ y: -12 }}
                                 className="relative rounded-3xl p-8 bg-white/70 backdrop-blur-xl
-                         border border-white/60  hover:shadow-2xl
-                         transition-all duration-500"
+                                border border-white/60 hover:shadow-2xl
+                                transition-all duration-500"
                             >
-                                {/* Top animated accent */}
+                                {/* Top Accent */}
                                 <motion.div
                                     initial={{ width: 0 }}
                                     whileInView={{ width: "100%" }}
                                     transition={{ duration: 0.6 }}
-                                    className="absolute top-0 left-0 h-1 rounded-t-3xl bg-linear-to-r from-green-600 to-emerald-500"
+                                    className="absolute top-0 left-0 h-1 rounded-t-3xl
+                             bg-linear-to-r from-green-600 to-emerald-500"
                                 />
 
-                                {/* Floating Icon */}
+                                {/* Icon */}
                                 <motion.div
                                     animate={{ y: [0, -6, 0] }}
                                     transition={{ repeat: Infinity, duration: 4 }}
-                                    className="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 text-green-700 mb-6"
+                                    className="w-12 h-12 flex items-center justify-center
+                             rounded-full bg-green-100 text-green-700 mb-6"
                                 >
                                     <MapPin />
                                 </motion.div>
@@ -398,27 +414,36 @@ const ContactSection: React.FC = () => {
                                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                                     {branch.city}
                                 </h3>
-
                                 <div className="space-y-5 text-gray-700">
+                                    {/* Address */}
                                     <div className="flex gap-3">
                                         <MapPin size={18} className="text-green-700 mt-1" />
                                         <p className="whitespace-pre-line">{branch.address}</p>
                                     </div>
-
+                                    {/* Phone */}
                                     <div className="flex gap-3">
                                         <Phone size={18} className="text-green-700 mt-1" />
                                         <p className="whitespace-pre-line">{branch.phone}</p>
                                     </div>
 
+                                    {/* Email */}
                                     <div className="flex gap-3">
                                         <Mail size={18} className="text-green-700 mt-1" />
                                         <p>{branch.email}</p>
                                     </div>
+                                    {/* View on Map */}
+                                    <button
+                                        onClick={() => openMap(branch.address)}
+                                        className="inline-flex items-center gap-2 text-md font-semibold
+                               text-green-700 bg-amber-500 px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl  hover:bg-blue-900 hover:text-white transition-colors"
+                                    >
+                                        <MapPin size={20} />
+                                        View on Map
+                                    </button>
                                 </div>
-                            </motion.div>
+                                </motion.div>
                         ))}
                     </motion.div>
-
                 </div>
             </section>
         </section>

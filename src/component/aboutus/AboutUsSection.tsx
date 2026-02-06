@@ -60,7 +60,7 @@ const AboutUsSection = () => {
               Anticipating and creating opportunities
             </span>
           </div>
-        </motion.div>
+          </motion.div>
 
         {/* ===== VISION & MISSION BLOCK ===== */}
         <motion.div

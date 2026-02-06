@@ -1,62 +1,111 @@
-  import heroBg from "../../assets/12.jpeg";
+import heroBg from "../../assets/12.jpeg";
+import { motion } from "framer-motion"; // Import Framer Motion
 
-  const AboutPage = () => {
-    return (
-      <div className="bg-slate-50 text-slate-900">
-        {/* ===== HERO SECTION (unchanged) ===== */}
-        <section
-          className="relative overflow-hidden min-h-screen  border-b pt-16 border-slate-200"
+const AboutPage = () => {
+  // Animation variants for staggered reveals
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.3, // Stagger child animations
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    visible: {
+      opacity: 1,
+      y: 0, // Slide up to position
+           transition: { duration: 0.8, ease: "easeOut" as const },
+    },
+  };
+
+  return (
+    <div className="bg-white text-slate-900">
+      {/* ===== ANIMATED ABOUT HERO ===== */}
+      <motion.section
+        className="relative flex items-center min-h-[70vh] border-b border-slate-200 overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        {/* Animated Background Zoom */}
+        <motion.div
+          className="absolute inset-0"
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
           }}
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.05 }}           
+          transition={{ duration: 10, ease: "linear" }}
+        />
+
+        {/* Animated Dark Overlay */}
+        <motion.div
+          className="absolute inset-0 bg-black/55"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+        />
+
+        {/* Animated Content Container */}
+        <motion.div
+          className="relative mx-auto max-w-5xl px-6 text-center space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          {/* Dark overlay for readability */}  
-          <div className="absolute inset-0 bg-black/70" />
+          {/* Animated Trust Line */}
+          <motion.p
+            className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-200"
+            variants={itemVariants}
+          >
+            Chartered Accountants • Since 1970
+          </motion.p>
 
-          {/* Blurred accents */}
-          <div className="pointer-events-none absolute inset-0 opacity-60">
-            <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-sky-200/40 blur-3xl" />
-            <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-emerald-200/30 blur-3xl" />
-          </div>
+          {/* Animated Main Heading */}
+          <motion.h1      
+            className="text-3xl font-semibold text-white sm:text-4xl lg:text-5xl"
+            variants={itemVariants}
+          >
+            About G. K. Choksi &amp; Co.
+          </motion.h1>
 
-          {/* Content */}
-          <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-4 py-10 md:py-30  lg:flex-row lg:items-center ">
-            {/* Left: Text */}
-            <div className="max-w-6xl mx-auto text-center space-y-6">
-              <p className="inline-flex items-center max-w-3xl mx-auto rounded-full bg-white/80 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-sky-700 shadow-sm ring-1 ring-sky-100">
-                Chartered Accountants • Since 1970
-              </p>
+          {/* Animated Short Description */}
+          <motion.p
+            className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200 sm:text-lg"
+            variants={itemVariants}
+          >
+            G. K. Choksi &amp; Co. is a trusted Chartered Accountancy firm with a
+            legacy of integrity, professionalism, and client-focused advisory
+            services, helping businesses make sound financial decisions for
+            over five decades.
+          </motion.p>
 
-              <h1 className="text-3xl max-w-3xl mx-auto font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Building Trust. Delivering Excellence Since 1970.
-              </h1>
+          {/* Animated CTA Button */}
+          <motion.div className="pt-2" variants={itemVariants}>
+            <motion.button
+              className="rounded-full bg-white px-6 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-slate-100"
+              whileHover={{ scale: 1.05, backgroundColor: "#f1f5f9" }} // Scale and color change on hover
+              transition={{ duration: 0.2 }}
+            >
+              View Our Services
+            </motion.button>
+          </motion.div>
+        </motion.div>
+      </motion.section>
+    </div>
+  );
+};
 
-              <p className="text-base leading-relaxed text-slate-100 sm:text-lg">
-                <span className="font-semibold">G. K. Choksi &amp; Co. (GKC)</span>{" "}
-                is a leading Chartered Accountancy firm driven by integrity,
-                professionalism, and a commitment to help organizations make
-                confident financial decisions.
-              </p>
-
-              <div className="flex flex-wrap justify-center items-center gap-3">
-              
-                <button className="inline-flex items-center justify-center rounded-full border border-slate-200/70 bg-white/90 px-5 py-2.5 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-white">
-                  Explore Our Services
-                </button>
-              </div>
-
-              <p className="text-sm font-medium text-slate-100/80">
-                More than 200 professionals • 50+ years of excellence • Serving
-                India &amp; global clients
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    );
-  };
-
-  export default AboutPage;
+export default AboutPage;
