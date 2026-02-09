@@ -4,10 +4,19 @@ import { motion, AnimatePresence } from "framer-motion"
 import { NavLink, useLocation } from "react-router-dom"
 import logo from "../assets/logo.png"
 
+/* ---------------- TYPES ---------------- */
+
 interface ServiceItem {
   label: string
   slug: string
 }
+
+interface NavItemProps {
+  to: string
+  children: React.ReactNode
+}
+
+/* ---------------- DATA ---------------- */
 
 const SERVICES: ServiceItem[] = [
   { label: "Management Consulting", slug: "management-consulting" },
@@ -18,6 +27,8 @@ const SERVICES: ServiceItem[] = [
   { label: "M&A", slug: "m-and-a" },
 ]
 
+/* ---------------- COMPONENT ---------------- */
+
 const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -27,12 +38,13 @@ const Navbar: React.FC = () => {
   const [aboutOpen, setAboutOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const servicesRef = useRef<HTMLDivElement | null>(null)
-  const aboutRef = useRef<HTMLDivElement | null>(null)
+  const servicesRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
 
   const location = useLocation()
 
-  /* Scroll hide / show */
+  /* ---------------- SCROLL HIDE / SHOW ---------------- */
+
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY
@@ -45,9 +57,10 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [lastScrollY])
 
-  /* Outside click */
+  /* ---------------- OUTSIDE CLICK ---------------- */
+
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
+    const handleClickOutside = (e: MouseEvent) => {
       if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
         setServicesOpen(false)
       }
@@ -59,9 +72,10 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  /* ESC close */
+  /* ---------------- ESC KEY ---------------- */
+
   useEffect(() => {
-    function handleKey(e: KeyboardEvent) {
+    const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setServicesOpen(false)
         setAboutOpen(false)
@@ -72,50 +86,54 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener("keydown", handleKey)
   }, [])
 
-  /* Route change close */
+  /* ---------------- ROUTE CHANGE CLOSE ---------------- */
+
   useEffect(() => {
     setServicesOpen(false)
     setAboutOpen(false)
     setMobileOpen(false)
   }, [location.pathname])
 
-  const linkBaseClasses =
-    "text-lg text-black/90 hover:text-black transition"
+  /* ---------------- HELPERS ---------------- */
 
-  const getLinkClass = ({
-    isActive,
-  }: {
-    isActive: boolean
-    isPending: boolean
-    isTransitioning: boolean
-  }) =>
+  const baseLink =
+    "text-lg text-black/90 hover:text-black transition-colors"
+
+  const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? `${linkBaseClasses} border-b border-black`
-      : linkBaseClasses
+      ? `${baseLink} border-b border-black`
+      : baseLink
+
+  /* ---------------- JSX ---------------- */
 
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 z-50 w-full transition-all ${
-        isScrolled ? "bg-white/95 shadow-lg" : "bg-white"
+      className={`fixed top-0 left-0 z-50 w-full ${
+        isScrolled ? "bg-white/95 shadow-lg backdrop-blur" : "bg-white"
       }`}
     >
-      {/* Main Bar */}
+      {/* MAIN BAR */}
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
-        {/* Logo */}
-        <NavLink to="/">
+
+        {/* LOGO */}
+        <NavLink to="/" className="shrink-0">
           <img src={logo} alt="Logo" className="h-12 w-60 object-contain" />
         </NavLink>
 
-        {/* Desktop Menu */}
+        {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-10">
-          {/* About Dropdown */}
+
+          {/* ABOUT */}
           <div className="relative" ref={aboutRef}>
             <button
-              onClick={() => setAboutOpen((p) => !p)}
-              className="flex items-center gap-2 text-lg"
+              onClick={() => {
+                setAboutOpen((p) => !p)
+                setServicesOpen(false)
+              }}
+              className="flex items-center gap-2 text-lg focus:outline-none"
             >
               About Us
               <Chevron open={aboutOpen} />
@@ -132,11 +150,14 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          {/* Services Dropdown */}
+          {/* SERVICES */}
           <div className="relative" ref={servicesRef}>
             <button
-              onClick={() => setServicesOpen((p) => !p)}
-              className="flex items-center gap-2 text-lg"
+              onClick={() => {
+                setServicesOpen((p) => !p)
+                setAboutOpen(false)
+              }}
+              className="flex items-center gap-2 text-lg focus:outline-none"
             >
               Services
               <Chevron open={servicesOpen} />
@@ -146,10 +167,7 @@ const Navbar: React.FC = () => {
               {servicesOpen && (
                 <Dropdown>
                   {SERVICES.map((s) => (
-                    <NavItem
-                      key={s.slug}
-                      to={`/services/${s.slug}`}
-                    >
+                    <NavItem key={s.slug} to={`/services/${s.slug}`}>
                       {s.label}
                     </NavItem>
                   ))}
@@ -163,23 +181,24 @@ const Navbar: React.FC = () => {
           <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
         </div>
 
-        {/* Mobile Button */}
+        {/* MOBILE TOGGLE */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden text-2xl"
           onClick={() => setMobileOpen((p) => !p)}
+          aria-label="Toggle Menu"
         >
           ☰
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* MOBILE DRAWER */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-black text-white px-4 py-4"
+            className="md:hidden bg-black text-white px-4 py-4 space-y-2"
           >
             <MobileAbout onNavigate={() => setMobileOpen(false)} />
             <MobileServices onNavigate={() => setMobileOpen(false)} />
@@ -194,7 +213,7 @@ const Navbar: React.FC = () => {
   )
 }
 
-/* ---------- Reusable UI ---------- */
+/* ---------------- REUSABLE UI ---------------- */
 
 const Chevron = ({ open }: { open: boolean }) => (
   <svg
@@ -217,30 +236,35 @@ const Dropdown = ({ children }: { children: React.ReactNode }) => (
     initial={{ opacity: 0, y: -8 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -8 }}
-    className="absolute mt-3 w-60 bg-white rounded-lg shadow-2xl z-50"
+    transition={{ duration: 0.2 }}
+    className="absolute left-0 mt-3 w-64 bg-white rounded-xl shadow-2xl z-50"
   >
     <ul className="py-2">{children}</ul>
   </motion.div>
 )
 
-const NavItem = ({ to, children }: any) => (
+const NavItem = ({ to, children }: NavItemProps) => (
   <li>
     <NavLink
       to={to}
-      className="block px-4 py-3 text-sm hover:bg-slate-100"
+      className="block px-4 py-3 text-sm text-black hover:bg-slate-100 transition"
     >
       {children}
     </NavLink>
   </li>
 )
 
-/* ---------- Mobile Sections ---------- */
+/* ---------------- MOBILE SECTIONS ---------------- */
 
 const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
-      <button onClick={() => setOpen(!open)} className="py-2 w-full text-left">
+      <button
+        onClick={() => setOpen(!open)}
+        className="py-2 w-full text-left font-medium"
+      >
         About Us
       </button>
       {open && (
@@ -262,9 +286,13 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
 
 const MobileServices = ({ onNavigate }: { onNavigate: () => void }) => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
-      <button onClick={() => setOpen(!open)} className="py-2 w-full text-left">
+      <button
+        onClick={() => setOpen(!open)}
+        className="py-2 w-full text-left font-medium"
+      >
         Services
       </button>
       {open && (
