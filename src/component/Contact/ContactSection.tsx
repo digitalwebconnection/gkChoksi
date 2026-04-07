@@ -68,12 +68,12 @@ const openMap = (address: string) => {
 
 const ContactSection: React.FC = () => {
     return (
-        <section className="bg-slate-50 py-24">
+        <section className="bg-[#F7F9F8] py-24">
             <section className="bg-slate-50 pb-24">
                 <div className="max-w-7xl mx-auto px-6">
 
                     {/* Heading */}
-                    <h2 className="text-5xl font-bold text-center text-gray-900 animate-slideUp">
+                    <h2 className="text-5xl font-bold text-center text-[#1c1c1c] animate-slideUp">
                         Contact GKC & CO
                     </h2>
 
@@ -181,7 +181,9 @@ const ContactSection: React.FC = () => {
 
                                     <button
                                         type="submit"
-                                        className="inline-flex items-center gap-3 rounded-2xl bg-green-800 px-14 py-4 text-white font-semibold tracking-wide transition hover:bg-green-900 hover:shadow-2xl"
+                                        className="inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
+              hover:bg-[#1F6F5B] 
+              text-white  px-14 py-4  font-semibold tracking-wide transition  hover:shadow-2xl"
                                     >
                                         Request Consultation
                                         <span className="text-lg">→</span>
@@ -199,30 +201,30 @@ const ContactSection: React.FC = () => {
                             <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-green-700 mb-4">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] group-hover:text-[#1c1c1c] mb-4">
                                     <Phone size={22} />
                                 </div>
 
-                                <p className="text-xs font-semibold text-green-800 uppercase mb-2">Call</p>
+                                <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Call</p>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Talk to our team</h3>
                                 <p className="text-gray-600 text-sm mb-3">
                                     For quick queries and consultation scheduling.
                                 </p>
 
-                                <a href="tel:+917968198900" className="font-medium text-gray-900 hover:text-green-700">
+                                <a href="tel:+917968198900" className="font-medium text-gray-900 hover:text-[#1F6F5B]">
                                     +91 79 68198900
                                 </a>
                             </div>
 
                             {/* Email Card */}
                             <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
-          hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-blue-100 hover:to-white">
+          hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700 mb-4">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
                                     <Mail size={22} />
                                 </div>
 
-                                <p className="text-xs font-semibold text-blue-700 uppercase mb-2">Email</p>
+                                <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Email</p>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Write to us</h3>
 
                                 <a href="mailto:info@gkcco.com" className="block font-medium text-gray-900 hover:underline">
@@ -237,11 +239,11 @@ const ContactSection: React.FC = () => {
                             <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-green-700 mb-4">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
                                     <MapPin size={22} />
                                 </div>
 
-                                <p className="text-xs font-semibold text-green-800 uppercase mb-2">Head Office</p>
+                                <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Head Office</p>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Visit our office</h3>
 
                                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -339,7 +341,9 @@ const ContactSection: React.FC = () => {
                             <div className="mt-8 flex gap-4">
                                 <a
                                     href="https://maps.app.goo.gl/tS8Msd3B9h5kYXup8"
-                                    className="flex-1 text-center px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 transition font-semibold text-white"
+                                    className="flex-1 text-center px-6 py-3 rounded-xl bg-[#0F3D2E] 
+              hover:bg-[#1F6F5B] 
+              text-white  transition font-semibold "
                                 >
                                     Get Directions
                                 </a>
@@ -350,11 +354,9 @@ const ContactSection: React.FC = () => {
             </div>
 
             {/* Branches Section */}
-            <section className="relative pt-12 bg-linear-to-b from-slate-50 via-white to-slate-100 overflow-hidden">
+            <section className="relative pt-12  overflow-hidden">
 
                 {/* Decorative blobs */}
-                <div className="absolute -top-24 -left-24 w-96 h-96 bg-green-200/30 rounded-full blur-3xl" />
-                <div className="absolute top-1/3 -right-24 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl" />
 
                 <div className="relative max-w-7xl mx-auto px-6">
 
@@ -366,7 +368,7 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-[#1c1c1c]">
                             Our Branches Across India
                         </h2>
                         <p className="mt-5 text-gray-600 text-lg leading-relaxed">
@@ -398,7 +400,7 @@ const ContactSection: React.FC = () => {
                                     whileInView={{ width: "100%" }}
                                     transition={{ duration: 0.6 }}
                                     className="absolute top-0 left-0 h-1 rounded-t-3xl
-                             bg-linear-to-r from-green-600 to-emerald-500"
+                             bg-[#1F6F5B]"
                                 />
 
                                 {/* Icon */}
@@ -406,7 +408,7 @@ const ContactSection: React.FC = () => {
                                     animate={{ y: [0, -6, 0] }}
                                     transition={{ repeat: Infinity, duration: 4 }}
                                     className="w-12 h-12 flex items-center justify-center
-                             rounded-full bg-green-100 text-green-700 mb-6"
+                             rounded-full bg-green-100 text-[#1F6F5B] mb-6"
                                 >
                                     <MapPin />
                                 </motion.div>
@@ -435,13 +437,13 @@ const ContactSection: React.FC = () => {
                                     <button
                                         onClick={() => openMap(branch.address)}
                                         className="inline-flex items-center gap-2 text-md font-semibold
-                               text-green-700 bg-amber-500 px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl  hover:bg-blue-900 hover:text-white transition-colors"
+                               text-white bg-[#6FAF9B] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl  hover:bg-[#1F6F5B] hover:text-white transition-colors"
                                     >
                                         <MapPin size={20} />
                                         View on Map
                                     </button>
                                 </div>
-                                </motion.div>
+                            </motion.div>
                         ))}
                     </motion.div>
                 </div>
