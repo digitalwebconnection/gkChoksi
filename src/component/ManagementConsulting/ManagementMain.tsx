@@ -1,9 +1,10 @@
 
+
 const ManagementMain = () => {
   return (
-    <>
-
-    </>
+    <div>
+      
+    </div>
   )
 }
 

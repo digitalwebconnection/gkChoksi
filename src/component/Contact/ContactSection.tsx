@@ -13,6 +13,7 @@ Tolstoy Marg, Janpath,
 New Delhi – 110001`,
         phone: "+91 11 43717773",
         email: "delhi@gkcco.com",
+        mapQuery: "Tolstoy House Janpath New Delhi",
     },
     {
         city: "Mumbai",
@@ -22,15 +23,17 @@ Mumbai – 400021`,
         phone: `+91 22 6632444
 +91 22 22826087`,
         email: "gkcmumbai@gmail.com",
+        mapQuery: "Raheja Chambers Nariman Point Mumbai",
     },
     {
         city: "Petlad, Gujarat",
-        address: `“Surya Bhavan”,
+        address: `Surya Bhavan,
 Station Road,
 Petlad – 388450`,
         phone: `+91 2697 309214
 +91 2697 224108`,
         email: "petlad@gkcco.com",
+        mapQuery: "Surya Bhavan Petlad Gujarat",
     },
 ];
 
@@ -66,6 +69,8 @@ const openMap = (address: string) => {
 };
 
 
+
+
 const ContactSection: React.FC = () => {
     return (
         <section className="bg-[#F7F9F8] py-24">
@@ -86,7 +91,7 @@ const ContactSection: React.FC = () => {
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
                         {/* RIGHT – Contact Form */}
-                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white rounded-4xl shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-14 overflow-hidden">
+                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-14 overflow-hidden">
 
                             {/* Decorative Accent */}
                             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-green-100 opacity-40 blur-3xl" />
@@ -198,7 +203,7 @@ const ContactSection: React.FC = () => {
                         <div className="lg:col-span-1 space-y-4 animate-slideUp">
 
                             {/* Call Card */}
-                            <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
+                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] group-hover:text-[#1c1c1c] mb-4">
@@ -217,7 +222,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Email Card */}
-                            <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
+                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
@@ -236,7 +241,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Office Card */}
-                            <div className="group bg-white rounded-2xl shadow-xl border border-gray-800/30 p-6 transition-all
+                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
@@ -255,11 +260,8 @@ const ContactSection: React.FC = () => {
 
                         </div>
 
-
                     </div>
                 </div>
-
-
 
             </section>
             {/* MAP – Full Width Bottom */}
@@ -338,16 +340,19 @@ const ContactSection: React.FC = () => {
                                 Gujarat, India
                             </p>
 
-                            <div className="mt-8 flex gap-4">
-                                <a
-                                    href="https://maps.app.goo.gl/tS8Msd3B9h5kYXup8"
-                                    className="flex-1 text-center px-6 py-3 rounded-xl bg-[#0F3D2E] 
-              hover:bg-[#1F6F5B] 
-              text-white  transition font-semibold "
-                                >
-                                    Get Directions
-                                </a>
-                            </div>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation(); // ❗ important
+                                    openMap("12th Floor, North Tower, ONE42, Billionaires Street, off Ambli Road, Ahmedabad, Gujarat – 380058");
+                                }}
+                                className="inline-flex items-center gap-2 text-sm font-semibold
+          text-white bg-[#0F3D2E] px-4 py-2 rounded-full
+          hover:bg-[#1F6F5B] hover:rounded-tr-3xl hover:rounded-bl-3xl
+          transition-all duration-300"
+                            >
+                                <MapPin size={18} />
+                                View on Map
+                            </button>
                         </div>
                     </div>
                 </div>

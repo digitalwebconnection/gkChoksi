@@ -176,7 +176,7 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <NavLink to="/blog" className={getLinkClass}>Blog</NavLink>
+          <NavLink to="/Alumni" className={getLinkClass}>Alumni</NavLink>
           <NavLink to="/careers" className={getLinkClass}>Careers</NavLink>
           <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
         </div>
@@ -203,7 +203,7 @@ const Navbar: React.FC = () => {
             <MobileAbout onNavigate={() => setMobileOpen(false)} />
             <MobileServices onNavigate={() => setMobileOpen(false)} />
 
-            <NavLink to="/blog" className="block py-2">Blog</NavLink>
+            <NavLink to="/Alumni" className="block py-2">Alumni</NavLink>
             <NavLink to="/careers" className="block py-2">Careers</NavLink>
             <NavLink to="/contact" className="block py-2">Contact</NavLink>
           </motion.div>

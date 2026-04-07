@@ -1,8 +1,5 @@
-"use client";
-
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import Heroimg1 from "../../assets/6.jpeg";
 import Heroimg2 from "../../assets/21.jpeg";
 import Heroimg3 from "../../assets/2.jpeg";
@@ -34,13 +31,6 @@ const ContactHeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  /* ================= PARALLAX ================= */
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const bgX = useTransform(mouseX, [0, 1], ["-2%", "2%"]);
-  const bgY = useTransform(mouseY, [0, 1], ["-2%", "2%"]);
-
   /* ================= MAGNETIC BUTTON ================= */
   const btnX = useMotionValue(0);
   const btnY = useMotionValue(0);
@@ -51,7 +41,7 @@ const ContactHeroSection = () => {
   return (
     <section
       
-      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden "
     >
 
       {/* ================= BACKGROUND SLIDER ================= */}
@@ -61,8 +51,7 @@ const ContactHeroSection = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${images[current]})`,
-            x: bgX,
-            y: bgY,
+      
           }}
           initial={{ opacity: 0, scale: 1.15 }}
           animate={{ opacity: 1, scale: 1 }}
