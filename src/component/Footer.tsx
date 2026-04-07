@@ -30,7 +30,7 @@ const Footer = () => {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/85" />
+        <div className="absolute inset-0 bg-[#0F3D2E]/5" />
 
         {/* Subtle radial glow behind card */}
         <div className="pointer-events-none absolute inset-0 opacity-40">
@@ -52,7 +52,7 @@ const Footer = () => {
 
             {/* Tagline */}
             <p className="max-w-xl text-sm sm:text-base text-slate-200/85 leading-relaxed">
-              Strategic financial clarity and confidence for businesses across India – 
+              Strategic financial clarity and confidence for businesses across India –
               with a partner–led, relationship–driven approach.
             </p>
 

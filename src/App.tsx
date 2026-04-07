@@ -22,7 +22,7 @@ function App() {
       <Navbar />
 
       {/* Add padding-top so content is not hidden behind fixed navbar */}
-      <div className="">
+      <div className=" mt-20">
         <Routes>
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />

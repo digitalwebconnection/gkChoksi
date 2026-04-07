@@ -97,11 +97,11 @@ const Navbar: React.FC = () => {
   /* ---------------- HELPERS ---------------- */
 
   const baseLink =
-    "text-lg text-black/90 hover:text-black transition-colors"
+    "text-lg text-[#0F3D2E] hover:text-black transition-colors"
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? `${baseLink} border-b border-black`
+      ? `${baseLink} border-b border-black text-[#0F3D2E]`
       : baseLink
 
   /* ---------------- JSX ---------------- */
@@ -111,12 +111,12 @@ const Navbar: React.FC = () => {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 z-50 w-full ${
-        isScrolled ? "bg-white/95 shadow-lg backdrop-blur" : "bg-white"
+      className={`fixed top-0 left-0 text-[#0F3D2E] z-50 w-full ${
+        isScrolled ? "bg-white/95 shadow-lg  backdrop-blur" : "bg-white "
       }`}
     >
       {/* MAIN BAR */}
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
+      <div className="mx-auto max-w-7xl flex items-center text-[#0F3D2E] justify-between px-4 py-4">
 
         {/* LOGO */}
         <NavLink to="/" className="shrink-0">
@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-black text-white px-4 py-4 space-y-2"
+            className="md:hidden bg-black text-[#0F3D2E] px-4 py-4 space-y-2"
           >
             <MobileAbout onNavigate={() => setMobileOpen(false)} />
             <MobileServices onNavigate={() => setMobileOpen(false)} />
