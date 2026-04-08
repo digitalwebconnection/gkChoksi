@@ -6,29 +6,29 @@ const timeline = [
   {
     icon: Landmark,
     chapter: "Chapter 01",
-    period: "1970s",
+    period: "1970",
     title: "Foundations of Trust",
     desc:
       "G.K. Choksi & Co. was established with a clear focus on audit, taxation and assurance, building a reputation for integrity and independence.",
     meta: "Early work with closely-held businesses and emerging enterprises.",
     side: "right",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStO16NrYuJ9RB8WbRJpfelBcZYSMsBWPGNug&s",
+    image: "https://media.licdn.com/dms/image/v2/C4E1BAQFKv8qctnQ2wA/company-background_10000/company-background_10000/0/1584511413839/the_foundation_trust_cover?e=2147483647&v=beta&t=SZftto9KtLSG85xgsdQlk85gJ44D_mUNlhzmJUjmkEI",
   },
   {
     icon: Users,
     chapter: "Chapter 02",
-    period: "1990s–2000s",
+    period: "1990–2000",
     title: "Expanding Our Reach",
     desc:
       "The firm grew its presence across major Indian cities, serving larger corporates, banks and institutions with multi-location audit and advisory services.",
     meta: "New partners, sector specialisation and long-term client relationships.",
     side: "left",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoZttRXBZySZTm-d2BWn91w0vzrHJvwTo7fQ&s",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_hjR0SrpuQ-iN-zF_iY2VsxylGdAdbbm4w&s",
   },
   {
     icon: ShieldCheck,
     chapter: "Chapter 03",
-    period: "2000s–2015",
+    period: "2000–2015",
     title: "Strengthening Governance & Compliance",
     desc:
       "With evolving regulations and global standards, we strengthened our focus on risk, governance, compliance and internal control frameworks.",
@@ -45,7 +45,7 @@ const timeline = [
       "Today, we combine technology, data-driven insights and decades of domain expertise to support clients in a global and digital environment.",
     meta: "Analytics-led audits and cross-border assignments.",
     side: "left",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv9stkjpWqPzOi56-EI2zkU8KbSEudJL_9ew&s",
+    image: "https://www.webintravel.com/wp-content/uploads/2012/11/chart_growth.png",
   },
 ];
 
@@ -137,7 +137,7 @@ const TimelineSection = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="h-[230px] w-full object-cover"
+                      className="h-[230px] w-full object-fill"
                     />
                   </motion.div>
                 </motion.div>

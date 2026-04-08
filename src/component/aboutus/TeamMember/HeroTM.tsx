@@ -22,7 +22,7 @@ const AboutHero = () => {
   }, []);
 
   return (
-    <section className="relative py-10 overflow-hidden">
+    <section className="relative h-125 py-10 overflow-hidden">
 
       {/* BACKGROUND IMAGES */}
       {images.map((img, index) => (
@@ -49,7 +49,7 @@ const AboutHero = () => {
 
         {/* HEADER */}
         <div className="mb-2">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-3  ">
             <span className="h-px w-12 bg-[#6FAF9B]" />
             <span className="text-[#6FAF9B] uppercase tracking-widest text-sm font-semibold">
               About Our Team
@@ -62,78 +62,9 @@ const AboutHero = () => {
           </h1>
         </div>
 
-        {/* CONTENT GRID */}
-        <div className="grid md:grid-cols-12 gap-10 items-start">
+        
 
-          {/* LEFT */}
-          <div className="md:col-span-8 space-y-2 text-lg leading-relaxed text-gray-200">
-            <p>
-              At the heart of the firm is a strong core team of Chartered Accountants,
-              supported by dedicated professional support staffs.
-            </p>
-
-            <p>
-              They are meticulous in execution, thoughtful in analysis, and consistent in delivery.
-              Each member of the team is encouraged to think independently, act responsibly,
-              and contribute meaningfully to the outcome.
-            </p>
-
-            <p>
-              The culture we foster is one of learning and ownership where questions are welcomed,
-              ideas are valued, and excellence is pursued quietly, without compromise.
-            </p>
-
-            <p className="font-medium text-white">
-              Together, they form a team that is not only capable, but dependable.
-            </p>
-          </div>
-
-          {/* RIGHT BOX */}
-          <div className="md:col-span-4">
-            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border-l-4 border-[#C2A96A]">
-
-              <h3 className="text-xl font-semibold text-white mb-4">
-                What Defines Us
-              </h3>
-
-              <ul className="space-y-3 text-sm text-gray-200">
-                {[
-                  "Precision in execution",
-                  "Independent thinking",
-                  "Ownership-driven culture",
-                  "Consistent delivery",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-[#6FAF9B] rounded-full mt-2" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-          </div>
-
-        </div>
-
-        {/* BOTTOM STRIP */}
-        <div className="mt-5 border-t border-white/20 pt-8 flex flex-wrap gap-6 text-sm text-gray-300">
-
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#6FAF9B] rounded-full" />
-            Chartered Expertise
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#1F6F5B] rounded-full" />
-            Structured Thinking
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-[#C2A96A] rounded-full" />
-            Value-driven Culture
-          </div>
-
-        </div>
+      
 
       </div>
     </section>

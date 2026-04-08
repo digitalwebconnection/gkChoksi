@@ -49,6 +49,59 @@ export default function TeamSection() {
         <>
             <AboutHero />
 
+            {/* CONTENT GRID */}
+            <div className="grid pt-20 max-w-7xl mx-auto md:grid-cols-12 gap-10 items-start">
+
+                {/* LEFT */}
+                <div className="md:col-span-8 space-y-2 text-lg leading-relaxed text-[#1c1c1c]">
+                    <p>
+                        At the heart of the firm is a strong core team of Chartered Accountants,
+                        supported by dedicated professional support staffs.
+                    </p>
+
+                    <p>
+                        They are meticulous in execution, thoughtful in analysis, and consistent in delivery.
+                        Each member of the team is encouraged to think independently, act responsibly,
+                        and contribute meaningfully to the outcome.
+                    </p>
+
+                    <p>
+                        The culture we foster is one of learning and ownership where questions are welcomed,
+                        ideas are valued, and excellence is pursued quietly, without compromise.
+                    </p>
+
+                    <p className="font-medium text-white">
+                        Together, they form a team that is not only capable, but dependable.
+                    </p>
+                </div>
+
+                {/* RIGHT BOX */}
+                <div className="md:col-span-4">
+                    <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border-l-4 border-[#C2A96A]">
+
+                        <h3 className="text-xl font-semibold text-black mb-4">
+                            What Defines Us
+                        </h3>
+
+                        <ul className="space-y-3 text-sm text-black">
+                            {[
+                                "Precision in execution",
+                                "Independent thinking",
+                                "Ownership-driven culture",
+                                "Consistent delivery",
+                            ].map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                    <span className="w-2 h-2 bg-[#6FAF9B] rounded-full mt-2" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
             <section className="bg-[#F7F9F8] pb-16 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -75,7 +128,7 @@ export default function TeamSection() {
                     </div>
 
                     {/* GRID */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-15">
                         {filteredTeam.map((member) => (
                             <div
                                 key={member.id}
@@ -86,7 +139,7 @@ export default function TeamSection() {
 
                                     <img
                                         src={member.image}
-                                        className="w-full h-80 object-cover 
+                                        className="w-full h-60 object-fill 
                     grayscale brightness-75 
                     group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110
                     transition duration-500"
@@ -99,18 +152,18 @@ export default function TeamSection() {
                                     </div>
 
                                     {/* OVERLAY */}
-                                    <div className="absolute bottom-0 w-full p-4 
+                                    <div className="absolute  bottom-0 w-full p-4 
                     bg-linear-to-t from-[#0F3D2E]/90 to-transparent text-white">
 
                                         {/* <p className="text-xs uppercase tracking-widest">
                       {member.department}
                     </p> */}
 
-                                        <h3 className="font-semibold text-sm">
+                                        <h3 className="font-semibold hidden group-hover:block text-sm">
                                             {member.name}
                                         </h3>
 
-                                        <p className="text-[#C2A96A] text-xs mt-1">
+                                        <p className="text-[#C2A96A] hidden group-hover:block text-xs mt-1">
                                             {member.role}
                                         </p>
                                     </div>
@@ -168,12 +221,12 @@ export default function TeamSection() {
                                     <div className="bg-[#F7F9F8] flex items-center col-span-12 md:col-span-4 justify-center p-6">
                                         <img
                                             src={activeMember.image}
-                                            className="w-70 h-80 object-cover shadow-xl shadow-black/50"
+                                            className="w-70 h-80 object-fill shadow-xl shadow-black/50"
                                         />
                                     </div>
 
                                     {/* CONTENT */}
-                                    <div className="p-8 col-span-12 md:col-span-8 bg-[#0F3D2E] text-white">
+                                    <div className="p-8 col-span-12 md:col-span-8  bg-[#0F3D2E] text-white">
                                         <p className="text-xs uppercase tracking-widest">
                                             {activeMember.department}
                                         </p>
@@ -192,8 +245,8 @@ export default function TeamSection() {
                                             </span>
                                             <span
                                                 className={`ml-2 px-2 py-1 text-xs rounded ${activeMember.status === "Open"
-                                                        ? "bg-green-100 text-green-700"
-                                                        : "bg-gray-200 text-gray-600"
+                                                    ? "bg-green-100 text-green-700"
+                                                    : "bg-gray-200 text-gray-600"
                                                     }`}
                                             >
                                                 {activeMember.status}

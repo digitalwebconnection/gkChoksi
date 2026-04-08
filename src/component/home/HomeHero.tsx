@@ -36,12 +36,12 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden select-none">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden select-none">
       {/* Background Images (Ken Burns + fade) */}
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1500 ease-out hero-bg
+          className={`absolute inset-0  object-fill transition-opacity duration-1500 ease-out hero-bg
             ${index === currentSlide ? "opacity-100 hero-kenburns" : "opacity-0 pointer-events-none"}
           `}
           style={{

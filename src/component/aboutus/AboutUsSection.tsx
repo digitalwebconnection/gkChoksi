@@ -61,7 +61,7 @@ const AboutUsSection = () => {
     <>
       {/* —— Tag line / 3Ps hero (carousel like home: fade + Ken Burns + swipe) —— */}
       <section
-        className="relative flex flex-col justify-center overflow-hidden py-8 md:py-11 lg:py-12 select-none touch-pan-y"
+        className="relative flex flex-col justify-center overflow-hidden  h-125 py-8 md:py-4 lg:py-5 select-none touch-pan-y"
         style={{ backgroundColor: IVORY }}
         onTouchStart={(e) => {
           touchStartX.current = e.touches[0].clientX
@@ -90,7 +90,7 @@ const AboutUsSection = () => {
           />
         ))}
         <div
-          className="absolute inset-0 z-[1]"
+          className="absolute inset-0 z-1"
           style={{ backgroundColor: `${CHARCOAL}`, opacity: 0.72 }}
         />
 
@@ -161,7 +161,7 @@ const AboutUsSection = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.45 }}
-            className="mx-auto mt-7 max-w-3xl text-center sm:mt-9"
+            className="mx-auto mt-3 max-w-3xl text-center sm:mt-9"
           >
             <p
               className="text-lg font-medium leading-snug sm:text-xl md:text-2xl"
@@ -183,7 +183,7 @@ const AboutUsSection = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.55 }}
-            className="mt-7 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4"
+            className="mt-2 mb-15 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4"
           >
             <Link
               to="/services/management-consulting"
@@ -202,7 +202,7 @@ const AboutUsSection = () => {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-3 sm:bottom-6">
+        <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-3 sm:bottom-6">
           {HERO_IMAGES.map((_, i) => (
             <button
               key={i}
@@ -299,7 +299,7 @@ const AboutUsSection = () => {
                 <img
                   src={aboutImgMain}
                   alt="GKC team collaborating"
-                  className="h-full w-full h-[380px] md:h-[460px] object-cover"
+                  className="w-full h-[380px] md:h-[460px] object-cover"
                 />
               </motion.div>
 

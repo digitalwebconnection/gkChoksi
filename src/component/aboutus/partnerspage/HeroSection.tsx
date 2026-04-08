@@ -22,7 +22,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <section className="relative h-120 overflow-hidden">
+        <section className="relative h-125 overflow-hidden">
 
             {/* BACKGROUND IMAGES */}
             {images.map((img, index) => (
@@ -57,13 +57,7 @@ const HeroSection = () => {
                         Insight That Drives Results.
                     </h1>
 
-                    {/* DESCRIPTION */}
-                    <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                        Our partners combine deep technical expertise with seasoned judgment,
-                        ensuring every engagement is led with personal involvement. With diverse
-                        industry experience, we bring clarity to complexity and guide decisions
-                        with integrity, intent, and responsibility.
-                    </p>
+                   
 
                     {/* BUTTONS */}
                     <div className="flex gap-4 flex-wrap">

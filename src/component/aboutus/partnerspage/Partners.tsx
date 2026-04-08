@@ -9,15 +9,21 @@ const Partners = () => {
     return (
         <>
             <HeroSection />
+            {/* DESCRIPTION */}
 
             <div className="max-w-7xl mx-auto px-6 py-12">
 
-                <h1 className="text-5xl text-[#1C1C1C] font-semibold text-center pb-20">
+                <h1 className="text-5xl text-[#1C1C1C] font-semibold text-center pb-2 ">
                     Our Partners
                 </h1>
-
+                <p className="text-lg pb-20 text-center  leading-relaxed mb-8">
+                    Our partners combine deep technical expertise with seasoned judgment,
+                    ensuring every engagement is led with personal involvement. With diverse
+                    industry experience, we bring clarity to complexity and guide decisions
+                    with integrity, intent, and responsibility.
+                </p>
                 {/* GRID */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-15">
                     {partners.map((partner) => (
                         <div
                             key={partner.id}
@@ -30,7 +36,7 @@ const Partners = () => {
                                 <img
                                     src={partner.image}
                                     alt={partner.name}
-                                    className="w-full h-80 object-cover 
+                                    className="w-full h-60 object-fill 
                   grayscale scale-100
                   group-hover:grayscale-0 
                   transition duration-500"
@@ -41,10 +47,10 @@ const Partners = () => {
                   bg-linear-to-t from-[#0F3D2E] via-[#0F3D2E]/80 to-transparent
                   transition-all duration-300"
                                 >
-                                    <h3 className="font-semibold text-lg group-hover:text-[#C2A96A]">
+                                    <h3 className="font-semibold  hidden group-hover:block text-lg group-hover:text-[#C2A96A]">
                                         {partner.name}
                                     </h3>
-                                    <p className="text-sm text-gray-200">
+                                    <p className="text-sm hidden group-hover:block text-gray-200">
                                         {partner.designation}
                                     </p>
                                 </div>

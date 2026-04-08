@@ -113,7 +113,7 @@ const VisionMissionSection = () => {
 
           <div className="grid gap-8 md:grid-cols-2 md:gap-10">
             <motion.article
-              className="group relative overflow-hidden rounded-2xl border bg-gradient-to-b from-white/95 to-[#F7F9F8] p-8 shadow-sm transition-colors duration-300 md:p-10"
+              className="group relative overflow-hidden rounded-2xl border bg-linear-to-b from-white/95 to-[#F7F9F8] p-8 shadow-sm transition-colors duration-300 md:p-10"
               style={{ borderColor: `${GOLD}55` }}
             >
               {/* Expanding circle hover effect */}
@@ -124,7 +124,7 @@ const VisionMissionSection = () => {
 
               {/* Optional corner arrow */}
               <div className="absolute top-0 right-0 flex items-center justify-center h-8 w-8 overflow-hidden rounded-tr-xl rounded-bl-lg bg-[linear-gradient(135deg,#6FAF9B,#1C1C1C)]">
-                <div className="text-white translate-x-[0.5px] translate-y-[-1px] text-sm font-medium">
+                <div className="text-white translate-x-[0.5px] -translate-y-px text-sm font-medium">
                   →
                 </div>
               </div>
@@ -141,7 +141,7 @@ const VisionMissionSection = () => {
             </motion.article>
 
             <motion.article
-              className="group relative overflow-hidden rounded-2xl border bg-gradient-to-b from-white/95 to-[#F7F9F8] p-8 shadow-sm transition-colors duration-300 md:p-10"
+              className="group relative overflow-hidden rounded-2xl border bg-linear-to-b from-white/95 to-[#F7F9F8] p-8 shadow-sm transition-colors duration-300 md:p-10"
               style={{ borderColor: `${GOLD}55` }}
             >
               <div
@@ -150,7 +150,7 @@ const VisionMissionSection = () => {
               />
 
               <div className="absolute top-0 right-0 flex items-center justify-center h-8 w-8 overflow-hidden rounded-tr-xl rounded-bl-lg bg-[linear-gradient(135deg,#6FAF9B,#1C1C1C)]">
-                <div className="text-white translate-x-[0.5px] translate-y-[-1px] text-sm font-medium">
+                <div className="text-white translate-x-[0.5px] -translate-y-px text-sm font-medium">
                   →
                 </div>
               </div>
@@ -213,9 +213,9 @@ const VisionMissionSection = () => {
               touchX.current = null
             }}
           >
-            <div className="relative z-10 grid min-h-[420px] grid-cols-1 md:min-h-[480px] md:grid-cols-2">
+            <div className="relative z-10 grid min-h-[420px] grid-cols-1 md:h-[380px] md:grid-cols-2">
               {/* Left: image (hero-like smooth crossfade) */}
-              <div className="relative min-h-[250px] md:min-h-[480px] overflow-hidden">
+              <div className="relative min-h-[250px] md:h-[380px] overflow-hidden">
                 {coreValues.map((item, i) => (
                   <div
                     key={item.title}
@@ -235,7 +235,7 @@ const VisionMissionSection = () => {
 
               {/* Right: content */}
               <div
-                className="flex items-center px-6 py-10 sm:px-8 md:px-10 lg:px-12"
+                className="flex  px-6 py-10 sm:px-8 md:px-10 lg:px-12"
                 style={{ backgroundColor: IVORY }}
               >
                 <motion.div

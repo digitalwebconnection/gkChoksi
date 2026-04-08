@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -97,7 +96,7 @@ const AboutSection = () => {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute bottom-5 left-6 space-y-1 text-white">
+              <div className="absolute bottom-5 left-30 space-y-1 text-white">
                 <p className="text-xs uppercase tracking-[0.2em] text-white/70">
                   Client-first approach
                 </p>
@@ -127,7 +126,7 @@ const AboutSection = () => {
             </div>
 
             {/* Stat pill (top-right) */}
-            <div className="absolute -right-14.5 top-22 w-40 rounded-3xl bg-slate-900 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.6)] transition-transform duration-500 ease-out hover:-translate-y-2">
+            <div className="absolute -right-14.5 top-22 w-40 rounded-3xl bg-slate-900 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.6)]  duration-500  hover:-translate-y-2">
               <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-slate-400">
                 Trusted Since
               </p>

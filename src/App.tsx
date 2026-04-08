@@ -5,13 +5,12 @@ import Footer from "./component/Footer";
 import HomeMain from "./component/home/HomeMain";
 import Navbar from "./component/Navbar";
 import AboutUsMain from "./component/aboutus/AboutUsMain";
-// import ManagementMain from "./component/ManagementConsulting/ManagementMain";
 import ContactMain from "./component/Contact/ContactMain";
 import DisclaimerModal from "./component/DisclaimerModal";
 import TeamSection from "./component/aboutus/TeamMember/TeamMain";
 import Partners from "./component/aboutus/partnerspage/Partners";
-import PartnerDetail from "./component/aboutus/partnerspage/PartnerDetail";
-import ManagementMain from "./component/ManagementConsulting/ManagementMain";
+import AlumniPage from "./component/Alumni/AlumniMain";
+
 // import ServicePage from "./component/service/service";
 
 
@@ -28,14 +27,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />
-          <Route path="/services/management-consulting" element={<ManagementMain />} />
           <Route path="/about/team" element={<TeamSection />} />
-           <Route path="/about/partners" element={<Partners />} />
-        <Route path="/about/partners/:id" element={<PartnerDetail />} />
-          {/* <Route path="/services" element={<ServicesPage />} /> */}
-          {/* <Route path="/news" element={<NewsPage />} /> */}
-          {/* <Route path="/careers" element={<CareersPage />} /> */}
+          <Route path="/about/partners" element={<Partners />} />
           <Route path="/contact" element={<ContactMain />} />
+          <Route path="/alumni" element={<AlumniPage />} />
         </Routes>
       </div>
 

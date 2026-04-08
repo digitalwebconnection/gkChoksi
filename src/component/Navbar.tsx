@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <NavLink to="/Alumni" className={getLinkClass}>Alumni</NavLink>
+          <NavLink to="/alumni" className={getLinkClass}>Alumni</NavLink>
           <NavLink to="/careers" className={getLinkClass}>Careers</NavLink>
           <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
         </div>
@@ -273,9 +273,6 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
       </div>
       {open && (
         <div className="ml-4">
-          <NavLink to="/about" onClick={onNavigate} className="block py-2">
-            Company Overview
-          </NavLink>
           <NavLink to="/about/team" onClick={onNavigate} className="block py-2">
             Team Members
           </NavLink>

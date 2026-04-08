@@ -47,7 +47,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
                 <img
                   src={partner.image}
                   alt={partner.name}
-                  className="w-80 h-80 shadow-xl object-cover mx-auto   "
+                  className="w-80 h-80 shadow-xl object-fill mx-auto   "
                 />
 
                 <h2 className="text-xl font-bold mt-4 text-[#0F3D2E]">
