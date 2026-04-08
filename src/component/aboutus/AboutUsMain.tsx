@@ -4,8 +4,8 @@ import VisionMissionSection from "./VisionMissionSection"
 const AboutUsMain = () => {
   return (
     <>
-      <VisionMissionSection/>
-      <AboutUsSection/>
+      <AboutUsSection />
+      <VisionMissionSection />
     </>
   )
 }

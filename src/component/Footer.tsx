@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
@@ -7,92 +9,110 @@ const fadeInUp = {
 };
 
 const Footer = () => {
+  const quickLinks = [
+    { label: "About Us", to: "/about" },
+    { label: "Services", to: "/services/management-consulting" },
+    { label: "Industries", to: "/about" },
+    { label: "Team", to: "/about/team" },
+    { label: "Insights", to: "/blog" },
+    { label: "Careers", to: "/careers" },
+    { label: "Contact Us", to: "/contact" },
+  ];
+
   return (
     <motion.footer
       id="contact"
-      className="relative mt-10 text-slate-100"
+      className="bg-[#0F3D2E] text-slate-100"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Top gradient line */}
-      <div className="h-[3px] w-full bg-linear-to-r from-emerald-800  to-emerald-600" />
-
-      {/* Background image + dark overlay */}
-      <div
-        className="relative"
-        style={{
-          backgroundImage: `url("https://img.freepik.com/premium-photo/ceo-office-interior-design-brown-color-with-bookshelves-modern-style-3d-rendering_761385-634.jpg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-[#0F3D2E]/5" />
-
-        {/* Subtle radial glow behind card */}
-        <div className="pointer-events-none absolute inset-0 opacity-40">
-          <div className="absolute inset-x-0 bottom-0 h-64 bg-linear-to-t from-emerald-500/20 via-transparent to-transparent blur-3xl" />
-        </div>
-
-        {/* Content card */}
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-0 py-5">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 rounded-3xl border border-white/30 bg-black/40 px-6 py-5 text-center backdrop-blur-md shadow-[0_18px_50px_rgba(0,0,0,0.7)] sm:px-0 sm:py-10">
-            {/* Small label */}
-            <span className="inline-flex items-center rounded-full border border-emerald-300/50 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.25em] text-emerald-200">
-              Chartered Accountants
-            </span>
-
-            {/* Company Name */}
-            <h3 className="text-2xl sm:text-3xl font-semibold font-serif tracking-wide">
-              G.K. Choksi &amp; Co.
-            </h3>
-
-            {/* Tagline */}
-            <p className="max-w-xl text-sm sm:text-base text-slate-200/85 leading-relaxed">
-              Strategic financial clarity and confidence for businesses across India –
-              with a partner–led, relationship–driven approach.
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-x-20">
+          {/* Left separate div */}
+          <div className="text-center md:text-left">
+            <img
+              src={logo}
+              alt="G.K. Choksi & Co."
+              className="mx-auto h-11 w-auto md:mx-0 sm:h-12"
+            />
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-300 md:mt-5">
+              Strategic financial clarity and confidence for businesses across India
+              - with a partner-led, relationship-driven approach.
             </p>
+          </div>
 
-            {/* Locations strip (optional, but looks premium) */}
-            <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-slate-400">
-              Mumbai &nbsp;·&nbsp; Ahmedabad &nbsp;·&nbsp; Delhi NCR &nbsp;·&nbsp;  Petlad, Gujarat
-            </p>
-
-            {/* Social icons */}
-            <div className="mt-0 flex gap-10">
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-500/70 bg-black/40 text-slate-200 transition transform hover:-translate-y-0.5 hover:scale-105 hover:border-emerald-400 hover:text-emerald-300 hover:bg-black/70"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-500/70 bg-black/40 text-slate-200 transition transform hover:-translate-y-0.5 hover:scale-105 hover:border-emerald-400 hover:text-emerald-300 hover:bg-black/70"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-500/70 bg-black/40 text-slate-200 transition transform hover:-translate-y-0.5 hover:scale-105 hover:border-emerald-400 hover:text-emerald-300 hover:bg-black/70"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
+          {/* Right separate div */}
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Quick links */}
+            <div className="text-center md:text-left">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+                Quick Links
+              </h4>
+              <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-1">
+                {quickLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      to={item.to}
+                      className="text-sm text-slate-300 transition hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Bottom line */}
-            <div className="mt-0 w-full border-t border-white/20 pt-4">
-              <p className="text-xs sm:text-sm text-slate-400">
-                &copy; {new Date().getFullYear()} G.K. Choksi &amp; Co. All rights reserved.
-              </p>
+            {/* Locations */}
+            <div className="text-center md:text-left">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+                Locations
+              </h4>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                <li>Mumbai</li>
+                <li>Ahmedabad</li>
+                <li>Delhi NCR</li>
+                <li>Petlad, Gujarat</li>
+              </ul>
+            </div>
+
+            {/* Social media */}
+            <div className="text-center md:text-left">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+                Social Media
+              </h4>
+              <div className="mt-4 flex flex-col gap-3">
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="mt-10 border-t border-slate-800 pt-6">
+          <p className="text-xs text-slate-400 sm:text-sm">
+            © 2026 G.K. Choksi &amp; Co. All rights reserved.
+          </p>
         </div>
       </div>
     </motion.footer>

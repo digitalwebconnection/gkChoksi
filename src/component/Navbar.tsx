@@ -6,26 +6,10 @@ import logo from "../assets/logo.png"
 
 /* ---------------- TYPES ---------------- */
 
-interface ServiceItem {
-  label: string
-  slug: string
-}
-
 interface NavItemProps {
   to: string
   children: React.ReactNode
 }
-
-/* ---------------- DATA ---------------- */
-
-const SERVICES: ServiceItem[] = [
-  { label: "Management Consulting", slug: "management-consulting" },
-  { label: "Business Advisory", slug: "business-advisory" },
-  { label: "Audit & Assurance", slug: "audit-assurance" },
-  { label: "Taxation", slug: "taxation" },
-  { label: "Regulatory", slug: "regulatory" },
-  { label: "M&A", slug: "m-and-a" },
-]
 
 /* ---------------- COMPONENT ---------------- */
 
@@ -34,11 +18,9 @@ const Navbar: React.FC = () => {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
 
-  const [servicesOpen, setServicesOpen] = useState(false)
   const [aboutOpen, setAboutOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const servicesRef = useRef<HTMLDivElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
 
   const location = useLocation()
@@ -61,9 +43,6 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
-        setServicesOpen(false)
-      }
       if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) {
         setAboutOpen(false)
       }
@@ -77,7 +56,6 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setServicesOpen(false)
         setAboutOpen(false)
         setMobileOpen(false)
       }
@@ -89,7 +67,6 @@ const Navbar: React.FC = () => {
   /* ---------------- ROUTE CHANGE CLOSE ---------------- */
 
   useEffect(() => {
-    setServicesOpen(false)
     setAboutOpen(false)
     setMobileOpen(false)
   }, [location.pathname])
@@ -111,9 +88,8 @@ const Navbar: React.FC = () => {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 text-[#0F3D2E] z-50 w-full ${
-        isScrolled ? "bg-white/95 shadow-lg  backdrop-blur" : "bg-white "
-      }`}
+      className={`fixed top-0 left-0 text-[#0F3D2E] z-50 w-full ${isScrolled ? "bg-white/95 shadow-lg  backdrop-blur" : "bg-white "
+        }`}
     >
       {/* MAIN BAR */}
       <div className="mx-auto max-w-7xl flex items-center text-[#0F3D2E] justify-between px-4 py-4">
@@ -128,21 +104,33 @@ const Navbar: React.FC = () => {
 
           {/* ABOUT */}
           <div className="relative" ref={aboutRef}>
-            <button
-              onClick={() => {
-                setAboutOpen((p) => !p)
-                setServicesOpen(false)
-              }}
-              className="flex items-center gap-2 text-lg focus:outline-none"
-            >
-              About Us
-              <Chevron open={aboutOpen} />
-            </button>
+            <div className="flex items-center gap-2 text-lg">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? `${baseLink} border-b border-black text-[#0F3D2E]`
+                    : baseLink
+                }
+              >
+                About Us
+              </NavLink>
+              <button
+                type="button"
+                onClick={() => {
+                  setAboutOpen((p) => !p)
+                }}
+                className="flex items-center focus:outline-none"
+                aria-expanded={aboutOpen}
+                aria-label="About submenu"
+              >
+                <Chevron open={aboutOpen} />
+              </button>
+            </div>
 
             <AnimatePresence>
               {aboutOpen && (
                 <Dropdown>
-                  <NavItem to="/about">Company Overview</NavItem>
                   <NavItem to="/about/team">Team Members</NavItem>
                   <NavItem to="/about/partners">Partners</NavItem>
                 </Dropdown>
@@ -150,6 +138,7 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
+<<<<<<< HEAD
           {/* SERVICES */}
           <div className="relative" ref={servicesRef}>
             <button
@@ -177,6 +166,10 @@ const Navbar: React.FC = () => {
           </div>
 
           <NavLink to="/Alumni" className={getLinkClass}>Alumni</NavLink>
+=======
+          <NavLink to="/services" className={getLinkClass}>Services</NavLink>
+          <NavLink to="/blog" className={getLinkClass}>Blog</NavLink>
+>>>>>>> dev2-work
           <NavLink to="/careers" className={getLinkClass}>Careers</NavLink>
           <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
         </div>
@@ -261,12 +254,24 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="py-2 w-full text-left font-medium"
-      >
-        About Us
-      </button>
+      <div className="flex items-center gap-2 w-full">
+        <NavLink
+          to="/about"
+          onClick={onNavigate}
+          className="py-2 flex-1 text-left font-medium"
+        >
+          About Us
+        </NavLink>
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          className="py-2 px-2"
+          aria-expanded={open}
+          aria-label="About submenu"
+        >
+          <Chevron open={open} />
+        </button>
+      </div>
       {open && (
         <div className="ml-4">
           <NavLink to="/about" onClick={onNavigate} className="block py-2">
@@ -285,31 +290,10 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
 }
 
 const MobileServices = ({ onNavigate }: { onNavigate: () => void }) => {
-  const [open, setOpen] = useState(false)
-
   return (
-    <>
-      <button
-        onClick={() => setOpen(!open)}
-        className="py-2 w-full text-left font-medium"
-      >
-        Services
-      </button>
-      {open && (
-        <div className="ml-4">
-          {SERVICES.map((s) => (
-            <NavLink
-              key={s.slug}
-              to={`/services/${s.slug}`}
-              onClick={onNavigate}
-              className="block py-2"
-            >
-              {s.label}
-            </NavLink>
-          ))}
-        </div>
-      )}
-    </>
+    <NavLink to="/services" onClick={onNavigate} className="block py-2 font-medium">
+      Services
+    </NavLink>
   )
 }
 
