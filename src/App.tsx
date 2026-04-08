@@ -11,7 +11,8 @@ import DisclaimerModal from "./component/DisclaimerModal";
 import TeamSection from "./component/aboutus/TeamMember/TeamMain";
 import Partners from "./component/aboutus/partnerspage/Partners";
 import PartnerDetail from "./component/aboutus/partnerspage/PartnerDetail";
-import ServicePage from "./component/service/service";
+import ManagementMain from "./component/ManagementConsulting/ManagementMain";
+// import ServicePage from "./component/service/service";
 
 
 

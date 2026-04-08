@@ -5,14 +5,16 @@ const CHARCOAL = "#1C1C1C"
 const ACCENT = "#6FAF9B"
 const GOLD = "#C2A96A"
 
-type Service = {
+export type Service = {
+  slug: string
   title: string
   subtitle: string
   paragraphs: string[]
 }
 
-const SERVICES: Service[] = [
+export const SERVICES: Service[] = [
   {
+    slug: "management-consultancy",
     title: "Management Consultancy",
     subtitle: "Strategy, made executable.",
     paragraphs: [
@@ -21,6 +23,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "business-advisory",
     title: "Business Advisory",
     subtitle: "Clarity that moves business forward",
     paragraphs: [
@@ -29,6 +32,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "audit-assurance",
     title: "Audit & Assurance",
     subtitle: "Confidence & Reliability for Stakeholders",
     paragraphs: [
@@ -38,6 +42,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "taxation",
     title: "Taxation",
     subtitle: "Structured for precisional advantage",
     paragraphs: [
@@ -46,6 +51,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "regulatory",
     title: "Regulatory",
     subtitle: "Complexity, made navigable",
     paragraphs: [
@@ -54,6 +60,7 @@ const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "mergers-acquisition",
     title: "Mergers & Acquisition",
     subtitle: "Every deal, thoughtfully shaped",
     paragraphs: [
