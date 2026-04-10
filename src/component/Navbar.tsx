@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { NavLink, useLocation } from "react-router-dom"
 import logo from "../assets/logo.png"
-import { SERVICES } from "./service/service"
 
 /* ---------------- TYPES ---------------- */
 
@@ -23,10 +22,8 @@ const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const aboutRef = useRef<HTMLDivElement>(null)
-  const servicesRef = useRef<HTMLDivElement>(null)
 
   const location = useLocation()
-  const [servicesOpen, setServicesOpen] = useState(false)
 
   /* ---------------- SCROLL HIDE / SHOW ---------------- */
 
@@ -122,7 +119,6 @@ const Navbar: React.FC = () => {
                 type="button"
                 onClick={() => {
                   setAboutOpen((p) => !p)
-                  setServicesOpen(false)
                 }}
                 className="flex items-center focus:outline-none"
                 aria-expanded={aboutOpen}
@@ -142,33 +138,15 @@ const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          {/* SERVICES */}
-          <div className="relative" ref={servicesRef}>
-            <button
-              onClick={() => {
-                setServicesOpen((p) => !p)
-                setAboutOpen(false)
-              }}
-              className="flex items-center gap-2 text-lg focus:outline-none"
-            >
-              Services
-              <Chevron open={servicesOpen} />
-            </button>
+          <NavLink to="/services" className={getLinkClass}>
+            Services
+          </NavLink>
 
-            <AnimatePresence>
-              {servicesOpen && (
-                <Dropdown>
-                  {SERVICES.map((s) => (
-                    <NavItem key={s.slug} to={`/services/${s.slug}`}>
-                      {s.title}
-                    </NavItem>
-                  ))}
-                </Dropdown>
-              )}
-            </AnimatePresence>
-          </div>
+          <NavLink to="/industry" className={getLinkClass}>
+            Industry
+          </NavLink>
 
-          <NavLink to="/alumni" className={getLinkClass}>Alumni</NavLink>
+          <NavLink to="/Alumni" className={getLinkClass}>Alumni</NavLink>
           <NavLink to="/careers" className={getLinkClass}>Careers</NavLink>
           <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
         </div>
@@ -194,6 +172,7 @@ const Navbar: React.FC = () => {
           >
             <MobileAbout onNavigate={() => setMobileOpen(false)} />
             <MobileServices onNavigate={() => setMobileOpen(false)} />
+            <NavLink to="/industry" onClick={() => setMobileOpen(false)} className="block py-2 font-medium">Industry</NavLink>
 
             <NavLink to="/Alumni" className="block py-2">Alumni</NavLink>
             <NavLink to="/careers" className="block py-2">Careers</NavLink>
@@ -273,6 +252,9 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
       </div>
       {open && (
         <div className="ml-4">
+          <NavLink to="/about" onClick={onNavigate} className="block py-2">
+            Company Overview
+          </NavLink>
           <NavLink to="/about/team" onClick={onNavigate} className="block py-2">
             Team Members
           </NavLink>
@@ -286,43 +268,10 @@ const MobileAbout = ({ onNavigate }: { onNavigate: () => void }) => {
 }
 
 const MobileServices = ({ onNavigate }: { onNavigate: () => void }) => {
-  const [open, setOpen] = useState(false)
-
   return (
-    <>
-      <div className="flex items-center gap-2 w-full">
-        <NavLink
-          to="/services"
-          onClick={onNavigate}
-          className="py-2 flex-1 text-left font-medium"
-        >
-          Services
-        </NavLink>
-        <button
-          type="button"
-          onClick={() => setOpen(!open)}
-          className="py-2 px-2"
-          aria-expanded={open}
-          aria-label="Services submenu"
-        >
-          <Chevron open={open} />
-        </button>
-      </div>
-      {open && (
-        <div className="ml-4">
-          {SERVICES.map((s) => (
-            <NavLink
-              key={s.slug}
-              to={`/services/${s.slug}`}
-              onClick={onNavigate}
-              className="block py-2"
-            >
-              {s.title}
-            </NavLink>
-          ))}
-        </div>
-      )}
-    </>
+    <NavLink to="/services" onClick={onNavigate} className="block py-2 font-medium">
+      Services
+    </NavLink>
   )
 }
 

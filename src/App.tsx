@@ -10,6 +10,9 @@ import DisclaimerModal from "./component/DisclaimerModal";
 import TeamSection from "./component/aboutus/TeamMember/TeamMain";
 import Partners from "./component/aboutus/partnerspage/Partners";
 import AlumniPage from "./component/Alumni/AlumniMain";
+import CareersPage from "./component/career/careers";
+import IndustryPage from "./component/industry/industry";
+import ServicePage from "./component/service/service";
 
 // import ServicePage from "./component/service/service";
 
@@ -28,7 +31,12 @@ function App() {
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />
           <Route path="/about/team" element={<TeamSection />} />
+          <Route path="/services" element={<ServicePage />} />
+         
           <Route path="/about/partners" element={<Partners />} />
+           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/industry" element={<IndustryPage />} />
+        
           <Route path="/contact" element={<ContactMain />} />
           <Route path="/alumni" element={<AlumniPage />} />
         </Routes>
