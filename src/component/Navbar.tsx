@@ -142,6 +142,10 @@ const Navbar: React.FC = () => {
             Services
           </NavLink>
 
+          <NavLink to="/insights" className={getLinkClass}>
+            Insights
+          </NavLink>
+
           <NavLink to="/industry" className={getLinkClass}>
             Industry
           </NavLink>
@@ -172,6 +176,7 @@ const Navbar: React.FC = () => {
           >
             <MobileAbout onNavigate={() => setMobileOpen(false)} />
             <MobileServices onNavigate={() => setMobileOpen(false)} />
+            <NavLink to="/insights" onClick={() => setMobileOpen(false)} className="block py-2 font-medium">Insights</NavLink>
             <NavLink to="/industry" onClick={() => setMobileOpen(false)} className="block py-2 font-medium">Industry</NavLink>
 
             <NavLink to="/Alumni" className="block py-2">Alumni</NavLink>

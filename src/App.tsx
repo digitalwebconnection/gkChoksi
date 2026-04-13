@@ -9,6 +9,7 @@ import ContactMain from "./component/Contact/ContactMain";
 import DisclaimerModal from "./component/DisclaimerModal";
 import TeamSection from "./component/aboutus/TeamMember/TeamMain";
 import Partners from "./component/aboutus/partnerspage/Partners";
+import InsightsMain from "./component/Insights/Insightsmain";
 import AlumniPage from "./component/Alumni/AlumniMain";
 import CareersPage from "./component/career/careers";
 import IndustryPage from "./component/industry/industry";
@@ -32,7 +33,7 @@ function App() {
           <Route path="/about" element={<AboutUsMain />} />
           <Route path="/about/team" element={<TeamSection />} />
           <Route path="/services" element={<ServicePage />} />
-         
+          <Route path="/insights" element={<InsightsMain />} />
           <Route path="/about/partners" element={<Partners />} />
            <Route path="/careers" element={<CareersPage />} />
           <Route path="/industry" element={<IndustryPage />} />
