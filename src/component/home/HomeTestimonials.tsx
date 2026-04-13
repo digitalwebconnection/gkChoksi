@@ -10,7 +10,7 @@ const HomeTestimonials = () => {
   return (
     <>
       <motion.section
-        className="timeline-section max-w-7xl mx-auto py-10 bg-[#F7F9F8]"
+        className="timeline-section max-w-7xl mx-auto py-10 "
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -117,7 +117,7 @@ const HomeTestimonials = () => {
 
         </div>
 
-        
+
       </motion.section>
     </>
   );
