@@ -176,7 +176,7 @@ const CareersPage = () => {
     <div className="bg-white min-h-screen selection:bg-[#6FAF9B]/30" style={{ color: COLORS.CHARCOAL }}>
       
       {/* Optimized Hero Section */}
-      <section className="relative h-125 flex items-center justify-center overflow-hidden bg-[#1C1C1C]">
+      <section className="relative h-150 flex items-center justify-center overflow-hidden bg-[#1C1C1C]">
         <div 
           className="absolute inset-0 z-0 opacity-60 scale-105"
           style={{

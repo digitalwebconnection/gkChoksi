@@ -1,18 +1,44 @@
-// StatsSection.jsx
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+import {
+  HiOutlineCalendarDays,
+  HiOutlineBuildingOffice2,
+  HiOutlineGlobeAlt,
+  HiOutlineClipboardDocumentCheck,
+} from "react-icons/hi2";
+
 const stats = [
-  { label: "Years of Experience", value: 65, suffix: "+" },
-  { label: "Listed Companies Served", value: 120, suffix: "+" },
-  { label: "Global Offices", value: 10 },
-  { label: "Assignments Completed", value: 2500, suffix: "+" },
+  {
+    label: "Years of Experience",
+    value: 65,
+    suffix: "+",
+    icon: HiOutlineCalendarDays,
+  },
+  {
+    label: "Listed Companies Served",
+    value: 120,
+    suffix: "+",
+    icon: HiOutlineBuildingOffice2,
+  },
+  {
+    label: "Global Offices",
+    value: 10,
+    icon: HiOutlineGlobeAlt,
+  },
+  {
+    label: "Assignments Completed",
+    value: 2500,
+    suffix: "+",
+    icon: HiOutlineClipboardDocumentCheck,
+  },
 ];
+
 interface CounterProps {
   value: number;
   suffix?: string;
 }
-// Lightweight counter (no spring, no motion values)
+
 const Counter = ({ value, suffix = "" }: CounterProps) => {
   const ref = useRef(null);
   const [count, setCount] = useState(0);
@@ -59,43 +85,60 @@ const Counter = ({ value, suffix = "" }: CounterProps) => {
 
 const StatsSection = () => {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-[#F7F9F8] py-14">
       <div className="mx-auto max-w-7xl px-4">
+
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
             By the Numbers
           </p>
-          <h2 className="mt-2 text-3xl font-semibold text-slate-900 sm:text-4xl">
+
+          <h2 className="mt-2 text-3xl font-semibold text-[#1C1C1C] sm:text-4xl">
             A legacy of trust and performance
           </h2>
-          <p className="mt-3 text-sm text-slate-600">
+
+          <p className="mt-3 text-sm text-[#1F6F5B]">
             Decades of experience delivering assurance and advisory services
             with uncompromising standards.
           </p>
         </div>
 
         {/* Stats */}
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, idx) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              custom={idx} whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ duration: 0.4, delay: idx * 0.06 }}
-              className="group relative overflow-hidden rounded-2xl border border-slate-600/30 bg-white/90 px-6 py-6 text-center shadow-xl shadow-black/30 hover:shadow-black/60 duration-300 hover:shadow-2xl"
-            >
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-emerald-600 opacity-70" /> {/* subtle badge */} <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white transition-colors"> ● </div>
-              <div className="mb-1 text-3xl font-semibold text-slate-900">
-                <Counter value={stat.value} suffix={stat.suffix} />
-              </div>
-              <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, idx) => {
+            const Icon = stat.icon;
+
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8, scale: 1.03 }}
+                transition={{ duration: 0.4, delay: idx * 0.06 }}
+                className="group relative overflow-hidden rounded-2xl border border-[#6FAF9B]/20 bg-white px-6 py-7 text-center shadow-[0_20px_60px_rgba(15,61,46,0.15)] transition-all duration-300 hover:shadow-[0_25px_80px_rgba(15,61,46,0.25)]"
+              >
+                {/* Top Accent */}
+                <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]" />
+
+                {/* Icon Badge 🔥 */}
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#6FAF9B]/15 text-[#0F3D2E] group-hover:bg-[#0F3D2E] group-hover:text-white transition-all">
+                  <Icon size={22} />
+                </div>
+
+                {/* Number */}
+                <div className="mb-1 text-3xl font-bold text-[#1C1C1C]">
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                </div>
+
+                {/* Label */}
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#1F6F5B]">
+                  {stat.label}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

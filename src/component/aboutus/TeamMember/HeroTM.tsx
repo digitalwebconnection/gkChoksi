@@ -22,7 +22,7 @@ const AboutHero = () => {
   }, []);
 
   return (
-    <section className="relative h-125 py-10 overflow-hidden">
+    <section className="relative h-150 py-10 overflow-hidden">
 
       {/* BACKGROUND IMAGES */}
       {images.map((img, index) => (
@@ -45,11 +45,11 @@ const AboutHero = () => {
 
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-white">
+      <div className="relative z-10 max-w-7xl mx-auto text-center flex flex-col items-center py-35 px-6 text-white">
 
         {/* HEADER */}
         <div className="mb-2">
-          <div className="flex items-center gap-3 mb-3  ">
+          <div className="flex items-center justify-center text-center gap-3 mb-3  ">
             <span className="h-px w-12 bg-[#6FAF9B]" />
             <span className="text-[#6FAF9B] uppercase tracking-widest text-sm font-semibold">
               About Our Team

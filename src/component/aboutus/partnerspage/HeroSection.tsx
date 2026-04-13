@@ -22,7 +22,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <section className="relative h-125 overflow-hidden">
+        <section className="relative h-150 overflow-hidden">
 
             {/* BACKGROUND IMAGES */}
             {images.map((img, index) => (
@@ -43,8 +43,8 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-[#000000]/80"></div>
 
             {/* CONTENT */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
-                <div className="max-w-3xl text-white">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  text-center items-center">
+                <div className="max-w-3xl mx-auto  justify-center  text-white">
 
                     {/* LABEL */}
                     <p className="uppercase tracking-widest text-[#6FAF9B] text-sm mb-4">
@@ -60,7 +60,7 @@ const HeroSection = () => {
                    
 
                     {/* BUTTONS */}
-                    <div className="flex gap-4 flex-wrap">
+                    <div className="flex gap-4 justify-center flex-wrap">
 
                         <button className="bg-[#6FAF9B] text-[#1C1C1C] px-6 py-3 rounded-full font-semibold hover:bg-[#C2A96A] transition">
                             Meet Our Team

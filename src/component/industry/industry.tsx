@@ -1,64 +1,91 @@
 import { motion } from "framer-motion"
 import industryHero from "../../assets/24.jpeg"
 import {
-    HiOutlineSparkles,
     HiOutlineBeaker,
     HiOutlineAcademicCap,
     HiOutlineFire,
-    HiOutlineBuildingOffice2,
     HiOutlineTruck,
     HiOutlineHeart,
     HiOutlineUserGroup,
     HiOutlineHomeModern,
     HiOutlineBolt,
-    HiOutlineSquares2X2,
     HiOutlineChartBar,
     HiOutlineSignal,
     HiOutlineCube,
     HiOutlineFilm,
     HiOutlineCpuChip,
     HiOutlineWrenchScrewdriver,
-    HiOutlineGlobeAlt,
     HiOutlineBanknotes,
     HiOutlineScale,
-    HiOutlineMap,
+    HiOutlineSquares2X2,
+    HiOutlineBuildingOffice2,
 } from "react-icons/hi2"
 import { HiOutlineTrendingUp } from "react-icons/hi"
+import { GiDiamondRing, GiMining } from "react-icons/gi"
+import { FaIndustry } from "react-icons/fa6"
 const IVORY = "#F7F9F8"
 const CHARCOAL = "#1C1C1C"
 const ACCENT = "#6FAF9B"
 const GOLD = "#C2A96A"
 const CATEGORIES = [
-    { title: "Jewellery", icon: HiOutlineSparkles, desc: "Providing precision-led advisory for the high-value luxury and gems sector." },
-    { title: "Pharmaceutical", icon: HiOutlineBeaker, desc: "Navigating complex regulatory landscapes for the life sciences industry." },
-    { title: "Education", icon: HiOutlineAcademicCap, desc: "Supporting institutional growth and compliance in the academic sector." },
-    { title: "Petroleum", icon: HiOutlineFire, desc: "Strategic depth for energy and natural resource management." },
-    { title: "Industrial & Construction", icon: HiOutlineBuildingOffice2, desc: "Building strong financial foundations for infrastructure and heavy industry." },
-    { title: "Auto Ancillary", icon: HiOutlineTruck, desc: "Driving efficiency in the automotive supply chain and manufacturing." },
-    { title: "Healthcare", icon: HiOutlineHeart, desc: "Reliable guidance for healthcare providers and medical institutions." },
-    { title: "Recruitment", icon: HiOutlineUserGroup, desc: "Professional services for the human capital and staffing industry." },
-    { title: "Hospitality", icon: HiOutlineHomeModern, desc: "Optimizing operations and growth for the travel and leisure sector." },
-    { title: "Power", icon: HiOutlineBolt, desc: "Insight-driven decision support for the utility and energy grid." },
-    { title: "Textiles", icon: HiOutlineSquares2X2, desc: "Traditional values meeting modern commerce in the textile industry." },
-    { title: "Real Estate", icon: HiOutlineBuildingOffice2, desc: "Structural clarity for property development and management." },
-    { title: "Stock", icon: HiOutlineChartBar, desc: "Expert advisory for equity markets and financial instruments." },
-    { title: "Growth", icon: HiOutlineTrendingUp, desc: "Scaling strategies for emerging businesses and startups." },
-    { title: "Telecom", icon: HiOutlineSignal, desc: "Connecting digital foresight with regulatory compliance." },
-    { title: "Logistics", icon: HiOutlineCube, desc: "Streamlining complex supply chains and global distribution." },
-    { title: "Media", icon: HiOutlineFilm, desc: "Strategic advisory for the evolving broadcasting and digital media world." },
-    { title: "Technology", icon: HiOutlineCpuChip, desc: "Future-ready guidance for IT and innovative tech enterprises." },
-    { title: "Engineering", icon: HiOutlineWrenchScrewdriver, desc: "Precision advisory for complex engineering and R&D operations." },
-    { title: "Mining", icon: HiOutlineGlobeAlt, desc: "Resource management and compliance for the extractive industries." },
-    { title: "Banks & Financial Services", icon: HiOutlineBanknotes, desc: "Institutional-grade assurance for the financial heart of the economy." },
-    { title: "Legal", icon: HiOutlineScale, desc: "Supporting legal practices with specialized financial and tax advisory." },
-    { title: "Infrastructure", icon: HiOutlineMap, desc: "Long-term strategic support for nation-building projects." },
-]
+  { title: "Jewellery", icon: GiDiamondRing, desc: "Providing precision-led advisory for the high-value luxury and gems sector." },
+
+  { title: "Pharmaceutical", icon: HiOutlineBeaker, desc: "Navigating complex regulatory landscapes for the life sciences industry." },
+
+  { title: "Education", icon: HiOutlineAcademicCap, desc: "Supporting institutional growth and compliance in the academic sector." },
+
+  { title: "Petroleum", icon: HiOutlineFire, desc: "Strategic depth for energy and natural resource management." },
+
+  // 🔄 CHANGED (Better industrial feel)
+  { title: "Industrial & Construction", icon: FaIndustry, desc: "Building strong financial foundations for infrastructure and heavy industry." },
+
+  { title: "Auto Ancillary", icon: HiOutlineTruck, desc: "Driving efficiency in the automotive supply chain and manufacturing." },
+
+  { title: "Healthcare", icon: HiOutlineHeart, desc: "Reliable guidance for healthcare providers and medical institutions." },
+
+  { title: "Recruitment", icon: HiOutlineUserGroup, desc: "Professional services for the human capital and staffing industry." },
+
+  // 🔄 OPTIONAL IMPROVEMENT
+  { title: "Hospitality", icon: HiOutlineHomeModern, desc: "Optimizing operations and growth for the travel and leisure sector." },
+  // (If you want better: FaHotel)
+
+  { title: "Power", icon: HiOutlineBolt, desc: "Insight-driven decision support for the utility and energy grid." },
+
+  // 🔄 CHANGED (Much more relevant)
+  { title: "Textiles", icon: HiOutlineSquares2X2, desc: "Traditional values meeting modern commerce in the textile industry." },
+
+  // ⚠️ DUPLICATE FIX (avoid same icon as Industrial)
+  { title: "Real Estate", icon: HiOutlineHomeModern, desc: "Structural clarity for property development and management." },
+
+  { title: "Stock", icon: HiOutlineChartBar, desc: "Expert advisory for equity markets and financial instruments." },
+
+  { title: "Growth", icon: HiOutlineTrendingUp, desc: "Scaling strategies for emerging businesses and startups." },
+
+  { title: "Telecom", icon: HiOutlineSignal, desc: "Connecting digital foresight with regulatory compliance." },
+
+  { title: "Logistics", icon: HiOutlineCube, desc: "Streamlining complex supply chains and global distribution." },
+
+  { title: "Media", icon: HiOutlineFilm, desc: "Strategic advisory for the evolving broadcasting and digital media world." },
+
+  { title: "Technology", icon: HiOutlineCpuChip, desc: "Future-ready guidance for IT and innovative tech enterprises." },
+
+  { title: "Engineering", icon: HiOutlineWrenchScrewdriver, desc: "Precision advisory for complex engineering and R&D operations." },
+
+  // ✅ GOOD (keep this)
+  { title: "Mining", icon: GiMining, desc: "Resource management and compliance for the extractive industries." },
+
+  { title: "Banks & Financial Services", icon: HiOutlineBanknotes, desc: "Institutional-grade assurance for the financial heart of the economy." },
+
+  { title: "Legal", icon: HiOutlineScale, desc: "Supporting legal practices with specialized financial and tax advisory." },
+
+  { title: "Infrastructure", icon: HiOutlineBuildingOffice2, desc: "Long-term strategic support for nation-building projects." },
+];
 
 const IndustryPage = () => {
     return (
         <div className="bg-white" style={{ color: CHARCOAL }}>
             {/* Hero Section */}
-            <section className="relative h-[60vh] min-h-[450px] flex items-center justify-center overflow-hidden">
+            <section className="relative h-150 flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 z-0 bg-fixed"
                     style={{

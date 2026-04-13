@@ -90,7 +90,7 @@ const ServicePage = () => {
     <>
       {/* Full-bleed hero (match About page sizing/feel) */}
       <section
-        className="relative h-125 flex items-center justify-center overflow-hidden py-16 md:py-20"
+        className="relative h-150 flex items-center justify-center overflow-hidden py-16 md:py-20"
         style={{ backgroundColor: "#F7F9F8" }}
       >
         {/* Background */}

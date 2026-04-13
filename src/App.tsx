@@ -26,7 +26,7 @@ function App() {
       <Navbar />
 
       {/* Add padding-top so content is not hidden behind fixed navbar */}
-      <div className=" mt-20">
+      <div className=" bg-[#F7F9F8]">
         <Routes>
           <Route path="/" element={<HomeMain />} />
           <Route path="/about" element={<AboutUsMain />} />

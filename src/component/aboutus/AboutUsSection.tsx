@@ -44,7 +44,7 @@ export default function HeroSection() {
   const CurrentIcon = SLIDES[index].icon
 
   return (
-    <section className="relative h-125 flex items-center justify-center overflow-hidden">
+    <section className="relative h-150 flex items-center justify-center overflow-hidden">
 
       {/* Background */}
       <div

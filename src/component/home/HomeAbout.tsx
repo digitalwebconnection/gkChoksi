@@ -12,9 +12,10 @@ const fadeInUp = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="py-16 bg-[#F7F9F8]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2">
+          
           {/* LEFT: TEXT CONTENT */}
           <motion.div
             variants={fadeInUp}
@@ -23,23 +24,29 @@ const AboutSection = () => {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
+              About Us
             </p>
 
-            <h2 className="mb-6 text-balance font-serif text-4xl font-bold text-slate-900 sm:text-5xl">
+            <h2 className="mb-6 font-serif text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
               Welcome to{" "}
-              <span className="inline-block rounded-lg bg-lime-300 px-2 text-slate-900">
+              <span className="inline-block rounded-lg bg-[#6FAF9B] px-2 text-white">
                 G. K. Choksi & Co
               </span>
-
             </h2>
 
-            <p className="mb-4 leading-relaxed text-slate-600">
-              Established in 1970 by CA Gautam K. Choksi, our Firm is built upon a distinguished legacy of professional integrity, independent judgment, and unwavering client trust. Conceived by a visionary founder, it has matured into a prominent Chartered Accountancy practice.
+            <p className="mb-4 leading-relaxed text-[#1F6F5B]">
+              Established in 1970 by CA Gautam K. Choksi, our Firm is built upon
+              a distinguished legacy of professional integrity, independent
+              judgment, and unwavering client trust. Conceived by a visionary
+              founder, it has matured into a prominent Chartered Accountancy
+              practice.
             </p>
-            <p className="mb-6 leading-relaxed text-slate-600">
-              Headquartered in Ahmedabad, with presence in New Delhi, Mumbai, and Petlad, the Firm delivers high-impact services nationwide with deep contextual insight.
+
+            <p className="mb-6 leading-relaxed text-[#1F6F5B]">
+              Headquartered in Ahmedabad, with presence in New Delhi, Mumbai, and
+              Petlad, the Firm delivers high-impact services nationwide with deep
+              contextual insight.
             </p>
 
             <ul className="mb-8 space-y-3">
@@ -50,10 +57,10 @@ const AboutSection = () => {
                 "Transparent pricing & communication",
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15">
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1F6F5B]/15">
+                    <div className="h-2 w-2 animate-pulse rounded-full bg-[#1F6F5B]" />
                   </div>
-                  <span className="text-slate-800">{item}</span>
+                  <span className="text-[#1C1C1C]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -61,7 +68,7 @@ const AboutSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-emerald-500"
+              className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -76,66 +83,57 @@ const AboutSection = () => {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Soft background blob */}
-            <div className="absolute -right-10 -top-10 h-64 w-64 rounded-[40px] bg-emerald-500/15 blur-3xl" />
+            {/* Background Blob */}
+            <div className="absolute -right-10 -top-10 h-64 w-64 rounded-[40px] bg-[#6FAF9B]/20 blur-3xl" />
 
-            {/* Top image card */}
-            <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-slate-200 shadow-[0_24px_60px_rgba(15,23,42,0.35)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02] sm:h-56">
-              <img
-                src={img}
-                alt="Team at work"
-                className="h-full w-full object-cover"
-              />
+            {/* Top Image */}
+            <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-gray-200 shadow-[0_24px_60px_rgba(15,61,46,0.35)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.02] sm:h-56">
+              <img src={img} alt="Team at work" className="h-full w-full object-cover" />
             </div>
 
-            {/* Main large card */}
-            <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-slate-200 shadow-[0_26px_80px_rgba(15,23,42,0.45)] transition-transform duration-500 ease-out hover:-translate-y-3 hover:scale-[1.02] sm:h-[350px] sm:w-[88%]">
-              <img
-                src={img1}
-                alt="Financial advisory meeting"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute bottom-5 left-30 space-y-1 text-white">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/70">
+            {/* Main Image */}
+            <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-gray-200 shadow-[0_26px_80px_rgba(15,61,46,0.45)] transition-transform duration-500 hover:-translate-y-3 hover:scale-[1.02] sm:h-[350px] sm:w-[88%]">
+              <img src={img1} alt="Financial advisory meeting" className="h-full w-full object-cover" />
+
+              <div className="absolute inset-0 bg-linear-to-t from-[#0F3D2E]/80 via-black/10 to-transparent" />
+
+              <div className="absolute bottom-5 left-28 space-y-1 text-white">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#6FAF9B]">
                   Client-first approach
                 </p>
-                <p className="text-sm font-medium text-white/90">
+                <p className="text-sm   font-medium text-white">
                   Long-term partnerships built on trust and clarity.
                 </p>
               </div>
             </div>
 
-            {/* Bottom-left mini card */}
-            <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,23,42,0.32)] transition-transform duration-500 ease-out hover:-translate-y-2 hover:scale-[1.03]">
+            {/* Mini Card */}
+            <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,61,46,0.32)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.03]">
               <div className="h-[70%] w-full">
-                <img
-                  src={img2}
-                  alt="Audit & review"
-                  className="h-full w-full object-cover"
-                />
+                <img src={img2} alt="Audit & review" className="h-full w-full object-cover" />
               </div>
               <div className="h-[40%] px-3 pt-2 text-[11px]">
-                <span className="block text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                <span className="block text-[9px] uppercase tracking-[0.18em] text-[#6FAF9B]">
                   See our
                 </span>
-                <span className="font-semibold text-slate-800">
+                <span className="font-semibold text-[#1C1C1C]">
                   Client case studies
                 </span>
               </div>
             </div>
 
-            {/* Stat pill (top-right) */}
-            <div className="absolute -right-14.5 top-22 w-40 rounded-3xl bg-slate-900 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.6)]  duration-500  hover:-translate-y-2">
-              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-slate-400">
+            {/* Stat Card */}
+            <div className="absolute -right-14 top-20 w-40 rounded-3xl bg-[#0F3D2E] p-6 text-white shadow-[0_20px_60px_rgba(15,61,46,0.6)] hover:-translate-y-2 transition duration-500">
+              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-[#6FAF9B]">
                 Trusted Since
               </p>
-              <p className="mb-1 text-2xl font-bold leading-none">1999</p>
-              <p className="text-[11px] text-slate-300">
+              <p className="mb-1 text-2xl font-bold">1999</p>
+              <p className="text-[11px] text-gray-300">
                 Serving businesses with reliable advisory and compliance.
               </p>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

@@ -41,7 +41,7 @@ const ContactHeroSection = () => {
   return (
     <section
       
-      className="relative h-125 flex items-center justify-center overflow-hidden "
+      className="relative h-150 flex items-center justify-center overflow-hidden "
     >
 
       {/* ================= BACKGROUND SLIDER ================= */}

@@ -24,7 +24,7 @@ export default function AlumniPage() {
         <div className="bg-[#F7F9F8] text-[#1C1C1C]">
 
             {/* HERO SECTION */}
-            <section className="relative h-125 bg-[#000000]/70 py-15 text-white overflow-hidden">
+            <section className="relative h-150 bg-[#000000]/70 py-15 text-white overflow-hidden">
 
                 {/* Background Images */}
                 <div className="absolute inset-0">
