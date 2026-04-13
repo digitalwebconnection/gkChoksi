@@ -84,9 +84,7 @@
   --border-dashed: #d2d6de;
 }
 
-.timeline-section {
-  background: var(--bg);
-}
+
 
 /* Flex wrapper for steps */
 .timeline-steps {
