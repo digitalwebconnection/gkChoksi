@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import i1 from "../../../assets/14.jpeg";
 import i2 from "../../../assets/15.jpeg";
 import i3 from "../../../assets/4.jpeg";
+import { Link } from "react-router-dom";
 
 const images = [
     i1,
@@ -47,7 +48,7 @@ const HeroSection = () => {
                 <div className="max-w-3xl mx-auto  justify-center  text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase tracking-widest text-[#6FAF9B] text-sm mb-4">
+                    <p className="uppercase tracking-widest text-[#6FAF9B] text-lg mb-4">
                         Leadership That Delivers
                     </p>
 
@@ -57,18 +58,28 @@ const HeroSection = () => {
                         Insight That Drives Results.
                     </h1>
 
-                   
+
 
                     {/* BUTTONS */}
                     <div className="flex gap-4 justify-center flex-wrap">
 
-                        <button className="bg-[#6FAF9B] text-[#1C1C1C] px-6 py-3 rounded-full font-semibold hover:bg-[#C2A96A] transition">
+                        {/* Meet Our Team */}
+                        <Link
+                            to="/about/team"
+                            onClick={() => window.scrollTo(0, 0)}
+                            className="bg-[#6FAF9B] text-[#1C1C1C] px-6 py-3 rounded-full font-semibold hover:bg-[#C2A96A] transition"
+                        >
                             Meet Our Team
-                        </button>
+                        </Link>
 
-                        <button className="border border-[#C2A96A] px-6 py-3 rounded-full font-semibold hover:bg-[#6FAF9B] hover:text-[#1C1C1C] transition">
+                        {/* Get Consultation */}
+                        <Link
+                            to="/contact"
+                            onClick={() => window.scrollTo(0, 0)}
+                            className="border border-[#C2A96A] px-6 py-3 rounded-full font-semibold text-white hover:bg-[#6FAF9B] hover:text-[#1C1C1C] transition"
+                        >
                             Get Consultation
-                        </button>
+                        </Link>
 
                     </div>
                 </div>

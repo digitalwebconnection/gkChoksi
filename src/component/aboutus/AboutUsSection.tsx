@@ -66,7 +66,7 @@ export default function HeroSection() {
         <div>
           <h1 className="text-3xl md:text-5xl font-bold text-white">
             Clarity in Thinking <br />
-            <span className="text-[#6FAF9B]">Confidence in Execution</span>
+            <span className="text-[#289572]">Confidence in Execution</span>
           </h1>
 
           <p className="mt-5 text-white">
@@ -76,7 +76,7 @@ export default function HeroSection() {
           <div className="mt-6 flex gap-4">
             <Link
               to="/services"
-              className="px-6 py-2 bg-[#6FAF9B] text-white rounded-full"
+              className="px-6 py-2 bg-[#289572] text-white rounded-full"
             >
               Explore Services
             </Link>
@@ -94,7 +94,7 @@ export default function HeroSection() {
         <div className="flex justify-center lg:justify-end">
           <div className=" p-8 text-center w-[280px] ">
 
-            <CurrentIcon className="w-25 h-25 mx-auto text-[#6FAF9B]" />
+            <CurrentIcon className="w-25 h-25 mx-auto text-[#289572]" />
 
             <h3 className="text-3xl font-bold text-white mt-4">
               {SLIDES[index].title}

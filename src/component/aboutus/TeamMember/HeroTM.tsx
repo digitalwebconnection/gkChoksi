@@ -50,8 +50,8 @@ const AboutHero = () => {
         {/* HEADER */}
         <div className="mb-2">
           <div className="flex items-center justify-center text-center gap-3 mb-3  ">
-            <span className="h-px w-12 bg-[#6FAF9B]" />
-            <span className="text-[#6FAF9B] uppercase tracking-widest text-sm font-semibold">
+            <span className="h-px w-6 bg-[#6FAF9B]" />
+            <span className="text-[#6FAF9B] uppercase tracking-widest text-lg font-semibold">
               About Our Team
             </span>
           </div>

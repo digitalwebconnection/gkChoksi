@@ -43,11 +43,11 @@ export default function AlumniPage() {
                 <div className="absolute inset-0 bg-[#000000]/60"></div>
 
                 {/* Content */}
-                <div className="relative max-w-7xl mx-auto px-6 py-24 text-center">
+                <div className="relative max-w-7xl mx-auto px-6 pt-52 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">
                         Connections That Endure
                     </h1>
-                    <p className="text-lg md:text-xl text-[#6FAF9B] max-w-4xl mx-auto">
+                    <p className="text-lg md:text-xl text-[#47f0ba] max-w-4xl mx-auto">
                         A lifelong bond that continues beyond time, built on shared journeys and lasting impact.
                     </p>
                 </div>
@@ -60,12 +60,7 @@ export default function AlumniPage() {
                 <p className="text-lg leading-relaxed">
                     Our alumni remain an integral part of our extended community. Individuals who have contributed to our journey and continue to carry our values into diverse paths and industries.
                 </p>
-                {/* <p className="mt-4 text-lg leading-relaxed">
-                    We take pride in these relationships, built on shared experiences and mutual respect.
-                </p>
-                <p className="mt-4 text-lg leading-relaxed">
-                    For us, alumni are not a chapter concluded, but a relationship that continues with appreciation, and with pride.
-                </p> */}
+                
             </section>
 
             {/* IMAGE + CONTENT SECTION */}
@@ -79,40 +74,22 @@ export default function AlumniPage() {
                 </div>
 
                 <div  className=" pt-20">
-                    <h3 className="text-3xl font-semibold text-[#1F6F5B] mb-4">
+                    <h3 className="text-4xl font-semibold text-[#1F6F5B] mb-4">
                         Shared Experiences, Strong Bonds
                     </h3>
-                    <p className="mb-4">
+                    <p className="mb-4 text-justify ">
                         The aim of our alumni network is to keep you in touch with your former colleagues and friends as well as G. K. Choksi & Co.
-
- 
                     </p>
-                    <p>
+                    <p className="mb-4 text-justify ">
                   So, if you are an alumnus, why not get in touch with us now. And keep visiting this section to find out about upcoming Alumni Meetings and Events.  </p>
                 </div>
             </section>
 
-            {/* STATS / HIGHLIGHTS */}
-            <section className="bg-[#1F6F5B] text-white py-10">
-                <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <h4 className="text-4xl font-bold text-white">500+</h4>
-                        <p className="mt-2">Alumni Members</p>
-                    </div>
-                    <div>
-                        <h4 className="text-4xl font-bold text-white">20+</h4>
-                        <p className="mt-2">Industries</p>
-                    </div>
-                    <div>
-                        <h4 className="text-4xl font-bold text-white">50+</h4>
-                        <p className="mt-2">Years of Legacy</p>
-                    </div>
-                </div>
-            </section>
+      
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <h3 className="text-5xl font-semibold pb-15 text-center text-[#0F3D2E] mb-10">
+                <h3 className="text-5xl font-semibold pb-5 text-center text-[#0F3D2E] mb-10">
                     Alumni Moments
                 </h3>
 
