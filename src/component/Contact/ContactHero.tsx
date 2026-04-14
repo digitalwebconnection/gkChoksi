@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import { motion, AnimatePresence} from "framer-motion";
 import { useEffect, useState } from "react";
 import Heroimg1 from "../../assets/6.jpeg";
 import Heroimg2 from "../../assets/21.jpeg";
@@ -31,12 +31,6 @@ const ContactHeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  /* ================= MAGNETIC BUTTON ================= */
-  const btnX = useMotionValue(0);
-  const btnY = useMotionValue(0);
-
-  const btnTransformX = useTransform(btnX, [-50, 50], [-12, 12]);
-  const btnTransformY = useTransform(btnY, [-50, 50], [-12, 12]);
 
   return (
     <section

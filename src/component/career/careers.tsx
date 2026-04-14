@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import careerHero from "../../assets/25.jpg";
-import { Link } from "lucide-react";
 
 // Constants defined outside component to prevent re-allocation
 const COLORS = {
