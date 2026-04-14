@@ -1,189 +1,228 @@
-import { motion } from "framer-motion"
-import industryHero from "../../assets/24.jpeg"
-import {
-    HiOutlineBeaker,
-    HiOutlineAcademicCap,
-    HiOutlineFire,
-    HiOutlineTruck,
-    HiOutlineHeart,
-    HiOutlineUserGroup,
-    HiOutlineHomeModern,
-    HiOutlineBolt,
-    HiOutlineChartBar,
-    HiOutlineSignal,
-    HiOutlineCube,
-    HiOutlineFilm,
-    HiOutlineCpuChip,
-    HiOutlineWrenchScrewdriver,
-    HiOutlineBanknotes,
-    HiOutlineScale,
-    HiOutlineSquares2X2,
-    HiOutlineBuildingOffice2,
-} from "react-icons/hi2"
-import { HiOutlineTrendingUp } from "react-icons/hi"
-import { GiDiamondRing, GiMining } from "react-icons/gi"
-import { FaIndustry } from "react-icons/fa6"
-const IVORY = "#F7F9F8"
-const CHARCOAL = "#1C1C1C"
-const ACCENT = "#6FAF9B"
-const GOLD = "#C2A96A"
+import React from "react";
+import { motion } from "framer-motion";
+import industryHero from "../../assets/24.jpeg";
+
+
 const CATEGORIES = [
-  { title: "Jewellery", icon: GiDiamondRing, desc: "Providing precision-led advisory for the high-value luxury and gems sector." },
-
-  { title: "Pharmaceutical", icon: HiOutlineBeaker, desc: "Navigating complex regulatory landscapes for the life sciences industry." },
-
-  { title: "Education", icon: HiOutlineAcademicCap, desc: "Supporting institutional growth and compliance in the academic sector." },
-
-  { title: "Petroleum", icon: HiOutlineFire, desc: "Strategic depth for energy and natural resource management." },
-
-  // 🔄 CHANGED (Better industrial feel)
-  { title: "Industrial & Construction", icon: FaIndustry, desc: "Building strong financial foundations for infrastructure and heavy industry." },
-
-  { title: "Auto Ancillary", icon: HiOutlineTruck, desc: "Driving efficiency in the automotive supply chain and manufacturing." },
-
-  { title: "Healthcare", icon: HiOutlineHeart, desc: "Reliable guidance for healthcare providers and medical institutions." },
-
-  { title: "Recruitment", icon: HiOutlineUserGroup, desc: "Professional services for the human capital and staffing industry." },
-
-  // 🔄 OPTIONAL IMPROVEMENT
-  { title: "Hospitality", icon: HiOutlineHomeModern, desc: "Optimizing operations and growth for the travel and leisure sector." },
-  // (If you want better: FaHotel)
-
-  { title: "Power", icon: HiOutlineBolt, desc: "Insight-driven decision support for the utility and energy grid." },
-
-  // 🔄 CHANGED (Much more relevant)
-  { title: "Textiles", icon: HiOutlineSquares2X2, desc: "Traditional values meeting modern commerce in the textile industry." },
-
-  // ⚠️ DUPLICATE FIX (avoid same icon as Industrial)
-  { title: "Real Estate", icon: HiOutlineHomeModern, desc: "Structural clarity for property development and management." },
-
-  { title: "Stock", icon: HiOutlineChartBar, desc: "Expert advisory for equity markets and financial instruments." },
-
-  { title: "Growth", icon: HiOutlineTrendingUp, desc: "Scaling strategies for emerging businesses and startups." },
-
-  { title: "Telecom", icon: HiOutlineSignal, desc: "Connecting digital foresight with regulatory compliance." },
-
-  { title: "Logistics", icon: HiOutlineCube, desc: "Streamlining complex supply chains and global distribution." },
-
-  { title: "Media", icon: HiOutlineFilm, desc: "Strategic advisory for the evolving broadcasting and digital media world." },
-
-  { title: "Technology", icon: HiOutlineCpuChip, desc: "Future-ready guidance for IT and innovative tech enterprises." },
-
-  { title: "Engineering", icon: HiOutlineWrenchScrewdriver, desc: "Precision advisory for complex engineering and R&D operations." },
-
-  // ✅ GOOD (keep this)
-  { title: "Mining", icon: GiMining, desc: "Resource management and compliance for the extractive industries." },
-
-  { title: "Banks & Financial Services", icon: HiOutlineBanknotes, desc: "Institutional-grade assurance for the financial heart of the economy." },
-
-  { title: "Legal", icon: HiOutlineScale, desc: "Supporting legal practices with specialized financial and tax advisory." },
-
-  { title: "Infrastructure", icon: HiOutlineBuildingOffice2, desc: "Long-term strategic support for nation-building projects." },
+    {
+        title: "Jewellery",
+        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800",
+        desc: "Precision-led advisory for high-value luxury and gems, focusing on valuation and global compliance."
+    },
+    {
+        title: "Pharmaceutical",
+        img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800",
+        desc: "Navigating regulatory landscapes and R&D tax credits for life sciences and biotech sectors."
+    },
+    {
+        title: "Real Estate",
+        img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+        desc: "Structural clarity for property development, REITs, and commercial asset management."
+    },
+    {
+        title: "Technology",
+        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
+        desc: "Future-ready guidance for SaaS, IT infrastructure, and innovative tech enterprises."
+    },
+    {
+        title: "Manufacturing",
+        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",
+        desc: "Optimizing supply chain efficiency and cost management for large-scale industrial production."
+    },
+    {
+        title: "Healthcare",
+        img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800",
+        desc: "Financial strategies for hospitals and clinics to improve patient care infrastructure."
+    },
+    {
+        title: "Education",
+        img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800",
+        desc: "Institutional growth and financial planning for universities and private learning centers."
+    },
+    {
+        title: "Hospitality",
+        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+        desc: "Operational advisory for luxury hotels, resorts, and global tourism ventures."
+    },
+    {
+        title: "Retail & E-commerce",
+        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
+        desc: "Digital transformation and fiscal management for modern retail and direct-to-consumer brands."
+    },
+    {
+        title: "Renewable Energy",
+        img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800",
+        desc: "Sustainable investment and regulatory support for solar, wind, and green energy projects."
+    },
+    {
+        title: "Agriculture",
+        img: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800",
+        desc: "Modernizing agribusiness with sustainable financing and yield-focused advisory."
+    },
+    {
+        title: "Logistics",
+        img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
+        desc: "Enhancing global distribution networks with smart warehousing and transportation strategy."
+    },
+    {
+        title: "Automotive",
+        img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800",
+        desc: "Navigating the shift toward electric vehicles and autonomous driving technology."
+    },
+    {
+        title: "Media & Entertainment",
+        img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800",
+        desc: "Content distribution rights, production tax credits, and digital media expansion."
+    },
+    {
+        title: "Financial Services",
+        img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
+        desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
+    },
+    {
+        title: "Food & Beverage",
+        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800",
+        desc: "Scale-up advisory for restaurants, franchises, and food production companies."
+    },
+    {
+        title: "Construction",
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+        desc: "Project cost controls and risk mitigation for infrastructure and civil engineering."
+    },
+    {
+        title: "Textiles & Fashion",
+        img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800",
+        desc: "Strategic sourcing and retail expansion for global apparel and designer labels."
+    },
+    {
+        title: "Mining & Metals",
+        img: "https://images.unsplash.com/photo-1578319439584-104c94d37305?q=80&w=800",
+        desc: "Advising on natural resource extraction and global commodity market trends."
+    },
+    {
+        title: "Chemicals",
+        img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=800",
+        desc: "Regulatory safety standards and operational efficiency for chemical processing and distribution."
+    },
+    {
+        title: "Non-Profit",
+        img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800",
+        desc: "Governance and audit services for social impact and charitable organizations."
+    },
+    {
+        title: "Telecom",
+        img: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=800",
+        desc: "Connectivity infrastructure and strategic market positioning for regional and global carriers."
+    },
+    {
+        title: "Aviation",
+        img: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800",
+        desc: "Fleet financing, safety compliance, and operational advisory for airlines and cargo operations."
+    }
 ];
 
 const IndustryPage = () => {
     return (
-        <div className="bg-white" style={{ color: CHARCOAL }}>
-            {/* Hero Section */}
-            <section className="relative h-150 flex items-center justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 z-0 bg-fixed"
-                    style={{
-                        backgroundImage: `url(${industryHero})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                >
-                    <div className="absolute inset-0 bg-black/60" />
-                </div>
+        <div className="bg-[#FBFBFB] font-sans selection:bg-[#C2A96A] selection:text-white">
 
-                <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-                    <motion.div
+            {/* --- HERO SECTION --- */}
+            <section className="relative h-150 flex items-center justify-center overflow-hidden bg-[#1A1A1A]">
+                <div
+                    className="absolute inset-0 bg-cover bg-center opacity-50"
+                    style={{ backgroundImage: `url(${industryHero})` }}
+                />
+                <div className="relative z-10 text-center px-4">
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        className="text-white text-3xl md:text-5xl font-light tracking-wide"
                     >
-                        <p className="text-gold font-semibold uppercase tracking-[0.3em] mb-4" style={{ color: GOLD }}>
-                            Expertise by sector
-                        </p>
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                            Industry Experience
-                        </h1>
-                        <div className="max-w-3xl mx-auto space-y-4">
-                            <p className="text-base md:text-lg text-white/90 leading-relaxed font-light">
-                                Every industry carries its own rhythm, its own set of risks, regulations, and opportunities.
-                                Our experience across diverse sectors has taught us that effective advice is never generic;
-                                it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
-                            </p>
-                            <p className="text-base md:text-lg text-white/90 leading-relaxed font-light">
-                                Our approach is not to merely understand the industry, but to understand your position within it
-                                and to provide guidance that is both practical and forward-looking.
-                            </p>
+                        Understanding Business, <span className="font-bold">Beyond Numbers</span>
+                    </motion.h1>
+                </div>
+            </section>
+
+            {/* --- MAIN SPLIT LAYOUT --- */}
+            <section className="max-w-[1440px] mx-auto px-6 py-20 lg:py-32">
+                <div className="flex flex-col lg:flex-row gap-16">
+
+                    {/* LEFT: STATIC CONTENT */}
+                    <aside className="w-full lg:w-[40%]">
+                        <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
+                            <span className="text-[#C2A96A] font-bold tracking-[0.3em] text-xs uppercase block mb-6">
+                                Specialized Advisory
+                            </span>
+                            <h2 className="text-5xl lg:text-7xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
+                                Our <br /> <span className="text-[#C2A96A]">Presence</span>
+                            </h2>
+                            <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
+                            <div className="space-y-6">
+                                <p className="text-lg text-gray-500 leading-relaxed font-light">
+                                    Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
+                                </p>
+                            </div>
                         </div>
-                    </motion.div>
+                    </aside>
+
+                    {/* RIGHT: SCROLLING ITEMS (No Numbers) */}
+                    <main className="w-full lg:w-[60%] space-y-16">
+                        {CATEGORIES.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6 }}
+                                className="group flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12"
+                            >
+                                {/* IMAGE WITH SHADOW */}
+                                <div className="w-full md:w-[220px] h-[150px] flex-shrink-0 overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(10,19,106,0.2)] group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
+                                    <motion.img
+                                        whileHover={{ scale: 1.05 }}
+                                        src={item.img}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 grayscale-[100%] group-hover:grayscale-0"
+                                    />
+                                </div>
+
+                                {/* CONTENT AREA */}
+                                <div className="flex-1 pt-2">
+                                    <h3 className="text-xl lg:text-2xl font-bold text-[#1C1C1C] group-hover:text-[#C2A96A] transition-colors duration-300 mb-3">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="text-gray-500 text-sm md:text-base leading-relaxed font-light">
+                                        {item.desc}
+                                    </p>
+
+                                    <motion.div
+                                        className="h-[1px] bg-[#C2A96A] mt-6 origin-left"
+                                        initial={{ scaleX: 0 }}
+                                        whileInView={{ scaleX: 1 }}
+                                        transition={{ delay: 0.2, duration: 0.8 }}
+                                    />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </main>
                 </div>
             </section>
+            <div className="max-w-4xl mx-auto my-16 px-8 py-10 border-t border-b border-gray-200 relative">
+                {/* Decorative corner brackets for a unique look */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
 
-            {/* Industry Sections - 23 Compact Boxes */}
-            <section className="py-16 md:py-24" style={{ backgroundColor: IVORY }}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="mb-16 text-center">
-                        <h2 className="text-3xl font-bold mb-3 tracking-tight">Industries We Serve</h2>
-                        <div className="h-1 w-16 bg-accent mx-auto" style={{ backgroundColor: ACCENT }} />
-                    </div>
-
-                    <div className="space-y-6">
-                        {CATEGORIES.map((item, index) => {
-                            const IconComponent = item.icon;
-                            return (
-                                <motion.div
-                                    key={item.title}
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-10px" }}
-                                    transition={{ duration: 0.4 }}
-                                    className="group bg-white rounded-xl overflow-hidden shadow-sm border border-charcoal/5 hover:border-gold/30 hover:shadow-md transition-all duration-300 max-w-7xl mx-auto"
-                                >
-                                    <div className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} min-h-60`}>
-                                        {/* Image - 30% width */}
-                                        <div className="w-[30%] flex items-center justify-center h-60">
-                                            <div className=" flex items-center justify-center rounded-2xl  transition">
-                                                <IconComponent className="w-28 h-28 text-[#6FAF9B]" />
-                                            </div>
-                                        </div>
-
-                                        {/* Content - 70% */}
-                                        <div className="w-[70%] px-8 md:px-16 flex items-center justify-between gap-8">
-                                            <div className="flex items-center gap-6">
-                                                <p className="text-gold font-bold text-[18px]" style={{ color: GOLD }}>
-                                                    {String(index + 1).padStart(2, '0')}
-                                                </p>
-                                                <h3 className="text-[16px] md:text-[24px] font-bold tracking-tight text-[#1C1C1C] group-hover:text-gold transition-colors">
-                                                    {item.title}
-                                                </h3>
-                                            </div>
-                                            <p className="hidden md:block text-charcoal/50 text-[20px] font-light italic truncate max-w-[50%]">
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            {/* Footer Quote */}
-            <section className="py-20 bg-white border-t border-gold/10" style={{ borderColor: `${GOLD}1a` }}>
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <p className="text-lg text-charcoal/60 font-light italic leading-relaxed">
-                        "Effective advice is never generic; it is shaped by context, informed by nuance, and delivered with appreciation."
+                <div className="text-center px-4">
+                    <p className="text-[#1C1C1C] text-xl md:text-2xl font-light leading-relaxed tracking-tight">
+                        Our approach is not to merely understand the industry,
+                        but to understand your position within it
+                        and to provide guidance that is both and forward-looking.
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default IndustryPage
+
+export default IndustryPage;

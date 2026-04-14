@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <motion.footer
       id="contact"
-      className="bg-[#0F3D2E] text-slate-100"
+      className="border-t border-gray-200 bg-white"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -38,7 +38,7 @@ const Footer = () => {
               alt="G.K. Choksi & Co."
               className="mx-auto h-11 w-auto md:mx-0 sm:h-12"
             />
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-300 md:mt-5">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-black md:mt-5">
               Strategic financial clarity and confidence for businesses across India
               - with a partner-led, relationship-driven approach.
             </p>
@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {/* Quick links */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Quick Links
               </h4>
               <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-1">
@@ -56,7 +56,7 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       to={item.to}
-                      className="text-sm text-slate-300 transition hover:text-white"
+                      className="text-sm text-black transition hover:text-[#0F3D2E]"
                     >
                       {item.label}
                     </Link>
@@ -67,10 +67,10 @@ const Footer = () => {
 
             {/* Locations */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Locations
               </h4>
-              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+              <ul className="mt-4 space-y-2 text-sm text-black">
                 <li>Mumbai</li>
                 <li>Ahmedabad</li>
                 <li>Delhi NCR</li>
@@ -80,37 +80,42 @@ const Footer = () => {
 
             {/* Social media */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Social Media
               </h4>
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-4 flex flex-row md:flex-col gap-3 justify-center md:justify-start">
+                {/* Instagram */}
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white transition transform hover:scale-110 shadow-md"
                 >
-                  <Instagram className="h-4 w-4" />
+                  <Instagram className="h-5 w-5" />
                 </a>
+
+                {/* Facebook */}
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition transform hover:scale-110 shadow-md"
                 >
-                  <Facebook className="h-4 w-4" />
+                  <Facebook className="h-5 w-5" />
                 </a>
+
+                {/* LinkedIn */}
                 <a
                   href="#"
                   aria-label="LinkedIn"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:border-slate-400 hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition transform hover:scale-110 shadow-md"
                 >
-                  <Linkedin className="h-4 w-4" />
+                  <Linkedin className="h-5 w-5" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-slate-800 pt-6">
-          <p className="text-xs text-slate-400 sm:text-sm">
+        <div className="mt-10 border-t border-slate-300 pt-6">
+          <p className="text-xs text-black sm:text-sm">
             © 2026 G.K. Choksi &amp; Co. All rights reserved.
           </p>
         </div>
