@@ -120,51 +120,61 @@ const JobAccordion = ({ job, isOpen, onClick }: JobAccordionProps) => {
           </svg>
         </motion.span>
       </button>
+<AnimatePresence initial={false}>
+  {isOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25 }}
+      className="overflow-hidden"
+    >
+      <div className="p-6 space-y-5 text-[#1C1C1C]/80 border-t border-[#1C1C1C]/5">
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-          >
-            <div className="p-8 space-y-6 text-[#1C1C1C]/80 border-t border-[#1C1C1C]/5">
-              {job.description && (
-                <div>
-                  <p className="font-bold text-[#1C1C1C] mb-2 uppercase text-xs tracking-widest">Description</p>
-                  <p className="leading-relaxed">{job.description}</p>
-                </div>
-              )}
-
-              {job.details && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-lg border border-[#C2A96A]/20" style={{ backgroundColor: COLORS.IVORY }}>
-                  {Object.entries(job.details).map(([key, value]) => (
-                    <p key={key} className="text-sm">
-                      <span className="font-bold text-[#1C1C1C]">{key}: </span> {String(value)}
-                    </p>
-                  ))}
-                </div>
-              )}
-
-              {/* Dynamic rendering for List items */}
-              {[
-                { label: "Major Responsibilities", data: job.responsibilities },
-                { label: "Experience & Background", data: job.requirements },
-                { label: "Skill Requirements", data: job.skillRequirement },
-                { label: "Key Points", data: job.points }
-              ].map((section, idx) => section.data && (
-                <div key={idx} className="space-y-3">
-                  <p className="font-bold text-[#1C1C1C] text-sm uppercase tracking-wider">{section.label}</p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    {section.data.map((item: string, i: number) => <li key={i} className="leading-relaxed">{item}</li>)}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+        {job.description && (
+          <div>
+            <p className="font-bold text-[#1C1C1C] mb-2 uppercase text-xs tracking-widest">
+              Description
+            </p>
+            <p className="leading-relaxed">{job.description}</p>
+          </div>
         )}
-      </AnimatePresence>
+
+        {job.details && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-lg border border-[#C2A96A]/20 bg-[#F7F9F8]">
+            {Object.entries(job.details).map(([key, value]) => (
+              <p key={key} className="text-sm">
+                <span className="font-bold text-[#1C1C1C]">{key}: </span>
+                {String(value)}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {[
+          { label: "Major Responsibilities", data: job.responsibilities },
+          { label: "Experience & Background", data: job.requirements },
+          { label: "Skill Requirements", data: job.skillRequirement },
+          { label: "Key Points", data: job.points }
+        ].map((section, idx) =>
+          section.data ? (
+            <div key={idx} className="space-y-2">
+              <p className="font-bold text-[#1C1C1C] text-sm uppercase tracking-wider">
+                {section.label}
+              </p>
+              <ul className="list-disc pl-5 space-y-1">
+                {section.data.map((item: string, i: number) => (
+                  <li key={i} className="leading-relaxed">{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        )}
+
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </div>
   );
 };
