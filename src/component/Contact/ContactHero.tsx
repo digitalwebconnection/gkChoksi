@@ -112,47 +112,6 @@ const ContactHeroSection = () => {
           </span>
         </motion.p>
 
-        {/* ================= CTA BUTTON ================= */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
-          className="mt-10 flex justify-center"
-        >
-          <motion.button
-            onMouseMove={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              btnX.set(e.clientX - rect.left - rect.width / 2);
-              btnY.set(e.clientY - rect.top - rect.height / 2);
-            }}
-            onMouseLeave={() => {
-              btnX.set(0);
-              btnY.set(0);
-            }}
-            style={{
-              x: btnTransformX,
-              y: btnTransformY,
-            }}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative 
-              bg-[#0F3D2E] 
-              hover:bg-[#1F6F5B] 
-              text-white 
-              px-12 py-4 
-              rounded-full 
-              font-semibold 
-              shadow-xl shadow-[#0F3D2E]/40 
-              border border-[#6FAF9B]/30
-              overflow-hidden"
-          >
-            <span className="relative z-10">Schedule a Consultation</span>
-
-            {/* Glow effect */}
-            <span className="absolute inset-0 bg-linear-to-r from-transparent via-[#6FAF9B]/20 to-transparent opacity-0 hover:opacity-100 transition duration-500" />
-          </motion.button>
-        </motion.div>
-
         {/* ================= SLIDER DOTS ================= */}
         <div className="mt-12 flex justify-center gap-3">
           {images.map((_, i) => (
@@ -169,25 +128,6 @@ const ContactHeroSection = () => {
         </div>
 
       </div>
-
-      {/* ================= SCROLL INDICATOR ================= */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70"
-      >
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="mt-2 w-0.5 h-10 bg-[#6FAF9B]/60 rounded-full"
-        />
-      </motion.div>
-
-      {/* ================= GRAIN ================= */}
-      <div className="absolute inset-0 bg-[url('/grain.png')] opacity-[0.04] pointer-events-none" />
-
     </section>
   );
 };

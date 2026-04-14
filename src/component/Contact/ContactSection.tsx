@@ -235,9 +235,7 @@ const ContactSection: React.FC = () => {
                                 <a href="mailto:info@gkcco.com" className="block font-medium text-gray-900 hover:underline">
                                     info@gkcco.com
                                 </a>
-                                <a href="mailto:ahmedabad@gkcco.com" className="block font-medium text-gray-900 hover:underline">
-                                    ahmedabad@gkcco.com
-                                </a>
+                                
                             </div>
 
                             {/* Office Card */}
@@ -284,19 +282,19 @@ const ContactSection: React.FC = () => {
 
                         {/* Left – Brand Presence */}
                         <div>
-                            <span className="inline-block text-xs tracking-[0.3em] uppercase text-emerald-400 font-semibold">
+                            <span className="inline-block text-lg tracking-[0.3em] uppercase text-emerald-400 font-semibold">
                                 Corporate Headquarters
                             </span>
 
                             <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-white leading-tight">
-                                GKC & CO
+                                G.K. Choksi & Co.
                                 <span className="block text-gray-300 text-2xl mt-2">
                                     Ahmedabad
                                 </span>
                             </h2>
 
-                            <p className="mt-6 text-gray-300 max-w-md leading-relaxed">
-                                Strategically located at ONE42, North Tower —
+                            <p className="mt-6 text-white font-bold max-w-md leading-relaxed text-justify">
+                                Strategically located at ONE42, North Tower -
                                 a landmark corporate destination designed for leadership,
                                 governance, and global advisory excellence.
                             </p>

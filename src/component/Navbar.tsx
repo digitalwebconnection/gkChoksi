@@ -131,8 +131,8 @@ const Navbar: React.FC = () => {
             <AnimatePresence>
               {aboutOpen && (
                 <Dropdown>
-                  <NavItem to="/about/team">Team Members</NavItem>
                   <NavItem to="/about/partners">Partners</NavItem>
+                  <NavItem to="/about/team">Team Members</NavItem>  
                 </Dropdown>
               )}
             </AnimatePresence>
