@@ -37,7 +37,7 @@ const insightCards = [
 ]
 
 const InsightsMain: React.FC = () => {
-    const [imageLoaded, setImageLoaded] = useState<{ [key: string]: boolean }>({})
+    const [, setImageLoaded] = useState<{ [key: string]: boolean }>({})
 
     const handleImageLoad = (title: string) => {
         setImageLoaded((prev) => ({ ...prev, [title]: true }))
@@ -141,7 +141,7 @@ const InsightsMain: React.FC = () => {
                         <div className="w-full lg:w-1/2 bg-[#F7F9F8] p-10 lg:p-16 shadow-xl relative z-10 flex flex-col justify-center">
                             <p className="text-md font-semibold uppercase tracking-widest text-[#C2A96A] mb-6">Important Portals</p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {insightCards[1].links?.map((link, idx) => (
+                                {insightCards[1].links?.map((link) => (
                                     <motion.a
                                         key={link.label}
                                         whileHover={{ scale: 1.03, backgroundColor: "rgb(223, 216, 216)", color: "#1F6F5B" }}
@@ -167,7 +167,7 @@ const InsightsMain: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="relative w-full h-[380px] flex flex-col md:flex-row bg-white rounded-[1rem] border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-500"
+                        className="relative w-full h-[380px] flex flex-col md:flex-row bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-500"
                     >
                         {/* Left Side: Content Area (65% for better text flow in shorter height) */}
                         <div className="w-full md:w-[65%] p-8 lg:p-12 flex flex-col justify-center">

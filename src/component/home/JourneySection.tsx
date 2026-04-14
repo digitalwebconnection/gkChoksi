@@ -133,7 +133,7 @@ const TimelineSection = () => {
                 >
                   <div className="rounded-2xl border border-[#6FAF9B]/30 bg-white p-6 shadow-[0_20px_50px_rgba(15,61,46,0.15)]">
 
-                    <span className="mb-3 inline-block rounded-full bg-[#6FAF9B]/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[#1F6F5B]">
+                    <span className="mb-3 inline-block rounded-full bg-[#6FAF9B]/10 px-3 py-1 text-[13px] font-semibold uppercase tracking-widest text-[#0a2e25]">
                       {item.chapter} • {item.period}
                     </span>
 
@@ -143,17 +143,17 @@ const TimelineSection = () => {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-bold text-[#1C1C1C]">
+                        <h3 className="text-xl font-bold text-[#1C1C1C]">
                           {item.title}
                         </h3>
 
-                        <p className="mt-1 text-sm text-[#1F6F5B]">
+                        <p className="mt-1 text-md text-black">
                           {item.desc}
                         </p>
 
-                        <p className="mt-3 text-[11px] font-medium uppercase tracking-widest text-[#6FAF9B]">
+                        {/* <p className="mt-3 text-[11px] font-medium uppercase tracking-widest text-[#6FAF9B]">
                           {item.meta}
-                        </p>
+                        </p> */}
 
                         <div className="mt-4 flex items-center gap-3">
                           <span className="text-xs font-semibold uppercase tracking-widest text-[#0F3D2E]">

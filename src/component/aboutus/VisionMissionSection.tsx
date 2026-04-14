@@ -24,6 +24,27 @@ const CHARCOAL = "#1C1C1C"
 const ACCENT = "#6FAF9B"
 const GOLD = "#C2A96A"
 
+
+// Assuming variables: GOLD, ACCENT, CHARCOAL, IVORY are defined
+// Assuming visionImage and missionImage are your imported assets
+
+const foundationItems = [
+  {
+    title: "Vision",
+    content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
+    image: "/path-to-vision-image.jpg", // Replace with your visionImage
+    color: GOLD,
+    index: 0
+  },
+  {
+    title: "Mission",
+    content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding.",
+    image: "/path-to-mission-image.jpg", // Replace with your missionImage
+    color: ACCENT,
+    index: 1
+  }
+];
+
 const coreValues = [
   {
     title: "Leadership",
@@ -81,102 +102,87 @@ const VisionMissionSection = () => {
   return (
     <div className="bg-[#FBFCFB]">
       {/* Vision & Mission */}
-      <section className="relative overflow-hidden py-24 md:py-32 ">
-        {/* Subtle Background Decorative Element */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.03] pointer-events-none">
-          <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(${GOLD} 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
-        </div>
+    <section className="py-24" style={{ backgroundColor: "#F7F9F8" }}>
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    {/* Header Block */}
+    <div className="mb-16 text-center">
+       <span className="text-sm font-bold uppercase tracking-[0.4em] text-[#1F6F5B]">Our Foundation</span>
+       <h2 className="mt-4 text-4xl md:text-5xl font-light text-[#1C1C1C]">
+         Purpose & <span className="font-serif italic">Strategy</span>
+       </h2>
+    </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
+    {/* Two Cards in One Row */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      {foundationItems.map((item, idx) => (
+        <div key={idx} className="flex flex-col">
+          
+          {/* Title on Top */}
+          <h3 
+            className="mb-6 text-2xl font-semibold tracking-tight text-center md:text-left"
+            style={{ color: "#1C1C1C" }}
+          >
+            {item.title}
+          </h3>
 
-            {/* Left Column: Typography Header */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5"
-            >
-              <span
-                className="inline-block text-xs font-bold uppercase tracking-[0.4em] mb-4"
-                style={{ color: ACCENT }}
-              >
-                Our Foundation
-              </span>
-              <h2
-                className="text-4xl font-light leading-[1.1] text-balance md:text-5xl"
-                style={{ color: CHARCOAL }}
-              >
-                Driving <span className="font-serif italic text-stone-500">Value</span> through <br />
-                <span className="font-semibold">Purpose & Strategy.</span>
-              </h2>
-              <div className="mt-8 h-px w-24" style={{ backgroundColor: GOLD }} />
-              <p className="mt-8 text-lg text-stone-600 max-w-md leading-relaxed">
-                We align our core philosophy with your long-term success, ensuring every
-                decision is rooted in technical excellence and foresight.
-              </p>
-            </motion.div>
-
-            {/* Right Column: Interactive Cards */}
-            <div className="grid gap-6 lg:col-span-7">
-              {[
-                {
-                  title: "Vision",
-                  content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
-                  index: 1
-                },
-                {
-                  title: "Mission",
-                  content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
-                  index: 2
-                }
-              ].map((item) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: item.index * 0.1 }}
-                  className="group relative bg-white border border-stone-200 p-8 md:p-12 transition-all duration-500 hover:shadow-2xl hover:shadow-stone-200/50"
-                >
-                  {/* Accent Border on Hover */}
-                  <div
-                    className="absolute inset-0 border-2 border-transparent transition-colors duration-500 group-hover:border-stone-800/5"
-                    style={{ borderLeftColor: item.index === 1 ? GOLD : ACCENT }}
+          {/* 180 Degree Flip Card Container */}
+          <div className="group h-[400px] w-full [perspective:1500px]">
+            <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              
+              {/* FRONT SIDE: Image */}
+              <div className="absolute inset-0 [backface-visibility:hidden]">
+                <div className="relative h-full w-full overflow-hidden rounded-xl">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  {/* Subtle Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  
+                  {/* Bottom Indicator */}
+                  <div 
+                    className="absolute bottom-0 left-0 h-1.5 w-full" 
+                    style={{ backgroundColor: item.color }} 
+                  />
+                </div>
+              </div>
 
-                  <div className="flex flex-col md:flex-row md:items-start gap-6">
-                    <span
-                      className="text-5xl font-light opacity-10 font-serif italic"
-                      style={{ color: CHARCOAL }}
-                    >
-                      0{item.index}
-                    </span>
-                    <div>
-                      <h3
-                        className="text-xs font-bold uppercase tracking-widest mb-4"
-                        style={{ color: item.index === 1 ? GOLD : ACCENT }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-xl text-stone-700 leading-relaxed font-medium">
-                        {item.content}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Subtle Geometric Detail */}
-                  <div className="absolute bottom-4 right-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="1.5">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
+              {/* BACK SIDE: Content (Rotated 180deg) */}
+              <div className="absolute inset-0 h-full w-full rounded-xl bg-white p-10 [backface-visibility:hidden] [transform:rotateY(180deg)] shadow-xl border border-stone-100">
+                <div className="flex flex-col h-full justify-center items-center text-center">
+                  <div 
+                    className="mb-6 rounded-full p-3 opacity-20" 
+                    style={{ backgroundColor: item.color }}
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={item.color} strokeWidth="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                   </div>
-                </motion.div>
-              ))}
+                  
+                  <p className="text-xl md:text-2xl leading-relaxed text-stone-700 font-serif italic">
+                    "{item.content}"
+                  </p>
+                  
+                  <div 
+                    className="mt-8 h-px w-16" 
+                    style={{ backgroundColor: item.color }} 
+                  />
+                  
+                  <span className="mt-4 text-[10px] uppercase tracking-widest font-bold text-stone-400">
+                    Our Commitment
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
 
       <section className="relative overflow-hidden py-24 md:pb-12" >

@@ -5,7 +5,6 @@ import {
   HiOutlineCalendarDays,
   HiOutlineBuildingOffice2,
   HiOutlineGlobeAlt,
-  HiOutlineClipboardDocumentCheck,
 } from "react-icons/hi2";
 
 const stats = [
@@ -26,12 +25,7 @@ const stats = [
     value: 10,
     icon: HiOutlineGlobeAlt,
   },
-  {
-    label: "Assignments Completed",
-    value: 2500,
-    suffix: "+",
-    icon: HiOutlineClipboardDocumentCheck,
-  },
+  
 ];
 
 interface CounterProps {
@@ -105,7 +99,7 @@ const StatsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
 

@@ -66,11 +66,11 @@ const HeroSection = () => {
         style={{ transform: `translateY(${scrollY * 0.05}px)` }}
       >
         {/* Title */}
-        <div className="mb-8">
+        <div className="mb-4">
           <h1 className="text-[#F7F9F8] text-5xl font-bold font-serif tracking-wide">
             G.K. Choksi & Co
           </h1>
-          <p className="text-[#6FAF9B] text-lg font-semibold font-serif mt-2">
+          <p className="text-[#f5cd55] text-2xl font-semibold font-serif mt-2">
             Chartered Accountants
           </p>
         </div>
@@ -80,7 +80,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.15 }}
-          className="mb-6 max-w-4xl mx-auto font-serif text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl"
+          className="mb-6 max-w-4xl mx-auto font-serif text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-5xl"
         >
           Strategic Financial Excellence
         </motion.h2>

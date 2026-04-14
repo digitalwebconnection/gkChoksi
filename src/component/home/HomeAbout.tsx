@@ -4,6 +4,13 @@ import { ArrowRight } from "lucide-react";
 import img from "../../assets/1.jpeg";
 import img1 from "../../assets/18.jpeg";
 import img2 from "../../assets/20.jpeg";
+import {
+  HiOutlineCheck,
+  HiOutlineUser,
+  HiOutlineCpuChip,
+  HiOutlineCurrencyRupee,
+} from "react-icons/hi2";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -24,18 +31,18 @@ const AboutSection = () => {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
+            <p className="mb-3 text-lg font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
               About Us
             </p>
 
             <h2 className="mb-6 font-serif text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
               Welcome to{" "}
-              <span className="inline-block rounded-lg bg-[#6FAF9B] px-2 text-white">
+              <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
                 G. K. Choksi & Co
               </span>
             </h2>
 
-            <p className="mb-4 leading-relaxed text-[#1F6F5B]">
+            <p className="mb-4 leading-relaxed text-black">
               Established in 1970 by CA Gautam K. Choksi, our Firm is built upon
               a distinguished legacy of professional integrity, independent
               judgment, and unwavering client trust. Conceived by a visionary
@@ -43,27 +50,47 @@ const AboutSection = () => {
               practice.
             </p>
 
-            <p className="mb-6 leading-relaxed text-[#1F6F5B]">
+            <p className="mb-6 leading-relaxed text-black">
               Headquartered in Ahmedabad, with presence in New Delhi, Mumbai, and
               Petlad, the Firm delivers high-impact services nationwide with deep
               contextual insight.
             </p>
 
-            <ul className="mb-8 space-y-3">
-              {[
-                "Expert certified professionals",
-                "Personalized service approach",
-                "Latest compliance technology",
-                "Transparent pricing & communication",
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1F6F5B]/15">
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-[#1F6F5B]" />
-                  </div>
-                  <span className="text-[#1C1C1C]">{item}</span>
-                </li>
-              ))}
-            </ul>
+         <ul className="mb-8 space-y-3">
+  {[
+    {
+      text: "Expert certified professionals",
+      icon: HiOutlineCheck,
+    },
+    {
+      text: "Personalized service approach",
+      icon: HiOutlineUser,
+    },
+    {
+      text: "Latest compliance technology",
+      icon: HiOutlineCpuChip,
+    },
+    {
+      text: "Transparent pricing & communication",
+      icon: HiOutlineCurrencyRupee,
+    },
+  ].map((item, idx) => {
+    const Icon = item.icon;
+
+    return (
+      <li key={idx} className="flex items-center gap-3">
+        
+        {/* Icon Container */}
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#6FAF9B]/15 text-[#0F3D2E]">
+          <Icon className="h-4 w-4" />
+        </div>
+
+        {/* Text */}
+        <span className="text-black">{item.text}</span>
+      </li>
+    );
+  })}
+</ul>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -109,11 +136,11 @@ const AboutSection = () => {
 
             {/* Mini Card */}
             <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,61,46,0.32)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.03]">
-              <div className="h-[70%] w-full">
+              <div className="h-[60%] w-full">
                 <img src={img2} alt="Audit & review" className="h-full w-full object-cover" />
               </div>
               <div className="h-[40%] px-3 pt-2 text-[11px]">
-                <span className="block text-[9px] uppercase tracking-[0.18em] text-[#6FAF9B]">
+                <span className="block text-[12px] uppercase tracking-[0.18em] text-black">
                   See our
                 </span>
                 <span className="font-semibold text-[#1C1C1C]">
@@ -123,8 +150,8 @@ const AboutSection = () => {
             </div>
 
             {/* Stat Card */}
-            <div className="absolute -right-14 top-20 w-40 rounded-3xl bg-[#0F3D2E] p-6 text-white shadow-[0_20px_60px_rgba(15,61,46,0.6)] hover:-translate-y-2 transition duration-500">
-              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-[#6FAF9B]">
+            <div className="absolute -right-14 top-20 w-50 rounded-3xl bg-[#0F3D2E] p-6 text-white shadow-[0_20px_60px_rgba(15,61,46,0.6)] hover:-translate-y-2 transition duration-500">
+              <p className="mb-2 text-[14px] uppercase tracking-[0.2em] text-white">
                 Trusted Since
               </p>
               <p className="mb-1 text-2xl font-bold">1999</p>
