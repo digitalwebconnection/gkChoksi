@@ -10,6 +10,7 @@ import {
   HiOutlineCpuChip,
   HiOutlineCurrencyRupee,
 } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
 
 
 const fadeInUp = {
@@ -18,11 +19,13 @@ const fadeInUp = {
 };
 
 const AboutSection = () => {
+
+  const navigate = useNavigate(); // ✅ ADD THIS
   return (
     <section id="about" className="py-16 bg-[#F7F9F8]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2">
-          
+
           {/* LEFT: TEXT CONTENT */}
           <motion.div
             variants={fadeInUp}
@@ -42,7 +45,7 @@ const AboutSection = () => {
               </span>
             </h2>
 
-            <p className="mb-4 leading-relaxed text-black">
+            <p className="mb-4 leading-relaxed text-justify text-black">
               Established in 1970 by CA Gautam K. Choksi, our Firm is built upon
               a distinguished legacy of professional integrity, independent
               judgment, and unwavering client trust. Conceived by a visionary
@@ -50,56 +53,60 @@ const AboutSection = () => {
               practice.
             </p>
 
-            <p className="mb-6 leading-relaxed text-black">
+            <p className="mb-6 leading-relaxed text-justify text-black">
               Headquartered in Ahmedabad, with presence in New Delhi, Mumbai, and
               Petlad, the Firm delivers high-impact services nationwide with deep
               contextual insight.
             </p>
 
-         <ul className="mb-8 space-y-3">
-  {[
-    {
-      text: "Expert certified professionals",
-      icon: HiOutlineCheck,
-    },
-    {
-      text: "Personalized service approach",
-      icon: HiOutlineUser,
-    },
-    {
-      text: "Latest compliance technology",
-      icon: HiOutlineCpuChip,
-    },
-    {
-      text: "Transparent pricing & communication",
-      icon: HiOutlineCurrencyRupee,
-    },
-  ].map((item, idx) => {
-    const Icon = item.icon;
+            <ul className="mb-8 space-y-3">
+              {[
+                {
+                  text: "Expert certified professionals",
+                  icon: HiOutlineCheck,
+                },
+                {
+                  text: "Personalized service approach",
+                  icon: HiOutlineUser,
+                },
+                {
+                  text: "Latest compliance technology",
+                  icon: HiOutlineCpuChip,
+                },
+                {
+                  text: "Transparent pricing & communication",
+                  icon: HiOutlineCurrencyRupee,
+                },
+              ].map((item, idx) => {
+                const Icon = item.icon;
 
-    return (
-      <li key={idx} className="flex items-center gap-3">
-        
-        {/* Icon Container */}
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#6FAF9B]/15 text-[#0F3D2E]">
-          <Icon className="h-4 w-4" />
-        </div>
+                return (
+                  <li key={idx} className="flex items-center gap-3">
 
-        {/* Text */}
-        <span className="text-black">{item.text}</span>
-      </li>
-    );
-  })}
-</ul>
+                    {/* Icon Container */}
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#6FAF9B]/15 text-[#0F3D2E]">
+                      <Icon className="h-4 w-4" />
+                    </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
-            >
-              Get in Touch
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </motion.button>
+                    {/* Text */}
+                    <span className="text-black">{item.text}</span>
+                  </li>
+                );
+              })}
+            </ul>
+
+  <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.96 }}
+  onClick={() => {
+    navigate("/contact");
+    window.scrollTo(0, 0); // ✅ scroll top
+  }}
+  className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
+>
+  Get in Touch
+  <ArrowRight className="ml-2 h-4 w-4" />
+</motion.button>
           </motion.div>
 
           {/* RIGHT: IMAGE CLUSTER */}

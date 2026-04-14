@@ -1,6 +1,14 @@
-import React from "react";
-import { motion } from "framer-motion";
-import industryHero from "../../assets/24.jpeg";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import im1 from "../../assets/10.jpeg";
+import im2 from "../../assets/11.jpeg";
+import im3 from "../../assets/12.jpeg";
+
+const images = [
+    im1,
+    im2,
+    im3
+];
 
 
 const CATEGORIES = [
@@ -122,42 +130,67 @@ const CATEGORIES = [
 ];
 
 const IndustryPage = () => {
+
+    const [index, setIndex] = useState(0);
+
+    // Auto change background every 4 sec
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % images.length);
+        }, 4000);
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="bg-[#FBFBFB] font-sans selection:bg-[#C2A96A] selection:text-white">
 
             {/* --- HERO SECTION --- */}
-            <section className="relative h-150 flex items-center justify-center overflow-hidden bg-[#1A1A1A]">
-                <div
-                    className="absolute inset-0 bg-cover bg-center opacity-50"
-                    style={{ backgroundImage: `url(${industryHero})` }}
-                />
+            <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-[#1A1A1A]">
+
+                {/* Background Animation */}
+                <AnimatePresence>
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 0.5, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${images[index]})` }}
+                    />
+                </AnimatePresence>
+                {/* ✅ Dark Overlay (FIXED POSITION) */}
+                <div className="absolute inset-0 bg-black/50 z-1" />
+
+                {/* Content */}
                 <div className="relative z-10 text-center px-4">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-white text-3xl md:text-5xl font-light tracking-wide"
                     >
-                        Understanding Business, <span className="font-bold">Beyond Numbers</span>
+                        Understanding Business, <br />
+                        <span className="font-bold">Beyond Numbers</span>
                     </motion.h1>
+
                 </div>
             </section>
 
             {/* --- MAIN SPLIT LAYOUT --- */}
-            <section className="max-w-[1440px] mx-auto px-6 py-20 lg:py-32">
-                <div className="flex flex-col lg:flex-row gap-16">
+            <section className="max-w-[1440px] mx-auto px-6 py-10 lg:py-22">
+                <div className="flex flex-col lg:flex-row gap-10">
 
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#C2A96A] font-bold tracking-[0.3em] text-xs uppercase block mb-6">
+                            <span className="text-[#C2A96A] font-bold tracking-[0.3em] text-lg uppercase block mb-6">
                                 Specialized Advisory
                             </span>
-                            <h2 className="text-5xl lg:text-7xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
-                                Our <br /> <span className="text-[#C2A96A]">Presence</span>
+                            <h2 className="text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
+                                Our   <span className="text-[#C2A96A]">Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
                             <div className="space-y-6">
-                                <p className="text-lg text-gray-500 leading-relaxed font-light">
+                                <p className="text-lg text-gray-500 text-justify leading-relaxed font-light">
                                     Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
                                 </p>
                             </div>
@@ -173,30 +206,30 @@ const IndustryPage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.2 }}
                                 transition={{ duration: 0.6 }}
-                                className="group flex flex-col md:flex-row gap-8 items-start border-b border-gray-100 pb-12"
+                                className="group flex flex-col md:flex-row gap-8 items-start border-b border-gray-800/40 pb-12"
                             >
                                 {/* IMAGE WITH SHADOW */}
-                                <div className="w-full md:w-[220px] h-[150px] flex-shrink-0 overflow-hidden rounded-xl shadow-[0_20px_50px_rgba(10,19,106,0.2)] group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
+                                <div className="w-full md:w-[220px] h-[150px] shrink-0 overflow-hidden rounded-lg shadow-[0_20px_50px_rgba(10,19,106,0.2)] group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
                                     <motion.img
                                         whileHover={{ scale: 1.05 }}
                                         src={item.img}
                                         alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 grayscale-[100%] group-hover:grayscale-0"
+                                        className="w-full h-full object-cover transition-transform duration-700 grayscale-100 group-hover:grayscale-0"
                                     />
                                 </div>
 
                                 {/* CONTENT AREA */}
-                                <div className="flex-1 pt-2">
+                                <div className="flex-1 pt-2 justify-center  items-center">
                                     <h3 className="text-xl lg:text-2xl font-bold text-[#1C1C1C] group-hover:text-[#C2A96A] transition-colors duration-300 mb-3">
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-sm md:text-base leading-relaxed font-light">
+                                    <p className="text-gray-500 text-justify text-sm md:text-base leading-relaxed font-light">
                                         {item.desc}
                                     </p>
 
                                     <motion.div
-                                        className="h-[1px] bg-[#C2A96A] mt-6 origin-left"
+                                        className="h-px bg-[#C2A96A] mt-6 origin-left"
                                         initial={{ scaleX: 0 }}
                                         whileInView={{ scaleX: 1 }}
                                         transition={{ delay: 0.2, duration: 0.8 }}
@@ -207,13 +240,13 @@ const IndustryPage = () => {
                     </main>
                 </div>
             </section>
-            <div className="max-w-4xl mx-auto my-16 px-8 py-10 border-t border-b border-gray-200 relative">
+            <div className="max-w-5xl mx-auto my-5 px-8 py-10 border-t border-b border-gray-200 relative">
                 {/* Decorative corner brackets for a unique look */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
 
                 <div className="text-center px-4">
-                    <p className="text-[#1C1C1C] text-xl md:text-2xl font-light leading-relaxed tracking-tight">
+                    <p className="text-[#1C1C1C] text-xl md:text-2xl text-center font-light leading-relaxed tracking-tight">
                         Our approach is not to merely understand the industry,
                         but to understand your position within it
                         and to provide guidance that is both and forward-looking.

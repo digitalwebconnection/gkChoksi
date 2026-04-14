@@ -38,7 +38,7 @@ const Footer = () => {
               alt="G.K. Choksi & Co."
               className="mx-auto h-11 w-auto md:mx-0 sm:h-12"
             />
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-black md:mt-5">
+            <p className="mt-4 max-w-md text-justify text-sm leading-relaxed text-black md:mt-5">
               Strategic financial clarity and confidence for businesses across India
               - with a partner-led, relationship-driven approach.
             </p>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white transition transform hover:scale-110 shadow-md"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white transition transform hover:scale-110 shadow-md"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>

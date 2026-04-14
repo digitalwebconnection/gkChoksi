@@ -62,7 +62,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="bg-[#0F3D2E] col-span-12 md:col-span-8 text-white p-6 overflow-y-auto">
+              <div className="bg-[#0F3D2E] text-justify col-span-12 md:col-span-8 text-white p-6 overflow-y-auto">
 
                 {[partner.description1, partner.description2, partner.description3, partner.description4]
                   .filter(Boolean)

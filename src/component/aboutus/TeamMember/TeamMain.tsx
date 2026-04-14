@@ -53,7 +53,7 @@ export default function TeamSection() {
             <div className="grid pt-20 max-w-7xl mx-auto md:grid-cols-12 gap-10 items-start">
 
                 {/* LEFT */}
-                <div className="md:col-span-8 space-y-2 text-lg leading-relaxed text-[#1c1c1c]">
+                <div className="md:col-span-8 space-y-2 text-justify text-lg leading-relaxed text-[#1c1c1c]">
                     <p>
                         At the heart of the firm is a strong core team of Chartered Accountants,
                         supported by dedicated professional support staffs.
@@ -145,11 +145,6 @@ export default function TeamSection() {
                     transition duration-500"
                                     />
 
-                                    {/* STATUS */}
-                                    <div className={`absolute top-0 right-0 text-xs px-4 py-1  rounded-bl-lg 
-                    ${member.status === "Open" ? "bg-green-600" : "bg-gray-400"} text-white`}>
-                                        {member.status}
-                                    </div>
 
                                     {/* OVERLAY */}
                                     <div className="absolute  bottom-0 w-full p-4 
@@ -239,19 +234,7 @@ export default function TeamSection() {
                                             {activeMember.role}
                                         </p>
 
-                                        <div className="mt-6">
-                                            <span className="text-sm font-semibold">
-                                                Status:
-                                            </span>
-                                            <span
-                                                className={`ml-2 px-2 py-1 text-xs rounded ${activeMember.status === "Open"
-                                                    ? "bg-green-100 text-green-700"
-                                                    : "bg-gray-200 text-gray-600"
-                                                    }`}
-                                            >
-                                                {activeMember.status}
-                                            </span>
-                                        </div>
+                                  
                                     </div>
 
                                 </div>

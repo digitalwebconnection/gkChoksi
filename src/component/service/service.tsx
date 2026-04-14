@@ -35,7 +35,7 @@ export const SERVICES: Service[] = [
     slug: "audit-assurance",
     title: "Audit & Assurance",
     subtitle: "Confidence & Reliability for Stakeholders",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVtMsBEYg-DMkuJXnipJpaF390zexNZr2QmQ&s",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTI0jgdsTReAA_OxyEIxgeNJLUHH0G9aqKTg&s",
     paragraphs: [
       "Assurance, in its truest sense, goes beyond verification - it builds trust where it matters most. Our audit approach is defined by independence of thought, depth of analysis, and an uncompromising commitment to quality.",
       "Across External and Internal Audits, Forensic Reviews, Due Diligence, Tax and Stock Audits, Departmental and Special Audits, we bring precision and perspective together.",
@@ -128,21 +128,26 @@ const ServicePage = () => {
             <div className="mt-8 w-16 h-0.5 bg-[#6FAF9B] mx-auto" />
 
             {/* Focus Section */}
-            <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#C2A96A] mb-5">
+         
+
+          </div>
+        </div>
+      </section>
+         <div className="mt-8 text-center">
+              <p className="text-lg uppercase  tracking-[0.3em] text-[#000000] mb-5">
                 Areas of Focus
               </p>
 
               {/* Pills */}
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-4">
                 {SERVICES.map((service) => (
                   <span
                     key={service.slug}
-                    className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+                    className="px-5 py-2 rounded-full text-md font-medium transition-all duration-300"
                     style={{
-                      backgroundColor: "rgba(255,255,255,0.08)",
-                      border: "1px solid rgba(255,255,255,0.2)",
-                      color: "#F7F9F8",
+                      backgroundColor: "#6FAF9B ",
+                      border: "1px solid #C2A96A",
+                      color: "#000000",
                     }}
                   >
                     {service.title}
@@ -151,16 +156,12 @@ const ServicePage = () => {
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* HEADER */}
           <div className="text-center mb-20">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#6FAF9B]">
+            <p className="text-lg uppercase tracking-[0.35em] text-[#6FAF9B]">
               Services
             </p>
 
@@ -174,10 +175,10 @@ const ServicePage = () => {
           {/* GRID */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            {SERVICES.map((service, index) => (
+            {SERVICES.map((service) => (
               <div
                 key={service.slug}
-                className="group relative rounded-3xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500 shadow-black/40"
               >
 
                 {/* IMAGE */}
@@ -193,12 +194,12 @@ const ServicePage = () => {
 
                   {/* Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="text-xs tracking-widest text-[#C2A96A] uppercase">
+                    {/* <p className="text-xs tracking-widest text-[#C2A96A] uppercase">
                       {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="text-lg font-semibold mt-1">
+                    </p> */}
+                    {/* <h3 className="text-lg font-semibold mt-1">
                       {service.title}
-                    </h3>
+                    </h3> */}
                   </div>
                 </div>
 
@@ -209,15 +210,15 @@ const ServicePage = () => {
                     {service.subtitle}
                   </h4>
 
-                  <p className="mt-4 text-sm text-[#1C1C1C]/70 leading-relaxed">
+                  <p className="mt-4 text-justify text-sm text-[#1C1C1C]/70 leading-relaxed">
                     {service.paragraphs[0]}
                   </p>
-                  <p className="mt-4 text-sm text-[#1C1C1C]/70 leading-relaxed">
+                  <p className="mt-4 text-justify text-sm text-[#1C1C1C]/70 leading-relaxed">
                     {service.paragraphs[1]}
                   </p>
 
                   {/* CTA */}
-                  <div className="mt-6 flex items-center justify-between">
+                  {/* <div className="mt-6 flex items-center justify-between">
                     <span className="text-xs uppercase tracking-widest text-[#6FAF9B]">
                       Learn More
                     </span>
@@ -225,10 +226,10 @@ const ServicePage = () => {
                     <div className="w-8 h-8 flex items-center justify-center rounded-full border border-[#6FAF9B] group-hover:bg-[#6FAF9B] group-hover:text-white transition">
                       →
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Accent */}
-                  <div className="mt-6 h-0.5 w-10 bg-[#C2A96A]" />
+                  {/* <div className="mt-6 h-0.5 w-10 bg-[#C2A96A]" /> */}
                 </div>
 
               </div>
@@ -237,10 +238,10 @@ const ServicePage = () => {
           </div>
 
           {/* BOTTOM STRIP (CLEAN VERSION) */}
-          <div className="mt-20 border-t pt-8 flex flex-wrap justify-center gap-6 text-sm text-[#1C1C1C]/70">
+          <div className="mt-20 border-t pt-8 flex flex-wrap justify-center gap-6 text-md text-[#1C1C1C]/70">
             {BOTTOM_POINTS.map((point, i) => (
-              <span key={i} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C2A96A]" />
+              <span key={i} className="flex items-center  gap-2">
+                <span className="w-1.5 h-1.5 rounded-full  bg-[#C2A96A]" />
                 {point}
               </span>
             ))}

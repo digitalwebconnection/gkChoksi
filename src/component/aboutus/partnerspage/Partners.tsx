@@ -47,7 +47,7 @@ const Partners = () => {
                   bg-linear-to-t from-[#0F3D2E] via-[#0F3D2E]/80 to-transparent
                   transition-all duration-300"
                                 >
-                                    <h3 className="font-semibold  hidden group-hover:block text-lg group-hover:text-[#C2A96A]">
+                                    <h3 className="font-bold  hidden group-hover:block text-md group-hover:text-[#C2A96A]">
                                         {partner.name}
                                     </h3>
                                     <p className="text-sm hidden group-hover:block text-gray-200">

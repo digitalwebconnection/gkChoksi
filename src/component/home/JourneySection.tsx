@@ -147,7 +147,7 @@ const TimelineSection = () => {
                           {item.title}
                         </h3>
 
-                        <p className="mt-1 text-md text-black">
+                        <p className="mt-1 text-justify text-md text-black">
                           {item.desc}
                         </p>
 
