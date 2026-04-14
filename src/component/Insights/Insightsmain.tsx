@@ -128,20 +128,20 @@ const InsightsMain: React.FC = () => {
                                         rel="noreferrer"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="group flex items-center gap-4 bg-white/10 border border-black/20 rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300"
+                                        className="group  text-center items-center gap-4 bg-white/10 border border-black/20 rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300"
                                     >
 
                                         {/* Logo */}
-                                        <div className="w-12 h-12 flex items-center justify-center">
+                                        <div className="w-50 h-50 flex items-center justify-center">
                                             <img
                                                 src={item.logo}
                                                 alt={item.name}
-                                                className="h-10 object-contain grayscale group-hover:grayscale-0 transition duration-300"
+                                                className="h-40 object-contain grayscale group-hover:grayscale-0 transition duration-300"
                                             />
                                         </div>
 
                                         {/* Name */}
-                                        <span className="text-sm font-semibold text-[#1C1C1C] group-hover:text-[#1F6F5B] transition">
+                                        <span className="text-lg font-semibold text-[#1C1C1C] group-hover:text-[#1F6F5B] transition">
                                             {item.name}
                                         </span>
 

@@ -21,7 +21,7 @@ import bgClient from "../../assets/15.jpeg"
 const IVORY = "#F7F9F8"
 const CHARCOAL = "#1C1C1C"
 const ACCENT = "#6FAF9B"
-const GOLD = "#C2A96A"
+const GOLD = "#79590a"
 
 
 // Assuming variables: GOLD, ACCENT, CHARCOAL, IVORY are defined
@@ -31,7 +31,7 @@ const foundationItems = [
   {
     title: "Vision",
     content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
-    image: "https://www.investmentmonitor.ai/wp-content/uploads/sites/7/2021/12/vision-leadership-mission.jpg",
+    image: "https://www.dmitraassociates.com/wp-content/uploads/2015/06/Vision1.png",
     color: GOLD,
     icon: "vision",
     index: 0
@@ -39,7 +39,7 @@ const foundationItems = [
   {
     title: "Mission",
     content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding.",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/003/396/738/small/businessman-clicks-on-virtual-screen-mission-photo.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgNL4FjG2CswM33bJVRPPe7AOgdiE864eNUg&s",
     color: ACCENT,
     icon: "mission",
     index: 1
@@ -101,89 +101,71 @@ const VisionMissionSection = () => {
 
 
   return (
-    <div className="bg-[#FBFCFB]">
+    <div className="bg-[#FBFCFB]  ">
       {/* Vision & Mission */}
-    <section className="py-24" style={{ backgroundColor: "#F7F9F8" }}>
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    
-    {/* Header Block */}
-    <div className="mb-10 text-center">
-       <span className="text-lg font-bold uppercase tracking-[0.4em] text-[#1F6F5B]">Our Foundation</span>
-       <h2 className="mt-2 text-4xl md:text-5xl font-serif  font-light text-[#1C1C1C]">
-         Purpose & <span className="">Strategy</span>
-       </h2>
-    </div>
+      <section className="py-14" style={{ backgroundColor: "#F7F9F8" }}>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-    {/* Two Cards in One Row */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-      {foundationItems.map((item, idx) => (
-        <div key={idx} className="flex flex-col">
-          
-          {/* Title on Top */}
-          <h3 
-            className="mb-6 text-3xl font-bold tracking-tight text-center md:text-left"
-            style={{ color: "#1C1C1C" }}
-          >
-            {item.title}
-          </h3>
-
-          {/* 180 Degree Flip Card Container */}
-          <div className="group h-[400px] w-full perspective-[1500px]">
-            <div className="relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
-              
-              {/* FRONT SIDE: Image */}
-              <div className="absolute inset-0 backface-hidden">
-                <div className="relative h-full w-full overflow-hidden rounded-xl">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="h-full w-full object-fill transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-                  
-                  {/* Bottom Indicator */}
-                  <div 
-                    className="absolute bottom-0 left-0 h-1.5 w-full" 
-                    style={{ backgroundColor: item.color }} 
-                  />
-                </div>
-              </div>
-
-              {/* BACK SIDE: Content (Rotated 180deg) */}
-              <div className="absolute inset-0 h-full w-full rounded-xl bg-white p-10 backface-hidden transform-[rotateY(180deg)] shadow-xl border border-stone-100">
-                <div className="flex flex-col h-full justify-center items-center text-center">
-                  <div 
-                    className="mb-6 rounded-full p-3 opacity-20" 
-                    style={{ backgroundColor: item.color }}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={item.color} strokeWidth="2">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    </svg>
-                  </div>
-                  
-                  <p className="text-xl  text-justify md:text-2xl leading-relaxed text-stone-700 font-serif italic">
-                    "{item.content}"
-                  </p>
-                  
-                  <div 
-                    className="mt-8 h-px w-16" 
-                    style={{ backgroundColor: item.color }} 
-                  />
-                  
-                  <span className="mt-4 text-[10px] uppercase tracking-widest font-bold text-stone-400">
-                    Our Commitment
-                  </span>
-                </div>
-              </div>
-
-            </div>
+          {/* Header Block */}
+          <div className="mb-5 text-center">
+            <span className="text-lg font-bold uppercase tracking-[0.4em] text-[#1F6F5B]">Our Foundation</span>
+            <h2 className="mt-2 text-4xl md:text-5xl font-serif  font-light text-[#1C1C1C]">
+              Purpose & <span className="">Strategy</span>
+            </h2>
           </div>
+
+          {/* Two Cards in One Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+  {foundationItems.map((item, idx) => (
+    <div
+      key={idx}
+      className="group relative h-[420px] shadow-xl shadow-black/30 overflow-hidden rounded-xl"
+    >
+
+      {/* 🔥 Background Image */}
+      <img
+        src={item.image}
+        alt={item.title}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
+      />
+
+      {/* 🔥 Dark Overlay */}
+      {/* <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition duration-500" /> */}
+
+      {/* 🔥 Gradient Overlay (Bottom Focus) */}
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
+
+      {/* 🔥 Content */}
+      <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+
+        {/* Title */}
+        <h3 className="text-3xl font-bold mb-3">
+          {item.title}
+        </h3>
+
+        {/* Content */}
+        <p className="text-sm md:text-base leading-relaxed text-white/80">
+          {item.content}
+        </p>
+
+        {/* Bottom Accent */}
+        <div className="mt-6 flex items-center gap-3">
+          <div
+            className="h-1 w-12 rounded-full transition-all duration-500 group-hover:w-20"
+            style={{ backgroundColor: item.color }}
+          />
+          <span className="text-xs uppercase tracking-wider text-white/60">
+            Our Commitment
+          </span>
         </div>
-      ))}
+
+      </div>
+
     </div>
-  </div>
-</section>
+  ))}
+</div>
+        </div>
+      </section>
 
 
       <section className="relative overflow-hidden py-24 md:pb-12" >
@@ -211,7 +193,7 @@ const VisionMissionSection = () => {
             </motion.div>
 
             {/* Progress Indicators / Navigation */}
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               {coreValues.map((_, i) => (
                 <button
                   key={i}
@@ -229,7 +211,7 @@ const VisionMissionSection = () => {
                   />
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Content Container */}
@@ -269,7 +251,7 @@ const VisionMissionSection = () => {
                   className="p-6 md:px-8 py-12 shadow-xl backdrop-blur-sm"
                   style={{ backgroundColor: `${IVORY}F0`, border: `1px solid ${GOLD}30` }}
                 >
-                  
+
 
                   <h3 className="text-4xl font-medium tracking-tight" style={{ color: CHARCOAL }}>
                     {coreValues[slide].title}
@@ -297,78 +279,78 @@ const VisionMissionSection = () => {
       </section>
 
       {/* Core values bottom CTA */}
-   <section className="relative overflow-hidden py-24 md:py-36" >
-  {/* Large Decorative Background Text (Modern Outline) */}
-  <div 
-    className="absolute text-center top-0 select-none opacity-[0.09] pointer-events-none"
-    style={{ 
-      fontSize: 'clamp(10rem, 18vw, 20rem)', 
-      fontWeight: 900,
-      lineHeight: 1,
-      WebkitTextStroke: `2px ${CHARCOAL}`,
-      color: 'transparent'
-    }}
-  >
-    G.K.C & Co
-  </div>
-
-  <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-    <div className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
-      
-      {/* Left side: Heading & Promise */}
-      <div className="max-w-2xl">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+      <section className="relative overflow-hidden py-24 md:py-36" >
+        {/* Large Decorative Background Text (Modern Outline) */}
+        <div
+          className="absolute text-center top-0 select-none opacity-[0.09] pointer-events-none"
+          style={{
+            fontSize: 'clamp(10rem, 18vw, 20rem)',
+            fontWeight: 900,
+            lineHeight: 1,
+            WebkitTextStroke: `2px ${CHARCOAL}`,
+            color: 'transparent'
+          }}
         >
-          <h2 
-            className="text-5xl font-semibold tracking-tighter md:text-6xl lg:text-7xl"
-            style={{ color: CHARCOAL }}
-          >
-            Go there <br /> 
-            <span className="font-serif " style={{ color: ACCENT }}>with us.</span>
-          </h2>
-          
-          <div className="mt-8 flex items-center gap-4">
-            <div className="h-px w-12" style={{ backgroundColor: GOLD }} />
-            <p className="text-2xl font-medium tracking-wide uppercase md:text-base" style={{ color: GOLD }}>
-              Now, for tomorrow is our promise.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Right side: Description & CTA (Floating Card style) */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative lg:max-w-md"
-      >
-        <div 
-          className="relative z-10 p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] rounded-sm"
-          style={{ backgroundColor: IVORY, borderLeft: `4px solid ${GOLD}` }}
-        >
-          <p className="text-lg leading-relaxed text-justify md:text-xl" style={{ color: CHARCOAL, opacity: 0.9 }}>
-            The business world is changing at lightning speed. To succeed, you
-            need an <span className="font-bold">agile partner</span> to help lead you forward—exploring every opportunity to prepare you for tomorrow.
-          </p>
-
-       
+          G.K.C & Co
         </div>
-        
-        {/* Abstract Geometry behind the card */}
-        <div 
-          className="absolute -bottom-4 -right-4 h-full w-full opacity-10"
-          style={{ border: `1px solid ${CHARCOAL}` }}
-        />
-      </motion.div>
-    </div>
-  </div>
-</section>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+
+            {/* Left side: Heading & Promise */}
+            <div className="max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <h2
+                  className="text-5xl font-semibold tracking-tighter md:text-6xl lg:text-7xl"
+                  style={{ color: CHARCOAL }}
+                >
+                  Go there <br />
+                  <span className="font-serif " style={{ color: ACCENT }}>with us.</span>
+                </h2>
+
+                <div className="mt-8 flex items-center gap-4">
+                  <div className="h-px w-12" style={{ backgroundColor: GOLD }} />
+                  <p className="text-2xl font-medium tracking-wide uppercase md:text-base" style={{ color: GOLD }}>
+                    Now, for tomorrow is our promise.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right side: Description & CTA (Floating Card style) */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative lg:max-w-md"
+            >
+              <div
+                className="relative z-10 p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] rounded-sm"
+                style={{ backgroundColor: IVORY, borderLeft: `4px solid ${GOLD}` }}
+              >
+                <p className="text-lg leading-relaxed text-justify md:text-xl" style={{ color: CHARCOAL, opacity: 0.9 }}>
+                  The business world is changing at lightning speed. To succeed, you
+                  need an <span className="font-bold">agile partner</span> to help lead you forward—exploring every opportunity to prepare you for tomorrow.
+                </p>
+
+
+              </div>
+
+              {/* Abstract Geometry behind the card */}
+              <div
+                className="absolute -bottom-4 -right-4 h-full w-full opacity-10"
+                style={{ border: `1px solid ${CHARCOAL}` }}
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

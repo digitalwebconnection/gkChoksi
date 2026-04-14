@@ -11,16 +11,17 @@ export type Service = {
 }
 
 export const SERVICES: Service[] = [
-  {
-    slug: "management-consultancy",
-    title: "Management Consultancy",
-    subtitle: "Strategy, made executable.",
-    image: "https://cdn.nishtyainfotech.com/content/learnings/data/blog/banner/648c8257d3bfa.jpeg",
+   {
+    slug: "regulatory",
+    title: "Regulatory",
+    subtitle: "Complexity, made navigable",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3Q73LSrZdtjzrUlNWWYnywOnhUs_MHI2HA&s",
     paragraphs: [
-      "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
-      "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
+      "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
+      "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
     ],
   },
+  
   {
     slug: "business-advisory",
     title: "Business Advisory",
@@ -43,26 +44,6 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: "taxation",
-    title: "Taxation",
-    subtitle: "Structured for precisional advantage",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY6oanAeanBjs1rk7gvz5XMXlHdZgqH_J_ww&s",
-    paragraphs: [
-      "Taxation, when approached thoughtfully, becomes a tool of efficiency rather than a burden of compliance. Our tax practice is built on this understanding.",
-      "With expertise in Corporate Tax, International Tax, Indirect Tax, and Transfer Pricing, we provide solutions that are technically sound, commercially viable, and aligned with long-term objectives.",
-    ],
-  },
-  {
-    slug: "regulatory",
-    title: "Regulatory",
-    subtitle: "Complexity, made navigable",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3Q73LSrZdtjzrUlNWWYnywOnhUs_MHI2HA&s",
-    paragraphs: [
-      "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
-      "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
-    ],
-  },
-  {
     slug: "mergers-acquisition",
     title: "Mergers & Acquisition",
     subtitle: "Every deal, thoughtfully shaped",
@@ -72,6 +53,27 @@ export const SERVICES: Service[] = [
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
     ],
   },
+  {
+    slug: "taxation",
+    title: "Taxation",
+    subtitle: "Structured for precisional advantage",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY6oanAeanBjs1rk7gvz5XMXlHdZgqH_J_ww&s",
+    paragraphs: [
+      "Taxation, when approached thoughtfully, becomes a tool of efficiency rather than a burden of compliance. Our tax practice is built on this understanding.",
+      "With expertise in Corporate Tax, International Tax, Indirect Tax, and Transfer Pricing, we provide solutions that are technically sound, commercially viable, and aligned with long-term objectives.",
+    ],
+  },
+ {
+    slug: "management-consultancy",
+    title: "Management Consultancy",
+    subtitle: "Strategy, made executable.",
+    image: "https://cdn.nishtyainfotech.com/content/learnings/data/blog/banner/648c8257d3bfa.jpeg",
+    paragraphs: [
+      "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
+      "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
+    ],
+  },
+  
 ]
 
 
@@ -133,29 +135,53 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
-         <div className="mt-8 text-center">
-              <p className="text-lg uppercase  tracking-[0.3em] text-[#000000] mb-5">
-                Areas of Focus
-              </p>
+       <div className="mt-14 text-center">
 
-              {/* Pills */}
-              <div className="flex flex-wrap justify-center gap-4">
-                {SERVICES.map((service) => (
-                  <span
-                    key={service.slug}
-                    className="px-5 py-2 rounded-full text-md font-medium transition-all duration-300"
-                    style={{
-                      backgroundColor: "#6FAF9B ",
-                      border: "1px solid #C2A96A",
-                      color: "#000000",
-                    }}
-                  >
-                    {service.title}
-                  </span>
-                ))}
-              </div>
-            </div>
+  {/* Title */}
+  <p className="text-lg uppercase tracking-[0.5em] text-[#1C1C1C] mb-10 font-semibold">
+    Areas of Focus
+  </p>
 
+  {/* Chips Container */}
+  <div className="flex flex-wrap justify-center gap-5 max-w-7xl mx-auto">
+
+    {SERVICES.map((service) => (
+      <div
+        key={service.slug}
+        className="relative group"
+      >
+        {/* Glow Background */}
+        <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-lg opacity-0 group-hover:opacity-60 transition duration-500" />
+
+        {/* Main Chip */}
+        <span
+          className="
+            relative z-10
+            px-7 py-3
+            rounded-full
+            text-sm md:text-base
+            font-semibold
+            text-[#1C1C1C]
+            backdrop-blur-md
+            bg-white/70
+            border border-white/40
+            shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+            group-hover:text-white
+            group-hover:bg-linear-to-r
+            group-hover:from-[#6FAF9B]
+            group-hover:to-[#C2A96A]
+            group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]
+            group-hover:-translate-y-1
+            transition-all duration-300 cursor-pointer
+          "
+        >
+          {service.title}
+        </span>
+      </div>
+    ))}
+
+  </div>
+</div>
       <section className="py-24 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -237,15 +263,40 @@ const ServicePage = () => {
 
           </div>
 
-          {/* BOTTOM STRIP (CLEAN VERSION) */}
-          <div className="mt-20 border-t pt-8 flex flex-wrap justify-center gap-6 text-md text-[#1C1C1C]/70">
-            {BOTTOM_POINTS.map((point, i) => (
-              <span key={i} className="flex items-center  gap-2">
-                <span className="w-1.5 h-1.5 rounded-full  bg-[#C2A96A]" />
-                {point}
-              </span>
-            ))}
-          </div>
+     {/* BOTTOM STRIP */}
+<div className="mt-20">
+
+  {/* Container */}
+  <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+
+    {BOTTOM_POINTS.map((point, i) => (
+      <div
+        key={i}
+        className="
+          flex items-center gap-3 
+          px-5 py-2.5 
+          rounded-full 
+          bg-white 
+          border border-[#C2A96A]/30
+          shadow-sm
+          hover:shadow-md
+          hover:-translate-y-1
+          transition-all duration-300
+        "
+      >
+        {/* Icon Dot */}
+        <div className="w-2 h-2 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A]" />
+
+        {/* Text */}
+        <span className="text-sm md:text-base text-[#1C1C1C] font-medium">
+          {point}
+        </span>
+      </div>
+    ))}
+
+  </div>
+
+</div>
 
         </div>
       </section>

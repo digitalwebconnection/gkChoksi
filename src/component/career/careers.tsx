@@ -120,61 +120,61 @@ const JobAccordion = ({ job, isOpen, onClick }: JobAccordionProps) => {
           </svg>
         </motion.span>
       </button>
-<AnimatePresence initial={false}>
-  {isOpen && (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.25 }}
-      className="overflow-hidden"
-    >
-      <div className="p-6 space-y-5 text-[#1C1C1C]/80 border-t border-[#1C1C1C]/5">
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden"
+          >
+            <div className="p-6 space-y-5 text-[#1C1C1C]/80 border-t border-[#1C1C1C]/5">
 
-        {job.description && (
-          <div>
-            <p className="font-bold text-[#1C1C1C] mb-2 uppercase text-xs tracking-widest">
-              Description
-            </p>
-            <p className="leading-relaxed">{job.description}</p>
-          </div>
-        )}
+              {job.description && (
+                <div>
+                  <p className="font-bold text-[#1C1C1C] mb-2 uppercase text-xs tracking-widest">
+                    Description
+                  </p>
+                  <p className="leading-relaxed">{job.description}</p>
+                </div>
+              )}
 
-        {job.details && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-lg border border-[#C2A96A]/20 bg-[#F7F9F8]">
-            {Object.entries(job.details).map(([key, value]) => (
-              <p key={key} className="text-sm">
-                <span className="font-bold text-[#1C1C1C]">{key}: </span>
-                {String(value)}
-              </p>
-            ))}
-          </div>
-        )}
+              {job.details && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-lg border border-[#C2A96A]/20 bg-[#F7F9F8]">
+                  {Object.entries(job.details).map(([key, value]) => (
+                    <p key={key} className="text-sm">
+                      <span className="font-bold text-[#1C1C1C]">{key}: </span>
+                      {String(value)}
+                    </p>
+                  ))}
+                </div>
+              )}
 
-        {[
-          { label: "Major Responsibilities", data: job.responsibilities },
-          { label: "Experience & Background", data: job.requirements },
-          { label: "Skill Requirements", data: job.skillRequirement },
-          { label: "Key Points", data: job.points }
-        ].map((section, idx) =>
-          section.data ? (
-            <div key={idx} className="space-y-2">
-              <p className="font-bold text-[#1C1C1C] text-sm uppercase tracking-wider">
-                {section.label}
-              </p>
-              <ul className="list-disc pl-5 space-y-1">
-                {section.data.map((item: string, i: number) => (
-                  <li key={i} className="leading-relaxed">{item}</li>
-                ))}
-              </ul>
+              {[
+                { label: "Major Responsibilities", data: job.responsibilities },
+                { label: "Experience & Background", data: job.requirements },
+                { label: "Skill Requirements", data: job.skillRequirement },
+                { label: "Key Points", data: job.points }
+              ].map((section, idx) =>
+                section.data ? (
+                  <div key={idx} className="space-y-2">
+                    <p className="font-bold text-[#1C1C1C] text-sm uppercase tracking-wider">
+                      {section.label}
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      {section.data.map((item: string, i: number) => (
+                        <li key={i} className="leading-relaxed">{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null
+              )}
+
             </div>
-          ) : null
+          </motion.div>
         )}
-
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
+      </AnimatePresence>
     </div>
   );
 };
@@ -231,15 +231,13 @@ const CareersPage = () => {
                 <p className="text-lg leading-relaxed border-l-4 pl-6 italic" style={{ borderColor: COLORS.GOLD }}>
                   We foster an environment that values curiosity, discipline, and integrity.
                 </p>
-                <p className="text-xl leading-relaxed font-light text-justify">
-                  Contact with HR :
-                </p>
+               
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.96 }}
-                  className="flex items-center justify-center rounded-full border border-[#6FAF9B] px-8 py-3 text-sm font-semibold text-[#6FAF9B] backdrop-blur-sm transition duration-300 hover:bg-[#6FAF9B]/20"
+                  className="flex items-center justify-center rounded-full border border-[#083023] px-10 py-2 text-lg font-semibold text-[#064631] backdrop-blur-sm transition duration-300 hover:bg-[#6FAF9B]/20"
                 >
-                  Contact Us
+                  Apply Now
                 </motion.button>
               </div>
             </div>

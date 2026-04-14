@@ -5,12 +5,13 @@ import img from "../../assets/1.jpeg";
 import img1 from "../../assets/18.jpeg";
 import img2 from "../../assets/20.jpeg";
 import {
-  HiOutlineCheck,
-  HiOutlineUser,
+
   HiOutlineCpuChip,
   HiOutlineCurrencyRupee,
+  HiOutlineUserGroup,
 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
+import { HiOutlineBadgeCheck } from "react-icons/hi";
 
 
 const fadeInUp = {
@@ -59,15 +60,15 @@ const AboutSection = () => {
               contextual insight.
             </p>
 
-            <ul className="mb-8 space-y-3">
+            <ul className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
                   text: "Expert certified professionals",
-                  icon: HiOutlineCheck,
+                  icon: HiOutlineBadgeCheck, // changed icon
                 },
                 {
                   text: "Personalized service approach",
-                  icon: HiOutlineUser,
+                  icon: HiOutlineUserGroup, // better icon
                 },
                 {
                   text: "Latest compliance technology",
@@ -81,32 +82,33 @@ const AboutSection = () => {
                 const Icon = item.icon;
 
                 return (
-                  <li key={idx} className="flex items-center gap-3">
+                  <li key={idx} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
 
-                    {/* Icon Container */}
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#6FAF9B]/15 text-[#0F3D2E]">
-                      <Icon className="h-4 w-4" />
+                    {/* Icon */}
+                    <div className="flex h-15 w-15 items-center justify-center rounded-xl bg-[#6FAF9B]/20 text-[#0F3D2E]">
+                      <Icon className="h-10 w-10" />
                     </div>
 
                     {/* Text */}
-                    <span className="text-black">{item.text}</span>
+                    <span className="text-black font-medium">
+                      {item.text}
+                    </span>
                   </li>
                 );
               })}
             </ul>
-
-  <motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.96 }}
-  onClick={() => {
-    navigate("/contact");
-    window.scrollTo(0, 0); // ✅ scroll top
-  }}
-  className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
->
-  Get in Touch
-  <ArrowRight className="ml-2 h-4 w-4" />
-</motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={() => {
+                navigate("/contact");
+                window.scrollTo(0, 0); // ✅ scroll top
+              }}
+              className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </motion.button>
           </motion.div>
 
           {/* RIGHT: IMAGE CLUSTER */}
