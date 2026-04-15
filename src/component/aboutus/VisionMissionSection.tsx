@@ -39,7 +39,7 @@ const foundationItems = [
   {
     title: "Mission",
     content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgNL4FjG2CswM33bJVRPPe7AOgdiE864eNUg&s",
+    image: "https://thumbs.dreamstime.com/b/notebook-tools-notes-text-our-mission-200350644.jpg",
     color: ACCENT,
     icon: "mission",
     index: 1
