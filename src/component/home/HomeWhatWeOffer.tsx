@@ -13,28 +13,40 @@ import { useNavigate } from "react-router-dom";
 
 const services = [
   {
-    title: "Regulatory",
-    icon: ShieldCheck,
-  },
-  {
     title: "Business Advisory",
     icon: Briefcase,
+    color: "#3B82F6", // blue
+    bg: "#DBEAFE",
   },
   {
     title: "Audit & Assurance",
     icon: SearchCheck,
+    color: "#10B981", // green
+    bg: "#D1FAE5",
   },
   {
     title: "Mergers & Acquisition",
     icon: GitMerge,
-  },
-  {
-    title: "Taxation",
-    icon: Calculator,
+    color: "#F59E0B", // orange
+    bg: "#FEF3C7",
   },
   {
     title: "Management Consultancy",
     icon: BarChart3,
+    color: "#8B5CF6", // purple
+    bg: "#EDE9FE",
+  },
+  {
+    title: "Regulatory",
+    icon: ShieldCheck,
+    color: "#EF4444", // red
+    bg: "#FEE2E2",
+  },
+  {
+    title: "Taxation",
+    icon: Calculator,
+    color: "#14B8A6", // teal
+    bg: "#CCFBF1",
   },
 ];
 
@@ -77,7 +89,7 @@ const WhatWeOffer = () => {
           </h2>
 
           <p className="mx-auto mt-4 text-lg text-[#1F6F5B]">
-We deliver comprehensive, specialized services as follows....
+            We deliver comprehensive, specialized services as follows....
           </p>
         </div>
 
@@ -99,15 +111,22 @@ We deliver comprehensive, specialized services as follows....
                 onClick={() => navigate("/services")}
                 className="cursor-pointer group relative border border-[#6FAF9B]/30 bg-white p-6 text-center
                 shadow-[0_10px_30px_rgba(15,61,46,0.1)] 
-                hover:shadow-[0_20px_60px_rgba(15,61,46,0.2)] 
+                hover:shadow-[0_20px_60px_rgba(15,61,46,0.2)] F
                 transition-all duration-300 rounded-xl"
               >
                 {/* Top Accent Line */}
                 <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]/70" />
 
                 {/* Icon */}
-                <div className="mb-4 flex h-14 w-14 mx-auto items-center justify-center rounded-xl bg-[#6FAF9B]/15 text-[#0F3D2E] group-hover:bg-[#0F3D2E] group-hover:text-white transition">
-                  <Icon className="h-6 w-6" />
+                <div
+                  className="mb-4 flex h-14 w-14 mx-auto items-center justify-center rounded-xl transition"
+                  style={{ backgroundColor: service.bg }}
+                >
+                  <Icon
+                    className="h-6 w-6"
+                    style={{ color: service.color }}
+                    strokeWidth={2}
+                  />
                 </div>
 
                 {/* Title */}

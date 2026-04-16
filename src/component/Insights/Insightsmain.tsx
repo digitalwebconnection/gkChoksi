@@ -27,11 +27,7 @@ const insightCards = [
                 logo: "https://cdnicai.s3.ap-south-1.amazonaws.com/images/New%20folder/logo-icai1.png",
                 href: "https://www.icai.org"
             },
-            {
-                name: "MCA",
-                logo: "https://play-lh.googleusercontent.com/wEO3g36yMueBOHrnWhypJFTzwaC2-85oMuacSkW0PvlIIrS0YfAiCqivVvWsmkAeTQ",
-                href: "https://www.mca.gov.in"
-            },
+
             {
                 name: "CBIC",
                 logo: "https://www.cbic.gov.in/content/images/CBIC_logo.png",
@@ -41,6 +37,11 @@ const insightCards = [
                 name: "CBDT",
                 logo: "https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_of_Income_Tax_Department_India.png",
                 href: "https://www.incometax.gov.in"
+            },
+            {
+                name: "MCA",
+                logo: "https://play-lh.googleusercontent.com/wEO3g36yMueBOHrnWhypJFTzwaC2-85oMuacSkW0PvlIIrS0YfAiCqivVvWsmkAeTQ",
+                href: "https://www.mca.gov.in"
             },
             {
                 name: "SEBI",
@@ -75,7 +76,7 @@ const InsightsMain: React.FC = () => {
                             <h1 className="text-3xl md:text-5xl font-semibold text-[#C2A96A]">
                                 Expert insight, thoughtful guidance, and regulatory clarity.
                             </h1>
-                       
+
                         </motion.div>
                     </div>
                 </div>
@@ -99,17 +100,17 @@ const InsightsMain: React.FC = () => {
                     </motion.article>
 
                     {/* 🔥 CARD 2 UPDATED */}
-                    
+
                     <motion.article className="   rounded-xl overflow-hidden">
                         {/* LEFT */}
-                    <div className="w-full  text-center ">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                            {insightCards[1].subtitle}
-                        </h2>
-                        <p className="text-black text-lg">
-                            {insightCards[1].description}
-                        </p>
-                    </div>
+                        <div className="w-full  text-center ">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                                {insightCards[1].subtitle}
+                            </h2>
+                            <p className="text-black text-lg">
+                                {insightCards[1].description}
+                            </p>
+                        </div>
                         {/* 🔥 RIGHT LOGO GRID */}
                         <div className="w-full  bg-[#F7F9F8] p-5 lg:p-0 shadow-xl relative z-10 flex flex-col justify-center">
 

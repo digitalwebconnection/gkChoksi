@@ -56,7 +56,7 @@ export default function TeamSection() {
 
                     {/* TITLE */}
                     <h1 className="text-4xl text-center mx-auto font-bold py-10 text-[#1C1C1C]">
-                        Members of the Team
+                        Our Team
                     </h1>
                     {/* CONTENT GRID */}
                     <div className="grid  max-w-7xl mb-15  items-start">

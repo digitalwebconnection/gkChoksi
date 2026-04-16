@@ -23,7 +23,7 @@ const CATEGORIES = [
         desc: "Navigating regulatory landscapes and R&D tax credits for life sciences and biotech sectors."
     },
     {
-        title: "Real Estate",
+        title: "Banking and Financial Services",
         img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
         desc: "Structural clarity for property development, REITs, and commercial asset management."
     },
@@ -83,7 +83,7 @@ const CATEGORIES = [
         desc: "Content distribution rights, production tax credits, and digital media expansion."
     },
     {
-        title: "Financial Services",
+        title: "Banking and Financial Services",
         img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
         desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
     },

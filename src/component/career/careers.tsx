@@ -223,7 +223,7 @@ const CareersPage = () => {
             {/* Left side remains light on DOM weight */}
             <div className="lg:w-1/3 space-y-8">
               <div className="inline-block h-1 w-12" style={{ backgroundColor: COLORS.GOLD }} />
-              <h2 className="text-4xl font-bold tracking-tight">Our Philosophy</h2>
+              <h2 className="text-4xl font-bold tracking-tight">Why Join Us?</h2>
               <div className="space-y-6 text-[#1C1C1C]/90">
                 <p className="text-xl leading-relaxed font-light text-justify">
                   At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.

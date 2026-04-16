@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
                     {/* Heading */}
 
 
-                    <p className="mt-4 text-center text-gray-600 max-w-3xl mx-auto animate-slideUp delay-100">
+                    <p className="mt-4 text-center  text-xl text-gray-600 max-w-3xl mx-auto animate-slideUp delay-100">
                         Have a question about accounting, taxation, audit or compliance?
                         Our team will guide you with clarity and professional expertise.
                     </p>
@@ -290,7 +290,7 @@ const ContactSection: React.FC = () => {
                             </h2>
 
                             <p className="mt-6 text-white font-bold max-w-md leading-relaxed text-justify">
-                                Strategically located at ONE42, North Tower -
+                                located at ONE42, North Tower -
                                 a landmark corporate destination designed for leadership,
                                 governance, and global advisory excellence.
                             </p>
