@@ -11,17 +11,19 @@ export type Service = {
 }
 
 export const SERVICES: Service[] = [
-   {
-    slug: "regulatory",
-    title: "Regulatory",
-    subtitle: "Complexity, made navigable",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3Q73LSrZdtjzrUlNWWYnywOnhUs_MHI2HA&s",
+  {
+    slug: "audit-assurance",
+    title: "Audit & Assurance",
+    subtitle: "Confidence & Reliability for Stakeholders",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjlTmp6LCd3DllEDENq3qA95DGlkc58DMwA&s",
     paragraphs: [
-      "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
-      "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
+      "Assurance, in its truest sense, goes beyond verification - it builds trust where it matters most. Our audit approach is defined by independence of thought, depth of analysis, and an uncompromising commitment to quality.",
+      "Across External and Internal Audits, Forensic Reviews, Due Diligence, Tax and Stock Audits, Departmental and Special Audits, we bring precision and perspective together.",
+      "Our work is designed to strengthen governance, identifying critical risks and enabling stakeholders to rely on financial and operational integrity with confidence.",
     ],
   },
-  
+
+
   {
     slug: "business-advisory",
     title: "Business Advisory",
@@ -32,48 +34,49 @@ export const SERVICES: Service[] = [
       "From Accounting Advisory and Start-up structuring to Government Incentives, Inbound and Outbound Investment Strategies, and Incubation, we work closely with businesses to shape scalable structures, unlock opportunities, and support growth with foresight and discipline.",
     ],
   },
-  {
-    slug: "audit-assurance",
-    title: "Audit & Assurance",
-    subtitle: "Confidence & Reliability for Stakeholders",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTI0jgdsTReAA_OxyEIxgeNJLUHH0G9aqKTg&s",
-    paragraphs: [
-      "Assurance, in its truest sense, goes beyond verification - it builds trust where it matters most. Our audit approach is defined by independence of thought, depth of analysis, and an uncompromising commitment to quality.",
-      "Across External and Internal Audits, Forensic Reviews, Due Diligence, Tax and Stock Audits, Departmental and Special Audits, we bring precision and perspective together.",
-      "Our work is designed to strengthen governance, identifying critical risks and enabling stakeholders to rely on financial and operational integrity with confidence.",
-    ],
-  },
+
   {
     slug: "mergers-acquisition",
     title: "Mergers & Acquisition",
     subtitle: "Every deal, thoughtfully shaped",
-    image: "https://d502jbuhuh9wk.cloudfront.net/articles/658fb202e4b0ce5ca4b26943/Di7Zqmergersandacquisitions01.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXczdgrzieBQpVMkTzrvVtoWm08eodYnAgYQ&s",
     paragraphs: [
       "Merger & Amalgamation are not merely financial events, they are defining milestones. Our M&A services combine analytical rigour with strategic perspective to support clients across the entire deal lifecycle.",
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
     ],
   },
   {
-    slug: "taxation",
-    title: "Taxation",
-    subtitle: "Structured for precisional advantage",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY6oanAeanBjs1rk7gvz5XMXlHdZgqH_J_ww&s",
-    paragraphs: [
-      "Taxation, when approached thoughtfully, becomes a tool of efficiency rather than a burden of compliance. Our tax practice is built on this understanding.",
-      "With expertise in Corporate Tax, International Tax, Indirect Tax, and Transfer Pricing, we provide solutions that are technically sound, commercially viable, and aligned with long-term objectives.",
-    ],
-  },
- {
     slug: "management-consultancy",
     title: "Management Consultancy",
     subtitle: "Strategy, made executable.",
-    image: "https://cdn.nishtyainfotech.com/content/learnings/data/blog/banner/648c8257d3bfa.jpeg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCu_RlikGUg8UGjkF9_fqjx1uLHXbntLG2EA&s",
     paragraphs: [
       "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
       "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
     ],
   },
-  
+  {
+    slug: "regulatory",
+    title: "Regulatory",
+    subtitle: "Complexity, made navigable",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaiW2XWKLtsd4W4knHKpZsw7YPtPqa35NJIw&s",
+    paragraphs: [
+      "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
+      "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
+    ],
+  },
+  {
+    slug: "taxation",
+    title: "Taxation",
+    subtitle: "Structured for precisional advantage",
+    image: "https://www.shutterstock.com/image-photo/person-interacts-digital-interface-displaying-600nw-2710079451.jpg",
+    paragraphs: [
+      "Taxation, when approached thoughtfully, becomes a tool of efficiency rather than a burden of compliance. Our tax practice is built on this understanding.",
+      "With expertise in Corporate Tax, International Tax, Indirect Tax, and Transfer Pricing, we provide solutions that are technically sound, commercially viable, and aligned with long-term objectives.",
+    ],
+  },
+
+
 ]
 
 
@@ -121,41 +124,39 @@ const ServicePage = () => {
 
             {/* Description */}
             <p className="mt-6 text-white/80 text-lg leading-relaxed max-w-6xl mx-auto">
-              Our services are organised around the moments that matter most — from
-              strategic inflection points and complex transactions to regulatory change
-              and ongoing assurance.
+              Our services focus on essential business needs, including taxation, compliance, audit, and financial advisory.
             </p>
 
             {/* Divider */}
             <div className="mt-8 w-16 h-0.5 bg-[#6FAF9B] mx-auto" />
 
             {/* Focus Section */}
-         
+
 
           </div>
         </div>
       </section>
-       <div className="mt-14 text-center">
+      <div className="mt-14 text-center">
 
-  {/* Title */}
-  <p className="text-lg uppercase tracking-[0.5em] text-[#1C1C1C] mb-10 font-semibold">
-    Areas of Focus
-  </p>
+        {/* Title */}
+        <p className="text-lg uppercase tracking-[0.5em] text-[#1C1C1C] mb-10 font-semibold">
+          Areas of Focus
+        </p>
 
-  {/* Chips Container */}
-  <div className="flex flex-wrap justify-center gap-5 max-w-7xl mx-auto">
+        {/* Chips Container */}
+        <div className="flex flex-wrap justify-center gap-5 max-w-7xl mx-auto">
 
-    {SERVICES.map((service) => (
-      <div
-        key={service.slug}
-        className="relative group"
-      >
-        {/* Glow Background */}
-        <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-lg opacity-0 group-hover:opacity-60 transition duration-500" />
+          {SERVICES.map((service) => (
+            <div
+              key={service.slug}
+              className="relative group"
+            >
+              {/* Glow Background */}
+              <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-lg opacity-0 group-hover:opacity-60 transition duration-500" />
 
-        {/* Main Chip */}
-        <span
-          className="
+              {/* Main Chip */}
+              <span
+                className="
             relative z-10
             px-7 py-3
             rounded-full
@@ -174,20 +175,20 @@ const ServicePage = () => {
             group-hover:-translate-y-1
             transition-all duration-300 cursor-pointer
           "
-        >
-          {service.title}
-        </span>
-      </div>
-    ))}
+              >
+                {service.title}
+              </span>
+            </div>
+          ))}
 
-  </div>
-</div>
+        </div>
+      </div>
       <section className="py-24 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* HEADER */}
           <div className="text-center mb-20">
-            <p className="text-lg uppercase tracking-[0.35em] text-[#6FAF9B]">
+            <p className="text-xl uppercase font-bold tracking-[0.2em] text-[#6FAF9B]">
               Services
             </p>
 
@@ -223,9 +224,9 @@ const ServicePage = () => {
                     {/* <p className="text-xs tracking-widest text-[#C2A96A] uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p> */}
-                    {/* <h3 className="text-lg font-semibold mt-1">
+                    <h3 className="text-lg font-semibold mt-1">
                       {service.title}
-                    </h3> */}
+                    </h3>
                   </div>
                 </div>
 
@@ -263,16 +264,16 @@ const ServicePage = () => {
 
           </div>
 
-     {/* BOTTOM STRIP */}
-<div className="mt-20">
+          {/* BOTTOM STRIP */}
+          <div className="mt-20">
 
-  {/* Container */}
-  <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            {/* Container */}
+            <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
 
-    {BOTTOM_POINTS.map((point, i) => (
-      <div
-        key={i}
-        className="
+              {BOTTOM_POINTS.map((point, i) => (
+                <div
+                  key={i}
+                  className="
           flex items-center gap-3 
           px-5 py-2.5 
           rounded-full 
@@ -283,20 +284,20 @@ const ServicePage = () => {
           hover:-translate-y-1
           transition-all duration-300
         "
-      >
-        {/* Icon Dot */}
-        <div className="w-2 h-2 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A]" />
+                >
+                  {/* Icon Dot */}
+                  <div className="w-2 h-2 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A]" />
 
-        {/* Text */}
-        <span className="text-sm md:text-base text-[#1C1C1C] font-medium">
-          {point}
-        </span>
-      </div>
-    ))}
+                  {/* Text */}
+                  <span className="text-sm md:text-base text-[#1C1C1C] font-medium">
+                    {point}
+                  </span>
+                </div>
+              ))}
 
-  </div>
+            </div>
 
-</div>
+          </div>
 
         </div>
       </section>

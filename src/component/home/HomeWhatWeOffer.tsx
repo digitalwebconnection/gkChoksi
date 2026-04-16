@@ -1,24 +1,40 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Scale, FileText, Shuffle, ShieldCheck } from "lucide-react";
+import {
+  ShieldCheck,
+  Briefcase,
+  SearchCheck,
+  GitMerge,
+  Calculator,
+  BarChart3,
+} from "lucide-react";
+
 import { useNavigate } from "react-router-dom";
 
 const services = [
   {
-    title: "Corporate and Allied Laws",
-    icon: Scale,
-  },
-  {
-    title: "Tax and Litigation Support",
-    icon: FileText,
-  },
-  {
-    title: "Transaction Advisory (M&A)",
-    icon: Shuffle,
-  },
-  {
-    title: "Audit and Assurance",
+    title: "Regulatory",
     icon: ShieldCheck,
+  },
+  {
+    title: "Business Advisory",
+    icon: Briefcase,
+  },
+  {
+    title: "Audit & Assurance",
+    icon: SearchCheck,
+  },
+  {
+    title: "Mergers & Acquisition",
+    icon: GitMerge,
+  },
+  {
+    title: "Taxation",
+    icon: Calculator,
+  },
+  {
+    title: "Management Consultancy",
+    icon: BarChart3,
   },
 ];
 
@@ -61,14 +77,13 @@ const WhatWeOffer = () => {
           </h2>
 
           <p className="mx-auto mt-4 text-lg text-[#1F6F5B]">
-            We deliver comprehensive, specialized services spanning governance,
-            tax, transactions, and assurance.
+We deliver comprehensive, specialized services as follows....
           </p>
         </div>
 
         {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

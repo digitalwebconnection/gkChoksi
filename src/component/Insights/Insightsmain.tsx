@@ -75,9 +75,7 @@ const InsightsMain: React.FC = () => {
                             <h1 className="text-3xl md:text-5xl font-semibold text-[#C2A96A]">
                                 Expert insight, thoughtful guidance, and regulatory clarity.
                             </h1>
-                            <p className="mt-6 text-lg text-white/80">
-                                Discover the latest articles and regulatory platforms.
-                            </p>
+                       
                         </motion.div>
                     </div>
                 </div>
@@ -85,6 +83,7 @@ const InsightsMain: React.FC = () => {
 
             {/* CARDS */}
             <div className="mx-auto max-w-7xl px-4 pb-32 pt-20">
+                <h2 className=" text-5xl text-center pb-15 font-bold">Articles & Publications</h2>
                 <section className="space-y-24">
 
                     {/* CARD 1 */}
@@ -94,7 +93,7 @@ const InsightsMain: React.FC = () => {
                         </div>
 
                         <div className="w-[90%] lg:w-6/12 bg-white p-8 text-justify shadow-xl -mt-16 lg:-ml-24">
-                            <h2 className="text-3xl font-bold">{insightCards[0].subtitle}</h2>
+                            {/* <h2 className="text-3xl font-bold">{insightCards[0].subtitle}</h2> */}
                             <p className="mt-4 text-gray-600">{insightCards[0].description}</p>
                         </div>
                     </motion.article>
@@ -136,7 +135,7 @@ const InsightsMain: React.FC = () => {
                                             <img
                                                 src={item.logo}
                                                 alt={item.name}
-                                                className="h-40 object-contain grayscale group-hover:grayscale-0 transition duration-300"
+                                                className="h-40 object-contain  transition duration-300"
                                             />
                                         </div>
 

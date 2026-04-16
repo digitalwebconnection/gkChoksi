@@ -36,12 +36,9 @@ const Footer = () => {
             <img
               src={logo}
               alt="G.K. Choksi & Co."
-              className="mx-auto h-11 w-auto md:mx-0 sm:h-12"
+              className="mx-auto h-15 w-auto md:mx-0 sm:h-12"
             />
-            <p className="mt-4 max-w-md text-justify text-sm leading-relaxed text-black md:mt-5">
-              Strategic financial clarity and confidence for businesses across India
-              - with a partner-led, relationship-driven approach.
-            </p>
+       
           </div>
 
           {/* Right separate div */}

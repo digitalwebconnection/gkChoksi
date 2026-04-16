@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <div className="max-w-3xl mx-auto  justify-center  text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase tracking-widest text-[#6FAF9B] text-lg mb-4">
+                    <p className="uppercase tracking-widest text-[#4fffc7] text-lg mb-4">
                         Leadership That Delivers
                     </p>
 
@@ -63,14 +63,7 @@ const HeroSection = () => {
                     {/* BUTTONS */}
                     <div className="flex gap-4 justify-center flex-wrap">
 
-                        {/* Meet Our Team */}
-                        <Link
-                            to="/about/team"
-                            onClick={() => window.scrollTo(0, 0)}
-                            className="bg-[#6FAF9B] text-[#1C1C1C] px-6 py-3 rounded-full font-semibold hover:bg-[#C2A96A] transition"
-                        >
-                            Meet Our Team
-                        </Link>
+                       
 
                         {/* Get Consultation */}
                         <Link

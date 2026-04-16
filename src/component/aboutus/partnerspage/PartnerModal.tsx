@@ -54,9 +54,9 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
                   {partner.name}
                 </h2>
 
-                <p className="text-gray-600">{partner.designation}</p>
+                <p className="text-gray-600  font-bold">{partner.designation}</p>
 
-                <p className="text-[#1F6F5B] mt-2 text-sm">
+                <p className="text-[#1F6F5B] font-bold mt-2 text-lg">
                   {partner.email}
                 </p>
               </div>

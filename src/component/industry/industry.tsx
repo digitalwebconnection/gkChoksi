@@ -104,12 +104,12 @@ const CATEGORIES = [
     },
     {
         title: "Mining & Metals",
-        img: "https://images.unsplash.com/photo-1578319439584-104c94d37305?q=80&w=800",
+        img: "https://www.pwc.com/gx/en/brand-simplified/teaser-images-670/industry-engineering/damil-gettyimages-482172505-670.jpg",
         desc: "Advising on natural resource extraction and global commodity market trends."
     },
     {
         title: "Chemicals",
-        img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=800",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGHA0xxdgMeIWGtLcbVc_uJC6neGaPPwYiQ&s",
         desc: "Regulatory safety standards and operational efficiency for chemical processing and distribution."
     },
     {
@@ -119,7 +119,7 @@ const CATEGORIES = [
     },
     {
         title: "Telecom",
-        img: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=800",
+        img: "https://bureaucrat.news/assets/news/1768565449gfdsgsdghfgh.jpg",
         desc: "Connectivity infrastructure and strategic market positioning for regional and global carriers."
     },
     {
@@ -166,10 +166,10 @@ const IndustryPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-white text-3xl md:text-5xl font-light tracking-wide"
+                        className="text-[#C2A96A] font-bold text-3xl md:text-5xl  tracking-wide"
                     >
                         Understanding Business, <br />
-                        <span className="font-bold">Beyond Numbers</span>
+                        <span className=" text-white">Beyond Numbers</span>
                     </motion.h1>
 
                 </div>
@@ -219,14 +219,14 @@ const IndustryPage = () => {
                                 </div>
 
                                 {/* CONTENT AREA */}
-                                <div className="flex-1 pt-2 justify-center  items-center">
+                                <div className=" py-10 justify-center  items-center">
                                     <h3 className="text-xl lg:text-2xl font-bold text-[#1C1C1C] group-hover:text-[#C2A96A] transition-colors duration-300 mb-3">
                                         {item.title}
                                     </h3>
 
-                                    <p className="text-gray-500 text-justify text-sm md:text-base leading-relaxed font-light">
+                                    {/* <p className="text-gray-500 text-justify text-sm md:text-base leading-relaxed font-light">
                                         {item.desc}
-                                    </p>
+                                    </p> */}
 
                                     <motion.div
                                         className="h-px bg-[#C2A96A] mt-6 origin-left"

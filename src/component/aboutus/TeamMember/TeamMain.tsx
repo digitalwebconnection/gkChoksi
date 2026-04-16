@@ -49,66 +49,64 @@ export default function TeamSection() {
         <>
             <AboutHero />
 
-            {/* CONTENT GRID */}
-            <div className="grid pt-20 max-w-7xl mx-auto md:grid-cols-12 gap-10 items-start">
 
-                {/* LEFT */}
-                <div className="md:col-span-8 space-y-2 text-justify text-lg leading-relaxed text-[#1c1c1c]">
-                    <p>
-                        At the heart of the firm is a strong core team of Chartered Accountants,
-                        supported by dedicated professional support staffs.
-                    </p>
 
-                    <p>
-                        They are meticulous in execution, thoughtful in analysis, and consistent in delivery.
-                        Each member of the team is encouraged to think independently, act responsibly,
-                        and contribute meaningfully to the outcome.
-                    </p>
+            <section className="bg-[#F7F9F8] pb-16 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6">
 
-                    <p>
-                        The culture we foster is one of learning and ownership where questions are welcomed,
-                        ideas are valued, and excellence is pursued quietly, without compromise.
-                    </p>
+                    {/* TITLE */}
+                    <h1 className="text-4xl text-center mx-auto font-bold py-10 text-[#1C1C1C]">
+                        Members of the Team
+                    </h1>
+                    {/* CONTENT GRID */}
+                    <div className="grid  max-w-7xl mb-15  items-start">
 
-                    <p className="font-medium text-white">
-                        Together, they form a team that is not only capable, but dependable.
-                    </p>
-                </div>
+                        {/* LEFT */}
+                        <div className=" space-y-2 text-center text-lg leading-relaxed text-[#1c1c1c]">
+                            <p>
+                                At the heart of the firm is a strong core team of Chartered Accountants,
+                                supported by dedicated professional support staffs.
+                            </p>
 
-                {/* RIGHT BOX */}
-                <div className="md:col-span-4">
-                    <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border-l-4 border-[#C2A96A]">
+                            <p>
+                                They are meticulous in execution, thoughtful in analysis, and consistent in delivery.
+                                Each member of the team is encouraged to think independently, act responsibly,
+                                and contribute meaningfully to the outcome.
+                            </p>
 
-                        <h3 className="text-xl font-semibold text-black mb-4">
-                            What Defines Us
-                        </h3>
+                            <p>
+                                The culture we foster is one of learning and ownership where questions are welcomed,
+                                ideas are valued, and excellence is pursued quietly, without compromise.
+                            </p>
 
-                        <ul className="space-y-3 text-sm text-black">
+                            <p className=" ">
+                                Together, they form a team that is not only capable, but dependable.
+                            </p>
+                        </div>
+
+                        {/* RIGHT BOXES ROW */}
+                        <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {[
                                 "Precision in execution",
                                 "Independent thinking",
                                 "Ownership-driven culture",
                                 "Consistent delivery",
                             ].map((item) => (
-                                <li key={item} className="flex items-start gap-2">
-                                    <span className="w-2 h-2 bg-[#6FAF9B] rounded-full mt-2" />
-                                    {item}
-                                </li>
+                                <div
+                                    key={item}
+                                    className="bg-white border border-gray-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md transition"
+                                >
+                                    {/* Dot */}
+                                    <div className="w-3 h-3 bg-[#6FAF9B] rounded-full mx-auto mb-3" />
+
+                                    {/* Text */}
+                                    <p className="text-sm text-gray-700 font-medium">
+                                        {item}
+                                    </p>
+                                </div>
                             ))}
-                        </ul>
-
+                        </div>
                     </div>
-                </div>
-
-            </div>
-
-            <section className="bg-[#F7F9F8] pb-16 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6">
-
-                    {/* TITLE */}
-                    <h1 className="text-4xl font-semibold py-10 text-[#1C1C1C]">
-                        Members of the Team
-                    </h1>
 
                     {/* FILTER */}
                     <div className="flex flex-wrap gap-4 mb-10">
@@ -234,7 +232,7 @@ export default function TeamSection() {
                                             {activeMember.role}
                                         </p>
 
-                                  
+
                                     </div>
 
                                 </div>

@@ -14,6 +14,7 @@ import AlumniPage from "./component/Alumni/AlumniMain";
 import CareersPage from "./component/career/careers";
 import IndustryPage from "./component/industry/industry";
 import ServicePage from "./component/service/service";
+import Coreteam from "./component/Coreteam/Coreteam";
 
 // import ServicePage from "./component/service/service";
 
@@ -37,7 +38,7 @@ function App() {
           <Route path="/about/partners" element={<Partners />} />
            <Route path="/careers" element={<CareersPage />} />
           <Route path="/industry" element={<IndustryPage />} />
-        
+        <Route path="/core-team" element={<Coreteam />} />
           <Route path="/contact" element={<ContactMain />} />
           <Route path="/alumni" element={<AlumniPage />} />
         </Routes>

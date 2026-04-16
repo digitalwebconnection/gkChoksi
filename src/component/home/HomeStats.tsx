@@ -3,31 +3,26 @@ import { motion } from "framer-motion";
 
 import {
   HiOutlineCalendarDays,
-  HiOutlineBuildingOffice2,
   HiOutlineGlobeAlt,
 } from "react-icons/hi2";
+
+const startYear = 1972;
+const currentYear = new Date().getFullYear();
+const experienceYears = currentYear - startYear;
 
 const stats = [
   {
     label: "Years of Experience",
-    value: 65,
+    value: experienceYears,
     suffix: "+",
     icon: HiOutlineCalendarDays,
   },
   {
-    label: "Listed Companies Served",
-    value: 120,
-    suffix: "+",
-    icon: HiOutlineBuildingOffice2,
-  },
-  {
-    label: "Global Offices",
-    value: 10,
+    label: "Offices",
+    value: 4,
     icon: HiOutlineGlobeAlt,
   },
-  
 ];
-
 interface CounterProps {
   value: number;
   suffix?: string;
@@ -84,22 +79,20 @@ const StatsSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
-            By the Numbers
-          </p>
+       
 
           <h2 className="mt-2 text-3xl font-semibold text-[#1C1C1C] sm:text-4xl">
             A legacy of trust and performance
           </h2>
 
           <p className="mt-3 text-sm text-[#1F6F5B]">
-            Decades of experience delivering assurance and advisory services
+            Decades of experience delivering Assurance and Advisory Services
             with uncompromising standards.
           </p>
         </div>
 
         {/* Stats */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
 

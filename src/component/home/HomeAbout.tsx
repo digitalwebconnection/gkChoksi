@@ -5,9 +5,6 @@ import img from "../../assets/1.jpeg";
 import img1 from "../../assets/18.jpeg";
 import img2 from "../../assets/20.jpeg";
 import {
-
-  HiOutlineCpuChip,
-  HiOutlineCurrencyRupee,
   HiOutlineUserGroup,
 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
@@ -47,7 +44,7 @@ const AboutSection = () => {
             </h2>
 
             <p className="mb-4 leading-relaxed text-justify text-black">
-              Established in 1970 by CA Gautam K. Choksi, our Firm is built upon
+              Established in 1972 by CA Gautam K. Choksi, our Firm is built upon
               a distinguished legacy of professional integrity, independent
               judgment, and unwavering client trust. Conceived by a visionary
               founder, it has matured into a prominent Chartered Accountancy
@@ -63,21 +60,14 @@ const AboutSection = () => {
             <ul className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
-                  text: "Expert certified professionals",
+                  text: "Certified Professionals",
                   icon: HiOutlineBadgeCheck, // changed icon
                 },
                 {
                   text: "Personalized service approach",
                   icon: HiOutlineUserGroup, // better icon
                 },
-                {
-                  text: "Latest compliance technology",
-                  icon: HiOutlineCpuChip,
-                },
-                {
-                  text: "Transparent pricing & communication",
-                  icon: HiOutlineCurrencyRupee,
-                },
+                
               ].map((item, idx) => {
                 const Icon = item.icon;
 
@@ -153,7 +143,7 @@ const AboutSection = () => {
                   See our
                 </span>
                 <span className="font-semibold text-[#1C1C1C]">
-                  Client case studies
+                 Clients
                 </span>
               </div>
             </div>
@@ -163,7 +153,7 @@ const AboutSection = () => {
               <p className="mb-2 text-[14px] uppercase tracking-[0.2em] text-white">
                 Trusted Since
               </p>
-              <p className="mb-1 text-2xl font-bold">1999</p>
+              <p className="mb-1 text-2xl font-bold">1972</p>
               <p className="text-[11px] text-gray-300">
                 Serving businesses with reliable advisory and compliance.
               </p>

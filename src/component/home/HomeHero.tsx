@@ -72,15 +72,6 @@ const HeroSection = () => {
           Chartered Accountants
         </p>
 
-        {/* Subtitle */}
-        <motion.h2
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="mt-6 text-3xl lg:text-5xl font-bold text-white"
-        >
-          Strategic Financial Excellence
-        </motion.h2>
 
         {/* Buttons */}
         <motion.div

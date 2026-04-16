@@ -6,8 +6,8 @@ const timeline = [
   {
     icon: Landmark,
     chapter: "Chapter 01",
-    period: "1970",
-    title: "Foundations of Trust",
+    period: "1972",
+    title: "“Foundations and Fam",
     desc:
       "G.K. Choksi & Co. was established with a clear focus on audit, taxation and assurance, building a reputation for integrity and independence.",
     meta: "Early work with closely-held businesses and emerging enterprises.",

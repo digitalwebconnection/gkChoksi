@@ -78,9 +78,7 @@ const ContactSection: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6">
 
                     {/* Heading */}
-                    <h2 className="text-5xl font-bold text-center text-[#1c1c1c] animate-slideUp">
-                        Contact GKC & CO
-                    </h2>
+
 
                     <p className="mt-4 text-center text-gray-600 max-w-3xl mx-auto animate-slideUp delay-100">
                         Have a question about accounting, taxation, audit or compliance?
@@ -106,9 +104,7 @@ const ContactSection: React.FC = () => {
                                     Speak With Our Experts
                                 </h3>
 
-                                <p className="mt-4 text-gray-600 max-w-md">
-                                    Structured advice. Strategic clarity. Long-term compliance.
-                                </p>
+
                             </div>
 
                             {/* Form */}
@@ -235,7 +231,7 @@ const ContactSection: React.FC = () => {
                                 <a href="mailto:info@gkcco.com" className="block font-medium text-gray-900 hover:underline">
                                     info@gkcco.com
                                 </a>
-                                
+
                             </div>
 
                             {/* Office Card */}
@@ -299,27 +295,7 @@ const ContactSection: React.FC = () => {
                                 governance, and global advisory excellence.
                             </p>
 
-                            {/* Trust Indicators */}
-                            <div className="mt-10 flex gap-10">
-                                <div>
-                                    <p className="text-2xl font-bold text-white">50+</p>
-                                    <p className="text-xs uppercase tracking-wider text-gray-200">
-                                        Years of Trust
-                                    </p>
-                                </div>
-                                <div>
-                                    <p className="text-2xl font-bold text-white">India</p>
-                                    <p className="text-xs uppercase tracking-wider text-gray-200">
-                                        Pan Presence
-                                    </p>
-                                </div>
-                                <div>
-                                    <p className="text-2xl font-bold text-white">Global</p>
-                                    <p className="text-xs uppercase tracking-wider text-gray-200">
-                                        Clientele
-                                    </p>
-                                </div>
-                            </div>
+
                         </div>
 
                         {/* Right – Glass Location Card */}
@@ -372,12 +348,9 @@ const ContactSection: React.FC = () => {
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h2 className="text-4xl md:text-5xl font-extrabold text-[#1c1c1c]">
-                            Our Branches Across India
+                            Our Branches
                         </h2>
-                        <p className="mt-5 text-gray-600 text-lg leading-relaxed">
-                            Strategically positioned offices delivering trusted accounting,
-                            audit, taxation, and advisory solutions.
-                        </p>
+
                     </motion.div>
 
                     {/* Cards */}
