@@ -19,8 +19,8 @@ const AboutHero = () => {
         {/* HEADER */}
         <div className="mb-4">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="h-px w-6 bg-[#4bf3be]" />
-            <span className="text-[#6FAF9B] uppercase tracking-widest text-sm font-semibold">
+        
+            <span className="text-[#36f1b6] uppercase tracking-widest text-lg font-bold">
               About Our Team
             </span>
           </div>

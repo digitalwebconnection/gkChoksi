@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   FaUserTie,
   FaShieldHalved,
@@ -7,270 +7,233 @@ import {
   FaLightbulb,
   FaUsers,
   FaHandshake,
-} from "react-icons/fa6"
+} from "react-icons/fa6";
 
-import "../home/heroAnimations.css"
-
-import bgLeadership from "../../assets/10.jpeg"
-import bgIntegrity from "../../assets/11.jpeg"
-import bgEmpathy from "../../assets/12.jpeg"
-import bgInnovation from "../../assets/13.jpeg"
-import bgCollaboration from "../../assets/14.jpeg"
-import bgClient from "../../assets/15.jpeg"
-import FeatureSection from "./FeatureSection"
-
-const IVORY = "#F7F9F8"
-const CHARCOAL = "#1C1C1C"
-const ACCENT = "#6FAF9B"
-const GOLD = "#79590a"
-
-
-// Assuming variables: GOLD, ACCENT, CHARCOAL, IVORY are defined
-// Assuming visionImage and missionImage are your imported assets
+// Assets (Keep your existing imports)
+import bgLeadership from "../../assets/10.jpeg";
+import bgIntegrity from "../../assets/11.jpeg";
+import bgEmpathy from "../../assets/12.jpeg";
+import bgInnovation from "../../assets/13.jpeg";
+import bgCollaboration from "../../assets/14.jpeg";
+import bgClient from "../../assets/15.jpeg";
+import { HiOutlineLightBulb, HiOutlineTicket, HiOutlineArrowUpRight } from "react-icons/hi2";
 
 const foundationItems = [
   {
-    title: "Vision",
+    title: "Our Vision",
     content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
-    image: "https://www.kei-ind.com/wp-content/uploads/2025/02/vision-con01.jpg",
-    color: GOLD,
-    icon: "vision",
-    index: 0
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIcL5VaDWKqAElmIXID5K92R4ErYzZq4Ibw&s",
+    icon: <HiOutlineLightBulb />,
+    color: "from-amber-400 to-orange-600",
+    accent: "#e2b43e",
+    lightBg: "bg-amber-50"
   },
   {
-    title: "Mission",
-    content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding.",
-    image: "https://www.shutterstock.com/image-photo/business-clear-vision-strategy-company-260nw-2661667953.jpg",
-    color: ACCENT,
-    icon: "mission",
-    index: 1
+    title: "Our Mission",
+    content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
+    image: "https://www.quantumconsumernig.com/assets/imgs/our-mission.jpg",
+    icon: <HiOutlineTicket />,
+    color: "from-emerald-400 to-teal-600",
+    accent: "#10b981",
+    lightBg: "bg-emerald-50"
   }
 ];
-
 const coreValues = [
-  {
-    title: "Leadership",
-    text: "Taking ownership and driving outcomes with accountability while ensuring commitment to quality and continuous improvement",
-    Icon: FaUserTie,
-    image: bgLeadership,
-  },
-  {
-    title: "Integrity",
-    text: "Upholding the highest ethical and professional standards",
-    Icon: FaShieldHalved,
-    image: bgIntegrity,
-  },
-  {
-    title: "Empathy",
-    text: "Understanding client needs with a solution-oriented mindset",
-    Icon: FaHeart,
-    image: bgEmpathy,
-  },
-  {
-    title: "Innovation",
-    text: "Leveraging technology and new thinking to deliver value",
-    Icon: FaLightbulb,
-    image: bgInnovation,
-  },
-  {
-    title: "Collaboration",
-    text: "Working seamlessly across teams and clients",
-    Icon: FaUsers,
-    image: bgCollaboration,
-  },
-  {
-    title: "Client Centricity",
-    text: "Prioritising long-term relationships over short-term gains",
-    Icon: FaHandshake,
-    image: bgClient,
-  },
-] as const
+  { title: "Leadership", text: "Taking ownership and driving outcomes with accountability.", icon: FaUserTie, image: bgLeadership, color: "#c5a059" },
+  { title: "Integrity", text: "Upholding the highest ethical and professional standards.", icon: FaShieldHalved, image: bgIntegrity, color: "#c5a059" },
+  { title: "Empathy", text: "Understanding client needs with a solution-oriented mindset.", icon: FaHeart, image: bgEmpathy, color: "#c5a059" },
+  { title: "Innovation", text: "Leveraging technology and new thinking to deliver value.", icon: FaLightbulb, image: bgInnovation, color: "#c5a059" },
+  { title: "Collaboration", text: "Working seamlessly across teams and clients.", icon: FaUsers, image: bgCollaboration, color: "#c5a059" },
+  { title: "Client Centricity", text: "Prioritising long-term relationships over short-term gains.", icon: FaHandshake, image: bgClient, color: "#c5a059" },
+];
 
 const VisionMissionSection = () => {
-  const [slide, setSlide] = useState(0)
+  const [activeValue, setActiveValue] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const t = window.setInterval(() => {
-      setSlide((p) => (p + 1) % coreValues.length)
-    }, 3000)
-    return () => clearInterval(t)
-  }, [])
-
-  const next = () => setSlide((p) => (p + 1) % coreValues.length)
-  const prev = () =>
-    setSlide((p) => (p - 1 + coreValues.length) % coreValues.length)
-
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setActiveValue((current) => (current + 1) % coreValues.length);
+          return 0;
+        }
+        return prev + 0.5; // Controls speed of auto-switch
+      });
+    }, 20);
+    return () => clearInterval(timer);
+  }, [activeValue]);
 
   return (
-    <div className="bg-[#FBFCFB]  ">
-      <FeatureSection/>
-      {/* Vision & Mission */}
-      <section className="py-14" style={{ backgroundColor: "#F7F9F8" }}>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-[#fcfcfc] font-sans text-slate-900">
 
-          {/* Header Block */}
-          <div className="mb-5 text-center">
-            <span className="text-3xl font-bold mb-5 uppercase tracking-widest text-[#1F6F5B]">Our Foundation</span>
-           
+      {/* SECTION 1: FOUNDATION (Vision/Mission) */}
+      <section className="relative py-14 bg-white overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -z-10" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-50 -z-10" />
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* HEADER AREA */}
+          <div className="relative mb-10">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="flex items-center justify-center  mb-4"
+            >
+
+              <span className="text-3xl text-center font-black tracking-[0.3em] text-[#3d2d04] uppercase">
+                The Foundation
+              </span>
+            </motion.div>
+
+
           </div>
 
-          {/* Two Cards in One Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {/* GRID ITEMS */}
+          <div className="grid md:grid-cols-2 gap-10">
             {foundationItems.map((item, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="group relative h-[420px] shadow-xl shadow-black/30 overflow-hidden rounded-xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.2 }}
+                className="group relative"
               >
+                {/* MAIN CONTAINER */}
+                <div className="relative bg-white rounded-[2.5rem] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-900/20 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] transition-all duration-500 h-full">
 
-                {/* 🔥 Background Image */}
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
-                />
+                  {/* IMAGE WRAPPER */}
+                  <div className="relative h-80 w-full overflow-hidden rounded-4xl">
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.8 }}
+                      src={item.image}
+                      alt={item.title}
+                      className="object-cover w-full h-full"
+                    />
 
-                {/* 🔥 Dark Overlay */}
-                {/* <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition duration-500" /> */}
+                    {/* Floating Icon Box */}
+                    <div className={`absolute top-6 left-6 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl text-white shadow-xl bg-linear-to-br ${item.color} transition-transform duration-500 group-hover:rotate-360`}>
+                      {item.icon}
+                    </div>
 
-                {/* 🔥 Gradient Overlay (Bottom Focus) */}
-                <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
+                   
+                  </div>
 
-                {/* 🔥 Content */}
-                <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+                  {/* CONTENT AREA */}
+                  <div className="p-8 pb-8">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className={`text-3xl font-serif text-slate-900 `}>{item.title}</h3>
+                      <div className={`p-2 rounded-full ${item.lightBg} group-hover:scale-110 transition-transform`}>
+                        <HiOutlineArrowUpRight className={`text-xl font-bold`} style={{ color: item.accent }} />
+                      </div>
+                    </div>
 
-                  {/* Title */}
-                  <h3 className="text-3xl font-bold mb-3">
-                    {item.title}
-                  </h3>
-
-                  {/* Content */}
-                  <p className="text-sm md:text-base leading-relaxed text-white/80">
-                    {item.content}
-                  </p>
+                    <p className="text-lg text-slate-500 leading-relaxed mb-8">
+                      {item.content}
+                    </p>
 
 
+                  </div>
+
+                  {/* Decorative Bottom Gradient Line */}
+                  <div
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1 rounded-full bg-linear-to-r ${item.color} opacity-0 group-hover:opacity-100 transition-opacity`}
+                  />
                 </div>
-
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* SECTION 2: CORE VALUES (Interactive Showcase) */}
+      <section className="py-24 bg-white  relative overflow-hidden">
+        {/* Abstract Background Decoration */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#79590a]/5 skew-x-12 translate-x-20" />
 
-      <section className="relative overflow-hidden py-24 md:pb-12" >
-        {/* Decorative Background Element */}
-        <div
-          className="absolute top-0 right-0 h-full w-1/3 opacity-[0.03] pointer-events-none"
-          style={{ borderLeft: `1px solid ${CHARCOAL}` }}
-        />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <h2 className="text-4xl text-center font-serif mb-10 font-bold leading-tight">
+            Our <span className="text-[#c5a059]">Excellence</span> <br />is Driven by Values
+          </h2>
+          <div className="grid lg:grid-cols-12 gap-10 items-center">
 
-        <div className="mx-auto  max-w-7xl px-6 py-10 lg:px-8">
-          {/* Header Section */}
-          <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="max-w-2xl"
-            >
-              <p className="text-lg font-bold uppercase tracking-[0.4em]" style={{ color: ACCENT }}>
-                How we work
-              </p>
-              <h2 className="mt-4 text-3xl font-bold  tracking-tight md:text-5xl" style={{ color: CHARCOAL }}>
-                Our <span className="font-serif " style={{ color: GOLD }}>Core</span> Values
-              </h2>
-            </motion.div>
-
-            {/* Progress Indicators / Navigation */}
-            {/* <div className="flex items-center gap-4">
-              {coreValues.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSlide(i)}
-                  className="group relative h-12 w-1 transition-all"
-                  aria-label={`Go to slide ${i + 1}`}
-                >
-                  <div
-                    className="absolute inset-0 w-full transition-all duration-500"
-                    style={{
-                      backgroundColor: i === slide ? GOLD : `${CHARCOAL}20`,
-                      height: i === slide ? "100%" : "60%",
-                      marginTop: i === slide ? "0" : "20%"
-                    }}
+            {/* Left Column: Visual Content */}
+            <div className="lg:col-span-7 ">
+              <div className="relative aspect-video h-full  rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={activeValue}
+                    src={coreValues[activeValue].image}
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.8 }}
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
-                </button>
-              ))}
-            </div> */}
-          </div>
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent opacity-60" />
 
-          {/* Content Container */}
-          <div className="relative grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
-
-            {/* Left: Interactive Image Canvas (Occupies 7/12 cols) */}
-            <div className="relative lg:col-span-7 h-80 lg:h-140 overflow-hidden rounded-sm shadow-2xl">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={slide}
-                  src={coreValues[slide].image}
-                  alt={coreValues[slide].title}
-                  initial={{ scale: 1.1, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 1.05, opacity: 0 }}
-                  transition={{ duration: 0.8, ease: [0.45, 0, 0.55, 1] }}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </AnimatePresence>
-
-              {/* Navigation Overlay for Mobile/Touch */}
-              <div className="absolute inset-0 z-10 flex">
-                <div className="w-1/2 h-full cursor-w-resize" onClick={prev} />
-                <div className="w-1/2 h-full cursor-e-resize" onClick={next} />
               </div>
             </div>
 
-            {/* Right: Floating Content Card (Occupies 5/12 cols) */}
-            <div className="lg:col-span-5 lg:-ml-34 z-20">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={slide}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="p-6 md:px-8 py-12 shadow-xl backdrop-blur-sm"
-                  style={{ backgroundColor: `${IVORY}F0`, border: `1px solid ${GOLD}30` }}
-                >
+            {/* Right Column: Interaction */}
+            <div className="lg:col-span-5">
 
 
-                  <h3 className="text-4xl font-medium tracking-tight" style={{ color: CHARCOAL }}>
-                    {coreValues[slide].title}
-                  </h3>
-
-                  <p className="mt-6 text-lg leading-relaxed" style={{ color: CHARCOAL, opacity: 0.8 }}>
-                    {coreValues[slide].text}
-                  </p>
-
-                  {/* <motion.button
-                    whileHover={{ x: 10 }}
-                    className="mt-10 flex items-center gap-3 text-sm font-bold uppercase tracking-widest"
-                    style={{ color: GOLD }}
+              <div className="space-y-4">
+                {coreValues.map((val, i) => (
+                  <button
+                    key={i}
+                    onClick={() => { setActiveValue(i); setProgress(0); }}
+                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 group flex items-center gap-4 ${activeValue === i ? "bg-[#032509] translate-x-4" : "hover:bg-[#c5a059]"
+                      }`}
                   >
-                    Explore Excellence
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </motion.button> */}
-                </motion.div>
-              </AnimatePresence>
+                    <div className="relative">
+                      {/* Mini Progress Circle */}
+                      <svg className="w-10 h-10 transform -rotate-90">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" fill="transparent" className="text-white/10" />
+                        {activeValue === i && (
+                          <motion.circle
+                            cx="20" cy="20" r="18"
+                            stroke="#c5a059" strokeWidth="2"
+                            fill="transparent"
+                            strokeDasharray="113.1"
+                            animate={{ strokeDashoffset: 113.1 - (113.1 * progress) / 100 }}
+                          />
+                        )}
+                      </svg>
+                      <val.icon className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 ${activeValue === i ? "text-[#c5a059]" : "text-black"}`} />
+                    </div>
+
+                    <div>
+                      <h4 className={`font-bold tracking-wide ${activeValue === i ? "text-white" : "text-slate-700"}`}>
+                        {val.title}
+                      </h4>
+                      {activeValue === i && (
+                        <motion.p
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          className="text-sm text-slate-300 mt-1 pr-4 leading-snug"
+                        >
+                          {val.text}
+                        </motion.p>
+                      )}
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-    
     </div>
-  )
-}
+  );
+};
 
-export default VisionMissionSection
+export default VisionMissionSection;

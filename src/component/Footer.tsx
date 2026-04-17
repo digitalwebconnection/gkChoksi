@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <motion.footer
       id="contact"
-      className="border-t border-gray-200 bg-white"
+      className="border-t-2 border-gray-800/50 bg-white"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -36,7 +36,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="G.K. Choksi & Co."
-              className="mx-auto h-15 w-auto md:mx-0 sm:h-12"
+              className="mx-auto h-15 w-auto md:mx-0 sm:h-22"
             />
        
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {/* Quick links */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Quick Links
               </h4>
               <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-1">
@@ -64,7 +64,7 @@ const Footer = () => {
 
             {/* Locations */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Locations
               </h4>
               <ul className="mt-4 space-y-2 text-sm text-black">
@@ -77,7 +77,7 @@ const Footer = () => {
 
             {/* Social media */}
             <div className="text-center md:text-left">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-black sm:text-sm">
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
                 Social Media
               </h4>
               <div className="mt-4 flex flex-row md:flex-col gap-3 justify-center md:justify-start">
@@ -101,7 +101,7 @@ const Footer = () => {
 
                 {/* LinkedIn */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/g-k-choksi-&-co/"
                   aria-label="LinkedIn"
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition transform hover:scale-110 shadow-md"
                 >

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import i1 from "../../../assets/14.jpeg";
+import i1 from "../../../assets/patner/patner.jpeg";
 import i2 from "../../../assets/15.jpeg";
 import i3 from "../../../assets/4.jpeg";
-import { Link } from "react-router-dom";
+
 
 const images = [
     i1,
@@ -41,11 +41,11 @@ const HeroSection = () => {
             ))}
 
             {/* COLOR OVERLAY */}
-            <div className="absolute inset-0 bg-[#000000]/80"></div>
+            <div className="absolute inset-0 bg-[#000000]/50"></div>
 
             {/* CONTENT */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  text-center items-center">
-                <div className="max-w-3xl mx-auto  justify-center  text-white">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  text-center items-end">
+                <div className="max-w-3xl mx-auto  justify-end  text-white">
 
                     {/* LABEL */}
                     <p className="uppercase tracking-widest text-[#4fffc7] text-lg mb-4">
@@ -60,21 +60,7 @@ const HeroSection = () => {
 
 
 
-                    {/* BUTTONS */}
-                    <div className="flex gap-4 justify-center flex-wrap">
-
-                       
-
-                        {/* Get Consultation */}
-                        <Link
-                            to="/contact"
-                            onClick={() => window.scrollTo(0, 0)}
-                            className="border border-[#C2A96A] px-6 py-3 rounded-full font-semibold text-white hover:bg-[#6FAF9B] hover:text-[#1C1C1C] transition"
-                        >
-                            Get Consultation
-                        </Link>
-
-                    </div>
+                    
                 </div>
             </div>
 

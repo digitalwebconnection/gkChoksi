@@ -11,7 +11,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
       {partner && (
         <motion.div
           className="fixed inset-0 bg-black/80 backdrop-blur-lg flex items-center justify-center z-50"
-          
+
           // BACKDROP ANIMATION
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -23,7 +23,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
           <motion.div
             onClick={(e) => e.stopPropagation()}
             className="bg-white max-w-5xl w-full rounded-sm overflow-hidden relative shadow-2xl"
-            
+
             // POPUP ANIMATION
             initial={{ scale: 0.85, opacity: 0, y: 60 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="bg-[#0F3D2E] text-justify col-span-12 md:col-span-8 text-white p-6 overflow-y-auto">
+              <div className="bg-[#0F3D2E] text-justify col-span-12 md:col-span-8 text-white px-6 py-12 overflow-y-auto">
 
                 {[partner.description1, partner.description2, partner.description3, partner.description4]
                   .filter(Boolean)
@@ -70,7 +70,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
                     <motion.p
                       key={i}
                       className="leading-relaxed text-md mt-4 first:mt-0"
-                      
+
                       // TEXT ANIMATION
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}

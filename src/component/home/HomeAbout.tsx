@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import img from "../../assets/1.jpeg";
 import img1 from "../../assets/18.jpeg";
@@ -64,7 +65,7 @@ const AboutSection = () => {
                   icon: HiOutlineBadgeCheck, // changed icon
                 },
                 {
-                  text: "Personalized service approach",
+                  text: "Personalized Service Approach",
                   icon: HiOutlineUserGroup, // better icon
                 },
                 
@@ -134,19 +135,27 @@ const AboutSection = () => {
             </div>
 
             {/* Mini Card */}
-            <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,61,46,0.32)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.03]">
-              <div className="h-[60%] w-full">
-                <img src={img2} alt="Audit & review" className="h-full w-full object-cover" />
-              </div>
-              <div className="h-[40%] px-3 pt-2 text-[11px]">
-                <span className="block text-[12px] uppercase tracking-[0.18em] text-black">
-                  See our
-                </span>
-                <span className="font-semibold text-[#1C1C1C]">
-                 Clients
-                </span>
-              </div>
-            </div>
+            <Link to="/industry">
+  <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,61,46,0.32)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.03] cursor-pointer">
+
+    <div className="h-[60%] w-full">
+      <img
+        src={img2}
+        alt="Audit & review"
+        className="h-full w-full object-cover"
+      />
+    </div>
+
+    <div className="h-[40%] px-3 pt-2 text-[11px]">
+      <span className="block text-[12px] uppercase tracking-[0.18em] text-black">
+        See our
+      </span>
+      <span className="font-semibold text-[#1C1C1C]">
+        Clients
+      </span>
+    </div>
+  </div>
+</Link>
 
             {/* Stat Card */}
             <div className="absolute -right-14 top-20 w-50 rounded-3xl bg-[#0F3D2E] p-6 text-white shadow-[0_20px_60px_rgba(15,61,46,0.6)] hover:-translate-y-2 transition duration-500">

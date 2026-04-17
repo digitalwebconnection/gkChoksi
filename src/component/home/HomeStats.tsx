@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-import {
-  HiOutlineCalendarDays,
-  HiOutlineGlobeAlt,
-} from "react-icons/hi2";
-
+import { HiOutlineCalendarDays, HiOutlineGlobeAlt, HiOutlineBriefcase, HiOutlineUsers } from "react-icons/hi2";
 const startYear = 1972;
 const currentYear = new Date().getFullYear();
 const experienceYears = currentYear - startYear;
@@ -21,6 +17,18 @@ const stats = [
     label: "Offices",
     value: 4,
     icon: HiOutlineGlobeAlt,
+  },
+  {
+    label: "Industries Served",
+    value: 23, // change this number as needed
+    suffix: "+",
+    icon: HiOutlineBriefcase,
+  },
+  {
+    label: "Happy Clients",
+    value: 1500,
+    suffix: "+",
+    icon: HiOutlineUsers,
   },
 ];
 interface CounterProps {
@@ -79,10 +87,10 @@ const StatsSection = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-       
+
 
           <h2 className="mt-2 text-3xl font-semibold text-[#1C1C1C] sm:text-4xl">
-            A legacy of trust and performance
+            A Legacy of Trust and Performance
           </h2>
 
           <p className="mt-3 text-sm text-[#1F6F5B]">
@@ -92,7 +100,7 @@ const StatsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-10 max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-10 max-w-7xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
 

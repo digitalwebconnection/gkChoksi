@@ -8,18 +8,18 @@ import { motion } from "framer-motion";
 const branches = [
     {
         city: "New Delhi",
-        address: `207, Tolstoy House,
-Tolstoy Marg, Janpath,
-New Delhi – 110001`,
+        address: `514...515 / FIFTH FLOOR TOLSTOY HOUSE, TOLSTOY MARG, JANPATH, 
+NEW DELHI, DELHI, INDIA,
+ 110001`,
         phone: "+91 11 43717773",
         email: "delhi@gkcco.com",
         mapQuery: "Tolstoy House Janpath New Delhi",
     },
     {
         city: "Mumbai",
-        address: `708, Raheja Chambers,
-Nariman Point,
-Mumbai – 400021`,
+        address: `708, RAHEJA CHAMBERS, FREE PRESS JOURNAL ROAD, NARIMAN POINT,
+MUMBAI,MAHARASHTRA, INDIA,
+ 400021`,
         phone: `+91 22 6632444
 +91 22 22826087`,
         email: "gkcmumbai@gmail.com",
@@ -27,10 +27,11 @@ Mumbai – 400021`,
     },
     {
         city: "Petlad, Gujarat",
-        address: `Surya Bhavan,
-Station Road,
-Petlad – 388450`,
-        phone: `+91 2697 309214
+        address: `SURYA BHAWAN,
+STATION ROAD, PETLAD,
+GUJARAT, INDIA,
+388450`,
+        phone: `+91 2697 224383
 +91 2697 224108`,
         email: "petlad@gkcco.com",
         mapQuery: "Surya Bhavan Petlad Gujarat",
@@ -228,6 +229,9 @@ const ContactSection: React.FC = () => {
                                 <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Email</p>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Write to us</h3>
 
+                                <a href="mailto:hr@gkcco.com" className="block font-medium text-gray-900 hover:underline">
+                                    hr@gkcco.com
+                                </a>
                                 <a href="mailto:info@gkcco.com" className="block font-medium text-gray-900 hover:underline">
                                     info@gkcco.com
                                 </a>
@@ -290,9 +294,8 @@ const ContactSection: React.FC = () => {
                             </h2>
 
                             <p className="mt-6 text-white font-bold max-w-md leading-relaxed text-justify">
-                                located at ONE42, North Tower -
-                                a landmark corporate destination designed for leadership,
-                                governance, and global advisory excellence.
+                                Located at ONE42, North Tower -
+                                a landmark corporate destination
                             </p>
 
 

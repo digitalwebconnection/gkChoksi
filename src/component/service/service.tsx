@@ -1,14 +1,20 @@
-
-
-import serviceHero from "/src/assets/25.jpg"
-
-export type Service = {
-  slug: string
-  title: string
-  subtitle: string
-  image: string // ✅ add this
-  paragraphs: string[]
+import { easeOut, motion } from "framer-motion";
+import serviceHero from "/src/assets/25.jpg";
+import {
+  HiOutlinePuzzlePiece,
+  HiOutlineBuildingOffice2,
+  HiOutlineChartBar,
+  HiOutlineUserGroup,
+} from "react-icons/hi2";
+interface Service {
+  slug: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  paragraphs: string[];
 }
+
+
 
 export const SERVICES: Service[] = [
   {
@@ -27,7 +33,7 @@ export const SERVICES: Service[] = [
   {
     slug: "business-advisory",
     title: "Business Advisory",
-    subtitle: "Clarity that moves business forward",
+    subtitle: "Strategy, made executable",
     image: "https://blog.udemy.com/wp-content/uploads/2014/04/bigstock-Image-of-business-partners-dis-41296537.jpg",
     paragraphs: [
       "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that with measured guidance backed by technical depth and commercial insight.",
@@ -49,7 +55,7 @@ export const SERVICES: Service[] = [
     slug: "management-consultancy",
     title: "Management Consultancy",
     subtitle: "Strategy, made executable.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCu_RlikGUg8UGjkF9_fqjx1uLHXbntLG2EA&s",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSHZSfGDClJDJYFy-tqiGQQk72CqKGh05NQ&s",
     paragraphs: [
       "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
       "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
@@ -79,26 +85,62 @@ export const SERVICES: Service[] = [
 
 ]
 
-
-
 const BOTTOM_POINTS = [
-  "Integrated approach",
-  "Industry-focused delivery",
-  "Partner-led execution",
-  "Insight-driven decision support",
-]
+  {
+    text: "Integrated approach",
+    icon: HiOutlinePuzzlePiece,
+    gradient: "from-[#6FAF9B] to-[#289572]",
+  },
+  {
+    text: "Industry-focused delivery",
+    icon: HiOutlineBuildingOffice2,
+    gradient: "from-[#3B82F6] to-[#1D4ED8]",
+  },
+  {
+    text: "Insight-driven decision support",
+    icon: HiOutlineChartBar,
+    gradient: "from-[#F59E0B] to-[#C2A96A]",
+  },
+  {
+    text: "Partner-led execution",
+    icon: HiOutlineUserGroup,
+    gradient: "from-[#8B5CF6] to-[#6D28D9]",
+  },
+];
+
+/* ------------------ ANIMATION ------------------ */
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: easeOut },
+  },
+};
 
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
+// ================= COMPONENT =================
 const ServicePage = () => {
   return (
     <>
-      {/* Full-bleed hero (match About page sizing/feel) */}
-      <section
-        className="relative h-150 flex items-center justify-center overflow-hidden py-16 md:py-20"
-        style={{ backgroundColor: "#F7F9F8" }}
-      >
-        {/* Background */}
+      {/* HERO */}
+      <section className="relative h-150 z-10 flex items-center justify-center overflow-hidden">
+
         <div
           className="absolute inset-0"
           style={{
@@ -108,86 +150,128 @@ const ServicePage = () => {
           }}
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#1C1C1C]/80 via-[#1C1C1C]/70 to-[#1C1C1C]/85" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 to-black/70" />
 
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="relative z-10 text-center px-6 max-w-3xl"
+        >
+          <h1 className="text-3xl md:text-5xl font-bold text-[#C2A96A]">
+            Our Professional Services
+          </h1>
 
-          {/* Glass Container */}
-          <div className="">
-
-            {/* Heading */}
-            <h1 className="text-3xl md:text-5xl font-semibold text-[#C2A96A] leading-tight">
-              Precision-led Professional Services
-            </h1>
-
-            {/* Description */}
-            <p className="mt-6 text-white/80 text-lg leading-relaxed max-w-6xl mx-auto">
-              Our services focus on essential business needs, including taxation, compliance, audit, and financial advisory.
-            </p>
-
-            {/* Divider */}
-            <div className="mt-8 w-16 h-0.5 bg-[#6FAF9B] mx-auto" />
-
-            {/* Focus Section */}
-
-
-          </div>
-        </div>
+          <p className="mt-6 text-white text-lg">
+            Delivering clarity, precision, and strategic insight across every engagement.
+          </p>
+        </motion.div>
       </section>
-      <div className="mt-14 text-center">
 
-        {/* Title */}
-        <p className="text-lg uppercase tracking-[0.5em] text-[#1C1C1C] mb-10 font-semibold">
-          Areas of Focus
-        </p>
+      <div className="relative  -mt-27 z-99  py-10 px-6 bg-transparent overflow-hidden ">
 
-        {/* Chips Container */}
-        <div className="flex flex-wrap justify-center gap-5 max-w-7xl mx-auto">
+        {/* ================= FLOATING BG GLOW ================= */}
+        {/* <div className="absolute top-20 left-10 w-72 h-72 bg-[#6FAF9B]/20 blur-[120px] rounded-full" /> */}
+        {/* <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C2A96A]/20 blur-[120px] rounded-full" /> */}
 
-          {SERVICES.map((service) => (
-            <div
-              key={service.slug}
-              className="relative group"
-            >
-              {/* Glow Background */}
-              <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-lg opacity-0 group-hover:opacity-60 transition duration-500" />
+        {/* ================= BOTTOM POINTS ================= */}
+        <div className="grid max-w-7xl mx-auto sm:grid-cols-2 md:grid-cols-4 gap-6 ">
+          {BOTTOM_POINTS.map((point, i) => {
+            const Icon = point.icon;
 
-              {/* Main Chip */}
-              <span
-                className="
-            relative z-10
-            px-7 py-3
-            rounded-full
-            text-sm md:text-base
-            font-semibold
-            text-[#1C1C1C]
-            backdrop-blur-md
-            bg-white/70
-            border border-white/40
-            shadow-[0_4px_20px_rgba(0,0,0,0.08)]
-            group-hover:text-white
-            group-hover:bg-linear-to-r
-            group-hover:from-[#6FAF9B]
-            group-hover:to-[#C2A96A]
-            group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]
-            group-hover:-translate-y-1
-            transition-all duration-300 cursor-pointer
-          "
+            return (
+              <motion.div
+                key={i}
+                variants={item}
+                whileHover={{ y: -8, scale: 1.05 }}
+                className="relative group rounded-xl  p-px bg-linear-to-r from-[#6FAF9B]/20 to-[#C2A96A]/20"
               >
-                {service.title}
-              </span>
-            </div>
-          ))}
+                {/* Glow Background */}
+                <div className={`absolute inset-0 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition duration-500 bg-linear-to-r ${point.gradient}`} />
 
+                {/* Card */}
+                <div className="relative z-10 rounded-xl bg-white px-5 py-6 text-center shadow-md transition-all duration-300 group-hover:shadow-2xl">
+
+                  {/* 🔥 COLORFUL ICON */}
+                  <motion.div
+                    className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-r ${point.gradient} text-white shadow-lg`}
+                    animate={{
+                      rotate: [0, 5, -5, 0],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    whileHover={{
+                      scale: 1.15,
+                    }}
+                  >
+                    <Icon className="w-7 h-7" />
+                  </motion.div>
+
+                  {/* Text */}
+                  <p className="text-sm font-semibold text-[#1C1C1C] leading-snug">
+                    {point.text}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
+        {/* ================= AREAS OF FOCUS ================= */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <p className="text-xl uppercase tracking-[0.5em] text-[#1C1C1C] mb-6 font-semibold">
+            Areas of Focus
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+            {SERVICES.map((service: any) => (
+              <motion.div
+                key={service.slug}
+                variants={item}
+                whileHover={{ y: -5 }}
+                className="relative group"
+              >
+                {/* Glow Layer */}
+                <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-md opacity-0 group-hover:opacity-60 transition duration-500" />
+
+                {/* Chip */}
+                <div className="relative z-10 px-10 py-3 rounded-full text-sm font-semibold bg-white border border-[#6FAF9B]/50 shadow-md transition-all duration-300 group-hover:bg-[#1C1C1C] group-hover:text-white group-hover:border-transparent">
+
+                  {/* Animated underline */}
+                  <span className="relative">
+                    {service.title}
+                    <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] transition-all duration-300 group-hover:w-full" />
+                  </span>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
-      <section className="py-24 bg-[#F7F9F8]">
+
+
+
+      {/* SERVICES GRID */}
+      <section className="py-14 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* HEADER */}
-          <div className="text-center mb-20">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
             <p className="text-xl uppercase font-bold tracking-[0.2em] text-[#6FAF9B]">
               Services
             </p>
@@ -197,15 +281,22 @@ const ServicePage = () => {
             </h2>
 
             <div className="w-20 h-0.5 bg-[#C2A96A] mx-auto mt-6" />
-          </div>
+          </motion.div>
 
           {/* GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+          >
             {SERVICES.map((service) => (
-              <div
+              <motion.div
                 key={service.slug}
-                className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500 shadow-black/40"
+                variants={item}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500"
               >
 
                 {/* IMAGE */}
@@ -213,18 +304,13 @@ const ServicePage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
                   />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
 
-                  {/* Title */}
                   <div className="absolute bottom-4 left-4 text-white">
-                    {/* <p className="text-xs tracking-widest text-[#C2A96A] uppercase">
-                      {String(index + 1).padStart(2, "0")}
-                    </p> */}
-                    <h3 className="text-lg font-semibold mt-1">
+                    <h3 className="text-lg font-semibold">
                       {service.title}
                     </h3>
                   </div>
@@ -232,77 +318,30 @@ const ServicePage = () => {
 
                 {/* CONTENT */}
                 <div className="p-6">
-
-                  <h4 className="text-xl font-semibold text-[#1C1C1C]">
+                  <h4 className="text-xl font-semibold text-[#1C1C1C] group-hover:text-[#289572] transition">
                     {service.subtitle}
                   </h4>
 
-                  <p className="mt-4 text-justify text-sm text-[#1C1C1C]/70 leading-relaxed">
+                  <p className="mt-4 text-sm text-gray-600">
                     {service.paragraphs[0]}
                   </p>
-                  <p className="mt-4 text-justify text-sm text-[#1C1C1C]/70 leading-relaxed">
+
+                  <p className="mt-2 text-sm text-gray-600">
                     {service.paragraphs[1]}
                   </p>
-
-                  {/* CTA */}
-                  {/* <div className="mt-6 flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-widest text-[#6FAF9B]">
-                      Learn More
-                    </span>
-
-                    <div className="w-8 h-8 flex items-center justify-center rounded-full border border-[#6FAF9B] group-hover:bg-[#6FAF9B] group-hover:text-white transition">
-                      →
-                    </div>
-                  </div> */}
-
-                  {/* Accent */}
-                  {/* <div className="mt-6 h-0.5 w-10 bg-[#C2A96A]" /> */}
                 </div>
 
-              </div>
+                {/* GLOW EFFECT */}
+                <div className="absolute inset-0 bg-linear-to-r from-[#6FAF9B]/0 via-[#6FAF9B]/10 to-[#C2A96A]/0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
+
+              </motion.div>
             ))}
-
-          </div>
-
-          {/* BOTTOM STRIP */}
-          <div className="mt-20">
-
-            {/* Container */}
-            <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-
-              {BOTTOM_POINTS.map((point, i) => (
-                <div
-                  key={i}
-                  className="
-          flex items-center gap-3 
-          px-5 py-2.5 
-          rounded-full 
-          bg-white 
-          border border-[#C2A96A]/30
-          shadow-sm
-          hover:shadow-md
-          hover:-translate-y-1
-          transition-all duration-300
-        "
-                >
-                  {/* Icon Dot */}
-                  <div className="w-2 h-2 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A]" />
-
-                  {/* Text */}
-                  <span className="text-sm md:text-base text-[#1C1C1C] font-medium">
-                    {point}
-                  </span>
-                </div>
-              ))}
-
-            </div>
-
-          </div>
+          </motion.div>
 
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ServicePage
+export default ServicePage;

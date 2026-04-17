@@ -182,15 +182,15 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#C2A96A] font-bold tracking-[0.3em] text-lg uppercase block mb-6">
+                            <span className="text-[#583f05] font-bold tracking-[0.2em] text-xl uppercase block mb-6">
                                 Specialized Advisory
                             </span>
-                            <h2 className="text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
-                                Our   <span className="text-[#C2A96A]">Presence</span>
+                            <h2 className="text-3xl lg:text-5xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
+                                Our   <span className="text-green-900">Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
                             <div className="space-y-6">
-                                <p className="text-lg text-gray-500 text-justify leading-relaxed font-light">
+                                <p className="text-lg text-gray-900 text-justify leading-relaxed font-light">
                                     Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
                                 </p>
                             </div>

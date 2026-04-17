@@ -3,6 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TEAM, type TeamMember } from "./team";
 import AboutHero from "./HeroTM";
 
+import {
+    HiOutlineSparkles,
+    HiOutlineLightBulb,
+    HiOutlineUserGroup,
+    HiOutlineCheckCircle,
+} from "react-icons/hi2";
+
+import teamImg from "../../../assets/Career/2.jpeg"; // add your image
+
 export default function TeamSection() {
     const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
     const [filter, setFilter] = useState("All");
@@ -52,72 +61,125 @@ export default function TeamSection() {
 
 
             <section className="bg-[#F7F9F8] pb-16 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6 py-20">
 
-                    {/* TITLE */}
-                    <h1 className="text-4xl text-center mx-auto font-bold py-10 text-[#1C1C1C]">
-                        Our Team
-                    </h1>
-                    {/* CONTENT GRID */}
-                    <div className="grid  max-w-7xl mb-15  items-start">
+                    {/* HEADER */}
+                    <div className="text-center max-w-3xl mx-auto mb-14">
 
-                        {/* LEFT */}
-                        <div className=" space-y-2 text-center text-lg leading-relaxed text-[#1c1c1c]">
+
+                        <h1 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mt-4">
+                            Our Team
+                        </h1>
+                    </div>
+
+                    {/* MAIN CONTENT */}
+                    <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+
+                        {/* LEFT IMAGE */}
+                        <div className="relative rounded-lg overflow-hidden shadow-lg">
+                            <img
+                                src={teamImg}
+                                className="w-full h-[300px] object-cover"
+                            />
+                            {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" /> */}
+                        </div>
+
+                        {/* RIGHT CONTENT */}
+                        <div className="space-y-6 text-gray-700 leading-relaxed">
+
                             <p>
                                 At the heart of the firm is a strong core team of Chartered Accountants,
-                                supported by dedicated professional support staffs.
+                                supported by dedicated professionals.
                             </p>
 
                             <p>
                                 They are meticulous in execution, thoughtful in analysis, and consistent in delivery.
-                                Each member of the team is encouraged to think independently, act responsibly,
-                                and contribute meaningfully to the outcome.
                             </p>
 
                             <p>
-                                The culture we foster is one of learning and ownership where questions are welcomed,
-                                ideas are valued, and excellence is pursued quietly, without compromise.
+                                Each member is encouraged to think independently, act responsibly,
+                                and contribute meaningfully.
                             </p>
 
-                            <p className=" ">
-                                Together, they form a team that is not only capable, but dependable.
+                            <p className="font-semibold text-[#1C1C1C] border-l-4 border-[#289572] pl-4">
+                                Together, they form a team that is capable and dependable.
                             </p>
-                        </div>
 
-                        {/* RIGHT BOXES ROW */}
-                        <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            {[
-                                "Precision in execution",
-                                "Independent thinking",
-                                "Ownership-driven culture",
-                                "Consistent delivery",
-                            ].map((item) => (
-                                <div
-                                    key={item}
-                                    className="bg-white border border-gray-200 rounded-xl p-5 text-center shadow-sm hover:shadow-md transition"
-                                >
-                                    {/* Dot */}
-                                    <div className="w-3 h-3 bg-[#6FAF9B] rounded-full mx-auto mb-3" />
-
-                                    {/* Text */}
-                                    <p className="text-sm text-gray-700 font-medium">
-                                        {item}
-                                    </p>
-                                </div>
-                            ))}
                         </div>
                     </div>
 
+                    {/* VALUE CARDS WITH ICONS */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                        {[
+                            {
+                                text: "Precision in execution",
+                                icon: HiOutlineCheckCircle,
+                                color: "#16A34A",
+                                bg: "#EAF7EF",
+                            },
+                            {
+                                text: "Independent thinking",
+                                icon: HiOutlineLightBulb,
+                                color: "#F59E0B",
+                                bg: "#FFF7E6",
+                            },
+                            {
+                                text: "Ownership-driven culture",
+                                icon: HiOutlineUserGroup,
+                                color: "#3B82F6",
+                                bg: "#EAF2FF",
+                            },
+                            {
+                                text: "Consistent delivery",
+                                icon: HiOutlineSparkles,
+                                color: "#8B5CF6",
+                                bg: "#F3EDFF",
+                            },
+                        ].map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div
+                                    key={item.text}
+                                    className="group rounded-xl p-6 text-center transition-all duration-300 border border-gray-200
+        hover:shadow-xl hover:-translate-y-1"
+                                    style={{ backgroundColor: item.bg }}
+                                >
+                                    {/* ICON BOX */}
+                                    <div
+                                        className="w-14 h-14 shadow mx-auto flex items-center justify-center border border-gray-300 rounded-lg mb-4 transition"
+                                        style={{ backgroundColor: "#ffffff" }}
+                                    >
+                                        <Icon
+                                            className="w-10 h-10"
+                                            style={{ color: item.color }}
+                                        />
+                                    </div>
+
+                                    {/* TEXT */}
+                                    <p className="text-gray-800 font-semibold text-sm leading-snug">
+                                        {item.text}
+                                    </p>
+
+                                    {/* ACCENT LINE */}
+                                    <div
+                                        className="mt-4 h-0.5 w-6 mx-auto transition-all group-hover:w-10"
+                                        style={{ backgroundColor: item.color }}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
                     {/* FILTER */}
-                    <div className="flex flex-wrap gap-4 mb-10">
+                    <div className="flex flex-wrap justify-center gap-3 mb-12">
                         {["All", "Tax", "Audit", "Legal"].map((item) => (
                             <button
                                 key={item}
                                 onClick={() => setFilter(item)}
                                 className={`px-5 py-2 rounded-full text-sm font-medium transition
-                  ${filter === item
-                                        ? "bg-[#0F3D2E] text-white"
-                                        : "bg-gray-200 text-gray-700 hover:bg-[#1F6F5B] hover:text-white"
+        ${filter === item
+                                        ? "bg-[#289572] text-white"
+                                        : "bg-gray-100 text-gray-700 hover:bg-[#289572] hover:text-white"
                                     }`}
                             >
                                 {item}
@@ -125,38 +187,32 @@ export default function TeamSection() {
                         ))}
                     </div>
 
-                    {/* GRID */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-15">
+                    {/* TEAM GRID */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {filteredTeam.map((member) => (
                             <div
                                 key={member.id}
                                 onClick={() => setActiveMember(member)}
-                                className="cursor-pointer group text-center"
+                                className="cursor-pointer group"
                             >
-                                <div className="relative overflow-hidden shadow-lg group-hover:shadow-2xl shadow-black transition">
+                                <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition">
 
-                                    <img
-                                        src={member.image}
-                                        className="w-full h-60 object-fill 
-                    grayscale brightness-75 
-                    group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110
-                    transition duration-500"
-                                    />
+                                    {/* IMAGE */}
+                                    <div className="relative h-60 overflow-hidden">
+                                        <img
+                                            src={member.image}
+                                            className="w-full h-full  grayscale-100 group-hover:grayscale-0  object-cover transition duration-500 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+                                    </div>
 
-
-                                    {/* OVERLAY */}
-                                    <div className="absolute  bottom-0 w-full p-4 
-                    bg-linear-to-t from-[#0F3D2E]/90 to-transparent text-white">
-
-                                        {/* <p className="text-xs uppercase tracking-widest">
-                      {member.department}
-                    </p> */}
-
-                                        <h3 className="font-semibold hidden group-hover:block text-sm">
+                                    {/* CONTENT */}
+                                    <div className="p-4 text-center">
+                                        <h3 className="font-semibold text-gray-900 text-sm">
                                             {member.name}
                                         </h3>
 
-                                        <p className="text-[#C2A96A] hidden group-hover:block text-xs mt-1">
+                                        <p className="text-xs text-[#289572] mt-1">
                                             {member.role}
                                         </p>
                                     </div>

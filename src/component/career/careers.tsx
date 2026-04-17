@@ -1,276 +1,316 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import careerHero from "../../assets/25.jpg";
+import {
+  Briefcase,
+  MapPin,
+  Clock,
+  GraduationCap,
+  ChevronDown,
+  CheckCircle2,
+  ArrowRight,
+  Sparkles,
+  Users
+} from "lucide-react";
+import careerHero from "../../assets/Career/1.jpeg";
 
-// Constants defined outside component to prevent re-allocation
-const COLORS = {
-  IVORY: "#F7F9F8",
-  CHARCOAL: "#1C1C1C",
-  GOLD: "#C2A96A",
-  ACCENT: "#6FAF9B",
-};
+
 
 const JOBS = [
   {
-    title: "Manager ( Audit & Assurance)",
+    title: "Manager (Audit & Assurance)",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "4-5 Years",
+    icon: <Briefcase className="w-5 h-5" />,
     description: "Lead and execute statutory audit engagements of various clients in line with auditing and accounting standards.",
     responsibilities: [
-      "Work with Audit team to execute Statutory Audits of Indian GAAP ( AS and IND AS clients)",
-      "Auditing and reviewing the clients financial statements, maintaining and preparing its financial reports, managing relationships.",
-      "Identify issues, offer suggestions and discuss with seniors to resolve them.",
-      "Be able to prioritize assignments deadlines and respond to clients and firm's needs.",
-      "To work under stringent deadlines and demanding client conditions"
+      "Execute Statutory Audits of Indian GAAP (AS and IND AS clients)",
+      "Review financial statements and manage client relationships.",
+      "Identify issues and offer suggestions to senior management.",
+      "Manage stringent deadlines and demanding client conditions."
     ],
     requirements: [
-      "CA Having 4 to 5 years of post qualification experience in Statutory Audit in a similar environment (Audit and Accounting firms)",
-      "Strong technical knowledge of Indian Accounting Standard (Ind AS) and Standards on Auditing (SAs).",
-      "Practical exposure in handling statutory audit. Experience of handing IND AS clients will be added advantage."
+      "Chartered Accountant (CA) qualification.",
+      "Strong knowledge of Ind AS and Standards on Auditing.",
+      "Experience handling IND AS clients is a major plus."
     ]
   },
   {
     title: "Senior Manager",
-    description: "Lead and execute statutory audit engagements of various clients in line with auditing and accounting standards.",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "10-15 Years",
+    icon: <Users className="w-5 h-5" />,
+    description: "High-level leadership role managing complex audit portfolios and team development.",
     details: {
-      "Post / Designation": "Senior Manager",
+      "Designation": "Senior Manager",
       "Qualification": "CA, FCA",
-      "Experience": "10 to 15 years in Statutory Audit in a similar environment",
-      "Employment": "Full-time",
-      "Salary": "Negotiable",
-      "Location": "Ahmedabad"
+      "Experience": "10 to 15 years",
+      "Salary": "Negotiable"
     },
     skillRequirement: [
-      "Strongly sound with technical knowledge of Indian Accounting Standard (IND AS) and Standards on Auditing (SAs).",
-      "Team player and smooth work coordination with clients while conducting assigned official duties.",
-      "Exposure with Internal Audits with be added advantage.",
-      "Drafting skills to prepare various audit working papers.",
-      "Identify issues, offer suggestions and resolve.",
-      "Prioritize assignments deadlines and respond to clients and firm's needs.",
-      "To work under stringent deadlines and demanding client conditions."
+      "Mastery of Indian Accounting Standards (IND AS).",
+      "Expert drafting skills for audit working papers.",
+      "Exposure to Internal Audits is an added advantage.",
+      "Proven ability to lead large audit teams."
     ]
   },
   {
-    title: "Fresher CA the Field of Auditing and Assurance (Preferable Male)",
+    title: "Fresher CA (Auditing)",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "0-1 Years",
+    icon: <GraduationCap className="w-5 h-5" />,
     points: [
-      "Working knowledge of all latest updates including Ind AS, IGAAP, GST, Income Tax Act and other relates acts used in the field of auditing and assurance.",
-      "Proficient knowledge of Word, Excel, SAP ERP and other accounting software's including tally.",
-      "Skills of administrating a team of articles and planning work to meet strict deadlines of assignment."
+      "Knowledge of Ind AS, IGAAP, GST, and Income Tax Act.",
+      "Proficiency in Word, Excel, SAP ERP, and Tally.",
+      "Ability to lead articles and plan work schedules."
     ]
   },
   {
-    title: "CS: Job Description Fresher 0-2 years / Male",
+    title: "Company Secretary",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "0-2 Years",
+    icon: <Sparkles className="w-5 h-5" />,
     points: [
-      "Incorporation of Public/ Private Co. & LLPs",
-      "MOA & AOA – Drafting & Alterations etc.",
-      "ROC Annual fillings of the Public/Private Co. & LLPs.",
-      "DIN & DSC Applications",
-      "XBRL – Conversion of a financial statements in a XBRL form.",
-      "Capital Structuring, Name Change, Change of a Registered Office, Conversion from public to private limited & vice versa, Appointment, Re-appointment & Resignation of a Directors, KMPs, Statutory Auditors etc. of a company",
-      "Charge Creation/ Modification/ Satisfaction.",
-      "Proceedings of Allotment, Transfer, Split, Consolidation of shares.",
-      "Filing application, affidavits and resolutions to the Regional Director for the grant of approval under the said section.",
-      "Handling & Conducting the Board Meetings.",
-      "Drafting of scheme of arrangement in the nature of merger/Amalgamation/de Merger under section 230 to 233 and filed respective forms."
-    ]
-  },
-  {
-    title: "Recruitment of CA (Fresher)",
-    points: [
-      "Working knowledge of all latest updates including Ind AS, IGAAP, GST, Income Tax Act.",
-      "Proficient knowledge of financial systems and audit methodologies.",
-      "Strong analytical and documentation skills."
+      "Incorporation of Public/Private Companies & LLPs.",
+      "ROC Annual filings and XBRL conversions.",
+      "Handling Board Meetings and drafting schemes of arrangement.",
+      "Managing Charge Creation and Allotment proceedings."
     ]
   }
-]
+];
 
-interface JobAccordionProps {
-  job: Job;
-  isOpen: boolean;
-  onClick: () => void;
-}
+// --- Animation Variants ---
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
 
-interface Job {
-  title: string;
-  description?: string;
-  details?: Record<string, string>;
-  responsibilities?: string[];
-  requirements?: string[];
-  skillRequirement?: string[];
-  points?: string[];
-}
-
-const JobAccordion = ({ job, isOpen, onClick }: JobAccordionProps) => {
-  return (
-    <div className="border border-[#1C1C1C]/10 rounded-xl overflow-hidden mb-4 transition-all duration-300 shadow-sm">
-      <button
-        onClick={onClick}
-        className="w-full flex items-center justify-between p-6 text-left transition-all"
-        style={{
-          backgroundColor: isOpen ? COLORS.IVORY : 'white',
-          color: COLORS.CHARCOAL
-        }}
-      >
-        <span className="font-bold text-lg md:text-xl tracking-tight leading-tight">{job.title}</span>
-        <motion.span
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3, ease: "circOut" }}
-          className="shrink-0 ml-4"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </motion.span>
-      </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="overflow-hidden"
-          >
-            <div className="p-6 space-y-5 text-[#1C1C1C]/80 border-t border-[#1C1C1C]/5">
-
-              {job.description && (
-                <div>
-                  <p className="font-bold text-[#1C1C1C] mb-2 uppercase text-xs tracking-widest">
-                    Description
-                  </p>
-                  <p className="leading-relaxed">{job.description}</p>
-                </div>
-              )}
-
-              {job.details && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-lg border border-[#C2A96A]/20 bg-[#F7F9F8]">
-                  {Object.entries(job.details).map(([key, value]) => (
-                    <p key={key} className="text-sm">
-                      <span className="font-bold text-[#1C1C1C]">{key}: </span>
-                      {String(value)}
-                    </p>
-                  ))}
-                </div>
-              )}
-
-              {[
-                { label: "Major Responsibilities", data: job.responsibilities },
-                { label: "Experience & Background", data: job.requirements },
-                { label: "Skill Requirements", data: job.skillRequirement },
-                { label: "Key Points", data: job.points }
-              ].map((section, idx) =>
-                section.data ? (
-                  <div key={idx} className="space-y-2">
-                    <p className="font-bold text-[#1C1C1C] text-sm uppercase tracking-wider">
-                      {section.label}
-                    </p>
-                    <ul className="list-disc pl-5 space-y-1">
-                      {section.data.map((item: string, i: number) => (
-                        <li key={i} className="leading-relaxed">{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null
-              )}
-
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 }
 };
 
 const CareersPage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="bg-white min-h-screen selection:bg-[#6FAF9B]/30" style={{ color: COLORS.CHARCOAL }}>
+    <div className="bg-[#FDFDFD] min-h-screen text-[#1A1A1A] overflow-x-hidden">
 
-      {/* Optimized Hero Section */}
-      <section className="relative h-150 flex items-center justify-center overflow-hidden bg-[#1C1C1C]">
-        <div
-          className="absolute inset-0 z-0 opacity-60 scale-105"
-          style={{
-            backgroundImage: `url(${careerHero})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            // Removed bg-fixed to improve scroll performance
-          }}
+      {/* 1. HERO SECTION WITH IMAGE REVEAL */}
+      <section className="relative h-150 flex items-center justify-center bg-[#1A1A1A]">
+        <motion.div
+          initial={{ scale: 1.2, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.5 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 z-0"
+          style={{ backgroundImage: `url(${careerHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
-        <div className="absolute inset-0 z-1 bg-linear-to-b from-transparent to-black/40" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#1A1A1A]/30 to-[#1A1A1A]/70" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="relative z-10 text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.5 }}
           >
-            <p className="font-semibold uppercase tracking-[0.4em] mb-4 text-lg" style={{ color: COLORS.GOLD }}>
+            <span className=" text-[#0bd390]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
               Work With Us
-            </p>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tighter drop-shadow-md">
+            </span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
-              <span style={{ color: COLORS.ACCENT }}>Thoughtfully</span>
+              <span className="text-[#079264]">Thoughtful.</span>
             </h1>
           </motion.div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+      {/* 2. CULTURE & LISTING SECTION */}
+      <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-16">
 
-            {/* Left side remains light on DOM weight */}
-            <div className="lg:w-1/3 space-y-8">
-              <div className="inline-block h-1 w-12" style={{ backgroundColor: COLORS.GOLD }} />
-              <h2 className="text-4xl font-bold tracking-tight">Why Join Us?</h2>
-              <div className="space-y-6 text-[#1C1C1C]/90">
-                <p className="text-xl leading-relaxed font-light text-justify">
-                  At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.
-                </p>
-                <p className="text-lg leading-relaxed border-l-4 pl-6 italic" style={{ borderColor: COLORS.GOLD }}>
-                  We foster an environment that values curiosity, discipline, and integrity.
-                </p>
-               
-                <motion.button
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.96 }}
-                  className="flex items-center justify-center rounded-full border border-[#083023] px-10 py-2 text-lg font-semibold text-[#064631] backdrop-blur-sm transition duration-300 hover:bg-[#6FAF9B]/20"
-                >
-                  Apply Now
-                </motion.button>
+          {/* Left: Why Us */}
+          <div className="lg:col-span-4 lg:sticky lg:top-24 h-fit">
+            <h2 className="text-4xl font-bold mb-8 leading-tight">
+              Why our firm is the <span className="text-[#C2A96A]">right fit</span> for you.
+            </h2>
+            <div className="space-y-8">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#064631]/10 flex items-center justify-center shrink-0 text-[#064631]">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-xl">Growth First</h4>
+                  <p className="text-black/60 text-md">At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.</p> <br />
+
+                  <p className="text-black/60 text-md">We foster an environment that values curiosity, discipline, and integrity where questions are welcomed, ideas are respected, and excellence is quietly pursued.</p>
+
+             
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#C2A96A]/10 flex items-center justify-center shrink-0 text-[#C2A96A]">
+                  <Users className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">Collaborative Culture</h4>
+                  <p className="text-black/60 text-sm">Join us, and build a career defined by substance, not just scale.</p>
+                </div>
               </div>
             </div>
 
-            {/* Right Side: Accordion with lighter interaction */}
-            <div className="lg:w-2/3">
-              <div className="mb-6 p-4 rounded-lg bg-[#F7F9F8] border border-[#1C1C1C]/5">
-                <h3 className="font-bold text-sm uppercase tracking-widest text-[#1C1C1C]/60">Available Positions</h3>
-              </div>
-              <div>
-                {JOBS.map((job, index) => (
-                  <JobAccordion
-                    key={index}
-                    job={job}
-                    isOpen={openIndex === index}
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  />
-                ))}
-              </div>
-            </div>
-
+            <motion.button
+              whileHover={{ x: 10 }}
+              className="mt-12 flex items-center gap-3 text-[#064631] text-lg font-bold group"
+            >
+              Learn more about our values
+              <ArrowRight className="w-5 h-5 group-hover:text-[#C2A96A] transition-colors" />
+            </motion.button>
           </div>
+
+          {/* Right: Modern Jobs Accordion */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="lg:col-span-8 space-y-6"
+          >
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="uppercase tracking-widest text-lg font-bold text-black">Open Roles</h3>
+              <div className="h-px flex-1 mx-6 bg-black/5" />
+            </div>
+
+            {JOBS.map((job, idx) => (
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                className={`rounded-3xl border transition-all duration-500 overflow-hidden ${openIndex === idx
+                  ? "border-[#815f09] bg-white shadow-2xl shadow-[#C2A96A]/10"
+                  : "border-black/50 bg-[#F8F9FA] hover:border-[#C2A96A]/40"
+                  }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                  className="w-full p-6 md:p-8 text-left flex items-start justify-between gap-4"
+                >
+                  <div className="flex gap-6">
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors ${openIndex === idx ? "bg-[#C2A96A] text-white" : "bg-white text-black/20"}`}>
+                      {job.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap gap-4 text-xs font-medium text-black/40">
+                        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {job.type}</span>
+                        <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5" /> {job.location}</span>
+                        <span className="flex items-center gap-1"><Briefcase className="w-3.5 h-3.5" /> {job.exp}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`mt-2 transition-transform duration-300 ${openIndex === idx ? "rotate-180 text-[#C2A96A]" : "text-black/20"}`}>
+                    <ChevronDown className="w-6 h-6" />
+                  </div>
+                </button>
+
+                <AnimatePresence>
+                  {openIndex === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <div className="px-8 pb-10 pt-2 ml-20">
+                        <div className="h-px bg-black/5 mb-8" />
+
+                        {job.description && (
+                          <p className="text-[#1A1A1A]/70 leading-relaxed mb-8 text-lg">{job.description}</p>
+                        )}
+
+                        <div className="grid md:grid-cols-2 mb-10 gap-10">
+                          {/* Section: Responsibilities */}
+                          {(job.responsibilities || job.points) && (
+                            <div>
+                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Key Focus Areas</h4>
+                              <ul className="space-y-4">
+                                {(job.responsibilities || job.points).map((item, i) => (
+                                  <li key={i} className="flex gap-3 text-sm text-black/80">
+                                    <CheckCircle2 className="w-5 h-5 text-[#064631] shrink-0" />
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Section: Requirements */}
+                          {job.requirements && (
+                            <div>
+                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Experience Needed</h4>
+                              <ul className="space-y-4">
+                                {job.requirements.map((item, i) => (
+                                  <li key={i} className="flex gap-3 text-sm text-black/80">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#C2A96A] mt-2 shrink-0" />
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+
+                        <a
+                        href="mailto:hr@gkcco.com"
+                        className="mt-12 bg-[#1A1A1A] text-white  px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#C2A96A] transition-colors shadow-lg">
+                          Apply for this position
+                        </a>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="pb-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="p-12 rounded-3xl text-center border border-[#C2A96A]/10" style={{ backgroundColor: COLORS.IVORY }}>
-            <p className="text-2xl md:text-3xl font-light italic text-[#1C1C1C]/80">
-              "We believe that a career is more than just a sequence of roles. It’s an opportunity to cultivate your craft and leave a lasting impact."
-            </p>
-          </div>
+      <section className="relative py-8 px-6 bg-white overflow-hidden text-center">
+
+        {/* 🌟 Soft Background Glow */}
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#6FAF9B]/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C2A96A]/10 blur-[120px] rounded-full" />
+
+        <div className="relative z-10 max-w-5xl mx-auto">
+
+
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-6 text-[#1C1C1C]"
+          >
+            Ready to <span className="text-[#C2A96A] ">make your mark?</span>
+          </motion.h2>
+
+          {/* Subtext */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-500 text-lg mb-12 leading-relaxed"
+          >
+            We are always looking for exceptional talent. If you don't see a role that fits,
+            send us your resume anyway.
+          </motion.p>
+
+
         </div>
       </section>
     </div>
