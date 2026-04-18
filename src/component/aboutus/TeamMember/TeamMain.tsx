@@ -212,9 +212,10 @@ export default function TeamSection() {
                                             {member.name}
                                         </h3>
 
-                                        <p className="text-xs text-[#289572] mt-1">
-                                            {member.role}
-                                        </p>
+                                        {/* <p className="text-xs text-[#289572] mt-1">
+                                            {member.details}
+                                        </p> */}
+
                                     </div>
                                 </div>
                             </div>
@@ -288,6 +289,35 @@ export default function TeamSection() {
                                             {activeMember.role}
                                         </p>
 
+                                        {activeMember.details && (
+                                            <motion.div
+                                                className="mt-6 space-y-4"
+                                                initial="hidden"
+                                                animate="visible"
+                                                variants={{
+                                                    hidden: {},
+                                                    visible: {
+                                                        transition: {
+                                                            staggerChildren: 0.3
+                                                        }
+                                                    }
+                                                }}
+                                            >
+                                                {activeMember.details.split('\n\n').map((paragraph, index) => (
+                                                    <motion.p
+                                                        key={index}
+                                                        className="text-sm leading-relaxed opacity-90"
+                                                        variants={{
+                                                            hidden: { opacity: 0, y: 20 },
+                                                            visible: { opacity: 1, y: 0 }
+                                                        }}
+                                                        transition={{ duration: 0.5 }}
+                                                    >
+                                                        {paragraph}
+                                                    </motion.p>
+                                                ))}
+                                            </motion.div>
+                                        )}
 
                                     </div>
 

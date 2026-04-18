@@ -6,8 +6,34 @@ export interface TeamMember {
     image: string;
     experience?: string;
     description?: string;
+    details?: string;
     status?: string;
 }
+import Narendra from "../../../assets/Core Team Photos/Adv. N D Patel.jpg"
+import AdvocateDhrutiTrivedi from "../../../assets/Core Team Photos/Advocate Dhruti Trivedi.jpg"
+import CAAkshayDodiya from "../../../assets/Core Team Photos/CA Akshay Dodiya.jpg"
+import CAArchitSeth from "../../../assets/Core Team Photos/CA Archit Seth.jpg"
+import CAArjunAkruwala from "../../../assets/Core Team Photos/CA Arjun Akruwala.jpg"
+import CAAshaSindhi from "../../../assets/Core Team Photos/CA Asha Sindhi.jpg"
+import CAAsmaShaikh from "../../../assets/Core Team Photos/CA Asma Shaikh.jpg"
+import CABhavikShah from "../../../assets/Core Team Photos/CA Bhavik Shah.jpg"
+import CAHarshParikh from "../../../assets/Core Team Photos/CA Harsh Parikh.jpg"
+import CAKamleshShah from "../../../assets/Core Team Photos/CA Kamlesh Shah.jpg"
+import CAMananShah from "../../../assets/Core Team Photos/CA Manan Shah.jpg"
+import CAMukeshDholakiya from "../../../assets/Core Team Photos/CA Mukesh Dholakiya.jpg"
+import CANikunjDevpura from "../../../assets/Core Team Photos/CA Nikunj Devpura.jpg"
+import CANitiPandya from "../../../assets/Core Team Photos/CA Niti Pandya.jpg"
+import CAPadmanabhShah from "../../../assets/Core Team Photos/CA Padmanabh Shah.jpg"
+import CAParagShah from "../../../assets/Core Team Photos/CA Parag Shah.jpg"
+import CAPriyankaShah from "../../../assets/Core Team Photos/CA Priyanka Shah.jpg"
+import CARujutaMunshi from "../../../assets/Core Team Photos/CA Rujuta Munshi.jpg"
+import CAshwetangPujara from "../../../assets/Core Team Photos/CA shwetang Pujara.jpg"
+import CASiddharthPatel from "../../../assets/Core Team Photos/CA Siddharth Patel.jpg"
+import CASudhaGupta from "../../../assets/Core Team Photos/CA Sudha Gupta ---.jpg"
+import CATanupriyaPatel from "../../../assets/Core Team Photos/CA Tanupriya Patel.jpg"
+import CAZankrutiMehta from "../../../assets/Core Team Photos/CA Zankruti Mehta.jpg"
+import CSShambhuBhikhadia from "../../../assets/Core Team Photos/CS Shambhu Bhikhadia.jpg"
+
 
 export const TEAM: TeamMember[] = [
     {
@@ -17,6 +43,7 @@ export const TEAM: TeamMember[] = [
         department: "Tax",
         image: "https://www.gkcco.com/wp-content/uploads/2019/12/Ullas-G-Shah.jpg",
         experience: "28+ years",
+        details: undefined,
         status: "Open",
     },
     {
@@ -24,8 +51,9 @@ export const TEAM: TeamMember[] = [
         name: "Narendra D Patel",
         role: "B.Com, LLB",
         department: "Legal",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/Adv.-N-D-Patel-150x150.jpg",
+        image: Narendra,
         experience: "44+ years",
+        details: undefined,
         status: "Open",
     },
     {
@@ -33,8 +61,9 @@ export const TEAM: TeamMember[] = [
         name: "Shambhu J Bhikadia",
         role: "B.Com, LLB, CS",
         department: "Legal",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CS-Shambhu-Bhikhadia-150x150.jpg",
+        image: CSShambhuBhikhadia,
         experience: "48+ years",
+        details: undefined,
         status: "Open",
     },
     {
@@ -42,8 +71,9 @@ export const TEAM: TeamMember[] = [
         name: "Kamlesh H Shah",
         role: "B.Com, CA, DISA",
         department: "Audit",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Kamlesh-Shah-150x150.jpg",
+        image: CAKamleshShah,
         experience: "42+ years",
+        details: undefined,
         status: "Open",
     },
     {
@@ -53,6 +83,7 @@ export const TEAM: TeamMember[] = [
         department: "Audit",
         image: "https://www.gkcco.com/wp-content/uploads/2019/12/Anil-Seth.jpg",
         experience: "46+ years",
+        details: undefined,
         status: "Open",
     },
     {
@@ -61,6 +92,7 @@ export const TEAM: TeamMember[] = [
         role: "IRS (Retd)",
         department: "Legal",
         image: "https://www.gkcco.com/wp-content/uploads/2025/12/Untitled-1_06-150x150.png",
+        details: undefined,
         status: "Open",
     },
     {
@@ -68,7 +100,8 @@ export const TEAM: TeamMember[] = [
         name: "Mukesh Dholakiya",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Mukesh-Dholakiya-233x300.jpg",
+        image: CAMukeshDholakiya,
+        details: "CA Mukesh Dholakiya is a Chartered Accountant with close to two decades of post-qualification experience in the domain of Direct Taxation.\n\nQualified as a member of the Institute of Chartered Accountants of India since 2006, he is presently associated with G.K. Choksi & Co., Chartered Accountants, as President – Direct Taxation.\n\nHis core practice encompasses complex areas of income tax law, including Search and Seizure proceedings, Block Assessments, Reassessment proceedings, Charitable Trust Taxation, and advisory on intricate direct tax matters for corporate groups, charitable institutions, and high-net-worth individuals.\n\nHe has co-authored a publication on the law of Search and Seizure and Settlement of Cases, published by the Chartered Accountants Association, Ahmedabad.\n\nHe regularly contributes professional articles on contemporary direct tax issues to leading platforms including Taxmann and Taxsutra.\n\nHis practice is defined by meticulous statutory analysis, thorough preparation, and an unwavering commitment to professional excellence.",
         status: "Closed"
     },
     {
@@ -76,7 +109,8 @@ export const TEAM: TeamMember[] = [
         name: "Padmanabh Shah",
         role: "M.Com, CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Padam-Shah-233x300.jpg",
+        image: CAPadmanabhShah,
+        details: undefined,
         status: "Open"
     },
     {
@@ -84,7 +118,8 @@ export const TEAM: TeamMember[] = [
         name: "Siddharth Patel",
         role: "CA",
         department: "Audit",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Siddharth-Patel-233x300.jpg",
+        image: CASiddharthPatel,
+        details: "Associated with the firm since 2008, he brings over 18 years of experience in assurance services across BFSI, cement, manufacturing, real estate, power, airports, and healthcare.\n\nHis experience includes statutory audits across a wide spectrum of entities, such as listed companies, PSUs, closely held public companies, private limited companies, LLPs, and Section 8 companies, in addition to transaction advisory, internal audits, tax audits, forensic audits, and Special Audits under Section 142(2A) of the Income-tax Act, 1961.\n\nHe possesses strong technical expertise in Ind AS and financial reporting, complemented by robust IT capabilities and effective stakeholder engagement.\n\nHe has authored several professional articles on Ind AS, tax audits, and accounting advisory matters, and has led the implementation of technology-driven advancements within the assurance practice.\n\nRecognised for decisive leadership and disciplined execution, he consistently delivers technically rigorous and commercially pragmatic outcomes within demanding timelines.",
         status: "Closed"
     },
     {
@@ -92,7 +127,8 @@ export const TEAM: TeamMember[] = [
         name: "Manan H Shah",
         role: "B.Com, CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Manan-Shah-1-233x300.jpg",
+        image: CAMananShah,
+        details: undefined,
         status: "Open"
     },
     {
@@ -100,7 +136,8 @@ export const TEAM: TeamMember[] = [
         name: "Shwetang Pujara",
         role: "B.Com, CA",
         department: "Audit",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-shwetang-Pujara-233x300.jpg",
+        image: CAshwetangPujara,
+        details: undefined,
         status: "Open"
     },
     {
@@ -108,7 +145,8 @@ export const TEAM: TeamMember[] = [
         name: "Dhruti Trivedi",
         role: "B.Com, LLB",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/Advocate-Dhruti-Trivedi-233x300.jpg",
+        image: AdvocateDhrutiTrivedi,
+        details: "As part of G.K. Choksi & Co.'s multidisciplinary professional services, the Para Legal Department offers integrated legal advisory and documentation support.\n\nThe department helps high-net-worth clients, corporations, developers, and institutions navigate complicated legal and regulatory frameworks pertaining to real estate issues, corporate transactions, and statutory compliance.\n\nThe team focuses on contract structuring, property due diligence, Trusts, regulatory liaison, and risk mitigation under the direction of Advocate Ms. Dhruti A. Trivedi, who brings more than 26 years of experience in legal advisory and dispute resolution.\n\nTo guarantee legally sound documentation, smooth transaction execution, and efficient legal issue resolution, the department collaborates closely with clients and regulatory bodies",
         status: "Closed"
     },
     {
@@ -116,7 +154,8 @@ export const TEAM: TeamMember[] = [
         name: "Parag K Shah",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Parag-Shah-150x150.jpg",
+        image: CAParagShah,
+        details: "Heading FEMA (Foreign Exchange Management Act) and GST (Goods and Services Tax) Departments\n\nIs a Chartered Accountant, Certified Public Accountant of the USA and has obtained an MBA degree from the UK\n\nAssociated with G. K. Choksi & Co. since 2009\n\nMore than 16 years of experience in the fields of FEMA, Foreign Contribution Regulation Act and GST (earlier service tax)\n\nGiven several presentations at various bodies including the ICAI\n\nContributed articles in many publications such as Ahmedabad Chartered Accountants Journal\n\nOne of the articles published in the Ahmedabad Chartered Accountants Journal was adjudged as \"Best Article\" in the category of \"Corporate & Other Laws\"",
         status: "Closed"
     },
     {
@@ -124,7 +163,8 @@ export const TEAM: TeamMember[] = [
         name: "Arjun Akruwala",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Arjun-Akruwala-150x150.jpg",
+        image: CAArjunAkruwala,
+        details: undefined,
         status: "Open"
     },
     {
@@ -132,7 +172,8 @@ export const TEAM: TeamMember[] = [
         name: "Bhavik Shah",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Bhavik-Shah-150x150.jpg",
+        image: CABhavikShah,
+        details: undefined,
         status: "Open"
     },
     {
@@ -140,7 +181,8 @@ export const TEAM: TeamMember[] = [
         name: "Akshay Dodiya",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Akshay-Dodiya-150x150.jpg",
+        image: CAAkshayDodiya,
+        details: "Akshay Dodiya is a Chartered Accountant, Company Secretary and Registered Valuer with 12 years of experience and experience across domains related to all three professions (CA, CS and Valuer).\n\nHe looks into Merger and Acquisition, Restructuring and Transactional advisory and execution roles and over the years, has developed an edge for structure planning and execution with a taste for implementing new ideas.\n\nHe has previously worked with Tata and Arvind groups bringing industry exposure to advisory.",
         status: "Closed"
     },
     {
@@ -148,7 +190,8 @@ export const TEAM: TeamMember[] = [
         name: "Zankruti A Mehta",
         role: "CA",
         department: "Audit",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Zankruti-Mehta-150x150.jpg",
+        image: CAZankrutiMehta,
+        details: "CA Zankruti Mehta had joined firm as article assistant and since last 17 years she is employed with us and having substantial experience in audit and assurance.\n\nAn accomplished audit professional with strong expertise in conducting statutory audits across diverse industries like Real Estate, Chemicals, Jewellery etc, ensuring compliance with applicable financial reporting frameworks, regulatory requirements, and auditing standards.\n\nExperienced in planning and executing statutory audits of corporate and non-corporate entities, including verification of financial statements, evaluation of accounting policies, and assessment of internal financial controls.\n\nAdept at identifying potential risks, reviewing financial records, and ensuring that financial statements present a true and fair view in compliance with applicable regulatory requirements.\n\nDemonstrates strong analytical and problem-solving capabilities in examining financial data, verifying transactions, and evaluating compliance with accounting standards and statutory provisions.\n\nSkilled in coordinating with management, reviewing audit documentation, and providing constructive recommendations to strengthen financial reporting and governance practices.",
         status: "Closed"
     },
     {
@@ -156,7 +199,8 @@ export const TEAM: TeamMember[] = [
         name: "Asmaakhtar Shaikh",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Asma-Shaikh-150x150.jpg",
+        image: CAAsmaShaikh,
+        details: undefined,
         status: "Open"
     },
     {
@@ -164,7 +208,8 @@ export const TEAM: TeamMember[] = [
         name: "Tanupriya Patel",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Tanuptiya-Patel.jpg",
+        image: CATanupriyaPatel,
+        details: "CA Tanupriya Patel has been associated with GK Choksi & Co. since 2009 and is presently engaged in handling direct tax appellate matters. With extensive experience in tax litigation, she regularly deals with complex matters involving detailed factual analysis, interpretation of law, preparation of written submissions, and formulation of appellate strategy.\n\nHer practice primarily focuses on managing comprehensive litigation proceedings, including analysis of assessment orders, drafting of appeals and submissions, and assisting in representation in complex and high-value tax disputes. She has a strong command over legal drafting, enabling her to prepare clear, structured, and persuasive appellate submissions.\n\nOver the years, she has developed strong expertise in handling appellate matters including faceless hearing that require a blend of legal acumen, analytical ability, and practical understanding of tax controversy management.\n\nShe is known for her methodical approach, technical strength, calm and composed demeanour, patient handling of complex matters, and ability to deliver high-quality work within stringent timelines.",
         status: "Closed"
     },
     {
@@ -172,7 +217,8 @@ export const TEAM: TeamMember[] = [
         name: "Harsh Hemant Parikh",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Harsh-Parikh-150x150.jpg",
+        image: CAHarshParikh,
+        details: "Harsh Parikh is a Chartered Accountant at G. K. Choksi & Co., where his professional journey began as an intern in 2007 before officially joining as a qualified CA in 2012.\n\nHe brings extensive expertise in Direct Taxation, with a highly specialized focus on Corporate Tax and Search matters.\n\nOver the years, Harsh has developed a proven track record of skillfully navigating the intricacies of search and seizure cases, managing high-stakes situations with precision and strategic foresight.\n\nA proactive problem-solver, Harsh plays a pivotal role in handling complex litigation and compliance for diverse corporate structures.\n\nHis core competencies span advising clients on tax compliance and return filing, representing them before various authorities, briefing senior counsels, and assisting in strategic transaction structuring.\n\nBeyond his technical acumen, Harsh is known for his client-centric approach and for taking leadership initiatives.\n\nOutside of his demanding professional commitments, Harsh is an avid gamer and loves to listen music. This hobby not only offers a refreshing balance to the world of taxation but also keeps his strategic thinking, adaptability, and quick decision-making skills sharp",
         status: "Closed"
     },
     {
@@ -180,7 +226,8 @@ export const TEAM: TeamMember[] = [
         name: "Rujuta Munshi",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Rujuta-Munshi-150x150.jpg",
+        image: CARujutaMunshi,
+        details: undefined,
         status: "Open"
     },
     {
@@ -188,15 +235,17 @@ export const TEAM: TeamMember[] = [
         name: "Niti Janakbhai Pandya",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Niti-Pandya-150x150.jpg",
+        image: CANitiPandya,
+        details: undefined,
         status: "Open"
     },
     {
         id: 23,
-        name: "Nikunj Murlimanhohar Devpura",
+        name: "Nikunj  Devpura",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Nikunj-Devpura-150x150.jpg",
+        image: CANikunjDevpura,
+        details: undefined,
         status: "Open"
     },
 
@@ -205,7 +254,8 @@ export const TEAM: TeamMember[] = [
         name: "Archit Sheth",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Archit-Seth-150x150.jpg",
+        image: CAArchitSeth,
+        details: "CA Archit Sheth has an extensive experience in direct tax advisory, litigation, and search-related proceedings under the Income Tax Act. He specialises in handling complex matters involving search and seizure, block assessments, unexplained assets, and high-value individual and corporate cases. His work involves strategic representation before tax authorities, drafting of submissions, and advisory on compliance. He has a keen interest in resolving intricate tax disputes through structured analysis and practical solutions.",
         status: "Closed"
     },
     {
@@ -213,7 +263,8 @@ export const TEAM: TeamMember[] = [
         name: "Sudha Gupta",
         role: "M.Com, MBA, CWA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2020/01/42-.jpg",
+        image: CASudhaGupta,
+        details: undefined,
         status: "Open"
     },
     {
@@ -221,7 +272,8 @@ export const TEAM: TeamMember[] = [
         name: "Asha Sindhi",
         role: "CA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/CA-Asha-Sindhi-150x150.jpg",
+        image: CAAshaSindhi,
+        details: undefined,
         status: "Open"
     },
     {
@@ -230,6 +282,7 @@ export const TEAM: TeamMember[] = [
         role: "CA",
         department: "Audit",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RsVX9frYS9BtDKqtEqUXbv0-6Q6N2IV7Gw&s",
+        details: undefined,
         status: "Open"
     },
     {
@@ -237,7 +290,8 @@ export const TEAM: TeamMember[] = [
         name: "Priyanka Mehta",
         role: "CA",
         department: "Tax",
-        image: "https://img.freepik.com/free-vector/woman-with-long-brown-hair-pink-shirt_90220-2940.jpg?semt=ais_hybrid&w=740&q=80",
+        image: CAPriyankaShah,
+        details: undefined,
         status: "Open"
     },
 ];

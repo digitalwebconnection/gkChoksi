@@ -79,11 +79,11 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
           <Icon className="w-7 h-7" style={{ color: block.color }} />
         </div>
 
-        <h3 style={{ transform: "translateZ(30px)" }} className="text-xl font-bold text-gray-900 mb-3">
+        <h3 style={{ transform: "translateZ(30px)" }} className="text-3xl font-bold text-gray-900 mb-3">
             {block.title}
         </h3>
 
-        <p style={{ transform: "translateZ(20px)" }} className="text-gray-600 leading-relaxed text-sm md:text-base">
+        <p style={{ transform: "translateZ(20px)" }} className="text-gray-900 leading-relaxed text-md md:text-xl">
           {block.text}
         </p>
 
@@ -130,7 +130,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-2xl font-bold text-gray-900">Leadership Team</h3>
+            <h3 className="text-4xl font-bold text-gray-900">Leadership Team</h3>
             
           </div>
 

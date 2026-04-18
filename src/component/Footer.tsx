@@ -36,7 +36,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="G.K. Choksi & Co."
-              className="mx-auto h-15 w-auto md:mx-0 sm:h-22"
+              className="mx-auto h-10 w-auto md:mx-0 sm:h-14"
             />
        
           </div>

@@ -38,6 +38,7 @@ export const SERVICES: Service[] = [
     paragraphs: [
       "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that with measured guidance backed by technical depth and commercial insight.",
       "From Accounting Advisory and Start-up structuring to Government Incentives, Inbound and Outbound Investment Strategies, and Incubation, we work closely with businesses to shape scalable structures, unlock opportunities, and support growth with foresight and discipline.",
+      "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning."
     ],
   },
 
@@ -51,16 +52,16 @@ export const SERVICES: Service[] = [
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
     ],
   },
-  {
-    slug: "management-consultancy",
-    title: "Management Consultancy",
-    subtitle: "Strategy, made executable.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSHZSfGDClJDJYFy-tqiGQQk72CqKGh05NQ&s",
-    paragraphs: [
-      "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
-      "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
-    ],
-  },
+  // {
+  //   slug: "management-consultancy",
+  //   title: "Management Consultancy",
+  //   subtitle: "Strategy, made executable.",
+  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSHZSfGDClJDJYFy-tqiGQQk72CqKGh05NQ&s",
+  //   paragraphs: [
+  //     "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
+  //     "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
+  //   ],
+  // },
   {
     slug: "regulatory",
     title: "Regulatory",
@@ -162,7 +163,7 @@ const ServicePage = () => {
             Our Professional Services
           </h1>
 
-          <p className="mt-6 text-white text-lg">
+          <p className="mt-6 text-white text-xl">
             Delivering clarity, precision, and strategic insight across every engagement.
           </p>
         </motion.div>
@@ -195,17 +196,13 @@ const ServicePage = () => {
                   {/* 🔥 COLORFUL ICON */}
                   <motion.div
                     className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-r ${point.gradient} text-white shadow-lg`}
-                    animate={{
-                      rotate: [0, 5, -5, 0],
-                    }}
+                    
                     transition={{
                       duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                    whileHover={{
-                      scale: 1.15,
-                    }}
+                    
                   >
                     <Icon className="w-7 h-7" />
                   </motion.div>
@@ -307,10 +304,10 @@ const ServicePage = () => {
                     className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
                   />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent" />
 
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-semibold">
+                    <h3 className="text-xl font-semibold">
                       {service.title}
                     </h3>
                   </div>
@@ -318,16 +315,19 @@ const ServicePage = () => {
 
                 {/* CONTENT */}
                 <div className="p-6">
-                  <h4 className="text-xl font-semibold text-[#1C1C1C] group-hover:text-[#289572] transition">
+                  <h4 className="text-2xl font-semibold text-[#1C1C1C] group-hover:text-[#289572] transition">
                     {service.subtitle}
                   </h4>
 
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-md text-gray-900">
                     {service.paragraphs[0]}
                   </p>
 
-                  <p className="mt-2 text-sm text-gray-600">
+                  <p className="mt-2 text-md text-gray-900">
                     {service.paragraphs[1]}
+                  </p>
+                    <p className="mt-2 text-md text-gray-900">
+                    {service.paragraphs[2]}
                   </p>
                 </div>
 

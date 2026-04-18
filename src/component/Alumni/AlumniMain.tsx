@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import alumni from "../../assets//alumini/5.jpeg"
 
-import i1 from "../../assets/1.jpeg";
-import i2 from "../../assets/2.jpeg";
-import i3 from "../../assets/5.jpeg";
-import i4 from "../../assets/11.jpeg";
+
 
 import g1 from "../../assets/alumini/1.jpeg"
 import g2 from "../../assets/alumini/2.jpeg"
@@ -13,7 +10,7 @@ import g4 from "../../assets/alumini/4.jpeg"
 
 export default function AlumniPage() {
 
-    const images = [i1, i2, i3, i4];
+    const images = [g1, g2, g4];
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {

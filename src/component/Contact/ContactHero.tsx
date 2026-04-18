@@ -99,8 +99,7 @@ const ContactHeroSection = () => {
           transition={{ delay: 1, duration: 1 }}
           className="mt-8 text-gray-200 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
         >
-          Whether you are navigating a complex decision or exploring new possibilities,
-          our team is here to bring clarity where it matters most. <br />
+    
           <span className="text-[#C2A96A] font-medium">
             Let’s connect and shape your next move with confidence.
           </span>

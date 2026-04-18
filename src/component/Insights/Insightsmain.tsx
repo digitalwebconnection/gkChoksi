@@ -6,7 +6,7 @@ import imgThought from "/src/assets/20.jpeg"
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import mca from "../../assets/mcalogo.png";
-
+import { ArrowRight } from "lucide-react";
 
 const insightCards = [
     {
@@ -84,7 +84,7 @@ const InsightsMain: React.FC = () => {
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
                     <div className="max-w-3xl text-center text-white">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                            <h1 className="text-3xl md:text-5xl font-semibold text-[#f5b20b]">
+                            <h1 className="text-3xl md:text-5xl font-semibold text-[#079264]">
                                 Our Insights
                             </h1>
 
@@ -94,47 +94,84 @@ const InsightsMain: React.FC = () => {
             </section>
 
             {/* CARDS */}
-            <div className="mx-auto max-w-7xl px-4 pb-32 pt-20">
-                <h2 className=" text-5xl text-center pb-15 font-bold">Articles & Publications</h2>
-                <section className="space-y-24">
-
-                    <motion.article
+            <div className="mx-auto max-w-7xl px-4 ">
+            
+                    <motion.section
                         ref={ref}
-                        className="relative flex flex-col lg:flex-row items-center justify-center py-20"
+                        className="relative py-8 md:py-10 \ max-w-7xl mx-auto overflow-hidden"
                     >
-                        {/* 1. LARGE IMAGE CONTAINER */}
-                        <div className="relative w-full lg:w-9/12 h-[500px] md:h-[600px] overflow-hidden rounded-[2.5rem] shadow-2xl">
-                            <motion.img
-                                style={{ scale: 1.1, y: imgY }}
-                                src={insightCards[0].image}
-                                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            {/* Dark subtle overlay for depth */}
-                            <div className="absolute inset-0 bg-linear-to-r from-black/20 via-transparent to-transparent" />
+                        {/* 🌈 Background */}
+                        <div className="absolute inset-0 -z-20 bg-linear-to-br from-slate-50 via-white to-slate-100" />
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-400/10 blur-[120px] rounded-full" />
+                        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-300/20 blur-[120px] rounded-full" />
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+                            {/* 🧠 LEFT CONTENT */}
+                            <motion.div style={{ y: textY }} className="flex flex-col gap-8">
+
+                                {/* Tag */}
+
+
+                                {/* Heading */}
+                                <h2 className="text-4xl md:text-6xl font-semibold text-slate-900 leading-tight">
+                                    Articles &
+                                    <br />
+                                    <span className="text-green-900 italic font-serif">
+                                        Publications
+                                    </span>
+                                </h2>
+
+                                {/* Description */}
+                                <p className="text-slate-600 text-lg text-justify leading-relaxed max-w-lg">
+                                    {insightCards[0].description}
+                                </p>
+
+                                {/* CTA */}
+                                <motion.button
+                                    whileHover={{ scale: 1.10 }}
+                                    whileTap={{ scale: 0.90 }}
+                                    className="group flex items-center gap-4 bg-slate-900 text-white px-6 py-4 rounded-xl w-fit transition-all duration-300 hover:bg-green-900  shadow-lg"
+                                >
+                                    Explore Now
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </motion.button>
+
+                            </motion.div>
+
+                            {/* 🎯 RIGHT VISUAL (FLOATING STACK) */}
+                            <motion.div
+                                style={{ y: imgY }}
+                                className="relative h-[500px] md:h-[600px] flex items-center justify-center"
+                            >
+                                {/* Main Image */}
+                                <div className="absolute w-full h-[75%] shadow-black  overflow-hidden shadow-2xl">
+                                    <img
+                                        src={insightCards[0].image}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+
+                            
+                                {/* Floating Card 2 */}
+                                <div className="absolute bottom-10 right-0 bg-slate-900 text-white  p-5 rounded-2xl shadow-xl w-48">
+                                    <p className="text-xs uppercase text-slate-400">Conversion</p>
+                                    <p className="text-lg font-bold">High Intent Leads</p>
+                                </div>
+
+                             
+                            </motion.div>
+
                         </div>
-
-                        {/* 2. FLOATING TEXT CARD */}
-                        <motion.div
-                            style={{ y: textY }}
-                            className="relative z-10 w-[82%] lg:w-5/12 bg-white p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.12)] rounded-xl -mt-20 lg:mt-0 lg:-ml-40 border border-slate-50"
-                        >
-                            <p className="text-gray-900 text-lg leading-relaxed mb-10 font-light">
-                                {insightCards[0].description}
-                            </p>
-
-
-                        </motion.div>
-
-
-                    </motion.article>
+                    </motion.section>
 
                     {/* 🔥 CARD 2 UPDATED */}
 
                     <motion.article className="   rounded-xl overflow-hidden">
                         {/* LEFT */}
 
-                        <div className="w-full  text-center mb-8">
-                            <p className="text-lg font-semibold text-center uppercase tracking-widest text-[#533f0c] ">
+                        <div className="w-full  text-center py-10 mb-8">
+                            <p className="text-5xl font-bold text-center uppercase tracking-widest text-[#C2A96A] ">
                                 Key Authorities
                             </p>
                             <p className="text-black text-xl font-semibold">
@@ -211,7 +248,6 @@ const InsightsMain: React.FC = () => {
 
                     </motion.article>
 
-                </section>
             </div>
         </main>
 

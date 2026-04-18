@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import i1 from "../../../assets/patner/patner.jpeg";
-import i2 from "../../../assets/15.jpeg";
-import i3 from "../../../assets/4.jpeg";
+
 
 
 const images = [
     i1,
-    i2,
-    i3,
+  
 ];
 
 const HeroSection = () => {
@@ -41,22 +39,22 @@ const HeroSection = () => {
             ))}
 
             {/* COLOR OVERLAY */}
-            <div className="absolute inset-0 bg-[#000000]/50"></div>
+            <div className="absolute inset-0 bg-[#000000]/40"></div>
 
             {/* CONTENT */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  text-center items-end">
-                <div className="max-w-3xl mx-auto  justify-end  text-white">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  items-end text-center ">
+                <div className="max-w-3xl mx-auto pb-15   text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase tracking-widest text-[#4fffc7] text-lg mb-4">
+                    <p className="uppercase font-bold tracking-widest text-white text-3xl  mb-4">
                         Leadership That Delivers
                     </p>
 
                     {/* HEADING */}
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    {/* <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
                         Experience That Leads. <br />
                         Insight That Drives Results.
-                    </h1>
+                    </h1> */}
 
 
 

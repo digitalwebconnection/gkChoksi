@@ -6,7 +6,6 @@ import {
   SearchCheck,
   GitMerge,
   Calculator,
-  BarChart3,
 } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
@@ -30,12 +29,7 @@ const services = [
     color: "#F59E0B", // orange
     bg: "#FEF3C7",
   },
-  {
-    title: "Management Consultancy",
-    icon: BarChart3,
-    color: "#8B5CF6", // purple
-    bg: "#EDE9FE",
-  },
+
   {
     title: "Regulatory",
     icon: ShieldCheck,
@@ -95,7 +89,7 @@ const WhatWeOffer = () => {
 
         {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

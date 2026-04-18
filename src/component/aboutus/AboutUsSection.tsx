@@ -42,45 +42,29 @@ export default function HeroSection() {
           />
 
           {/* GRADIENT */}
-          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-black/20" />
         </div>
       ))}
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 py-32  flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 py-32 text-center justify-center  flex items-center">
 
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
 
-          {/* SMALL TAGLINE */}
-          <p className="text-[#6FAF9B] uppercase tracking-[0.3em] text-lg font-semibold mb-2">
-            Built on Clarity & Trust
-          </p>
 
           {/* MAIN HEADING */}
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
             Clarity in Thinking <br />
-            <span className="text-[#289572] ">
+            <span className="text-[#079264] ">
               Confidence in Execution
             </span>
           </h1>
 
-          {/* SHORT STRONG LINE */}
-          <p className="mt-6 text-white text-lg">
-            Ours is a firm built on the belief that clarity creates confidence.
-          </p>
-
-          {/* DESCRIPTION (CLEAN SPLIT VERSION) */}
-          <p className="mt-4 text-white/90 text-md leading-relaxed">
-            With the leadership of 8 Partners and a team of 35+ Chartered Accountants 
-            supported by 150+ professionals, we bring depth of knowledge and real-world 
-            experience to businesses that are evolving and expanding. Our expertise spans 
-            Audit, Tax, and Advisory — delivering insights that are precise, practical, 
-            and future-focused.
-          </p>
+         
 
           {/* BUTTONS */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+             
             <Link
               to="/services"
               className="group flex items-center gap-3 px-7 py-3 text-white bg-[#164637] hover:bg-[#1f7559] transition rounded-md font-semibold"
