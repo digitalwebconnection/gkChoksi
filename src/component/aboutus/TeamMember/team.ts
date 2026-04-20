@@ -31,8 +31,10 @@ import CAshwetangPujara from "../../../assets/Core Team Photos/CA shwetang Pujar
 import CASiddharthPatel from "../../../assets/Core Team Photos/CA Siddharth Patel.jpg"
 import CASudhaGupta from "../../../assets/Core Team Photos/CA Sudha Gupta ---.jpg"
 import CATanupriyaPatel from "../../../assets/Core Team Photos/CA Tanupriya Patel.jpg"
-import CAZankrutiMehta from "../../../assets/Core Team Photos/CA Zankruti Mehta.jpg"
+import CAZankrutiMehta from "../../../assets/Core Team Photos/Zankruti Mehta.png"
 import CSShambhuBhikhadia from "../../../assets/Core Team Photos/CS Shambhu Bhikhadia.jpg"
+import AnilKumarSeth from "../../../assets/Core Team Photos/Anil Kumar Seth.png"
+import Priteshdudani from "../../../assets/Core Team Photos/Pritesh dudani.png"
 
 
 export const TEAM: TeamMember[] = [
@@ -73,7 +75,7 @@ export const TEAM: TeamMember[] = [
         department: "Audit",
         image: CAKamleshShah,
         experience: "42+ years",
-        details: undefined,
+        details: "CA Kamlesh Shah, a distinguished member of the profession since qualifying in 1985, is a DISA-certified professional with over four decades of extensive post-qualification experience. Associated with the firm since 1995, he stands as a pillar and backbone of the firm’s audit and advisory practice.\n\n He has led numerous statutory and tax audits across a wide spectrum of corporate and non-corporate clients, bringing depth, precision, and strategic oversight to every engagement. His expertise spans transaction advisory, special audits under Section 142(2A) of the Income Tax Act, and resolution of complex accounting and regulatory matters.\n\nWidely regarded as the go-to person for technical challenges in audit, he combines deep technical acumen with practical insight to deliver effective solutions. Beyond his professional contributions, he is a respected mentor, guiding young Chartered Accountants and serving as a stepping stone in shaping their careers.\n\nRespected for his sound judgement, integrity, and solution-oriented approach, CA Kamlesh Shah continues to play a defining role in upholding the firm’s standards of excellence and professional commitment.",
         status: "Open",
     },
     {
@@ -81,9 +83,9 @@ export const TEAM: TeamMember[] = [
         name: "Anil Kumar Seth",
         role: "B.Com, FCA",
         department: "Audit",
-        image: "https://www.gkcco.com/wp-content/uploads/2019/12/Anil-Seth.jpg",
+        image: AnilKumarSeth,
         experience: "46+ years",
-        details: undefined,
+        details: "A Chartered Accountant since 1985, he brings over four decades of rich and diverse experience across auditing and taxation. Widely regarded as a key personnel of the firm, his deep practical insights form the backbone of several critical engagements.\n\nHe has led a wide spectrum of assignments, including statutory and internal audits, tax matters, and special audits under Section 142(2A) of the Income Tax Act. Known as the go-to person for peers, he plays a key role in guiding teams, resolving audit matters and delivering well-rounded, strategic solutions to clients. \n\nPrior to his association with the firm, he held senior leadership roles across reputed organizations, contributing significantly to financial governance, compliance, and business expansion initiatives.\n\nBeyond his professional excellence, he is known as the most fun-loving presence within the team bringing energy, warmth, and a sense of camaraderie that truly defines the firm’s culture.",
         status: "Open",
     },
     {
@@ -281,8 +283,8 @@ export const TEAM: TeamMember[] = [
         name: "Pritesh Dudani",
         role: "CA",
         department: "Audit",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RsVX9frYS9BtDKqtEqUXbv0-6Q6N2IV7Gw&s",
-        details: undefined,
+        image: Priteshdudani,
+        details: "Pritesh Dudani is a Chartered Accountant having 10 years of experience in the field of audit and assurance. He is an integral part of the firm’s Audit and Assurance Practice, bringing deep expertise in statutory audits, tax audits, and compliance for both corporate and non-corporate clients. His professional journey includes significant contributions to audits of listed entities and extensive involvement in IPO-related assignments.\n\nHe has successfully led audits across diverse industries such as Engineering, Procurement and Construction ('EPC'), automobile manufacturing, renewable energy, pharmaceuticals, and services, demonstrating versatility and sectoral knowledge. Prior to his current role, Pritesh gained valuable experience at BSR & Co LLP (an affiliate of KPMG), where he specialized in audit and assurance engagements and consistently delivered high-quality outcomes.",
         status: "Open"
     },
     {

@@ -1,137 +1,184 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import im1 from "../../assets/10.jpeg";
-import im2 from "../../assets/11.jpeg";
-import im3 from "../../assets/12.jpeg";
+
 
 const images = [
-    im1,
-    im2,
-    im3
+    "https://www.shutterstock.com/image-photo/collage-movie-various-field-technology-600nw-2491000037.jpg",
+    "https://print-packagingblog.com/wp-content/uploads/2014/11/Collage-KUM.jpg",
+    "https://astromachineworks.com/wp-content/uploads/collage.webp"
 ];
 
 
-const CATEGORIES = [
-    {
-        title: "Jewellery",
-        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800",
-        desc: "Precision-led advisory for high-value luxury and gems, focusing on valuation and global compliance."
-    },
-    {
-        title: "Pharmaceutical",
-        img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800",
-        desc: "Navigating regulatory landscapes and R&D tax credits for life sciences and biotech sectors."
-    },
-    {
-        title: "Banking and Financial Services",
-        img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
-        desc: "Structural clarity for property development, REITs, and commercial asset management."
-    },
-    {
-        title: "Technology",
-        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
-        desc: "Future-ready guidance for SaaS, IT infrastructure, and innovative tech enterprises."
-    },
-    {
-        title: "Manufacturing",
-        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",
-        desc: "Optimizing supply chain efficiency and cost management for large-scale industrial production."
-    },
-    {
-        title: "Healthcare",
-        img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800",
-        desc: "Financial strategies for hospitals and clinics to improve patient care infrastructure."
-    },
-    {
-        title: "Education",
-        img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800",
-        desc: "Institutional growth and financial planning for universities and private learning centers."
-    },
-    {
-        title: "Hospitality",
-        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
-        desc: "Operational advisory for luxury hotels, resorts, and global tourism ventures."
-    },
-    {
-        title: "Retail & E-commerce",
-        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
-        desc: "Digital transformation and fiscal management for modern retail and direct-to-consumer brands."
-    },
-    {
-        title: "Renewable Energy",
-        img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800",
-        desc: "Sustainable investment and regulatory support for solar, wind, and green energy projects."
-    },
-    {
-        title: "Agriculture",
-        img: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800",
-        desc: "Modernizing agribusiness with sustainable financing and yield-focused advisory."
-    },
-    {
-        title: "Logistics",
-        img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
-        desc: "Enhancing global distribution networks with smart warehousing and transportation strategy."
-    },
-    {
-        title: "Automotive",
-        img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800",
-        desc: "Navigating the shift toward electric vehicles and autonomous driving technology."
-    },
-    {
-        title: "Media & Entertainment",
-        img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800",
-        desc: "Content distribution rights, production tax credits, and digital media expansion."
-    },
-    {
-        title: "Banking and Financial Services",
-        img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
-        desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
-    },
-    {
-        title: "Food & Beverage",
-        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800",
-        desc: "Scale-up advisory for restaurants, franchises, and food production companies."
-    },
-    {
-        title: "Construction",
-        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
-        desc: "Project cost controls and risk mitigation for infrastructure and civil engineering."
-    },
-    {
-        title: "Textiles & Fashion",
-        img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800",
-        desc: "Strategic sourcing and retail expansion for global apparel and designer labels."
-    },
-    {
-        title: "Mining & Metals",
-        img: "https://www.pwc.com/gx/en/brand-simplified/teaser-images-670/industry-engineering/damil-gettyimages-482172505-670.jpg",
-        desc: "Advising on natural resource extraction and global commodity market trends."
-    },
-    {
-        title: "Chemicals",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGHA0xxdgMeIWGtLcbVc_uJC6neGaPPwYiQ&s",
-        desc: "Regulatory safety standards and operational efficiency for chemical processing and distribution."
-    },
-    {
-        title: "Non-Profit",
-        img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800",
-        desc: "Governance and audit services for social impact and charitable organizations."
-    },
-    {
-        title: "Telecom",
-        img: "https://bureaucrat.news/assets/news/1768565449gfdsgsdghfgh.jpg",
-        desc: "Connectivity infrastructure and strategic market positioning for regional and global carriers."
-    },
-    {
-        title: "Aviation",
-        img: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800",
-        desc: "Fleet financing, safety compliance, and operational advisory for airlines and cargo operations."
-    }
+    const CATEGORIES = [
+        {
+            title: "Jewellery",
+            img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800",
+            desc: "Precision-led advisory for high-value luxury and gems, focusing on valuation and global compliance."
+        },
+        {
+            title: "Pharmaceutical",
+            img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800",
+            desc: "Navigating regulatory landscapes and R&D tax credits for life sciences and biotech sectors."
+        },
+        {
+            title: "Banking and Financial Services",
+            img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+            desc: "Structural clarity for property development, REITs, and commercial asset management."
+        },
+        {
+            title: "Technology",
+            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
+            desc: "Future-ready guidance for SaaS, IT infrastructure, and innovative tech enterprises."
+        },
+        {
+            title: "Manufacturing",
+            img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",
+            desc: "Optimizing supply chain efficiency and cost management for large-scale industrial production."
+        },
+        {
+            title: "Healthcare",
+            img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800",
+            desc: "Financial strategies for hospitals and clinics to improve patient care infrastructure."
+        },
+        {
+            title: "Education",
+            img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800",
+            desc: "Institutional growth and financial planning for universities and private learning centers."
+        },
+        {
+            title: "Hospitality",
+            img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+            desc: "Operational advisory for luxury hotels, resorts, and global tourism ventures."
+        },
+        {
+            title: "Retail & E-commerce",
+            img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
+            desc: "Digital transformation and fiscal management for modern retail and direct-to-consumer brands."
+        },
+        {
+            title: "Renewable Energy",
+            img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800",
+            desc: "Sustainable investment and regulatory support for solar, wind, and green energy projects."
+        },
+        {
+            title: "Agriculture",
+            img: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800",
+            desc: "Modernizing agribusiness with sustainable financing and yield-focused advisory."
+        },
+        {
+            title: "Logistics",
+            img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
+            desc: "Enhancing global distribution networks with smart warehousing and transportation strategy."
+        },
+        {
+            title: "Automotive",
+            img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800",
+            desc: "Navigating the shift toward electric vehicles and autonomous driving technology."
+        },
+        {
+            title: "Media & Entertainment",
+            img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800",
+            desc: "Content distribution rights, production tax credits, and digital media expansion."
+        },
+        {
+            title: "Banking and Financial Services",
+            img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
+            desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
+        },
+        {
+            title: "Food & Beverage",
+            img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800",
+            desc: "Scale-up advisory for restaurants, franchises, and food production companies."
+        },
+        {
+            title: "Construction",
+            img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+            desc: "Project cost controls and risk mitigation for infrastructure and civil engineering."
+        },
+        {
+            title: "Textiles & Fashion",
+            img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800",
+            desc: "Strategic sourcing and retail expansion for global apparel and designer labels."
+        },
+        {
+            title: "Mining & Metals",
+            img: "https://www.pwc.com/gx/en/brand-simplified/teaser-images-670/industry-engineering/damil-gettyimages-482172505-670.jpg",
+            desc: "Advising on natural resource extraction and global commodity market trends."
+        },
+        {
+            title: "Chemicals",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGHA0xxdgMeIWGtLcbVc_uJC6neGaPPwYiQ&s",
+            desc: "Regulatory safety standards and operational efficiency for chemical processing and distribution."
+        },
+        {
+            title: "Non-Profit",
+            img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800",
+            desc: "Governance and audit services for social impact and charitable organizations."
+        },
+        {
+            title: "Telecom",
+            img: "https://bureaucrat.news/assets/news/1768565449gfdsgsdghfgh.jpg",
+            desc: "Connectivity infrastructure and strategic market positioning for regional and global carriers."
+        },
+        {
+            title: "Aviation",
+            img: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800",
+            desc: "Fleet financing, safety compliance, and operational advisory for airlines and cargo operations."
+        }
+    ];
+
+const INDUSTRY_MODULES = [
+  {
+    module: "Finance",
+    industries: [
+      "Banking and Financial Services",
+      "Pharmaceutical",
+      "Healthcare",
+      "Education",
+      "Non-Profit",
+      "Telecom",
+    ],
+  },
+
+  {
+    module: "Retail",
+    industries: [
+      "Jewellery",
+      "Hospitality",
+      "Retail & E-commerce",
+      "Food & Beverage",
+      "Textiles & Fashion",
+      "Media & Entertainment",
+    ],
+  },
+
+  {
+    module: "Industrial",
+    industries: [
+      "Manufacturing",
+      "Construction",
+      "Automotive",
+      "Logistics",
+      "Mining & Metals",
+      "Chemicals",
+    ],
+  },
+
+  {
+    module: "Technology",
+    industries: [
+      "Technology",
+      "Renewable Energy",
+      "Agriculture",
+      "Aviation",
+    ],
+  },
 ];
 
 const IndustryPage = () => {
 
     const [index, setIndex] = useState(0);
+    const [selectedFilter, setSelectedFilter] = useState("All");
 
     // Auto change background every 4 sec
     useEffect(() => {
@@ -175,7 +222,36 @@ const IndustryPage = () => {
                 </div>
             </section>
 
-            {/* --- MAIN SPLIT LAYOUT --- */}
+            {/* --- FILTER BUTTONS SECTION --- */}
+            <section className="bg-white py-12 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <button
+                            onClick={() => setSelectedFilter("All")}
+                            className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                                selectedFilter === "All"
+                                    ? "bg-[#9e7201] text-white shadow-lg"
+                                    : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-900"
+                            }`}
+                        >
+                            All
+                        </button>
+                        {INDUSTRY_MODULES.map((module) => (
+                            <button
+                                key={module.module}
+                                onClick={() => setSelectedFilter(module.module)}
+                                className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap ${
+                                    selectedFilter === module.module
+                                        ? "bg-[#C2A96A] text-white shadow-lg"
+                                        : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-200"
+                                }`}
+                            >
+                                {module.module}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </section>
             <section className="max-w-[1440px] mx-auto px-6 py-10 lg:py-22">
                 <div className="flex flex-col lg:flex-row gap-10">
 
@@ -199,7 +275,11 @@ const IndustryPage = () => {
 
                     {/* RIGHT: SCROLLING ITEMS (No Numbers) */}
                     <main className="w-full lg:w-[60%] space-y-16">
-                        {CATEGORIES.map((item, index) => (
+                        {CATEGORIES.filter((item) => {
+                            if (selectedFilter === "All") return true;
+                            const module = INDUSTRY_MODULES.find(m => m.module === selectedFilter);
+                            return module?.industries.includes(item.title);
+                        }).map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}

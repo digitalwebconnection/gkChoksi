@@ -1,56 +1,39 @@
 import { useState, useEffect } from "react";
-import {
-  HiOutlineDotsHorizontal,
-  HiOutlineChartSquareBar,
-  HiOutlineEye,
-  HiOutlineLightningBolt,
-  HiOutlineShieldCheck,
-  HiOutlineSparkles
-} from "react-icons/hi";
+
 import { Users, Briefcase, ShieldCheck } from "lucide-react";
 
 
 import { motion } from "framer-motion";
+import {
+  HiOutlineDotsHorizontal,
+  HiOutlineChartSquareBar,
+  HiOutlineEye,
+} from "react-icons/hi";
 
-const SLIDES = [
+export const EXPERTISE = [
   {
-    icon: <HiOutlineDotsHorizontal className="w-8 h-8" />,
-    badgeIcon: <HiOutlineShieldCheck />,
     title: "Precision",
-    sub: "Technical Excellence",
-    desc: "Achieving accuracy through rigorous standards and engineering mastery.",
-    image: "https://www.thoughtco.com/thmb/I5cL2do487V73TIGmEAI7CLmIys=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-958882058-ea61bbe62a594754b80a23a6fe150aae.jpg",
-    theme: "emerald",
+    subtitle: "Technical Excellence",
+    desc: "Achieving accuracy through rigorous standards and engineering mastery that ensures zero compromise.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTflY5SWwQakiHYIDqdbbUpt3daAf0-gYF35A&s",
     gradient: "from-emerald-400 to-cyan-500",
-    shadow: "shadow-emerald-200",
-    bgLight: "bg-emerald-50",
-    text: "text-emerald-600"
+    icon: HiOutlineDotsHorizontal,
   },
   {
-    icon: <HiOutlineEye className="w-8 h-8" />,
-    badgeIcon: <HiOutlineSparkles />,
     title: "Perspective",
-    sub: "Strategic Foresight",
-    desc: "Seeing beyond the immediate to identify long-term opportunities and risks.",
-    image: "https://www.commerceclasseskey2success.com/wp-content/uploads/2019/03/Accounts-featured.jpg",
-    theme: "amber",
+    subtitle: "Strategic Foresight",
+    desc: "Seeing beyond the present to unlock hidden opportunities and minimize future risks.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgW0s05K23B7L0_3VCpmqar5eEY3dZEzf7mQ&s",
     gradient: "from-orange-400 to-rose-500",
-    shadow: "shadow-orange-200",
-    bgLight: "bg-orange-50",
-    text: "text-orange-600"
+    icon: HiOutlineEye,
   },
   {
-    icon: <HiOutlineChartSquareBar className="w-8 h-8" />,
-    badgeIcon: <HiOutlineLightningBolt />,
     title: "Performance",
-    sub: "Measurable Results",
-    desc: "Delivering data-driven outcomes that impact your bottom line directly.",
-    image: "https://www.techfunnel.com/wp-content/uploads/2019/07/7-Types-of-Performance-Appraisal-Methods-in-HRM-1.jpg",
-    theme: "indigo",
+    subtitle: "Proven Results",
+    desc: "Driving measurable growth through data-backed decisions and high-impact execution.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_SSMRvMgHTdIPwFHP8HYU1A4uvS5f9EPIwQ&s",
     gradient: "from-blue-500 to-indigo-600",
-    shadow: "shadow-indigo-200",
-    bgLight: "bg-indigo-50",
-    text: "text-indigo-600"
+    icon: HiOutlineChartSquareBar,
   },
 ];
 const services = [
@@ -58,31 +41,47 @@ const services = [
     icon: ShieldCheck,
     title: "Audit",
     desc: "Ensuring accuracy, compliance, and transparency across financials.",
+    image: "https://i0.wp.com/avanopti.com/wp-content/uploads/2024/03/Enron-Financial-Audit.png?fit=2240%2C1260&ssl=1",
   },
   {
     icon: Briefcase,
     title: "Tax",
     desc: "Strategic tax planning aligned with regulations and growth goals.",
+    image: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202601/6956321139809-tax-burden-013627631-16x9.jpg?size=948:533",
   },
   {
     icon: Users,
     title: "Advisory",
     desc: "Practical insights to support smarter business decisions.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMUVy__cHyUmW1WVXOkNiYy-GmVw5gpmHvmQ&s",
   },
 ];
 
 export default function FeatureSection() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
 
+  // 🔁 Auto rotate
   useEffect(() => {
     const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % SLIDES.length);
-    }, 6000);
+      setActive((prev) => (prev + 1) % EXPERTISE.length);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // 🔁 Auto change every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-4 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="my-12 max-w-7xl mx-auto text-center"
@@ -106,9 +105,9 @@ export default function FeatureSection() {
 
           {/* 🧠 EXPERTISE BLOCKS */}
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8">
-
             {services.map((item, i) => {
               const Icon = item.icon;
+              const isActive = i === activeIndex;
 
               return (
                 <motion.div
@@ -117,151 +116,183 @@ export default function FeatureSection() {
                   transition={{ duration: 0.3 }}
                   className="group relative p-px rounded-2xl bg-linear-to-br from-amber-400/40 via-transparent to-slate-300/40"
                 >
-                  {/* Card */}
-                  <div className="relative h-full p-7 rounded-2xl bg-white border border-slate-200/60 shadow-sm transition-all duration-500 group-hover:shadow-xl overflow-hidden">
+                  {/* Card Container */}
+                  <div
+                    className={`relative h-full p-7 rounded-2xl bg-white border shadow-gray-500 border-slate-500/60 shadow-lg transition-all duration-500 overflow-hidden
+              ${isActive ? "shadow-2xl" : ""}`}
+                  >
+                    {/* 🖼️ Background Image */}
+                    <div className="absolute inset-0 z-0 overflow-hidden">
+                      <motion.img
+                        src={item.image}
+                        alt={item.title}
+                        className={`w-full h-full object-cover transition-all duration-700 ease-out
+                  ${isActive
+                            ? "opacity-100 scale-110"
+                            : "opacity-0 scale-100"
+                          }`}
+                      />
 
-                    {/* ✨ Glow Effect */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-br from-amber-100/40 to-transparent" />
-
-                    {/* 🔥 Icon Box */}
-                    <div className="relative w-12 h-12 flex items-center justify-center rounded-xl bg-amber-50 mb-5 group-hover:bg-amber-100 transition">
-                      <Icon className="w-6 h-6 text-[#079264]" />
+                      {/* Overlay */}
+                      <div
+                        className={`absolute inset-0 transition-colors duration-500
+                  ${isActive
+                            ? "bg-black/60"
+                            : "bg-white/90"
+                          }`}
+                      />
                     </div>
 
-                    {/* 🧠 Title */}
-                    <h4 className="text-2xl font-semibold text-black mb-3 group-hover:text-amber-600 transition">
-                      {item.title}
-                    </h4>
+                    {/* ✨ Glow */}
+                    <div
+                      className={`absolute inset-0 transition duration-500 bg-linear-to-br from-amber-500/20 to-transparent z-10
+                ${isActive ? "opacity-100" : "opacity-0"}`}
+                    />
 
-                    {/* 📄 Description */}
-                    <p className="text-sm text-slate-900 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    {/* Content */}
+                    <div className="relative z-20">
+                      {/* Icon */}
+                      <div
+                        className={`w-12 h-12 flex items-center justify-center rounded-xl mb-5 transition-all duration-300
+                  ${isActive
+                            ? "bg-amber-500 text-white"
+                            : "bg-amber-50"
+                          }`}
+                      >
+                        <Icon
+                          className={`w-6 h-6 transition-colors
+                    ${isActive
+                              ? "text-white"
+                              : "text-[#079264]"
+                            }`}
+                        />
+                      </div>
 
-                    {/* ➡️ Bottom Accent Line */}
-                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-500" />
+                      {/* Title */}
+                      <h4
+                        className={`text-2xl font-semibold mb-3 transition-colors duration-300
+                  ${isActive
+                            ? "text-white"
+                            : "text-black"
+                          }`}
+                      >
+                        {item.title}
+                      </h4>
 
+                      {/* Description */}
+                      <p
+                        className={`text-sm leading-relaxed transition-colors duration-300
+                  ${isActive
+                            ? "text-slate-100"
+                            : "text-slate-600"
+                          }`}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Bottom Line */}
+                    <div
+                      className={`absolute bottom-0 left-0 h-1 bg-amber-500 transition-all duration-700 z-30
+                ${isActive ? "w-full" : "w-0"}`}
+                    />
                   </div>
                 </motion.div>
               );
             })}
-
           </div>
 
         </motion.div>
 
-        {/* Header Text */}
-        <div className="flex flex-col items-center text-center mb-10">
-          <span className="px-10 py-1.5 rounded-full border-2 border-green-500 bg-gray-200 text-gray-950 text-3xl font-bold tracking-widest uppercase mb-4">
-            Our Expertise
-          </span>
-          {/* SHORT STRONG LINE */}
 
+
+        {/* ✨ Soft Background Glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-linear-to-br from-blue-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-40" />
+        </div>
+
+        {/* 🔥 Heading */}
+        <div className="text-center mb-16 relative z-10">
+          <h2 className="text-5xl font-extrabold tracking-tight text-gray-900">
+            Our Expertise
+          </h2>
 
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:items-stretch">
+        {/* 💎 Cards */}
+        <div className="flex flex-col md:flex-row gap-6 relative z-10">
 
-          {/* LEFT SIDE: Interactive Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-5">
-            {SLIDES.map((slide, i) => {
-              const isActive = i === active;
+          {EXPERTISE.map((item, i) => {
+            const isActive = i === active;
+            const Icon = item.icon;
 
-              return (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  className={`relative overflow-hidden text-left px-8 py-9 rounded-3xl border-2 transition-all duration-500 transform ${isActive
-                    ? `bg-white border-transparent shadow-2xl ${slide.shadow} -translate-y-1`
-                    : "bg-gray-50 border-gray-900/20 hover:border-gray-900/60  hover:opacity-100"
-                    }`}
-                >
-                  <div className="flex gap-6 relative z-10">
-                    {/* Dynamic Icon Box */}
-                    <div className={`shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 ${isActive
-                      ? `bg-linear-to-br ${slide.gradient} text-white  shadow-lg`
-                      : "bg-white text-gray-900 shadow-sm"
-                      }`}>
-                      {slide.icon}
-                    </div>
+            return (
+              <div
+                key={i}
+                onMouseEnter={() => setActive(i)}
+                className={`relative flex-1 rounded-3xl overflow-hidden cursor-pointer transition-all duration-700
+        ${isActive ? "flex-3" : "flex-1"}`}
+              >
 
-                    <div className="flex flex-col justify-center">
-                      <h3 className={`text-2xl font-bold transition-colors ${isActive ? "text-gray-900" : "text-gray-900"}`}>
-                        {slide.title}
-                      </h3>
-                      <p className={`font-semibold text-sm uppercase tracking-wider ${isActive ? slide.text : "text-gray-800"}`}>
-                        {slide.sub}
-                      </p>
-                    </div>
-                  </div>
+                {/* Image */}
+                <img
+                  src={item.image}
+                  className={`w-full h-[420px] object-cover transition-all duration-700
+          ${isActive ? "scale-105" : ""}`}
+                />
 
-                  {/* Progress bar line for active item */}
-                  {isActive && (
-                    <div className="absolute bottom-0 left-0 h-1.5 w-full bg-gray-100">
-                      <div className={`h-full bg-linear-to-r ${slide.gradient} animate-[progress_6s_linear]`} />
-                    </div>
-                  )}
-                </button>
-              );
-            })}
-          </div>
+                {/* Overlay */}
+                <div className={`absolute inset-0 transition-all duration-500
+          ${isActive ? "bg-black/70" : "bg-black/50"}`} />
 
-          {/* RIGHT SIDE: Visual Showcase */}
-          <div className="lg:col-span-7">
-            <div className={`h-full rounded-[2.5rem] p-4 transition-colors duration-700 ${SLIDES[active].bgLight}`}>
-              <div className="bg-white rounded-xl h-full overflow-hidden shadow-xl flex flex-col">
-
-                {/* Image Section */}
-                <div className="relative h-42 md:h-66 w-full overflow-hidden">
-                  <img
-                    key={active}
-                    src={SLIDES[active].image}
-                    alt={SLIDES[active].title}
-                    className="w-full h-full object-cover animate-in fade-in zoom-in-95 duration-700"
-                  />
-                  {/* Badge */}
-                  <div className={`absolute top-6 left-6 px-4 py-2 rounded-xl backdrop-blur-md bg-white/90 shadow-lg flex items-center gap-2 font-bold ${SLIDES[active].text}`}>
-                    <span className="text-xl">{SLIDES[active].badgeIcon}</span>
-                    {SLIDES[active].title}
+                {/* 🔥 ICON BADGE */}
+                <div className="absolute top-6 left-6 z-20">
+                  <div
+                    className={`w-12 h-12 flex items-center justify-center rounded-xl backdrop-blur-md border transition-all duration-500
+            ${isActive
+                        ? `bg-linear-to-br ${item.gradient} text-white border-white/30 shadow-lg scale-110`
+                        : "bg-white/80 text-gray-700 border-gray-200"
+                      }`}
+                  >
+                    <Icon className="w-6 h-6" />
                   </div>
                 </div>
 
-                {/* Text Content */}
-                <div className="p-10 grow flex flex-col justify-center">
-                  <p className="text-2xl text-gray-700 leading-relaxed font-medium mb-8">
-                    "{SLIDES[active].desc}"
+                {/* Content */}
+                <div className="absolute bottom-0 p-8 w-full z-10">
+
+                  <h3 className={`text-4xl font-bold transition-all duration-300
+            ${isActive ? "text-white" : "text-green-500"}`}>
+                    {item.title}
+                  </h3>
+
+                  <p className={`text-lg font-medium mt-1
+            ${isActive ? "text-white" : "text-amber-400"}`}>
+                    {item.subtitle}
                   </p>
 
-                  <div className="flex items-center justify-between mt-auto">
+                  {/* Expand Content */}
+                  <div className={`overflow-hidden transition-all duration-500
+            ${isActive ? "max-h-40 mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
 
+                    <p className="text-white text-lg leading-relaxed">
+                      {item.desc}
+                    </p>
 
-                    {/* Decorative Dots */}
-                    <div className="flex gap-1.5">
-                      {SLIDES.map((_, i) => (
-                        <div
-                          key={i}
-                          className={`h-2 rounded-full transition-all duration-500 ${i === active ? `w-8 bg-linear-to-r ${SLIDES[active].gradient}` : "w-2 bg-gray-200"
-                            }`}
-                        />
-                      ))}
-                    </div>
+                    {/* Gradient Line */}
+                    <div className={`mt-4 h-1 w-12 bg-linear-to-r ${item.gradient} rounded-full`} />
                   </div>
-                </div>
 
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
 
         </div>
+
+
       </div>
 
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes progress {
-          from { width: 0%; }
-          to { width: 100%; }
-        }
-      `}} />
     </section>
   );
 }

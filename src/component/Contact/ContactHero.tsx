@@ -1,10 +1,8 @@
 import { motion, AnimatePresence} from "framer-motion";
 import { useEffect, useState } from "react";
-import Heroimg1 from "../../assets/6.jpeg";
-import Heroimg2 from "../../assets/21.jpeg";
-import Heroimg3 from "../../assets/2.jpeg";
 
-const images = [Heroimg1, Heroimg2, Heroimg3];
+
+const images = ["https://www.shutterstock.com/image-photo/customer-service-call-center-contact-600nw-2493101023.jpg"];
 const fullText = "Contact Us";
 
 const ContactHeroSection = () => {
@@ -42,7 +40,7 @@ const ContactHeroSection = () => {
       <AnimatePresence>
         <motion.div
           key={current}
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover  bg-center"
           style={{
             backgroundImage: `url(${images[current]})`,
       
@@ -57,7 +55,7 @@ const ContactHeroSection = () => {
 
 
       {/* EXTRA DARK LAYER */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* ================= GLOW ORBS ================= */}
       <motion.div
@@ -73,7 +71,7 @@ const ContactHeroSection = () => {
       />
 
       {/* ================= CONTENT ================= */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-40 text-center text-white">
 
         {/* HEADING */}
         <motion.h1
@@ -93,7 +91,7 @@ const ContactHeroSection = () => {
         </motion.h1>
 
         {/* SUBTEXT */}
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
@@ -103,7 +101,7 @@ const ContactHeroSection = () => {
           <span className="text-[#C2A96A] font-medium">
             Let’s connect and shape your next move with confidence.
           </span>
-        </motion.p>
+        </motion.p> */}
 
         {/* ================= SLIDER DOTS ================= */}
         <div className="mt-12 flex justify-center gap-3">

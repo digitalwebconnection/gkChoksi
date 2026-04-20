@@ -201,7 +201,7 @@ export default function TeamSection() {
                                     <div className="relative h-60 overflow-hidden">
                                         <img
                                             src={member.image}
-                                            className="w-full h-full  grayscale-100 group-hover:grayscale-0  object-cover transition duration-500 group-hover:scale-105"
+                                            className="w-full h-full object-fill grayscale-100 group-hover:grayscale-0   transition duration-500 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
                                     </div>

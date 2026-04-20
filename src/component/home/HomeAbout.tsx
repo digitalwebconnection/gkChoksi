@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import img from "../../assets/1.jpeg";
-import img1 from "../../assets/18.jpeg";
-import img2 from "../../assets/20.jpeg";
+
 import {
   HiOutlineUserGroup,
 } from "react-icons/hi2";
@@ -73,10 +71,10 @@ const AboutSection = () => {
                 const Icon = item.icon;
 
                 return (
-                  <li key={idx} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                  <li key={idx} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-xl border border-gray-900/60">
 
                     {/* Icon */}
-                    <div className="flex h-15 w-15 items-center justify-center rounded-xl bg-[#6FAF9B]/20 text-[#0F3D2E]">
+                    <div className="flex h-15 w-15 items-center justify-center rounded-xl bg-[#03251b] text-[#C2A96A]">
                       <Icon className="h-10 w-10" />
                     </div>
 
@@ -115,20 +113,20 @@ const AboutSection = () => {
 
             {/* Top Image */}
             <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-gray-200 shadow-[0_24px_60px_rgba(15,61,46,0.35)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.02] sm:h-56">
-              <img src={img} alt="Team at work" className="h-full w-full object-cover" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsBJLw2DZ51dW8eAPwcwguy8qcALI2CMyCdQ&s" alt="Team at work" className="h-full w-full object-cover" />
             </div>
 
             {/* Main Image */}
             <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-gray-200 shadow-[0_26px_80px_rgba(15,61,46,0.45)] transition-transform duration-500 hover:-translate-y-3 hover:scale-[1.02] sm:h-[350px] sm:w-[88%]">
-              <img src={img1} alt="Financial advisory meeting" className="h-full w-full object-cover" />
+              <img src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg" alt="Financial advisory meeting" className="h-full w-full object-cover" />
 
-              <div className="absolute inset-0 bg-linear-to-t from-[#0F3D2E]/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#000000]/90 via-black/10 to-transparent" />
 
-              <div className="absolute bottom-5 left-28 space-y-1 text-white">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#6FAF9B]">
+              <div className="absolute bottom-2 left-28  text-white">
+                <p className="text-lg uppercase tracking-[0.2em] text-[#6FAF9B]">
                   Client-first approach
                 </p>
-                <p className="text-sm   font-medium text-white">
+                <p className="text-md   font-medium text-white">
                   Long-term partnerships built on trust and clarity.
                 </p>
               </div>
@@ -140,7 +138,7 @@ const AboutSection = () => {
 
     <div className="h-[60%] w-full">
       <img
-        src={img2}
+        src="https://www.ikonmarket.com/assets/images/industry/collage-industry.jpg"
         alt="Audit & review"
         className="h-full w-full object-cover"
       />

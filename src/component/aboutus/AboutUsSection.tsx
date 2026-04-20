@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
-import heroImg1 from "/src/assets/25.jpg";
-import heroImg2 from "/src/assets/8.jpeg";
-import heroImg3 from "/src/assets/1.jpeg";
 
 const SLIDES = [
-  { image: heroImg1 },
-  { image: heroImg2 },
-  { image: heroImg3 },
+  { image: "https://cdn-ilagggb.nitrocdn.com/bcPPdcwkJPtwVRoplnSFoMYDXtQrxOyR/assets/images/optimized/rev-cdd09d9/vidya.ac.in/wp-content/uploads/2023/03/Accounts-Banking-and-Finance-Course-750x458-1.jpg" },
+  { image: "https://akaunting.com/blog/wp-content/uploads/2021/03/The-Difference-Between-Bookkeeping-and-Accounting.jpg" },
+  { image: "https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-05/shutterstock_264409757_0.jpg?h=265e640d&itok=qRj3l4JW" },
 ];
 
 export default function HeroSection() {
@@ -42,7 +39,7 @@ export default function HeroSection() {
           />
 
           {/* GRADIENT */}
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-black/20" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/30" />
         </div>
       ))}
 
@@ -67,7 +64,7 @@ export default function HeroSection() {
              
             <Link
               to="/services"
-              className="group flex items-center gap-3 px-7 py-3 text-white bg-[#164637] hover:bg-[#1f7559] transition rounded-md font-semibold"
+              className="group flex items-center gap-3 px-7 py-3 text-white bg-[#1d8665] hover:bg-[#1f7559] transition rounded-md font-semibold"
             >
               Explore Services
               <HiOutlineArrowRight className="group-hover:translate-x-1 transition" />

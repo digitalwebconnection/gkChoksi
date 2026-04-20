@@ -1,5 +1,5 @@
 import { easeOut, motion } from "framer-motion";
-import serviceHero from "/src/assets/25.jpg";
+
 import {
   HiOutlinePuzzlePiece,
   HiOutlineBuildingOffice2,
@@ -86,26 +86,30 @@ export const SERVICES: Service[] = [
 
 ]
 
-const BOTTOM_POINTS = [
+export const BOTTOM_POINTS = [
   {
     text: "Integrated approach",
     icon: HiOutlinePuzzlePiece,
     gradient: "from-[#6FAF9B] to-[#289572]",
+    image: "https://i.ytimg.com/vi/ELmI0cXPcWg/maxresdefault.jpg",
   },
   {
     text: "Industry-focused delivery",
     icon: HiOutlineBuildingOffice2,
     gradient: "from-[#3B82F6] to-[#1D4ED8]",
+    image: "https://www.shutterstock.com/image-photo/expert-woman-asian-people-discuss-600nw-2644672529.jpg",
   },
   {
-    text: "Insight-driven decision support",
+    text: "Insight-driven decisions",
     icon: HiOutlineChartBar,
     gradient: "from-[#F59E0B] to-[#C2A96A]",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaldbIDJVN_ZK2zICQtQG3PfbSmfr-2BerWg&s",
   },
   {
     text: "Partner-led execution",
     icon: HiOutlineUserGroup,
     gradient: "from-[#8B5CF6] to-[#6D28D9]",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfJ-QmDcnFNaIYvKq6jNrkW0WSIu0_5fGMw&s",
   },
 ];
 
@@ -145,7 +149,7 @@ const ServicePage = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url(${serviceHero})`,
+            backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/5a6f6bfbd55b4125e5d8169b/1532366196509-7ROUHLAKCU2YOYGQAOZI/1200x800-placeholder.jpg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -169,53 +173,71 @@ const ServicePage = () => {
         </motion.div>
       </section>
 
-      <div className="relative  -mt-27 z-99  py-10 px-6 bg-transparent overflow-hidden ">
+      <div className="relative   py-10 px-6 bg-transparent overflow-hidden ">
 
         {/* ================= FLOATING BG GLOW ================= */}
         {/* <div className="absolute top-20 left-10 w-72 h-72 bg-[#6FAF9B]/20 blur-[120px] rounded-full" /> */}
         {/* <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C2A96A]/20 blur-[120px] rounded-full" /> */}
 
         {/* ================= BOTTOM POINTS ================= */}
-        <div className="grid max-w-7xl mx-auto sm:grid-cols-2 md:grid-cols-4 gap-6 ">
-          {BOTTOM_POINTS.map((point, i) => {
-            const Icon = point.icon;
+  <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6">
 
-            return (
-              <motion.div
-                key={i}
-                variants={item}
-                whileHover={{ y: -8, scale: 1.05 }}
-                className="relative group rounded-xl  p-px bg-linear-to-r from-[#6FAF9B]/20 to-[#C2A96A]/20"
-              >
-                {/* Glow Background */}
-                <div className={`absolute inset-0 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition duration-500 bg-linear-to-r ${point.gradient}`} />
+  {BOTTOM_POINTS.map((point, i) => {
+    const Icon = point.icon;
 
-                {/* Card */}
-                <div className="relative z-10 rounded-xl bg-white px-5 py-6 text-center shadow-md transition-all duration-300 group-hover:shadow-2xl">
+    return (
+      <div
+        key={i}
+        className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
+      >
+        {/* 🖼️ IMAGE */}
+        <img
+          src={point.image}
+          className="w-full h-[260px] object-cover transition-all duration-500 group-hover:scale-105"
+        />
 
-                  {/* 🔥 COLORFUL ICON */}
-                  <motion.div
-                    className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-r ${point.gradient} text-white shadow-lg`}
-                    
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    
-                  >
-                    <Icon className="w-7 h-7" />
-                  </motion.div>
+        {/* 🌑 DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
 
-                  {/* Text */}
-                  <p className="text-sm font-semibold text-[#1C1C1C] leading-snug">
-                    {point.text}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+        {/* 📝 DEFAULT TEXT */}
+        <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 group-hover:opacity-0">
+          <p className="text-white text-xl font-bold">
+            {point.text}
+          </p>
         </div>
+
+        {/* 💎 HOVER PANEL (FROM RIGHT + BOTTOM) */}
+        <div
+          className="
+            absolute bottom-0 right-0 w-[85%] 
+            translate-x-full translate-y-full 
+            group-hover:translate-x-0 group-hover:translate-y-0
+            transition-all duration-500 ease-out z-20
+          "
+        >
+          <div className="bg-white px-5  rounded-tl-md   py-10 shadow-2xl relative">
+
+            {/* GOLD BORDER TOP */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-yellow-500 rounded-tl-2xl" />
+
+            {/* ICON + TITLE */}
+            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+              <span className="p-2 rounded-lg bg-gray-100">
+                <Icon className="w-5 h-5 text-gray-700" />
+              </span>
+              {point.text}
+            </h3>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    );
+  })}
+
+</div>
         {/* ================= AREAS OF FOCUS ================= */}
         <motion.div
           variants={container}
@@ -269,7 +291,7 @@ const ServicePage = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <p className="text-xl uppercase font-bold tracking-[0.2em] text-[#6FAF9B]">
+            <p className="text-2xl uppercase font-bold tracking-[0.2em] text-[#6FAF9B]">
               Services
             </p>
 
@@ -293,7 +315,7 @@ const ServicePage = () => {
                 key={service.slug}
                 variants={item}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500"
+                className="group relative rounded-lg overflow-hidden border border-black/20 shadow-gray-500 bg-white shadow-lg hover:shadow-xl transition-all duration-500"
               >
 
                 {/* IMAGE */}
@@ -326,7 +348,7 @@ const ServicePage = () => {
                   <p className="mt-2 text-md text-gray-900">
                     {service.paragraphs[1]}
                   </p>
-                    <p className="mt-2 text-md text-gray-900">
+                  <p className="mt-2 text-md text-gray-900">
                     {service.paragraphs[2]}
                   </p>
                 </div>

@@ -4,11 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "./heroAnimations.css";
 
-import img3 from "/src/assets/25.jpg";
-import img5 from "/src/assets/8.jpeg";
-import img21 from "/src/assets/3.jpeg";
-
-const images = [img3, img5, img21];
+const images = ["https://cdn.corporatefinanceinstitute.com/assets/accounting.jpeg",
+  "https://www.deskera.com/blog/content/images/2020/11/featured-image-1.jpg",
+  "https://www.theaccountant-online.com/wp-content/uploads/sites/10/2025/01/ICAI-shutterstock_2477239405.jpg"];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 25 },
@@ -50,7 +48,7 @@ const HeroSection = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
       ))}
 
@@ -92,7 +90,7 @@ const HeroSection = () => {
             <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
 
-    
+
 
         </motion.div>
       </motion.div>
@@ -103,11 +101,10 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-2.5 rounded-full transition-all ${
-              index === currentSlide
-                ? "w-10 bg-[#6FAF9B]"
-                : "w-3 bg-white/40"
-            }`}
+            className={`h-2.5 rounded-full transition-all ${index === currentSlide
+              ? "w-10 bg-[#6FAF9B]"
+              : "w-3 bg-white/40"
+              }`}
           />
         ))}
       </div>

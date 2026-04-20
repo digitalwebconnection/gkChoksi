@@ -68,9 +68,9 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
     >
       <div className={`relative h-full p-8 rounded-xl bg-white border border-gray-900/20 transition-all duration-500 
         ${block.highlight ? "shadow-[0_20px_50px_rgba(194,169,106,0.15)] border-[#C2A96A]/20" : "shadow-xl shadow-gray-200/40"}`}>
-        
+
         {/* Hover Gradient Blob */}
-        <div 
+        <div
           className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity duration-700"
           style={{ backgroundColor: block.color }}
         />
@@ -80,7 +80,7 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
         </div>
 
         <h3 style={{ transform: "translateZ(30px)" }} className="text-3xl font-bold text-gray-900 mb-3">
-            {block.title}
+          {block.title}
         </h3>
 
         <p style={{ transform: "translateZ(20px)" }} className="text-gray-900 leading-relaxed text-md md:text-xl">
@@ -131,7 +131,7 @@ const Partners = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-4xl font-bold text-gray-900">Leadership Team</h3>
-            
+
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -144,8 +144,8 @@ const Partners = () => {
                 onClick={() => setSelectedPartner(partner)}
                 className="group cursor-pointer"
               >
-                <div className="bg-white rounded-4xl overflow-hidden border border-gray-500/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                  
+                <div className="bg-white rounded-xl overflow-hidden border border-gray-500/20 shadow-gray-300 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+
                   {/* IMAGE with Color Overlay */}
                   <div className="relative aspect-4/5 overflow-hidden bg-gray-100">
                     <img
@@ -154,9 +154,9 @@ const Partners = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <span className="text-white text-sm font-bold flex items-center gap-2">
-                            View Profile <HiOutlineArrowRight />
-                        </span>
+                      <span className="text-white text-sm font-bold flex items-center gap-2">
+                        View Profile <HiOutlineArrowRight />
+                      </span>
                     </div>
                   </div>
 
@@ -168,9 +168,9 @@ const Partners = () => {
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">
                       {partner.designation}
                     </p>
-                    
+
                     <div className="flex justify-center mt-4">
-                        <div className="w-8 h-1 bg-gray-100 rounded-full group-hover:w-16 group-hover:bg-[#C2A96A] transition-all duration-500" />
+                      <div className="w-8 h-1 bg-gray-100 rounded-full group-hover:w-16 group-hover:bg-[#C2A96A] transition-all duration-500" />
                     </div>
                   </div>
                 </div>
