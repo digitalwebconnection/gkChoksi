@@ -5,7 +5,7 @@ import alumni from "../../assets//alumini/5.jpeg"
 
 import g1 from "../../assets/alumini/1.jpeg"
 import g2 from "../../assets/alumini/2.jpeg"
-import g3 from "../../assets/alumini/3.jpeg"
+// import g3 from "../../assets/alumini/3.jpeg"
 import g4 from "../../assets/alumini/4.jpeg"
 
 export default function AlumniPage() {
@@ -100,17 +100,17 @@ export default function AlumniPage() {
                         alt=""
                     />
                     <img
-                        src={g2}
+                        src=""
                         className="shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
                     />
                     <img
-                        src={g3}
+                        src=""
                         className="shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
                     />
                     <img
-                        src={g4}
+                        src=""
                         className="shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
                     />

@@ -7,12 +7,12 @@ const timeline = [
     icon: Landmark,
     chapter: "Chapter 01",
     period: "1972",
-    title: "“Foundations and Fam",
+    title: "Foundations and Fam",
     desc:
       "G.K. Choksi & Co. was established with a clear focus on audit, taxation and assurance, building a reputation for integrity and independence.",
     meta: "Early work with closely-held businesses and emerging enterprises.",
     side: "right",
-    image: "https://media.licdn.com/dms/image/v2/C4E1BAQFKv8qctnQ2wA/company-background_10000/company-background_10000/0/1584511413839/the_foundation_trust_cover?e=2147483647&v=beta&t=SZftto9KtLSG85xgsdQlk85gJ44D_mUNlhzmJUjmkEI",
+    image: "https://www.logodee.com/wp-content/uploads/2017/10/foundation-Logo-Design.jpg",
   },
   {
     icon: Users,

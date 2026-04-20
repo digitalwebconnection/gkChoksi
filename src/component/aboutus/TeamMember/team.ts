@@ -35,6 +35,7 @@ import CAZankrutiMehta from "../../../assets/Core Team Photos/Zankruti Mehta.png
 import CSShambhuBhikhadia from "../../../assets/Core Team Photos/CS Shambhu Bhikhadia.jpg"
 import AnilKumarSeth from "../../../assets/Core Team Photos/Anil Kumar Seth.png"
 import Priteshdudani from "../../../assets/Core Team Photos/Pritesh dudani.png"
+import Ullas from "../../../assets/Core Team Photos/ullash.png"
 
 
 export const TEAM: TeamMember[] = [
@@ -43,7 +44,7 @@ export const TEAM: TeamMember[] = [
         name: "Ullas G Shah",
         role: "B.Com, FCA, CPA",
         department: "Tax",
-        image: "https://www.gkcco.com/wp-content/uploads/2019/12/Ullas-G-Shah.jpg",
+        image: Ullas,
         experience: "28+ years",
         details: undefined,
         status: "Open",
