@@ -119,10 +119,10 @@ const CareersPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <span className=" text-[#0bd390]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
+            <span className=" text-[#0bd390] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
               Work With Us
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none mb-6">
+            <h1 className="text-5xl md:text-7xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
               <span className="text-[#079264]">Thoughtfully.</span>
             </h1>
@@ -136,7 +136,7 @@ const CareersPage = () => {
 
           {/* Left: Why Us */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 h-fit">
-            <h2 className="text-4xl font-bold mb-8 leading-tight">
+            <h2 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
               Why our firm is the <span className="text-[#C2A96A]">right fit</span> for you.
             </h2>
             <div className="space-y-8">

@@ -89,7 +89,7 @@ const StatsSection = () => {
         <div className="mx-auto max-w-3xl text-center">
 
 
-          <h2 className="mt-2 text-3xl font-semibold text-[#1C1C1C] sm:text-4xl">
+          <h2 className="mt-2 text-3xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] sm:text-4xl">
             A Legacy of Trust and Performance
           </h2>
 

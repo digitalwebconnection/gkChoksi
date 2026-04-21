@@ -20,7 +20,7 @@ const AboutHero = () => {
         <div className="mb-4">
           <div className="flex items-center justify-center gap-3 mb-3">
         
-            <span className="text-[#36f1b6] uppercase tracking-widest text-4xl font-bold">
+            <span className="text-[#36f1b6] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase tracking-widest text-4xl font-bold">
               About Our Team
             </span>
           </div>

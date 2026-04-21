@@ -43,42 +43,42 @@ export default function HeroSection() {
         </div>
       ))}
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 py-32 text-center justify-center  flex items-center">
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-auto h-full px-6 py-32 text-center justify-center  flex items-center">
 
-        <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
 
 
-          {/* MAIN HEADING */}
-          <h1 className="text-3xl md:text-5xl font-bold  text-white">
-            Clarity in Thinking <br />
-            <span className="text-[#079264] ">
-              Confidence in Execution
-            </span>
-          </h1>
+            {/* MAIN HEADING */}
+            <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
+  Clarity in Thinking <br />
+  <span className="text-[#079264] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]">
+    Confidence in Execution
+  </span>
+</h1>
 
-         
+          
 
-          {/* BUTTONS */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-             
-            <Link
-              to="/services"
-              className="group flex items-center gap-3 px-7 py-3 text-white bg-[#1d8665] hover:bg-[#1f7559] transition rounded-md font-semibold"
-            >
-              Explore Services
-              <HiOutlineArrowRight className="group-hover:translate-x-1 transition" />
-            </Link>
+            {/* BUTTONS */}
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              
+              <Link
+                to="/services"
+                className="group flex items-center gap-3 px-7 py-3 text-white bg-[#1d8665] hover:bg-[#1f7559] transition rounded-md font-semibold"
+              >
+                Explore Services
+                <HiOutlineArrowRight className="group-hover:translate-x-1 transition" />
+              </Link>
 
-            <Link
-              to="/contact"
-              className="px-7 py-3 border border-white text-white hover:bg-white/10 transition rounded-md font-semibold"
-            >
-              Contact Us
-            </Link>
+              <Link
+                to="/contact"
+                className="px-7 py-3 border border-white text-white hover:bg-white/10 transition rounded-md font-semibold"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
  
     </section>

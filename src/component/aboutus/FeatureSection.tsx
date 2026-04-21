@@ -91,7 +91,7 @@ export default function FeatureSection() {
         >
 
           {/* 🔥 MAIN STATEMENT */}
-          <h3 className="text-2xl md:text-5xl font-bold text-[#C2A96A] leading-snug max-w-2xl mx-auto text-center">
+          <h3 className="text-2xl md:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-snug max-w-2xl mx-auto text-center">
             Clarity Creates Confidence
           </h3>
 
@@ -213,7 +213,7 @@ export default function FeatureSection() {
 
         {/* 🔥 Heading */}
         <div className="text-center mb-16 relative z-10">
-          <h2 className="text-5xl font-extrabold tracking-tight text-[#C2A96A]">
+          <h2 className="text-5xl font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-[#C2A96A]">
             Our Expertise
           </h2>
 

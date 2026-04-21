@@ -82,7 +82,7 @@ const InsightsMain: React.FC = () => {
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
                     <div className="max-w-3xl text-center text-white">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                            <h1 className="text-3xl md:text-5xl font-semibold text-[#C2A96A]">
+                            <h1 className="text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-semibold text-[#C2A96A]">
                                 Our Insights
                             </h1>
 
@@ -112,7 +112,7 @@ const InsightsMain: React.FC = () => {
 
 
                             {/* Heading */}
-                            <h2 className="text-4xl md:text-6xl font-semibold text-slate-900 leading-tight">
+                            <h2 className="text-4xl md:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-semibold text-slate-900 leading-tight">
                                 Articles &
                                 <br />
                                 <span className="text-green-900 italic font-serif">
@@ -169,9 +169,9 @@ const InsightsMain: React.FC = () => {
                     {/* LEFT */}
 
                     <div className="w-full  text-center  mb-8">
-                        <p className="text-5xl font-bold pb-5 text-center uppercase tracking-widest text-[#C2A96A] ">
+                        <h1 className="text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center uppercase tracking-widest text-[#C2A96A] ">
                             Key Authorities
-                        </p>
+                        </h1>
                         <p className="text-black text-xl font-semibold">
                             {insightCards[1].description}
                         </p>
@@ -182,7 +182,7 @@ const InsightsMain: React.FC = () => {
                         <div className="absolute top-10 left-10 w-72 h-72 bg-[#6FAF9B]/20 blur-[120px] rounded-full" />
                         <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C2A96A]/20 blur-[120px] rounded-full" />
 
-                        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                        <div className="max-w-7xl py-10 px-3  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                             {insightCards[1].portals?.map((item, i) => (
                                 <motion.a
                                     key={item.name}
@@ -193,7 +193,7 @@ const InsightsMain: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                     whileHover="hovered" // Trigger child animations
-                                    className="relative group p-0.5 rounded-2xl overflow-hidden transition-all duration-500"
+                                    className="relative group p-0.5 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden transition-all duration-500"
                                 >
                                     {/* THE GRADIENT BORDER EFFECT */}
                                     {/* This div acts as the moving gradient border */}

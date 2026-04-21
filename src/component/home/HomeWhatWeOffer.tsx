@@ -74,11 +74,11 @@ const WhatWeOffer = () => {
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <p className="text-lg font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
+          <p className="text-lg font-semibold  uppercase tracking-[0.25em] text-[#6FAF9B]">
             Our Core Expertise
           </p>
 
-          <h2 className="mt-3 font-serif text-3xl max-w-3xl mx-auto font-bold text-[#1C1C1C] sm:text-5xl">
+          <h2 className="mt-3 font-serif text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-[#C2A96A] sm:text-5xl">
             Integrated Professional Solutions
           </h2>
 

@@ -101,7 +101,7 @@ const ContactSection: React.FC = () => {
                                     Confidential Advisory
                                 </span>
 
-                                <h3 className="text-4xl font-bold text-gray-900 leading-tight">
+                                <h3 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] leading-tight">
                                     Speak With Our Experts
                                 </h3>
 
@@ -282,11 +282,11 @@ const ContactSection: React.FC = () => {
 
                         {/* Left – Brand Presence */}
                         <div>
-                            <span className="inline-block text-lg tracking-[0.3em] uppercase text-emerald-400 font-semibold">
+                            <span className="inline-block text-lg tracking-[0.3em] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase text-emerald-400 font-semibold">
                                 Office Headquarters
                             </span>
 
-                            <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-white leading-tight">
+                            <h2 className="mt-4 drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-4xl lg:text-5xl font-bold text-white leading-tight">
                                 G.K. Choksi & Co.
                                 <span className="block text-gray-300 text-2xl mt-2">
                                     Ahmedabad
@@ -350,7 +350,7 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-[#1c1c1c]">
+                        <h2 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-extrabold text-[#C2A96A]">
                             Our Branches
                         </h2>
 

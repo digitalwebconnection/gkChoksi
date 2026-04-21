@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <div className="max-w-3xl mx-auto pb-15   text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase font-bold tracking-widest text-white text-3xl  mb-4">
+                    <p className="uppercase font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] tracking-widest text-white text-3xl  mb-4">
                         Leadership That Delivers
                     </p>
 

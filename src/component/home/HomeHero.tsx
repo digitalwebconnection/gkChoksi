@@ -63,10 +63,10 @@ const HeroSection = () => {
       >
 
         {/* Title */}
-        <h1 className="text-[#F7F9F8] text-5xl font-bold font-serif">
+        <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-5xl font-bold font-serif">
           G.K. Choksi & Co
         </h1>
-        <p className="text-[#f5cd55] text-2xl font-semibold mt-2">
+        <p className="text-[#f5cd55] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
           Chartered Accountants
         </p>
 

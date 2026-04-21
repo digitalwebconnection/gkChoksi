@@ -67,8 +67,8 @@ export default function TeamSection() {
                     <div className="text-center max-w-3xl mx-auto mb-14">
 
 
-                        <h1 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mt-4">
-                            Our Team
+                        <h1 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-bold text-[#1C1C1C] mt-4">
+                            Our <span className="text-[#C2A96A]"> Team</span> 
                         </h1>
                     </div>
 
@@ -176,10 +176,10 @@ export default function TeamSection() {
                             <button
                                 key={item}
                                 onClick={() => setFilter(item)}
-                                className={`px-5 py-2 rounded-full text-sm font-medium transition
+                                className={`px-8 py-2 rounded-lg text-md font-medium transition
         ${filter === item
-                                        ? "bg-[#289572] text-white"
-                                        : "bg-gray-100 text-gray-700 hover:bg-[#289572] hover:text-white"
+                                        ? "bg-[#289572] text-white "
+                                        : "bg-gray-100 border border-gray-800/30 text-gray-700 hover:bg-[#289572] hover:text-white"
                                     }`}
                             >
                                 {item}

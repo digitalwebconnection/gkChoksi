@@ -113,7 +113,7 @@ const VisionMissionSection = () => {
               className="flex items-center justify-center  mb-4"
             >
 
-              <span className="text-3xl text-center font-black tracking-[0.3em] text-[#3d2d04] uppercase">
+              <span className="text-3xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-center font-black tracking-[0.3em] text-[#C2A96A] uppercase">
                 The Foundation
               </span>
             </motion.div>
@@ -190,7 +190,7 @@ const VisionMissionSection = () => {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#79590a]/5 skew-x-12 translate-x-20" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl text-center font-serif mb-10 font-bold leading-tight">
+          <h2 className="text-4xl text-center drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif mb-10 font-bold leading-tight">
             Our <span className="text-[#c5a059]">Excellence</span> <br />is Driven by Values
           </h2>
           <div className="grid lg:grid-cols-12 gap-10 items-center">

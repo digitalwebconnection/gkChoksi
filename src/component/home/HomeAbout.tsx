@@ -35,7 +35,7 @@ const AboutSection = () => {
               About Us
             </p>
 
-            <h2 className="mb-6 font-serif text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
+            <h2 className="mb-6 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-4xl font-bold text-[#C2A96A] sm:text-5xl">
               Welcome to{" "}
               <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
                 G. K. Choksi & Co

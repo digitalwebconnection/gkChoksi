@@ -159,7 +159,7 @@ const ServicePage = () => {
           animate="show"
           className="relative z-10 text-center px-6 max-w-3xl"
         >
-          <h1 className="text-3xl md:text-5xl font-bold text-[#C2A96A]">
+          <h1 className="text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-bold text-[#C2A96A]">
             Our Professional Services
           </h1>
 
@@ -216,7 +216,7 @@ const ServicePage = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="text-xl uppercase tracking-[0.5em] text-[#1C1C1C] mb-6 font-semibold">
+          <p className="text-3xl uppercase drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] tracking-[0.2em] text-[#C2A96A] mb-6 font-semibold">
             Areas of Focus
           </p>
 
