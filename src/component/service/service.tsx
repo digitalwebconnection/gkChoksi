@@ -21,7 +21,7 @@ export const SERVICES: Service[] = [
     slug: "audit-assurance",
     title: "Audit & Assurance",
     subtitle: "Confidence & Reliability for Stakeholders",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjlTmp6LCd3DllEDENq3qA95DGlkc58DMwA&s",
+    image: "https://img.freepik.com/premium-photo/audit-accounting-finance-business-report-concept-accountant-financial-budget-tax-document-ana_926199-3832559.jpg",
     paragraphs: [
       "Assurance, in its truest sense, goes beyond verification - it builds trust where it matters most. Our audit approach is defined by independence of thought, depth of analysis, and an uncompromising commitment to quality.",
       "Across External and Internal Audits, Forensic Reviews, Due Diligence, Tax and Stock Audits, Departmental and Special Audits, we bring precision and perspective together.",
@@ -34,11 +34,11 @@ export const SERVICES: Service[] = [
     slug: "business-advisory",
     title: "Business Advisory",
     subtitle: "Strategy, made executable",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFe2_IAsTWI-CFV1yxKYHE60zLB3b8CVcktQ&s",
+    image: "https://ap-as.com/wp-content/uploads/2022/01/business-advisory-banner.jpg",
     paragraphs: [
-      "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that with measured guidance backed by technical depth and commercial insight.",
-      "From Accounting Advisory and Start-up structuring to Government Incentives, Inbound and Outbound Investment Strategies, and Incubation, we work closely with businesses to shape scalable structures, unlock opportunities, and support growth with foresight and discipline.",
-      "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning."
+      "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that measured with guidance backed by technical depth and commercial insight.",
+      "Through Valuation, Strategic Advisory, ESG, Governance, Risk & Compliance, and Succession Planning, we provide a comprehensive advisory framework aligned with evolving business needs..",
+      "From Accounting Advisory and Start-up structuring to Government Incentives, Inbound and Outbound Investment Strategies, and Incubation, we work closely with businesses to shape scalable structures, unlock opportunities, and support growth with foresight and discipline."
     ],
   },
 
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
     slug: "mergers-acquisition",
     title: "Mergers & Acquisition",
     subtitle: "Every deal, thoughtfully shaped",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXczdgrzieBQpVMkTzrvVtoWm08eodYnAgYQ&s",
+    image: "https://windes.com/wp-content/uploads/2021/05/Hand-shake-WEBSITE-April-28-2021.jpg",
     paragraphs: [
       "Merger & Amalgamation are not merely financial events, they are defining milestones. Our M&A services combine analytical rigour with strategic perspective to support clients across the entire deal lifecycle.",
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
@@ -57,7 +57,7 @@ export const SERVICES: Service[] = [
     slug: "regulatory",
     title: "Regulatory",
     subtitle: "Complexity, made navigable",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaiW2XWKLtsd4W4knHKpZsw7YPtPqa35NJIw&s",
+    image: "https://media.licdn.com/dms/image/v2/D5612AQEcT2QKWdWCXg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1708749475563?e=2147483647&v=beta&t=l5ITstMpXF-a3rsK7EKc4ce93tJxy4f7Jzp0BpKU_sw",
     paragraphs: [
       "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
       "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
@@ -86,25 +86,25 @@ export const BOTTOM_POINTS = [
     text: "Integrated approach",
     icon: HiOutlinePuzzlePiece,
     gradient: "from-[#6FAF9B] to-[#289572]",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRzg-0tgVR9EOYTAR0vMyD9eDA8zAx4e_zbA&s",
+    image: "https://www.isotracker.com/wp-content/uploads/the-role-of-process-approach-in-quality-management-featured.jpg",
   },
   {
     text: "Industry-focused delivery",
     icon: HiOutlineBuildingOffice2,
     gradient: "from-[#3B82F6] to-[#1D4ED8]",
-    image: "https://www.shutterstock.com/image-photo/expert-woman-asian-people-discuss-600nw-2644672529.jpg",
+    image: "https://www.optiproerp.com/wp-content/uploads/7-Step-Action-Plan-to-Improve-Delivery-Performance.png",
   },
   {
     text: "Insight-driven decisions",
     icon: HiOutlineChartBar,
     gradient: "from-[#F59E0B] to-[#C2A96A]",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaldbIDJVN_ZK2zICQtQG3PfbSmfr-2BerWg&s",
+    image: "https://nextgeninvent.com/wp-content/uploads/2022/09/How-can-Organizations-transform-to-be-Data-Led-and-Insight-driven.jpg",
   },
   {
     text: "Partner-led execution",
     icon: HiOutlineUserGroup,
     gradient: "from-[#8B5CF6] to-[#6D28D9]",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfJ-QmDcnFNaIYvKq6jNrkW0WSIu0_5fGMw&s",
+    image: "https://www.retail-insight-network.com/wp-content/uploads/sites/18/2026/04/shutterstock_2638480347-430x241.jpg",
   },
 ];
 

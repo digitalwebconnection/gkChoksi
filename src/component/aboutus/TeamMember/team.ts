@@ -27,7 +27,7 @@ import CAPadmanabhShah from "../../../assets/Core Team Photos/CA Padmanabh Shah.
 import CAParagShah from "../../../assets/Core Team Photos/CA Parag Shah.jpg"
 import CAPriyankaShah from "../../../assets/Core Team Photos/CA Priyanka Shah.jpg"
 import CARujutaMunshi from "../../../assets/Core Team Photos/CA Rujuta Munshi.jpg"
-import CAshwetangPujara from "../../../assets/Core Team Photos/CA shwetang Pujara.jpg"
+import CAshwetangPujara from "../../../assets/Core Team Photos/Hariprasad.jpeg"
 import CASiddharthPatel from "../../../assets/Core Team Photos/CA Siddharth Patel.jpg"
 import CASudhaGupta from "../../../assets/Core Team Photos/CA Sudha Gupta ---.jpg"
 import CATanupriyaPatel from "../../../assets/Core Team Photos/CA Tanupriya Patel.jpg"
@@ -137,7 +137,7 @@ export const TEAM: TeamMember[] = [
     {
         id: 11,
         name: "Shwetang Pujara",
-        role: "B.Com, CA",
+        role: "B. Com., LL. B., FCA, DISA, PGDBM [Fin.]",
         department: "Audit",
         image: CAshwetangPujara,
         details: undefined,
@@ -147,7 +147,7 @@ export const TEAM: TeamMember[] = [
         id: 12,
         name: "Dhruti Trivedi",
         role: "B.Com, LLB",
-        department: "Tax",
+        department: "Legal",
         image: AdvocateDhrutiTrivedi,
         details: "As part of G.K. Choksi & Co.'s multidisciplinary professional services, the Para Legal Department offers integrated legal advisory and documentation support.\n\nThe department helps high-net-worth clients, corporations, developers, and institutions navigate complicated legal and regulatory frameworks pertaining to real estate issues, corporate transactions, and statutory compliance.\n\nThe team focuses on contract structuring, property due diligence, Trusts, regulatory liaison, and risk mitigation under the direction of Advocate Ms. Dhruti A. Trivedi, who brings more than 26 years of experience in legal advisory and dispute resolution.\n\nTo guarantee legally sound documentation, smooth transaction execution, and efficient legal issue resolution, the department collaborates closely with clients and regulatory bodies",
         status: "Closed"

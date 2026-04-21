@@ -85,6 +85,7 @@ const InsightsMain: React.FC = () => {
                             <h1 className="text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-semibold text-[#C2A96A]">
                                 Our Insights
                             </h1>
+                            <p className=" text-2xl font-semibold mt-5">Publications & Regulatory</p>
 
                         </motion.div>
                     </div>

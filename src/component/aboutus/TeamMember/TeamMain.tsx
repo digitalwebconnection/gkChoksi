@@ -172,7 +172,7 @@ export default function TeamSection() {
                     </div>
                     {/* FILTER */}
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
-                        {["All", "Tax", "Audit", "Legal"].map((item) => (
+                        {["All",  "Audit", "Legal","Tax"].map((item) => (
                             <button
                                 key={item}
                                 onClick={() => setFilter(item)}

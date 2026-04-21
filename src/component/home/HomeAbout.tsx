@@ -105,7 +105,7 @@ const AboutSection = () => {
   {/* MAIN IMAGE */}
   <motion.div
     whileHover={{ scale: 1.02 }}
-    className="relative h-full w-full rounded-[32px] overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
+    className="relative h-full w-full rounded-4xl overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
   >
     <img
       src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"
@@ -113,7 +113,7 @@ const AboutSection = () => {
     />
 
     {/* PREMIUM OVERLAY */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
     {/* CONTENT */}
     <div className="absolute bottom-6 left-6 right-6 text-white">

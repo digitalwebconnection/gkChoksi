@@ -71,7 +71,7 @@ const foundationItems = [
   },
   {
     title: "Our Mission",
-    content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
+    content: "To provide high-quality Audit & Assurance, Taxation & Risk Advisory Consulting Services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
     image: "https://www.quantumconsumernig.com/assets/imgs/our-mission.jpg",
     icon: <HiOutlineTicket />,
     color: "from-emerald-400 to-teal-600",
@@ -293,10 +293,8 @@ export default function FeatureSection() {
           </h2>
 
           {/* ✨ DESCRIPTION */}
-          <p className="mt-6 text-black text-lg leading-relaxed max-w-5xl mx-auto">
-            With the leadership of 8 Partners and a team of 35+ Chartered Accountants supported by
-            150+ professionals, we bring depth of knowledge and real-world experience to businesses
-            that are evolving and expanding.
+          <p className="mt-6 text-black text-lg leading-relaxed max-w-6xl mx-auto">
+            With the leadership of 8 Partners supported by a strong talent base of 185+ professionals comprising of 40+ Chartered Accountants, 5+ Company Secretaries, 4+ Advocates, 100+ Articles, and 40+ Expert Chartered Accountants engaged on an assignment basis, the firm brings together deep domain expertise and practical insights to support clientele navigating growth and transformation.
           </p>
 
 
