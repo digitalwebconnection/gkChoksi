@@ -10,28 +10,7 @@ import {
 } from "react-icons/fa6";
 
 
-import { HiOutlineLightBulb, HiOutlineTicket } from "react-icons/hi2";
 
-const foundationItems = [
-  {
-    title: "Our Vision",
-    content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
-    image: "https://shahkar.org.af/wp-content/uploads/2024/09/Our-Vision.jpg",
-    icon: <HiOutlineLightBulb />,
-    color: "from-amber-400 to-orange-600",
-    accent: "#e2b43e",
-    lightBg: "bg-amber-50"
-  },
-  {
-    title: "Our Mission",
-    content: "To provide high-quality audit, tax and advisory services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
-    image: "https://www.quantumconsumernig.com/assets/imgs/our-mission.jpg",
-    icon: <HiOutlineTicket />,
-    color: "from-emerald-400 to-teal-600",
-    accent: "#10b981",
-    lightBg: "bg-emerald-50"
-  }
-];
 const coreValues = [
   {
     title: "Leadership",
@@ -97,92 +76,7 @@ const VisionMissionSection = () => {
   return (
     <div className="bg-[#fcfcfc] font-sans text-slate-900">
 
-      {/* SECTION 1: FOUNDATION (Vision/Mission) */}
-      <section className="relative py-14 bg-white overflow-hidden">
-        {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -z-10" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-50 -z-10" />
-
-        <div className="max-w-6xl mx-auto px-6">
-
-          {/* HEADER AREA */}
-          <div className="relative mb-10">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center justify-center  mb-4"
-            >
-
-              <span className="text-3xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-center font-black tracking-[0.3em] text-[#C2A96A] uppercase">
-                The Foundation
-              </span>
-            </motion.div>
-
-
-          </div>
-
-          {/* GRID ITEMS */}
-          <div className="grid md:grid-cols-2 gap-15 perspective-distant">
-
-            {foundationItems.map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
-                className="group w-full h-80"
-              >
-
-                {/* 🔥 FLIP CONTAINER */}
-                <div className="relative w-full h-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
-
-                  {/* ================= FRONT (IMAGE) ================= */}
-                  <div className="absolute inset-0 rounded-2xl overflow-hidden backface-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
-
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/30" />
-
-                    {/* Icon */}
-                    <div className={`absolute top-6 left-6 w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg bg-linear-to-br ${item.color}`}>
-                      {item.icon}
-                    </div>
-
-                    {/* Title on image */}
-                    <h3 className="absolute bottom-6 left-6 text-white text-3xl font-semibold">
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  {/* ================= BACK (CONTENT) ================= */}
-                  <div className="absolute inset-0 rounded-[2.5rem] p-8 bg-white border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.08)] 
-                        transform-[rotateY(180deg)] backface-hidden flex flex-col justify-between">
-
-                    <div>
-                      <h3 className="text-4xl font-semibold text-[#C2A96A] mb-4">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-black text-lg text-justify leading-relaxed">
-                        {item.content}
-                      </p>
-                    </div>
-
-                 
-                  </div>
-
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* SECTION 2: CORE VALUES (Interactive Showcase) */}
       <section className="py-24 bg-white  relative overflow-hidden">

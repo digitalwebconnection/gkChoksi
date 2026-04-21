@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+
 
 
 import {
@@ -65,7 +65,7 @@ const AboutSection = () => {
                   text: "Personalized Service Approach",
                   icon: HiOutlineUserGroup, // better icon
                 },
-                
+
               ].map((item, idx) => {
                 const Icon = item.icon;
 
@@ -100,72 +100,55 @@ const AboutSection = () => {
           </motion.div>
 
           {/* RIGHT: IMAGE CLUSTER */}
-          <motion.div
-            className="relative h-[360px] sm:h-[420px] md:h-[540px]"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.7 }}
-          >
-            {/* Background Blob */}
-            <div className="absolute -right-10 -top-10 h-64 w-64 rounded-[40px] bg-[#6FAF9B]/20 blur-3xl" />
+      <div className="relative h-[520px] w-full">
 
-            {/* Top Image */}
-            <div className="absolute left-6 top-0 h-40 w-[60%] overflow-hidden rounded-[28px] bg-gray-200 shadow-[0_24px_60px_rgba(15,61,46,0.35)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.02] sm:h-56">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsBJLw2DZ51dW8eAPwcwguy8qcALI2CMyCdQ&s" alt="Team at work" className="h-full w-full object-cover" />
-            </div>
+  {/* MAIN IMAGE */}
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    className="relative h-full w-full rounded-[32px] overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
+  >
+    <img
+      src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"
+      className="h-full w-full object-cover"
+    />
 
-            {/* Main Image */}
-            <div className="absolute bottom-10 right-0 h-56 w-full overflow-hidden rounded-4xl bg-gray-200 shadow-[0_26px_80px_rgba(15,61,46,0.45)] transition-transform duration-500 hover:-translate-y-3 hover:scale-[1.02] sm:h-[350px] sm:w-[88%]">
-              <img src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg" alt="Financial advisory meeting" className="h-full w-full object-cover" />
+    {/* PREMIUM OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-              <div className="absolute inset-0 bg-linear-to-t from-[#000000]/90 via-black/10 to-transparent" />
+    {/* CONTENT */}
+    <div className="absolute bottom-6 left-6 right-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-[#6FAF9B]">
+        Client-first approach
+      </p>
 
-              <div className="absolute bottom-2 left-28  text-white">
-                <p className="text-lg uppercase tracking-[0.2em] text-[#6FAF9B]">
-                  Client-first approach
-                </p>
-                <p className="text-md   font-medium text-white">
-                  Long-term partnerships built on trust and clarity.
-                </p>
-              </div>
-            </div>
-
-            {/* Mini Card */}
-            <Link to="/industry">
-  <div className="absolute bottom-0 left-0 h-32 w-40 overflow-hidden rounded-3xl bg-white shadow-[0_20px_50px_rgba(15,61,46,0.32)] transition-transform duration-500 hover:-translate-y-2 hover:scale-[1.03] cursor-pointer">
-
-    <div className="h-[60%] w-full">
-      <img
-        src="https://www.ikonmarket.com/assets/images/industry/collage-industry.jpg"
-        alt="Audit & review"
-        className="h-full w-full object-cover"
-      />
+      <p className="mt-2 text-lg font-medium leading-snug max-w-sm">
+        Long-term partnerships built on trust, transparency, and clarity.
+      </p>
     </div>
+  </motion.div>
 
-    <div className="h-[40%] px-3 pt-2 text-[11px]">
-      <span className="block text-[12px] uppercase tracking-[0.18em] text-black">
-        See our
-      </span>
-      <span className="font-semibold text-[#1C1C1C]">
-        Clients
-      </span>
-    </div>
-  </div>
-</Link>
+  {/* GLASS STAT CARD (INTEGRATED) */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    whileHover={{ y: -6 }}
+    className="absolute bottom-6 right-6 w-48 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
+  >
+    <p className="text-[11px] uppercase tracking-[0.2em] text-gray-200">
+      Trusted Since
+    </p>
 
-            {/* Stat Card */}
-            <div className="absolute -right-14 top-20 w-50 rounded-3xl bg-[#0F3D2E] p-6 text-white shadow-[0_20px_60px_rgba(15,61,46,0.6)] hover:-translate-y-2 transition duration-500">
-              <p className="mb-2 text-[14px] uppercase tracking-[0.2em] text-white">
-                Trusted Since
-              </p>
-              <p className="mb-1 text-2xl font-bold">1972</p>
-              <p className="text-[11px] text-gray-300">
-                Serving businesses with reliable advisory and compliance.
-              </p>
-            </div>
-          </motion.div>
+    <p className="text-2xl font-bold mt-1">1972</p>
 
+    <p className="text-[11px] text-gray-300 mt-1">
+      Delivering reliable advisory for decades.
+    </p>
+  </motion.div>
+
+  {/* SOFT GLOW (DEPTH EFFECT) */}
+  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#6FAF9B]/20 blur-3xl rounded-full" />
+
+</div>
         </div>
       </div>
     </section>

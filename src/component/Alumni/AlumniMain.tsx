@@ -7,8 +7,10 @@ import g1 from "../../assets/alumini/1.jpeg"
 import g2 from "../../assets/alumini/2.jpeg"
 // import g3 from "../../assets/alumini/3.jpeg"
 import g4 from "../../assets/alumini/4.jpeg"
+import GetInTouchModal from "../GetInTouchPopup";
 
 export default function AlumniPage() {
+    const [open, setOpen] = useState(false);
 
     const images = [g1, g2, g4];
     const [current, setCurrent] = useState(0);
@@ -82,11 +84,17 @@ export default function AlumniPage() {
                     <p className="mb-4 text-justify ">
                         For us, alumni are not a chapter concluded, but a relationship that continues with appreciation, and with pride.
                     </p>
-                    <button className=" border px-8 py-2 rounded-lg bg-[#0F3D2E] text-white">Get In Tuch</button>
+                    <button
+                        onClick={() => setOpen(true)}
+                        className="border px-8 py-2 rounded-lg bg-[#0F3D2E] text-white"
+                    >
+                        Get In Touch
+                    </button>
                 </div>
             </section>
 
-
+            {/* CALL MODAL */}
+            <GetInTouchModal open={open} setOpen={setOpen} />
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
@@ -94,13 +102,13 @@ export default function AlumniPage() {
                     Alumni Moments
                 </h3>
 
-                <div className="grid md:grid-cols-4  gap-10">
+                <div className="flex  max-w-7xl mx-auto text-center justify-center   gap-10">
                     <img
                         src={g1}
                         className=" shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
                     />
-                    <img
+                    {/* <img
                         src=""
                         className="shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
@@ -114,11 +122,11 @@ export default function AlumniPage() {
                         src=""
                         className="shadow-lg shadow-black/80 w-80 h-50 object-cover"
                         alt=""
-                    />
+                    /> */}
                 </div>
             </section>
 
-        
+
 
         </div>
     );

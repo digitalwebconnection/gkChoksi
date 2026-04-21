@@ -169,7 +169,7 @@ const INDUSTRY_MODULES = [
         module: "Industrial",
         industries: [
             "Automotive",
-            
+
             "Chemicals",
             "Construction",
             "Mining & Metals",
@@ -308,7 +308,21 @@ const IndustryPage = () => {
                                     Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
                                 </p>
                             </div>
+                            <div className="max-w-5xl mx-auto my-5 px-8 py-10 border-t border-b border-gray-200 relative">
+                            {/* Decorative corner brackets for a unique look */}
+                            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
+
+                            <div className="text-center px-4">
+                                <p className="text-[#1C1C1C] text-xl text-justify md:text-2xl  font-light leading-relaxed tracking-tight">
+                                    Our approach is not to merely understand the industry,
+                                    but to understand your position within it
+                                    and to provide guidance that is both practical and forward-looking.
+                                </p>
+                            </div>
                         </div>
+                        </div>
+                        
                     </aside>
 
                     {/* RIGHT: SCROLLING ITEMS (No Numbers) */}
@@ -358,19 +372,7 @@ const IndustryPage = () => {
                     </main>
                 </div>
             </section>
-            <div className="max-w-5xl mx-auto my-5 px-8 py-10 border-t border-b border-gray-200 relative">
-                {/* Decorative corner brackets for a unique look */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
 
-                <div className="text-center px-4">
-                    <p className="text-[#1C1C1C] text-xl md:text-2xl text-center font-light leading-relaxed tracking-tight">
-                        Our approach is not to merely understand the industry,
-                        but to understand your position within it
-                        and to provide guidance that is both practical and forward-looking.
-                    </p>
-                </div>
-            </div>
         </div>
     );
 };
