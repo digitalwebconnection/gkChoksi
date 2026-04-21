@@ -1,9 +1,9 @@
 import AboutSection from "./HomeAbout"
 import HeroSection from "./HomeHero"
 import StatsSection from "./HomeStats"
-// import HomeTestimonials from "./HomeTestimonials"
+import HomeTestimonials from "./HomeTestimonials"
 import WhatWeOffer from "./HomeWhatWeOffer"
-import JourneySection from "./JourneySection"
+// import JourneySection from "./JourneySection"
 
 const HomeMain = () => {
   return (
@@ -11,9 +11,10 @@ const HomeMain = () => {
       <HeroSection/>
       <StatsSection/>
       <AboutSection/>
-      <JourneySection/>
+      {/* <JourneySection/> */}
+        <HomeTestimonials/>
       <WhatWeOffer/>
-      {/* <HomeTestimonials/> */}
+    
     </>
   )
 }

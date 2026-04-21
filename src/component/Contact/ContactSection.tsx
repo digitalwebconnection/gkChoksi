@@ -283,7 +283,7 @@ const ContactSection: React.FC = () => {
                         {/* Left – Brand Presence */}
                         <div>
                             <span className="inline-block text-lg tracking-[0.3em] uppercase text-emerald-400 font-semibold">
-                                Corporate Headquarters
+                                Office Headquarters
                             </span>
 
                             <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-white leading-tight">

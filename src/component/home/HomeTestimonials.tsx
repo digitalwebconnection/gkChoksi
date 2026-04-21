@@ -1,126 +1,119 @@
+
 import { motion } from "framer-motion";
-import "./heroAnimations.css";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0 },
-};
+const timeline = [
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0n5S96TkRXdMIj9mlW_b52jl9JkIh6BnFQ&s",
+    period: "2018",
+    title: "The Beginning",
+    desc: "Early work with closely-held businesses and emerging enterprises.",
+    color: "#12632A",
+  },
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSko2M7te0So4PgD3HmdqFqGo3uHPmBorSEQ&s",
+    period: "2020",
+    title: "Expansion",
+    desc: "New partners, sector specialisation and long-term client relationships.",
+    color: "#D9A20D",
+  },
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrEEmoaotDHa4iHKDGGUjURb9fAoZZH0C-Rg&s",
+    period: "2021",
+    title: "Scaling Up",
+    desc: "Listed entities, regulatory assignments and complex group audits.",
+    color: "#12632A",
+  },
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC376xP-vqAynxnEpfjgQ6u94XQOvNQb3HZQ&s",
+    period: "2022",
+    title: "Innovation",
+    desc: "Analytics-led audits and cross-border assignments.",
+    color: "#D9A20D",
+  },
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5vJOPMjpulD-SEuCmpI7i1CR6jtFq-lv1Aw&s",
+    period: "2024",
+    title: "Global Reach",
+    desc: "Core work in specific industries across multiple continents.",
+    color: "#12632A",
+  },
+  {
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWi9xoGGdSwY920b33n8zXWlFQXiRbQ7Oxcw&s",
+    period: "2026",
+    title: "Future Ready",
+    desc: "Ongoing innovation and client success in a digital world.",
+    color: "#D9A20D",
+  },
+];
 
-const HomeTestimonials = () => {
+const TimelineSection = () => {
   return (
-    <>
-      <motion.section
-        className="timeline-section max-w-7xl mx-auto py-10 "
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.35 }}
-        transition={{ duration: 0.65 }}
-      >
-        <motion.h1
-          className="text-5xl font-semibold text-center text-[#1C1C1C]"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-        >
-          Our Process
-        </motion.h1>
+    <section className="relative bg-white py-24 px-4 overflow-hidden font-sans">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative">
+          
+          {/* Central Horizontal Axis (Desktop) */}
+          <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-500 -translate-y-1/2 hidden lg:block" />
 
-        <div className="timeline-steps">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-0 relative">
+            {timeline.map((item, index) => {
+              const isEven = index % 2 === 0;
 
-          {/* 1 */}
-          <motion.div className="step step-top mb-15">
-            <div className="icon-outer">
-              <div className="icon-inner">
-                <img src="https://immigracia.ca/wp-content/uploads/2023/07/consultation-1.jpeg" className="h-full w-full" />
-              </div>
-            </div>
+              return (
+                <div key={index} className="relative flex flex-col items-center">
+                  
+                  {/* --- TOP CONTENT (Desktop: Even | Mobile: All) --- */}
+                  <motion.div
+                    initial={{ opacity: 0, y: isEven ? -70 : 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={`flex flex-col items-center text-center z-10 
+                      ${isEven ? "lg:mb-1" : "lg:mt-90 lg:order-last"} 
+                      mb-8 lg:mb-0`}
+                  >
+                    <div 
+                      className="w-32 h-32 rounded-full overflow-hidden border-4 bg-white shadow-xl mb-4"
+                      style={{ borderColor: item.color }}
+                    >
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-xl font-bold" style={{ color: item.color }}>{item.title}</h3>
+                    <p className="text-gray-900 text-sm mt-2 max-w-[180px] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </motion.div>
 
-            <div className="step-title text-[#0F3D2E]">Initial Consultation:</div>
+                  {/* --- CENTER DOT & YEAR --- */}
+                  <div className="relative flex flex-col items-center justify-center h-12 w-full lg:absolute lg:top-1/2 lg:-translate-y-1/2">
+                    {/* Vertical line for mobile */}
+                    <div className="absolute h-full w-0.5 bg-gray-200 lg:hidden top-0" />
+                    
+                    {/* The Connecting Dot */}
+                    <motion.div 
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      className="w-6 h-6 rounded-full border-4 bg-white z-20"
+                      style={{ borderColor: item.color }}
+                    />
+                    
+                    {/* Year Label */}
+                    <div className="absolute mt-16 lg:mt-20">
+                      <span className="text-sm font-black text-gray-900 tracking-widest uppercase">
+                        {item.period}
+                      </span>
+                    </div>
+                  </div>
 
-            <p className="step-desc text-[#1F6F5B]">
-              We understand your <b>business, goals,</b> and current{" "}
-              <b>financial challenges</b>.
-            </p>
-          </motion.div>
-
-          <div className="line bg-[#6FAF9B]" />
-
-          {/* 2 */}
-          <motion.div className="step step-bottom mt-30">
-            <div className="icon-outer">
-              <div className="icon-inner">
-                <img src="https://www.shutterstock.com/image-photo/businessman-document-management-system-dms-600nw-2162094655.jpg" className="h-full w-full" />
-              </div>
-            </div>
-
-            <div className="step-title text-[#0F3D2E]">Data & Document Review:</div>
-
-            <p className="step-desc text-[#1F6F5B]">
-              Analyse <b>financial statements, tax returns,</b> and identify{" "}
-              <b>gaps, risks,</b> and opportunities.
-            </p>
-          </motion.div>
-
-          <div className="line1 bg-[#6FAF9B]" />
-
-          {/* 3 */}
-          <motion.div className="step step-top mb-15">
-            <div className="icon-outer">
-              <div className="icon-inner">
-                <img src="https://static.wixstatic.com/media/f5a7ea_eb1644b0d8364633832498a0e55a1a3b~mv2.jpg" className="h-full w-full" />
-              </div>
-            </div>
-
-            <div className="step-title text-[#0F3D2E]">Strategy & Planning:</div>
-
-            <p className="step-desc text-[#1F6F5B]">
-              We design a personalised <b>tax, compliance,</b> and{" "}
-              <b>cash-flow strategy</b>.
-            </p>
-          </motion.div>
-
-          <div className="line bg-[#6FAF9B]" />
-
-          {/* 4 */}
-          <motion.div className="step step-bottom mt-30">
-            <div className="icon-outer">
-              <div className="icon-inner">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwI_0jN25jaejTOy-yfIdQ2DNttxXEnElQng&s" className="h-full w-full" />
-              </div>
-            </div>
-
-            <div className="step-title text-[#0F3D2E]">Implementation & Filing:</div>
-
-            <p className="step-desc text-[#1F6F5B]">
-              We ensure <b>accurate bookkeeping, timely filings,</b> and{" "}
-              <b>statutory compliance</b>.
-            </p>
-          </motion.div>
-
-          <div className="line1 bg-[#6FAF9B]" />
-
-          {/* 5 */}
-          <motion.div className="step step-top mb-15">
-            <div className="icon-outer">
-              <div className="icon-inner">
-                <img src="https://www.investopedia.com/thmb/vfl0lrU4M1P3Zsnbyf5jDL4W0-4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1803777103-03b3b05e0ff542f6bcf7e4070fb37b09.jpg" className="h-full w-full" />
-              </div>
-            </div>
-
-            <div className="step-title text-[#0F3D2E]">Ongoing Review & Advisory:</div>
-
-            <p className="step-desc text-[#1F6F5B]">
-              We provide <b>MIS reports, financial insights,</b> and proactive{" "}
-              <b>advisory</b>.
-            </p>
-          </motion.div>
-
+                </div>
+              );
+            })}
+          </div>
         </div>
-
-
-      </motion.section>
-    </>
+      </div>
+    </section>
   );
 };
 
-export default HomeTestimonials;
+export default TimelineSection;

@@ -82,7 +82,7 @@ const InsightsMain: React.FC = () => {
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
                     <div className="max-w-3xl text-center text-white">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                            <h1 className="text-3xl md:text-5xl font-semibold text-[#079264]">
+                            <h1 className="text-3xl md:text-5xl font-semibold text-[#C2A96A]">
                                 Our Insights
                             </h1>
 

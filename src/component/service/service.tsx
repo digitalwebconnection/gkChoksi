@@ -1,4 +1,5 @@
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 import {
   HiOutlinePuzzlePiece,
@@ -6,6 +7,7 @@ import {
   HiOutlineChartBar,
   HiOutlineUserGroup,
 } from "react-icons/hi2";
+
 interface Service {
   slug: string;
   title: string;
@@ -13,8 +15,6 @@ interface Service {
   image: string;
   paragraphs: string[];
 }
-
-
 
 export const SERVICES: Service[] = [
   {
@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     slug: "business-advisory",
     title: "Business Advisory",
     subtitle: "Strategy, made executable",
-    image: "https://blog.udemy.com/wp-content/uploads/2014/04/bigstock-Image-of-business-partners-dis-41296537.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFe2_IAsTWI-CFV1yxKYHE60zLB3b8CVcktQ&s",
     paragraphs: [
       "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that with measured guidance backed by technical depth and commercial insight.",
       "From Accounting Advisory and Start-up structuring to Government Incentives, Inbound and Outbound Investment Strategies, and Incubation, we work closely with businesses to shape scalable structures, unlock opportunities, and support growth with foresight and discipline.",
@@ -52,16 +52,7 @@ export const SERVICES: Service[] = [
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
     ],
   },
-  // {
-  //   slug: "management-consultancy",
-  //   title: "Management Consultancy",
-  //   subtitle: "Strategy, made executable.",
-  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSHZSfGDClJDJYFy-tqiGQQk72CqKGh05NQ&s",
-  //   paragraphs: [
-  //     "Every organisation reaches moments that call for reflection, recalibration, and renewal. Our management consultancy services are designed to support such transitions with clarity and foresight.",
-  //     "Through Valuation, Strategic Advisory, ESG, Governance Risk & Compliance, and Succession Planning, we help organisations strengthen foundations, manage uncertainties, and prepare thoughtfully for the future.",
-  //   ],
-  // },
+
   {
     slug: "regulatory",
     title: "Regulatory",
@@ -86,12 +77,16 @@ export const SERVICES: Service[] = [
 
 ]
 
+
+
+
+
 export const BOTTOM_POINTS = [
   {
     text: "Integrated approach",
     icon: HiOutlinePuzzlePiece,
     gradient: "from-[#6FAF9B] to-[#289572]",
-    image: "https://i.ytimg.com/vi/ELmI0cXPcWg/maxresdefault.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRzg-0tgVR9EOYTAR0vMyD9eDA8zAx4e_zbA&s",
   },
   {
     text: "Industry-focused delivery",
@@ -141,6 +136,7 @@ const fadeUp = {
 
 // ================= COMPONENT =================
 const ServicePage = () => {
+    const [selectedService, setSelectedService] = useState<Service | null>(null);
   return (
     <>
       {/* HERO */}
@@ -183,7 +179,7 @@ const ServicePage = () => {
   <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6">
 
   {BOTTOM_POINTS.map((point, i) => {
-    const Icon = point.icon;
+    
 
     return (
       <div
@@ -200,38 +196,12 @@ const ServicePage = () => {
         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
 
         {/* 📝 DEFAULT TEXT */}
-        <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 group-hover:opacity-0">
+        <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 ">
           <p className="text-white text-xl font-bold">
             {point.text}
           </p>
         </div>
 
-        {/* 💎 HOVER PANEL (FROM RIGHT + BOTTOM) */}
-        <div
-          className="
-            absolute bottom-0 right-0 w-[85%] 
-            translate-x-full translate-y-full 
-            group-hover:translate-x-0 group-hover:translate-y-0
-            transition-all duration-500 ease-out z-20
-          "
-        >
-          <div className="bg-white px-5  rounded-tl-md   py-10 shadow-2xl relative">
-
-            {/* GOLD BORDER TOP */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-yellow-500 rounded-tl-2xl" />
-
-            {/* ICON + TITLE */}
-            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-              <span className="p-2 rounded-lg bg-gray-100">
-                <Icon className="w-5 h-5 text-gray-700" />
-              </span>
-              {point.text}
-            </h3>
-
-
-
-          </div>
-        </div>
 
       </div>
     );
@@ -279,28 +249,10 @@ const ServicePage = () => {
 
 
 
-      {/* SERVICES GRID */}
-      <section className="py-14 bg-[#F7F9F8]">
+   <section className="py-14 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
-          {/* HEADER */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <p className="text-2xl uppercase font-bold tracking-[0.2em] text-[#6FAF9B]">
-              Services
-            </p>
-
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold text-[#1C1C1C]">
-              Expertise That Moves Business Forward
-            </h2>
-
-            <div className="w-20 h-0.5 bg-[#C2A96A] mx-auto mt-6" />
-          </motion.div>
+          {/* HEADER SAME */}
 
           {/* GRID */}
           <motion.div
@@ -315,7 +267,8 @@ const ServicePage = () => {
                 key={service.slug}
                 variants={item}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative rounded-lg overflow-hidden border border-black/20 shadow-gray-500 bg-white shadow-lg hover:shadow-xl transition-all duration-500"
+                onClick={() => setSelectedService(service)}
+                className="group cursor-pointer relative rounded-lg overflow-hidden border border-black/20 shadow-lg bg-white hover:shadow-xl transition-all duration-500"
               >
 
                 {/* IMAGE */}
@@ -323,10 +276,10 @@ const ServicePage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
 
                   <div className="absolute bottom-4 left-4 text-white">
                     <h3 className="text-xl font-semibold">
@@ -335,25 +288,17 @@ const ServicePage = () => {
                   </div>
                 </div>
 
-                {/* CONTENT */}
-                <div className="p-6">
-                  <h4 className="text-2xl font-semibold text-[#1C1C1C] group-hover:text-[#289572] transition">
-                    {service.subtitle}
-                  </h4>
-
-                  <p className="mt-4 text-md text-gray-900">
-                    {service.paragraphs[0]}
-                  </p>
-
-                  <p className="mt-2 text-md text-gray-900">
-                    {service.paragraphs[1]}
-                  </p>
-                  <p className="mt-2 text-md text-gray-900">
-                    {service.paragraphs[2]}
-                  </p>
+                {/* READ MORE */}
+                <div className="p-4 flex justify-between items-center">
+                  <span className="text-sm text-gray-600">
+                    Explore details
+                  </span>
+                  <span className="text-[#289572] font-semibold group-hover:underline">
+                    Read More →
+                  </span>
                 </div>
 
-                {/* GLOW EFFECT */}
+                {/* GLOW */}
                 <div className="absolute inset-0 bg-linear-to-r from-[#6FAF9B]/0 via-[#6FAF9B]/10 to-[#C2A96A]/0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
 
               </motion.div>
@@ -362,6 +307,61 @@ const ServicePage = () => {
 
         </div>
       </section>
+
+      {/* ================= MODAL ================= */}
+      <AnimatePresence>
+        {selectedService && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+            onClick={() => setSelectedService(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white max-w-3xl w-full rounded-xl overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
+            >
+
+              {/* CLOSE */}
+              <button
+                onClick={() => setSelectedService(null)}
+                className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl"
+              >
+                ✕
+              </button>
+
+              {/* IMAGE */}
+              <div className="h-64 w-full">
+                <img
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="p-6">
+                <h2 className="text-2xl font-bold text-[#1C1C1C]">
+                  {selectedService.title}
+                </h2>
+
+                <h4 className="text-lg text-[#289572] mt-2">
+                  {selectedService.subtitle}
+                </h4>
+
+                <div className="mt-4 space-y-3 text-gray-700">
+                  {selectedService.paragraphs.map((para, index) => (
+                    <p key={index}>{para}</p>
+                  ))}
+                </div>
+              </div>
+
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

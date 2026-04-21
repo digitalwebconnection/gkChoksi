@@ -2,7 +2,7 @@ import { motion, AnimatePresence} from "framer-motion";
 import { useEffect, useState } from "react";
 
 
-const images = ["https://www.shutterstock.com/image-photo/customer-service-call-center-contact-600nw-2493101023.jpg"];
+const images = ["https://reflectiveit.com/wp-content/uploads/2025/12/contact-us-scaled-1.jpg"];
 const fullText = "Contact Us";
 
 const ContactHeroSection = () => {
@@ -57,18 +57,6 @@ const ContactHeroSection = () => {
       {/* EXTRA DARK LAYER */}
       <div className="absolute inset-0 bg-black/60" />
 
-      {/* ================= GLOW ORBS ================= */}
-      <motion.div
-        animate={{ y: [0, -25, 0], opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity }}
-        className="absolute top-20 left-20 w-72 h-72 bg-[#6FAF9B]/20 rounded-full blur-3xl"
-      />
-
-      <motion.div
-        animate={{ y: [0, 30, 0], opacity: [0.2, 0.5, 0.2] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute bottom-20 right-20 w-96 h-96 bg-[#C2A96A]/20 rounded-full blur-3xl"
-      />
 
       {/* ================= CONTENT ================= */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-40 text-center text-white">

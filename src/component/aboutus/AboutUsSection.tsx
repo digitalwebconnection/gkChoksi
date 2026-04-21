@@ -5,7 +5,7 @@ import { HiOutlineArrowRight } from "react-icons/hi2";
 
 const SLIDES = [
   { image: "https://cdn-ilagggb.nitrocdn.com/bcPPdcwkJPtwVRoplnSFoMYDXtQrxOyR/assets/images/optimized/rev-cdd09d9/vidya.ac.in/wp-content/uploads/2023/03/Accounts-Banking-and-Finance-Course-750x458-1.jpg" },
-  { image: "https://akaunting.com/blog/wp-content/uploads/2021/03/The-Difference-Between-Bookkeeping-and-Accounting.jpg" },
+  { image: "https://static.vecteezy.com/system/resources/thumbnails/007/994/612/small/businessman-analyzing-company-s-financial-balance-sheet-working-with-digital-augmented-reality-graphics-businessman-calculates-financial-data-for-long-term-investment-photo.jpg" },
   { image: "https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-05/shutterstock_264409757_0.jpg?h=265e640d&itok=qRj3l4JW" },
 ];
 
@@ -39,7 +39,7 @@ export default function HeroSection() {
           />
 
           {/* GRADIENT */}
-          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/80 to-black/30" />
         </div>
       ))}
 
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
 
           {/* MAIN HEADING */}
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
+          <h1 className="text-3xl md:text-5xl font-bold  text-white">
             Clarity in Thinking <br />
             <span className="text-[#079264] ">
               Confidence in Execution
@@ -80,18 +80,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* SLIDER INDICATOR */}
-      {/* <div className="absolute bottom-8  left-25 flex gap-2">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`h-1 transition-all duration-300 ${
-              i === index ? "w-10 bg-[#289572]" : "w-5 bg-white/30"
-            }`}
-          />
-        ))}
-      </div> */}
+ 
     </section>
   );
 }

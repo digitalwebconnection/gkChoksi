@@ -54,7 +54,7 @@ export default function AlumniPage() {
             </section>
             {/* INTRO SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-10 text-center">
-                <h2 className="text-4xl font-semibold text-[#0F3D2E] mb-6">
+                <h2 className="text-4xl font-bold text-[#0F3D2E] mb-6">
                     Our Alumni Community
                 </h2>
                 <p className="text-lg leading-relaxed">
@@ -74,7 +74,7 @@ export default function AlumniPage() {
                 </div>
 
                 <div className=" pt-20">
-                    <h3 className="text-4xl font-semibold text-[#1F6F5B] mb-4">
+                    <h3 className="text-4xl font-bold text-[#0F3D2E] mb-4">
                         Shared Experiences, Strong Bonds
                     </h3>
                     <p className="mb-4 text-justify ">
@@ -82,6 +82,7 @@ export default function AlumniPage() {
                     <p className="mb-4 text-justify ">
                         For us, alumni are not a chapter concluded, but a relationship that continues with appreciation, and with pride.
                     </p>
+                    <button className=" border px-8 py-2 rounded-lg bg-[#0F3D2E] text-white">Get In Tuch</button>
                 </div>
             </section>
 
@@ -89,7 +90,7 @@ export default function AlumniPage() {
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <h3 className="text-5xl font-semibold pb-5 text-center text-[#0F3D2E] mb-10">
+                <h3 className="text-5xl font-bold pb-5 text-center  text-[#0F3D2E] mb-10">
                     Alumni Moments
                 </h3>
 

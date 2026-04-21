@@ -124,7 +124,7 @@ const CareersPage = () => {
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
-              <span className="text-[#079264]">Thoughtful.</span>
+              <span className="text-[#079264]">Thoughtfully.</span>
             </h1>
           </motion.div>
         </div>
