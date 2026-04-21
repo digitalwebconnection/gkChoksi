@@ -169,7 +169,7 @@ const INDUSTRY_MODULES = [
         module: "Industrial",
         industries: [
             "Automotive",
-            "Aviation",
+            
             "Chemicals",
             "Construction",
             "Mining & Metals",
@@ -202,6 +202,7 @@ const INDUSTRY_MODULES = [
         module: "Services",
         industries: [
             "Agriculture",
+            "Aviation",
             "Education",
             "Food & Beverages",
             "Healthcare",
@@ -366,7 +367,7 @@ const IndustryPage = () => {
                     <p className="text-[#1C1C1C] text-xl md:text-2xl text-center font-light leading-relaxed tracking-tight">
                         Our approach is not to merely understand the industry,
                         but to understand your position within it
-                        and to provide guidance that is both and forward-looking.
+                        and to provide guidance that is both practical and forward-looking.
                     </p>
                 </div>
             </div>

@@ -46,8 +46,7 @@ const AboutSection = () => {
               Established in 1972 by CA Gautam K. Choksi, our Firm is built upon
               a distinguished legacy of professional integrity, independent
               judgment, and unwavering client trust. Conceived by a visionary
-              founder, it has matured into a prominent Chartered Accountancy
-              practice.
+              founder, it has matured into a prominent audit, accountancy & advisory practice.
             </p>
 
             <p className="mb-6 leading-relaxed text-justify text-black">
