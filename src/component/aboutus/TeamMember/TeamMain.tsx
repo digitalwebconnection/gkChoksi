@@ -67,9 +67,18 @@ export default function TeamSection() {
                     <div className="text-center max-w-3xl mx-auto mb-14">
 
 
-                        <h1 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-bold text-[#1C1C1C] mt-4">
-                            Our <span className="text-[#C2A96A]"> Team</span> 
-                        </h1>
+
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className="text-4xl md:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif font-bold text-gray-900"
+                        >
+                            Our <span className="text-[#C2A96A]  ">Team</span>
+                        </motion.h2> <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: 100 }}
+                            className="h-1 bg-linear-to-r from-[#289572] to-[#C2A96A] mx-auto mt-6"
+                        />
                     </div>
 
                     {/* MAIN CONTENT */}
@@ -172,7 +181,7 @@ export default function TeamSection() {
                     </div>
                     {/* FILTER */}
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
-                        {["All",  "Audit", "Legal","Tax"].map((item) => (
+                        {["All", "Audit", "Legal", "Tax"].map((item) => (
                             <button
                                 key={item}
                                 onClick={() => setFilter(item)}

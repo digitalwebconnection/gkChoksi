@@ -48,7 +48,7 @@ export default function HeroSection() {
 
 
           {/* MAIN HEADING */}
-          <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
+          <h1 className="text-3xl font-serif md:text-5xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
             Clarity in Thinking <br />
             <span className="text-[#079264] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]">
               Confidence in Execution

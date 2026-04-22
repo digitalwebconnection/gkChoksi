@@ -107,9 +107,9 @@ const Partners = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
+              className="text-4xl md:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
             >
-              Our <span className="text-[#C2A96A] font-serif ">Partners</span>
+              Our <span className="text-[#C2A96A]  ">Partners</span>
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}

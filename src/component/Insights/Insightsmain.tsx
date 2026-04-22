@@ -82,7 +82,7 @@ const InsightsMain: React.FC = () => {
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
                     <div className="max-w-3xl text-center text-white">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                            <h1 className="text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-semibold text-[#C2A96A]">
+                            <h1 className="text-3xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-semibold text-[#C2A96A]">
                                 Our Insights
                             </h1>
                             <p className=" text-2xl font-semibold mt-5">Publications & Regulatory</p>
@@ -166,7 +166,7 @@ const InsightsMain: React.FC = () => {
                     {/* LEFT */}
 
                     <div className="w-full  text-center  mb-8">
-                        <h1 className="text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center  tracking-widest text-[#C2A96A] ">
+                        <h1 className="text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center  tracking-widest text-[#C2A96A] ">
                             Key Authorities
                         </h1>
                         <p className="text-black text-xl font-semibold">

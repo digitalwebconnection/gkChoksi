@@ -122,7 +122,7 @@ const CareersPage = () => {
             <span className=" text-[#0bd390] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
               Work With Us
             </span>
-            <h1 className="text-5xl md:text-7xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
+            <h1 className="text-5xl font-serif md:text-7xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
               <span className="text-[#079264]">Thoughtfully.</span>
             </h1>
@@ -131,13 +131,13 @@ const CareersPage = () => {
       </section>
 
       {/* 2. CULTURE & LISTING SECTION */}
-      <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+      <section className="py-24 px-6 lg:px-5 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-16">
 
           {/* Left: Why Us */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 h-fit">
-            <h2 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
-              Why our firm is the <span className="text-[#C2A96A]">right fit</span> for you.
+            <h2 className="text-4xl  drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
+              Why Our Firm Is The <span className="text-[#C2A96A]">Right Fit</span> For You.
             </h2>
             <div className="space-y-8">
               <div className="flex gap-4">
