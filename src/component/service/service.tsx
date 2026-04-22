@@ -92,7 +92,7 @@ export const BOTTOM_POINTS = [
     text: "Industry-focused delivery",
     icon: HiOutlineBuildingOffice2,
     gradient: "from-[#3B82F6] to-[#1D4ED8]",
-    image: "https://www.optiproerp.com/wp-content/uploads/7-Step-Action-Plan-to-Improve-Delivery-Performance.png",
+    image: "https://controllerscouncil.org/wp-content/uploads/2026/03/AI-and-Automation.png",
   },
   {
     text: "Insight-driven decisions",
@@ -104,7 +104,7 @@ export const BOTTOM_POINTS = [
     text: "Partner-led execution",
     icon: HiOutlineUserGroup,
     gradient: "from-[#8B5CF6] to-[#6D28D9]",
-    image: "https://www.retail-insight-network.com/wp-content/uploads/sites/18/2026/04/shutterstock_2638480347-430x241.jpg",
+    image: "https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/getty_1160000498_mxfuqs.jpg",
   },
 ];
 

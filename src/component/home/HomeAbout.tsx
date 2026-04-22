@@ -113,11 +113,11 @@ const AboutSection = () => {
     />
 
     {/* PREMIUM OVERLAY */}
-    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
     {/* CONTENT */}
     <div className="absolute bottom-6 left-6 right-6 text-white">
-      <p className="text-xs uppercase tracking-[0.2em] text-[#6FAF9B]">
+      <p className="text-xl uppercase tracking-[0.2em] text-[#0effb3]">
         Client-first approach
       </p>
 
@@ -140,9 +140,7 @@ const AboutSection = () => {
 
     <p className="text-2xl font-bold mt-1">1972</p>
 
-    <p className="text-[11px] text-gray-300 mt-1">
-      Delivering reliable advisory for decades.
-    </p>
+   
   </motion.div>
 
   {/* SOFT GLOW (DEPTH EFFECT) */}

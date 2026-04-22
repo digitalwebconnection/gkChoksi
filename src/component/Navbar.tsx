@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   /* ---------------- SCROLL EFFECT ---------------- */
   useEffect(() => {
@@ -23,13 +24,51 @@ const Navbar: React.FC = () => {
   }, [lastScrollY]);
 
   /* ---------------- LINK STYLE ---------------- */
-  const baseLink =
-    "text-lg text-[#0F3D2E] hover:text-black transition-colors";
+  const linkBase =
+    "text-lg text-[#0F3D2E] hover:text-black transition-all duration-300";
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? `${baseLink} border-b border-black`
-      : baseLink;
+      ? `${linkBase} font-semibold border-b border-black pb-1`
+      : linkBase;
+
+  /* ---------------- ANIMATION VARIANTS ---------------- */
+
+  const drawerVariants: Variants = {
+    hidden: { x: "100%", scale: 0.98 },
+    visible: {
+      x: 0,
+      scale: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 120,
+        damping: 18,
+      },
+    },
+    exit: {
+      x: "100%",
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const menuContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const menuItem = {
+    hidden: { opacity: 0, x: 40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4 },
+    },
+  };
 
   return (
     <>
@@ -39,80 +78,107 @@ const Navbar: React.FC = () => {
         animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.35 }}
         className={`fixed top-0 left-0 z-50 w-full ${
-          isScrolled ? "bg-white/95 shadow-lg backdrop-blur" : "bg-white"
+          isScrolled ? "bg-white/90 backdrop-blur shadow-lg" : "bg-white"
         }`}
       >
         <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
-
+          
           {/* LOGO */}
           <NavLink to="/">
             <img src={logo} alt="Logo" className="h-10 w-auto" />
           </NavLink>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-10">
-            <NavLink to="/" className={getLinkClass}>Home</NavLink>
-            <NavLink to="/about" className={getLinkClass}>About Us</NavLink>
-            <NavLink to="/core-team" className={getLinkClass}>Core Team</NavLink>
-            <NavLink to="/services" className={getLinkClass}>Services</NavLink>
-            <NavLink to="/insights" className={getLinkClass}>Insights</NavLink>
-            <NavLink to="/industry" className={getLinkClass}>Industry</NavLink>
-            <NavLink to="/Alumni" className={getLinkClass}>Alumni</NavLink>
-            <NavLink to="/careers" className={getLinkClass}>Careers</NavLink>
-            <NavLink to="/contact" className={getLinkClass}>Contact</NavLink>
-          </div>
-
-          {/* MOBILE MENU BUTTON */}
-          <button
-            className="md:hidden text-3xl"
-            onClick={() => setMobileOpen(true)}
+          {/* HAMBURGER */}
+          <motion.button
+            whileTap={{ scale: 0.85 }}
+            whileHover={{ rotate: 90 }}
+            onClick={() => setMenuOpen(true)}
+            className="p-2 rounded-lg hover:bg-gray-100 transition"
           >
-            ☰
-          </button>
+            <Menu size={28} />
+          </motion.button>
         </div>
       </motion.nav>
 
-      {/* MOBILE DRAWER */}
+      {/* DRAWER */}
       <AnimatePresence>
-        {mobileOpen && (
+        {menuOpen && (
           <>
             {/* OVERLAY */}
             <motion.div
-              className="fixed inset-0 bg-black/40 z-40"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => setMenuOpen(false)}
             />
 
-            {/* MENU */}
+            {/* MENU PANEL */}
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 w-3/4 h-full bg-white z-50 shadow-2xl p-6"
+              variants={drawerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-50 shadow-2xl p-6 flex flex-col"
             >
-              {/* CLOSE BUTTON */}
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="text-2xl mb-6"
-              >
-                ✕
-              </button>
+              {/* HEADER */}
+              <div className="flex items-center justify-between mb-8">
+                <img src={logo} alt="Logo" className="h-8" />
+                <motion.button
+                  whileHover={{ rotate: 180 }}
+                  whileTap={{ scale: 0.8 }}
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2 rounded-lg hover:bg-gray-100"
+                >
+                  <X size={26} />
+                </motion.button>
+              </div>
 
               {/* MENU ITEMS */}
-              <nav className="flex flex-col space-y-4 text-lg">
-                <NavLink to="/" onClick={() => setMobileOpen(false)} className="border-b pb-2">Home</NavLink>
-                <NavLink to="/about" onClick={() => setMobileOpen(false)} className="border-b pb-2">About Us</NavLink>
-                <NavLink to="/core-team" onClick={() => setMobileOpen(false)} className="border-b pb-2">Core Team</NavLink>
-                <NavLink to="/services" onClick={() => setMobileOpen(false)} className="border-b pb-2">Services</NavLink>
-                <NavLink to="/insights" onClick={() => setMobileOpen(false)} className="border-b pb-2">Insights</NavLink>
-                <NavLink to="/industry" onClick={() => setMobileOpen(false)} className="border-b pb-2">Industry</NavLink>
-                <NavLink to="/Alumni" onClick={() => setMobileOpen(false)} className="border-b pb-2">Alumni</NavLink>
-                <NavLink to="/careers" onClick={() => setMobileOpen(false)} className="border-b pb-2">Careers</NavLink>
-                <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Contact</NavLink>
-              </nav>
+              <motion.nav
+                variants={menuContainer}
+                initial="hidden"
+                animate="visible"
+                className="flex flex-col space-y-6 text-lg"
+              >
+                {[
+                  { to: "/", label: "Home" },
+                  { to: "/about", label: "About Us" },
+                  { to: "/core-team", label: "Core Team" },
+                  { to: "/services", label: "Services" },
+                  { to: "/insights", label: "Insights" },
+                  { to: "/industry", label: "Industry" },
+                  { to: "/alumni", label: "Alumni" },
+                  { to: "/careers", label: "Careers" },
+                  { to: "/contact", label: "Contact" },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={menuItem}
+                    whileHover={{ x: 8 }}
+                  >
+                    <NavLink
+                      to={item.to}
+                      onClick={() => setMenuOpen(false)}
+                      className={getLinkClass}
+                    >
+                      {item.label}
+                    </NavLink>
+                  </motion.div>
+                ))}
+              </motion.nav>
+
+              {/* CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="mt-auto pt-10"
+              >
+                <button className="w-full bg-[#0F3D2E] text-white py-3 rounded-xl hover:bg-black transition">
+                  Get in Touch
+                </button>
+              </motion.div>
             </motion.div>
           </>
         )}

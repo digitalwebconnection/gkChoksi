@@ -44,7 +44,7 @@ const coreValues = [
     title: "Collaboration",
     text: "Working seamlessly across teams and clients.",
     icon: FaUsers,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtasI0ZWIXzxa3yb8HNc7YZ-XpO9-g9Iw-A&s", // teamwork / group discussion
+    image: "https://s43829.pcdn.co/wp-content/uploads/2018/07/Collaboration-at-the-Heart-of-Successful-Change-Initiatives.jpg", // teamwork / group discussion
     color: "#c5a059"
   },
   {
@@ -76,8 +76,7 @@ const VisionMissionSection = () => {
   return (
     <div className="bg-[#fcfcfc] font-sans text-slate-900">
 
-   
-
+  
       {/* SECTION 2: CORE VALUES (Interactive Showcase) */}
       <section className="py-24 bg-white  relative overflow-hidden">
         {/* Abstract Background Decoration */}
