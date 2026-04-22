@@ -12,17 +12,18 @@ import { useNavigate } from "react-router-dom";
 
 const services = [
   {
-    title: "Business Advisory",
-    icon: Briefcase,
-    color: "#3B82F6", // blue
-    bg: "#DBEAFE",
-  },
-  {
     title: "Audit & Assurance",
     icon: SearchCheck,
     color: "#10B981", // green
     bg: "#D1FAE5",
   },
+  {
+    title: "Business Advisory",
+    icon: Briefcase,
+    color: "#3B82F6", // blue
+    bg: "#DBEAFE",
+  },
+  
   {
     title: "Mergers & Acquisition",
     icon: GitMerge,
