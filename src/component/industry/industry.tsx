@@ -27,7 +27,7 @@ const CATEGORIES = [
         desc: "Navigating the shift toward electric vehicles and autonomous driving technology."
     },
     {
-        title: "Banking and Financial Services",
+        title: "Banking & Financial Services",
         img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
         desc: "Structural clarity for property development, REITs, and commercial asset management."
     },
@@ -68,7 +68,7 @@ const CATEGORIES = [
     },
     {
         title: "Jewellery",
-        img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800",
+        img: "https://www.ijewels.co.in/cdn/shop/files/cd028ec0-0590-4918-b22f-f09925350800_c598a80e-b5b0-433d-a081-369be3ebdc3a.png?v=1772455646&width=1024",
         desc: "Precision-led advisory for high-value luxury and gems, focusing on valuation and global compliance."
     },
     {
@@ -94,18 +94,14 @@ const CATEGORIES = [
     },
     {
         title: "Non Profit Organisations",
-        img: "https://media.licdn.com/dms/image/v2/C4E1BAQHBGhQrGXZHWQ/company-background_10000/company-background_10000/0/1585351065817/non_profit_organization_cover?e=2147483647&v=beta&t=a39S6iuYXM1_q8fPu-q15WPw-5X-xThdGhW44dG-DIQ"
+        img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800"
     },
     {
         title: "Non Banking Financial Company",
         img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
         desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
     },
-    {
-        title: "Non-Profit",
-        img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800",
-        desc: "Governance and audit services for social impact and charitable organizations."
-    },
+  
     {
         title: "Oil & Gas",
         img: "https://eco-cdn.iqpc.com/eco/images/channel_content/images/biggest_oil_and_gas_companies.jpg",

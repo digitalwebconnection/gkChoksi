@@ -168,17 +168,7 @@ const Navbar: React.FC = () => {
                 ))}
               </motion.nav>
 
-              {/* CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="mt-auto pt-10"
-              >
-                <button className="w-full bg-[#0F3D2E] text-white py-3 rounded-xl hover:bg-black transition">
-                  Get in Touch
-                </button>
-              </motion.div>
+            
             </motion.div>
           </>
         )}

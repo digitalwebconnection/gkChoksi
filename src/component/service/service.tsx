@@ -216,7 +216,7 @@ const ServicePage = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="text-3xl uppercase drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] tracking-[0.2em] text-[#C2A96A] mb-6 font-semibold">
+          <p className="text-5xl  drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-[#C2A96A] mb-6 font-semibold">
             Areas of Focus
           </p>
 

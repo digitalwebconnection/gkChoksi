@@ -109,7 +109,7 @@ const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
             >
-              Our <span className="text-[#C2A96A] font-serif italic">Partners</span>
+              Our <span className="text-[#C2A96A] font-serif ">Partners</span>
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}
@@ -151,7 +151,7 @@ const Partners = () => {
                     <img
                       src={partner.image}
                       alt={partner.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                       <span className="text-white text-sm  font-bold flex items-center gap-2">

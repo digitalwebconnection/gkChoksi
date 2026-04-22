@@ -121,7 +121,7 @@ export default function FeatureSection() {
               className="flex items-center justify-center  mb-4"
             >
 
-              <span className="text-3xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-center font-black tracking-[0.3em] text-[#C2A96A] uppercase">
+              <span className="text-5xl drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-center font-black  text-[#C2A96A] ">
                 The Foundation
               </span>
             </motion.div>

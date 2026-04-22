@@ -152,11 +152,7 @@ const InsightsMain: React.FC = () => {
                             </div>
 
 
-                            {/* Floating Card 2 */}
-                            <div className="absolute bottom-10 right-0 bg-slate-900 text-white  p-5 rounded-2xl shadow-xl w-48">
-                                <p className="text-xs uppercase text-slate-400">Conversion</p>
-                                <p className="text-lg font-bold">High Intent Leads</p>
-                            </div>
+                       
 
 
                         </motion.div>
@@ -170,7 +166,7 @@ const InsightsMain: React.FC = () => {
                     {/* LEFT */}
 
                     <div className="w-full  text-center  mb-8">
-                        <h1 className="text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center uppercase tracking-widest text-[#C2A96A] ">
+                        <h1 className="text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center  tracking-widest text-[#C2A96A] ">
                             Key Authorities
                         </h1>
                         <p className="text-black text-xl font-semibold">
