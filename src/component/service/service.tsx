@@ -351,7 +351,7 @@ const ServicePage = () => {
                   {selectedService.subtitle}
                 </h4>
 
-                <div className="mt-4 space-y-3 text-gray-700">
+                <div className="mt-4 space-y-3 text-justify text-gray-700">
                   {selectedService.paragraphs.map((para, index) => (
                     <p key={index}>{para}</p>
                   ))}

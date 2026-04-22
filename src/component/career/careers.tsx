@@ -145,10 +145,10 @@ const CareersPage = () => {
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-xl">Growth First</h4>
-                  <p className="text-black/60 text-md">At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.</p> <br />
+                  <h4 className="font-bold  text-xl">Growth First</h4>
+                  <p className="text-black/90 text-justify text-md">At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.</p> <br />
 
-                  <p className="text-black/60 text-md">We foster an environment that values curiosity, discipline, and integrity where questions are welcomed, ideas are respected, and excellence is quietly pursued.</p>
+                  <p className="text-black/90 text-justify text-md">We foster an environment that values curiosity, discipline, and integrity where questions are welcomed, ideas are respected, and excellence is quietly pursued.</p>
 
              
                 </div>

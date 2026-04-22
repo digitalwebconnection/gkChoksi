@@ -11,10 +11,10 @@ const fadeInUp = {
 const Footer = () => {
   const quickLinks = [
     { label: "About Us", to: "/about" },
-    { label: "Services", to: "/services/management-consulting" },
-    { label: "Industries", to: "/about" },
-    { label: "Team", to: "/about/team" },
-    { label: "Insights", to: "/blog" },
+    { label: "Services", to: "/services" },
+    { label: "Industries", to: "/industry" },
+    { label: "Core Team", to: "/core-team" },
+    { label: "Insights", to: "/Insights" },
     { label: "Careers", to: "/careers" },
     { label: "Contact Us", to: "/contact" },
   ];

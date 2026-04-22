@@ -27,9 +27,9 @@ MUMBAI,MAHARASHTRA, INDIA,
     },
     {
         city: "Petlad, Gujarat",
-        address: `SURYA BHAWAN,
-STATION ROAD, PETLAD,
-GUJARAT, INDIA,
+        address: `SURYA BHAWAN,STATION ROAD,
+ PETLAD,GUJARAT, 
+ INDIA,
 388450`,
         phone: `+91 2697 224383
 +91 2697 224108`,
@@ -399,7 +399,7 @@ const ContactSection: React.FC = () => {
                                     {/* Address */}
                                     <div className="flex gap-3">
                                         <MapPin size={18} className="text-green-700 mt-1" />
-                                        <p className="whitespace-pre-line">{branch.address}</p>
+                                        <p className="whitespace-pre-line ">{branch.address}</p>
                                     </div>
                                     {/* Phone */}
                                     <div className="flex gap-3">

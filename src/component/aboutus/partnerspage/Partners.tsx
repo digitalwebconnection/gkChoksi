@@ -66,7 +66,7 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       className="group h-full"
     >
-      <div className={`relative h-full p-8 rounded-xl bg-white border border-gray-900/20 transition-all duration-500 
+      <div className={`relative h-full p-6 rounded-xl bg-white border border-gray-900/20 transition-all duration-500 
         ${block.highlight ? "shadow-[0_20px_50px_rgba(194,169,106,0.15)] border-[#C2A96A]/20" : "shadow-xl shadow-gray-200/40"}`}>
 
         {/* Hover Gradient Blob */}
@@ -79,11 +79,11 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
           <Icon className="w-7 h-7" style={{ color: block.color }} />
         </div>
 
-        <h3 style={{ transform: "translateZ(30px)" }} className="text-3xl font-bold text-gray-900 mb-3">
+        <h3 style={{ transform: "translateZ(30px)" }} className="text-2xl font-bold text-gray-900 mb-3">
           {block.title}
         </h3>
 
-        <p style={{ transform: "translateZ(20px)" }} className="text-gray-900 leading-relaxed text-md md:text-xl">
+        <p style={{ transform: "translateZ(20px)" }} className="text-gray-900 text-justify leading-relaxed text-md md:text-xl">
           {block.text}
         </p>
 

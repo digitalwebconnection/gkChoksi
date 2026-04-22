@@ -15,6 +15,7 @@ import CareersPage from "./component/career/careers";
 import IndustryPage from "./component/industry/industry";
 import ServicePage from "./component/service/service";
 import Coreteam from "./component/Coreteam/Coreteam";
+import ScrollToTop from "./component/PageWrapper";
 
 // import ServicePage from "./component/service/service";
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <Router>
       <DisclaimerModal />
+      <ScrollToTop />
       {/* Fixed navbar at top */}
       <Navbar />
 

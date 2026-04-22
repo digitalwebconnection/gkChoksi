@@ -195,46 +195,63 @@ export default function TeamSection() {
                             </button>
                         ))}
                     </div>
-
                     {/* TEAM GRID */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                        {filteredTeam.map((member) => (
-                            <div
-                                key={member.id}
-                                onClick={() => setActiveMember(member)}
-                                className="cursor-pointer group"
-                            >
-                                <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                        {filteredTeam.map((member) => {
+                            const isClickable = !!member.details;
 
-                                    {/* IMAGE */}
-                                    <div className="relative h-60 overflow-hidden">
-                                        <img
-                                            src={member.image}
-                                            className="w-full h-full object-fill grayscale-100 group-hover:grayscale-0   transition duration-500 group-hover:scale-105"
-                                        />
-                                        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-                                    </div>
+                            return (
+                                <div
+                                    key={member.id}
+                                    onClick={() => {
+                                        if (isClickable) {
+                                            setActiveMember(member);
+                                        }
+                                    }}
+                                    className={`group ${isClickable
+                                            ? "cursor-pointer"
+                                            : "cursor-default "
+                                        }`}
+                                >
+                                    <div
+                                        className={`bg-white border border-black/30 rounded-xl overflow-hidden shadow-sm transition ${isClickable ? "hover:shadow-xl" : ""
+                                            }`}
+                                    >
+                                        {/* IMAGE */}
+                                        <div className="relative h-60 overflow-hidden">
+                                            <img
+                                                src={member.image}
+                                                className={`w-full h-full object-fill transition duration-500 ${isClickable
+                                                        ? "grayscale-100 group-hover:grayscale-0 group-hover:scale-105"
+                                                        : "grayscale"
+                                                    }`}
+                                            />
+                                            <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+                                        </div>
 
-                                    {/* CONTENT */}
-                                    <div className="p-4 text-center">
-                                        <h3 className="font-semibold text-gray-900 text-sm">
-                                            {member.name}
-                                        </h3>
+                                        {/* CONTENT */}
+                                        <div className="p-4 text-center">
+                                            <h3 className="font-semibold text-gray-900 text-sm">
+                                                {member.name}
+                                            </h3>
 
-                                        {/* <p className="text-xs text-[#289572] mt-1">
-                                            {member.details}
-                                        </p> */}
-
+                                            {/* Optional: show label */}
+                                            {!isClickable && (
+                                                <p className="text-xs text-gray-400 mt-1">
+                                                    {/* Details not available */}
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
 
                 {/* MODAL */}
                 <AnimatePresence>
-                    {activeMember && (
+                    {activeMember && activeMember.details && (
                         <motion.div
                             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md px-4"
                             initial={{ opacity: 0 }}
@@ -249,19 +266,18 @@ export default function TeamSection() {
                                 exit={{ scale: 0.95, opacity: 0 }}
                                 className="bg-white max-w-5xl w-full overflow-hidden shadow-2xl relative"
                             >
-
-                                {/* ✅ LEFT ARROW */}
+                                {/* LEFT ARROW */}
                                 <button
                                     onClick={handlePrev}
-                                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 py-3 px-2  shadow z-20"
+                                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 py-3 px-2 shadow z-20"
                                 >
                                     ←
                                 </button>
 
-                                {/* ✅ RIGHT ARROW */}
+                                {/* RIGHT ARROW */}
                                 <button
                                     onClick={handleNext}
-                                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 py-3 px-2  shadow z-20"
+                                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 py-3 px-2 shadow z-20"
                                 >
                                     →
                                 </button>
@@ -275,7 +291,6 @@ export default function TeamSection() {
                                 </button>
 
                                 <div className="grid grid-cols-12">
-
                                     {/* IMAGE */}
                                     <div className="bg-[#F7F9F8] flex items-center col-span-12 md:col-span-4 justify-center p-6">
                                         <img
@@ -285,7 +300,7 @@ export default function TeamSection() {
                                     </div>
 
                                     {/* CONTENT */}
-                                    <div className="p-8 col-span-12 md:col-span-8  bg-[#0F3D2E] text-white">
+                                    <div className="p-8 col-span-12 md:col-span-8 bg-[#0F3D2E] text-white">
                                         <p className="text-xs uppercase tracking-widest">
                                             {activeMember.department}
                                         </p>
@@ -298,38 +313,37 @@ export default function TeamSection() {
                                             {activeMember.role}
                                         </p>
 
-                                        {activeMember.details && (
-                                            <motion.div
-                                                className="mt-6 space-y-4"
-                                                initial="hidden"
-                                                animate="visible"
-                                                variants={{
-                                                    hidden: {},
-                                                    visible: {
-                                                        transition: {
-                                                            staggerChildren: 0.3
-                                                        }
-                                                    }
-                                                }}
-                                            >
-                                                {activeMember.details.split('\n\n').map((paragraph, index) => (
+                                        {/* DETAILS */}
+                                        <motion.div
+                                            className="mt-6 space-y-4"
+                                            initial="hidden"
+                                            animate="visible"
+                                            variants={{
+                                                hidden: {},
+                                                visible: {
+                                                    transition: {
+                                                        staggerChildren: 0.3,
+                                                    },
+                                                },
+                                            }}
+                                        >
+                                            {activeMember.details
+                                                .split("\n\n")
+                                                .map((paragraph, index) => (
                                                     <motion.p
                                                         key={index}
                                                         className="text-sm leading-relaxed opacity-90"
                                                         variants={{
                                                             hidden: { opacity: 0, y: 20 },
-                                                            visible: { opacity: 1, y: 0 }
+                                                            visible: { opacity: 1, y: 0 },
                                                         }}
                                                         transition={{ duration: 0.5 }}
                                                     >
                                                         {paragraph}
                                                     </motion.p>
                                                 ))}
-                                            </motion.div>
-                                        )}
-
+                                        </motion.div>
                                     </div>
-
                                 </div>
                             </motion.div>
                         </motion.div>
