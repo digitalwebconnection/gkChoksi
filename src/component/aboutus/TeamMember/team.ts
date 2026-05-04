@@ -46,7 +46,7 @@ export const TEAM: TeamMember[] = [
         department: "Tax",
         image: Ullas,
         experience: "28+ years",
-        details: undefined,
+        details: "Ullas is a seasoned Chartered Accountant with over three decades of experience in corporate advisory, transaction advisory, and tax strategy. Since qualifying in 1997, he has built a strong reputation for delivering insight-driven, value-focused solutions across complex financial and regulatory landscapes. At G. K. Choksi & Co, he has led high-impact engagements spanning audit assurance, tax litigation, international transactions, and transfer pricing across key financial centres including Ahmedabad, Mumbai, and Delhi. \n\nAs Director of GKC Advisory Services Private Limited, Ullas spearheads transaction advisory mandates, including resolution of stressed assets under the Insolvency and Bankruptcy Code (IBC) and investment banking initiatives. His approach blends commercial acumen with strategic foresight, enabling clients to navigate complex transactions with clarity and confidence while driving sustainable value creation.  \n\n Known for his disciplined execution and trusted advisory, Ullas fosters long-term client relationships and leads with a strong focus on excellence and continuous learning. He brings a distinctive perspective by integrating philosophical depth with financial expertise, believing that innovation, when guided by purpose, is central to building enduring and impactful outcomes.      ",
         status: "Open",
     },
     {

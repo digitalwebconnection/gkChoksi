@@ -15,7 +15,7 @@ export const partners = [
     email: "rkc@gkcco.com",
     image: rohitImg,
     description1: `At the helm of the Firm, CA. Rohit K. Choksi brings a measured blend of technical depth and strategic foresight. His practice spans taxation, business advisory, and assurance, with a particular emphasis on international taxation and complex transaction structuring, including mergers and acquisitions. He is equally experienced in navigating sensitive, search-related matters with discretion and clarity. Over the years, he has advised both transnational enterprises and leading Indian organisations across various sectors.`,
-    description2: `He is a respected member of the Indian Council of Arbitration and serves on its Panel of Arbitrators, in addition to contributing as a member of the Executive Committee of the Income Tax Appellate Tribunal Bar Association, reflecting his continued engagement with the evolving legal and professional framework`,
+    description2: `He is a respected member of the Indian Council of Arbitration and serves on its Panel of Arbitrators, over and above he is also involved in various charitable events, reflecting his continued engagement with the evolving legal and professional framework`,
     description3: `His approach remains grounded in first principles combining precision with perspective to help clients move forward with confidence.`,
   },
 
@@ -90,7 +90,7 @@ export const partners = [
     designation: "Partner - ACA, DISA (ICAI), B. Com",
     email: "ndp@gkcco.com",
     image: nehalImg,
-    description1: `CA Nehal Shah’s journey with the Firm reflects a rare continuity of purpose and growth, having begun his career as an article assistant over two decades ago. Over the years, he has evolved alongside the organisation, contributing steadily to its development and becoming an integral part of its leadership.
+    description1: `CA Nehal Shah’s journey with the Firm reflects a rare continuity of purpose and growth, having begun his career as an article assistant over 25 years ago. Over the years, he has evolved alongside the organisation, contributing steadily to its development and becoming an integral part of its leadership.
 `,
     description2: `His professional approach is defined by commitment, discipline, and a strong sense of ownership whether in managing time-sensitive engagements or contributing to the Firm’s broader growth initiatives. He brings together sound technical understanding with a practical business perspective, enabling consistent and reliable outcomes.`,
     description3: `He is known for his balanced leadership style, combining high professional standards with a genuine regard for people. His ability to lead with clarity while fostering trust and collaboration continues to make a meaningful difference within the Firm and across client engagements.`,
