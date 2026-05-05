@@ -79,14 +79,14 @@ const VisionMissionSection = () => {
   return (
     <div className="bg-[#fcfcfc] font-sans text-slate-900">
 
-  
+
       {/* SECTION 2: CORE VALUES (Interactive Showcase) */}
-      <section className="py-24 bg-white  relative overflow-hidden">
+      <section className="py-24  bg-white  relative overflow-hidden">
         {/* Abstract Background Decoration */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#79590a]/5 skew-x-12 translate-x-20" />
+        {/* <div className="absolute top-0 right-0 w-1/3 h-full bg-[#79590a]/5 skew-x-12 translate-x-20" /> */}
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className="text-5xl text-center drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif mb-10 font-bold leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif mb-10 font-bold leading-tight px-4">
             Our <span className="text-[#c5a059]">Excellence</span> <br />is Driven by Values
           </h2>
           <div className="grid lg:grid-cols-12 gap-10 items-center">
@@ -112,14 +112,12 @@ const VisionMissionSection = () => {
 
             {/* Right Column: Interaction */}
             <div className="lg:col-span-5">
-
-
               <div className="space-y-4">
                 {coreValues.map((val, i) => (
                   <button
                     key={i}
                     onClick={() => { setActiveValue(i); setProgress(0); }}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 group flex items-center gap-4 ${activeValue === i ? "bg-[#032509] translate-x-4" : "hover:bg-[#c5a059]"
+                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 group flex items-center gap-4 ${activeValue === i ? "bg-[#032509] " : "hover:bg-[#c5a059]"
                       }`}
                   >
                     <div className="relative">

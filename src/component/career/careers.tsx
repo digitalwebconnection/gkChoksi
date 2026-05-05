@@ -15,67 +15,67 @@ import careerHero from "../../assets/Career/1.jpeg";
 
 
 const JOBS = [
- {
-  title: "Article Assistant - Audit",
-  type: "Full-Time",
-  location: "Ahmedabad",
-  exp: "Only fresher",
-  icon: <Briefcase className="w-5 h-5" />,
+  {
+    title: "Article Assistant - Audit",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "Only fresher",
+    icon: <Briefcase className="w-5 h-5" />,
 
-  description:
-    "Kickstart your professional journey with hands-on exposure to real-world audit, taxation, and advisory engagements. Work closely with experienced professionals and build strong technical and analytical skills.",
+    description:
+      "Kickstart your professional journey with hands-on exposure to real-world audit, taxation, and advisory engagements. Work closely with experienced professionals and build strong technical and analytical skills.",
 
-  responsibilities: [
-    "Assist in Statutory Audits of Indian GAAP (AS & IND AS) clients",
-    "Support in preparation and review of financial statements",
-    "Work on audit documentation, compliance, and reporting",
-    "Assist in handling client queries and coordination",
-    "Identify discrepancies and support senior team members with solutions",
-    "Maintain working papers and ensure timely completion of assignments"
-  ],
+    responsibilities: [
+      "Assist in Statutory Audits of Indian GAAP (AS & IND AS) clients",
+      "Support in preparation and review of financial statements",
+      "Work on audit documentation, compliance, and reporting",
+      "Assist in handling client queries and coordination",
+      "Identify discrepancies and support senior team members with solutions",
+      "Maintain working papers and ensure timely completion of assignments"
+    ],
 
-  requirements: [
-    "CA Intermediate (Both Groups cleared)",
-    "Strong interest in Audit, Accounting, and Financial Reporting",
-    "Basic knowledge of Ind AS and Standards on Auditing",
-    "Good understanding of MS Excel and MS Office tools",
-    "Strong analytical and problem-solving skills",
-    "Willingness to learn and adapt in a professional environment",
-    "Good communication and teamwork abilities"
-  ],
+    requirements: [
+      "CA Intermediate (Both Groups cleared)",
+      "Strong interest in Audit, Accounting, and Financial Reporting",
+      "Basic knowledge of Ind AS and Standards on Auditing",
+      "Good understanding of MS Excel and MS Office tools",
+      "Strong analytical and problem-solving skills",
+      "Willingness to learn and adapt in a professional environment",
+      "Good communication and teamwork abilities"
+    ],
 
-},
-{
-  title: "Article Assistant - Tax",
-  type: "Full-Time",
-  location: "Ahmedabad",
-  exp: "Only fresher", 
-  icon: <Briefcase className="w-5 h-5" />,
+  },
+  {
+    title: "Article Assistant - Tax",
+    type: "Full-Time",
+    location: "Ahmedabad",
+    exp: "Only fresher",
+    icon: <Briefcase className="w-5 h-5" />,
 
-  description:
-    "Gain real-time exposure to income tax litigation, advisory, and compliance. Work on high-impact tax matters and develop strong legal, analytical, and drafting skills in a professional environment.",
+    description:
+      "Gain real-time exposure to income tax litigation, advisory, and compliance. Work on high-impact tax matters and develop strong legal, analytical, and drafting skills in a professional environment.",
 
-  responsibilities: [
-    "Assist in handling income tax proceedings including assessment, reassessment, and appeals",
-    "Support in tax litigation matters and advisory assignments",
-    "Prepare submissions, replies, and legal documents",
-    "Conduct research on tax laws, case laws, and interpretations",
-    "Assist in transfer pricing, search & survey related matters",
-    "Work closely with seniors on complex tax cases"
-  ],
+    responsibilities: [
+      "Assist in handling income tax proceedings including assessment, reassessment, and appeals",
+      "Support in tax litigation matters and advisory assignments",
+      "Prepare submissions, replies, and legal documents",
+      "Conduct research on tax laws, case laws, and interpretations",
+      "Assist in transfer pricing, search & survey related matters",
+      "Work closely with seniors on complex tax cases"
+    ],
 
-  requirements: [
-    "CA Intermediate (Both Groups cleared in recent attempts)",
-    "Strong interest in Direct Tax Litigation & Advisory",
-    "Passion for legal drafting and tax interpretation",
-    "Good research and analytical skills",
-    "Proficiency in MS Word & Excel (data analysis, reconciliations)",
-    "Logical thinking and problem-solving mindset",
-    "Willingness to learn and grow in taxation domain"
-  ],
+    requirements: [
+      "CA Intermediate (Both Groups cleared in recent attempts)",
+      "Strong interest in Direct Tax Litigation & Advisory",
+      "Passion for legal drafting and tax interpretation",
+      "Good research and analytical skills",
+      "Proficiency in MS Word & Excel (data analysis, reconciliations)",
+      "Logical thinking and problem-solving mindset",
+      "Willingness to learn and grow in taxation domain"
+    ],
 
 
-}
+  }
 ];
 
 // --- Animation Variants ---
@@ -104,7 +104,7 @@ const CareersPage = () => {
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.5 }}
           transition={{ duration: 1.5 }}
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 "
           style={{ backgroundImage: `url(${careerHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#1A1A1A]/30 to-[#1A1A1A]/70" />
@@ -118,7 +118,7 @@ const CareersPage = () => {
             <span className=" text-[#0bd390] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
               Work With Us
             </span>
-            <h1 className="text-5xl font-serif md:text-7xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
               <span className="text-[#079264]">Thoughtfully.</span>
             </h1>
@@ -132,7 +132,7 @@ const CareersPage = () => {
 
           {/* Left: Why Us */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 h-fit">
-            <h2 className="text-4xl  drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
               Why Our Firm Is The <span className="text-[#C2A96A]">Right Fit</span> For You.
             </h2>
             <div className="space-y-8">
@@ -146,7 +146,7 @@ const CareersPage = () => {
 
                   <p className="text-black/90 text-justify text-md">We foster an environment that values curiosity, discipline, and integrity where questions are welcomed, ideas are respected, and excellence is quietly pursued.</p>
 
-             
+
                 </div>
               </div>
 
@@ -197,12 +197,12 @@ const CareersPage = () => {
                   className="w-full p-6 md:p-8 text-left flex items-start justify-between gap-4"
                 >
                   <div className="flex gap-6">
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-colors ${openIndex === idx ? "bg-[#C2A96A] text-white" : "bg-white text-black/20"}`}>
+                    <div className={`md:w-14 w-10 h-8 md:h-14 rounded-2xl flex items-center justify-center transition-colors ${openIndex === idx ? "bg-[#C2A96A] text-white" : "bg-white text-black/20"}`}>
                       {job.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">{job.title}</h3>
-                      <div className="flex flex-wrap gap-4 text-xs font-medium text-black/40">
+                      <h3 className="text-lg md:text-2xl font-bold mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap gap-4 text-xs font-medium text-black/90">
                         <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {job.type}</span>
                         <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5" /> {job.location}</span>
                         <span className="flex items-center gap-1"><Briefcase className="w-3.5 h-3.5" /> {job.exp}</span>
@@ -222,7 +222,7 @@ const CareersPage = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <div className="px-8 pb-10 pt-2 ml-20">
+                      <div className="px-4 md:px-8 pb-10 pt-2 ml-0 md:ml-20">
                         <div className="h-px bg-black/5 mb-8" />
 
                         {job.description && (
@@ -261,11 +261,14 @@ const CareersPage = () => {
                           )}
                         </div>
 
-                        <a
-                        href="mailto:hr@gkcco.com"
-                        className="mt-12 bg-[#1A1A1A] text-white  px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#C2A96A] transition-colors shadow-lg">
-                          Apply for this position
-                        </a>
+                        <div className="mt-12 flex justify-center md:justify-start">
+                          <a
+                            href="mailto:hr@gkcco.com"
+                            className="bg-[#1A1A1A] text-white px-8 md:px-10 py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-[#C2A96A] transition-colors shadow-lg"
+                          >
+                            Apply for this position
+                          </a>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -290,7 +293,7 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold mb-6 text-[#1C1C1C]"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#1C1C1C]"
           >
             Ready to <span className="text-[#C2A96A] ">make your mark?</span>
           </motion.h2>

@@ -38,9 +38,9 @@ function App() {
           <Route path="/services" element={<ServicePage />} />
           <Route path="/insights" element={<InsightsMain />} />
           <Route path="/about/partners" element={<Partners />} />
-           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/careers" element={<CareersPage />} />
           <Route path="/industry" element={<IndustryPage />} />
-        <Route path="/core-team" element={<Coreteam />} />
+          <Route path="/core-team" element={<Coreteam />} />
           <Route path="/contact" element={<ContactMain />} />
           <Route path="/alumni" element={<AlumniPage />} />
         </Routes>

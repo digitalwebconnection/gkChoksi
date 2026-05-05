@@ -71,7 +71,7 @@ const WhatWeOffer = () => {
 
   return (
     <section className="relative overflow-hidden py-12 bg-[#F7F9F8]">
-      <div className="relative mx-auto max-w-7xl px-4">
+      <div className="relative mx-auto max-w-7xl px-6">
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
@@ -79,8 +79,8 @@ const WhatWeOffer = () => {
             Our Core Expertise
           </p>
 
-          <h2 className="mt-3 font-serif text-3xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-[#C2A96A] sm:text-5xl">
-            Integrated Professional Solutions
+          <h2 className="mt-3 font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-[#C2A96A]">
+            Comprehensive Professional Services
           </h2>
 
           <p className="mx-auto mt-4 text-xl text-[#0a382d]">

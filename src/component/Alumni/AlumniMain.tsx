@@ -46,7 +46,7 @@ export default function AlumniPage() {
 
                 {/* Content */}
                 <div className="relative max-w-7xl mx-auto px-6 pt-52 text-center">
-                    <h1 className="text-3xl font-serif md:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-6">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-6">
                         Connections That Endure
                     </h1>
                     <p className="text-lg md:text-xl text-[#47f0ba] max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export default function AlumniPage() {
             </section>
             {/* INTRO SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-10 text-center">
-                <h2 className="text-5xl font-serif font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#0F3D2E] mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#0F3D2E] mb-6">
                     Our Alumni Community
                 </h2>
                 <p className="text-lg leading-relaxed">
@@ -76,7 +76,7 @@ export default function AlumniPage() {
                 </div>
 
                 <div className=" pt-20">
-                    <h3 className="text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#0F3D2E] mb-4">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#0F3D2E] mb-4">
                         Shared Experiences, Strong Bonds
                     </h3>
                     <p className="mb-4 text-justify ">
@@ -98,7 +98,7 @@ export default function AlumniPage() {
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <h3 className="text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center  text-[#0F3D2E] mb-10">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center text-[#0F3D2E] mb-10">
                     Alumni Moments
                 </h3>
 

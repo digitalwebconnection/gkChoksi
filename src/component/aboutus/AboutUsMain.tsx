@@ -6,8 +6,8 @@ const AboutUsMain = () => {
   return (
     <>
       <AboutUsSection />
-      <FeatureSection/>
-    
+      <FeatureSection />
+
     </>
   )
 }

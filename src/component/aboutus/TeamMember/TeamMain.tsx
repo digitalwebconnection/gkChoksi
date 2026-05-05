@@ -71,7 +71,7 @@ export default function TeamSection() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif font-bold text-gray-900"
+                            className="text-3xl md:text-5xl lg:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif font-bold text-gray-900"
                         >
                             Our <span className="text-[#C2A96A]  ">Team</span>
                         </motion.h2> <motion.div
@@ -88,7 +88,7 @@ export default function TeamSection() {
                         <div className="relative rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src={teamImg}
-                                className="w-full h-[300px] object-cover"
+                                className="w-full h-[300px] object-fill md:object-cover"
                             />
                             {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" /> */}
                         </div>
@@ -185,7 +185,7 @@ export default function TeamSection() {
                             <button
                                 key={item}
                                 onClick={() => setFilter(item)}
-                                className={`px-8 py-2 rounded-lg text-md font-medium transition
+                                className={`px-3 md:px-8 py-2 rounded-lg text-md font-medium transition
         ${filter === item
                                         ? "bg-[#289572] text-white "
                                         : "bg-gray-100 border border-gray-800/30 text-gray-700 hover:bg-[#289572] hover:text-white"
@@ -218,7 +218,7 @@ export default function TeamSection() {
                                             }`}
                                     >
                                         {/* IMAGE */}
-                                        <div className="relative h-60 overflow-hidden">
+                                        <div className="relative h-80 md:h-60 overflow-hidden">
                                             <img
                                                 src={member.image}
                                                 className={`w-full h-full object-fill transition duration-500 ${isClickable
@@ -264,7 +264,7 @@ export default function TeamSection() {
                                 initial={{ scale: 0.9, opacity: 0, y: 40 }}
                                 animate={{ scale: 1, opacity: 1, y: 0 }}
                                 exit={{ scale: 0.95, opacity: 0 }}
-                                className="bg-white max-w-5xl w-full overflow-hidden shadow-2xl relative"
+                                className="bg-white max-w-5xl w-full overflow-y-auto md:overflow-hidden shadow-2xl relative max-h-[90vh] rounded-xl"
                             >
                                 {/* LEFT ARROW */}
                                 <button

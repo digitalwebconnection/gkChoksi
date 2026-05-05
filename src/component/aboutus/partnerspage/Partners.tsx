@@ -107,7 +107,7 @@ const Partners = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
+              className="text-3xl md:text-5xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
             >
               Our <span className="text-[#C2A96A]  ">Partners</span>
             </motion.h2>
@@ -130,7 +130,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-4xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-gray-900">Leadership Team</h3>
+            <h3 className="text-3xl md:text-4xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-gray-900">Leadership Team</h3>
 
           </div>
 

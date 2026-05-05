@@ -66,7 +66,7 @@ const ContactHeroSection = () => {
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2 }}
-          className="text-5xl font-serif md:text-7xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold tracking-tight"
+          className="text-3xl md:text-5xl lg:text-7xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold tracking-tight"
         >
           {text}
           <motion.span

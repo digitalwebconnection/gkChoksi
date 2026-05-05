@@ -77,12 +77,11 @@ const Navbar: React.FC = () => {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.35 }}
-        className={`fixed top-0 left-0 z-50 w-full ${
-          isScrolled ? "bg-white/90 backdrop-blur shadow-lg" : "bg-white"
-        }`}
+        className={`fixed top-0 left-0 z-50 w-full ${isScrolled ? "bg-white/90 backdrop-blur shadow-lg" : "bg-white"
+          }`}
       >
         <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
-          
+
           {/* LOGO */}
           <NavLink to="/">
             <img src={logo} alt="Logo" className="h-10 w-auto" />
@@ -168,7 +167,7 @@ const Navbar: React.FC = () => {
                 ))}
               </motion.nav>
 
-            
+
             </motion.div>
           </>
         )}

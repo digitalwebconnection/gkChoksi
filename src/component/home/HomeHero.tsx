@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden select-none">
+    <section className="relative h-150 md:h-screen flex items-center justify-center overflow-hidden select-none">
 
       {/* Background Images */}
       {images.map((img, index) => (
@@ -63,7 +63,7 @@ const HeroSection = () => {
       >
 
         {/* Title */}
-        <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-5xl font-bold font-serif">
+        <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-5xl lg:text-7xl font-bold font-serif">
           G.K. Choksi & Co
         </h1>
         <p className="text-[#f5cd55] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
@@ -73,7 +73,7 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <motion.div
-          className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+          className="mt-8 flex  justify-center"
         >
 
           {/* ✅ FIXED BUTTON */}

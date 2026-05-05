@@ -249,7 +249,7 @@ const IndustryPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-[#C2A96A] font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-3xl md:text-5xl  tracking-wide"
+                        className="text-[#C2A96A] font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-3xl md:text-4xl lg:text-5xl  tracking-wide"
                     >
                         Understanding Business, <br />
                         <span className=" text-white">Beyond Numbers</span>
@@ -295,7 +295,7 @@ const IndustryPage = () => {
                             <span className="text-[#583f05] font-bold tracking-[0.2em] text-xl uppercase block mb-6">
                                 Specialized Advisory
                             </span>
-                            <h2 className="text-3xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] lg:text-5xl font-bold text-[#1C1C1C] leading-[0.9] mb-10">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#1C1C1C] leading-[0.9] mb-10">
                                 Our   <span className="text-green-900">Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />

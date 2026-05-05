@@ -159,7 +159,7 @@ const ServicePage = () => {
           animate="show"
           className="relative z-10 text-center px-6 max-w-3xl"
         >
-          <h1 className="text-3xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-bold text-[#C2A96A]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A]">
             Our Professional Services
           </h1>
 
@@ -216,7 +216,7 @@ const ServicePage = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-black mb-6 font-semibold">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-black mb-6 font-semibold">
             Areas of Focus
           </p>
 
@@ -232,7 +232,7 @@ const ServicePage = () => {
                 <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-md opacity-0 group-hover:opacity-60 transition duration-500" />
 
                 {/* Chip */}
-                <div className="relative z-10 px-10 py-3 rounded-full text-sm font-semibold bg-white border border-[#6FAF9B]/50 shadow-md transition-all duration-300 group-hover:bg-[#1C1C1C] group-hover:text-white group-hover:border-transparent">
+                <div className="relative z-10 px-5 md:px-10 py-3 rounded-full text-sm font-semibold bg-white border border-[#6FAF9B]/50 shadow-md transition-all duration-300 group-hover:bg-[#1C1C1C] group-hover:text-white group-hover:border-transparent">
 
                   {/* Animated underline */}
                   <span className="relative">

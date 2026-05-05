@@ -90,7 +90,7 @@ const ContactSection: React.FC = () => {
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
                         {/* RIGHT – Contact Form */}
-                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-14 overflow-hidden">
+                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-5 md:p-14 overflow-hidden">
 
                             {/* Decorative Accent */}
                             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-green-100 opacity-40 blur-3xl" />
@@ -101,7 +101,7 @@ const ContactSection: React.FC = () => {
                                     Confidential Advisory
                                 </span>
 
-                                <h3 className="text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] leading-tight">
+                                <h3 className="text-3xl md:text-4xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
                                     Speak With Our Experts
                                 </h3>
 
@@ -185,7 +185,7 @@ const ContactSection: React.FC = () => {
                                         type="submit"
                                         className="inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
               hover:bg-[#1F6F5B] 
-              text-white  px-14 py-4  font-semibold tracking-wide transition  hover:shadow-2xl"
+              text-white px-4  md:px-14 py-4  font-semibold tracking-wide transition  hover:shadow-2xl"
                                     >
                                         Request Consultation
                                         <span className="text-lg">→</span>
@@ -286,9 +286,9 @@ const ContactSection: React.FC = () => {
                                 Office Headquarters
                             </span>
 
-                            <h2 className="mt-4 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-4xl lg:text-5xl font-bold text-white leading-tight">
+                            <h2 className="mt-4 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                                 G.K. Choksi & Co.
-                                <span className="block text-gray-300 text-2xl mt-2">
+                                <span className="block text-gray-300 text-xl md:text-2xl mt-2">
                                     Ahmedabad
                                 </span>
                             </h2>
@@ -350,7 +350,7 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h2 className="text-4xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] md:text-5xl font-extrabold text-[#C2A96A]">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-extrabold text-[#C2A96A]">
                             Our Branches
                         </h2>
 

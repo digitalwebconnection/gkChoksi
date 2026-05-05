@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -16,44 +16,58 @@ const Footer = () => {
     { label: "Core Team", to: "/core-team" },
     { label: "Insights", to: "/Insights" },
     { label: "Careers", to: "/careers" },
-    { label: "Contact Us", to: "/contact" },
   ];
+
+  const locations = ["Mumbai", "Ahmedabad", "Delhi NCR", "Petlad, Gujarat"];
 
   return (
     <motion.footer
-      id="contact"
-      className="border-t-2 border-gray-800/50 bg-white"
+      className="bg-slate-50 border-t border-gray-200 font-sans"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-x-20">
-          {/* Left separate div */}
-          <div className="text-center md:text-left">
-            <img
-              src={logo}
-              alt="G.K. Choksi & Co."
-              className="mx-auto h-10 w-auto md:mx-0 sm:h-14"
-            />
-       
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:pt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-8">
+
+          {/* Brand Column - Wider (4 cols) */}
+          <div className="lg:col-span-5 space-y-6 text-center md:text-left">
+            <Link to="/" className="inline-block">
+              <img
+                src={logo}
+                alt="G.K. Choksi & Co."
+                className="h-14 sm:h-18 w-auto object-contain mx-auto md:mx-0"
+              />
+            </Link>
+
+            <div className="flex justify-center md:justify-start gap-4">
+              <a href="https://www.linkedin.com/company/g-k-choksi-&-co/" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#0077B5] hover:border-[#0077B5] transition-all shadow-sm">
+                <Linkedin size={18} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#E1306C] hover:border-[#E1306C] transition-all shadow-sm">
+                <Instagram size={18} />
+              </a>
+              <a href="#" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#1877F2] hover:border-[#1877F2] transition-all shadow-sm">
+                <Facebook size={18} />
+              </a>
+            </div>
           </div>
 
-          {/* Right separate div */}
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Quick links */}
-            <div className="text-center md:text-left">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
+          {/* WRAPPER FOR MOBILE SIDE-BY-SIDE */}
+          <div className="lg:col-span-5 flex flex-row justify-between gap-8 md:contents">
+            {/* Quick Links (2 cols) */}
+            <div className="lg:col-span-2 text-left">
+              <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
                 Quick Links
               </h4>
-              <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-1">
+              <ul className="space-y-4">
                 {quickLinks.map((item) => (
                   <li key={item.label}>
                     <Link
                       to={item.to}
-                      className="text-sm text-black transition hover:text-[#0F3D2E]"
+                      className="text-sm text-gray-600 hover:text-green-800 hover:underline underline-offset-4 transition-all"
                     >
                       {item.label}
                     </Link>
@@ -62,59 +76,71 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Locations */}
-            <div className="text-center md:text-left">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
+            {/* Locations (2 cols) */}
+            <div className="lg:col-span-2 text-left">
+              <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
                 Locations
               </h4>
-              <ul className="mt-4 space-y-2 text-sm text-black">
-                <li>Mumbai</li>
-                <li>Ahmedabad</li>
-                <li>Delhi NCR</li>
-                <li>Petlad, Gujarat</li>
+              <ul className="space-y-4">
+                {locations.map((loc) => (
+                  <li key={loc} className="flex items-center justify-start gap-2 text-sm text-gray-600">
+                    <MapPin size={14} className="text-gray-400" />
+                    {loc}
+                  </li>
+                ))}
               </ul>
             </div>
+          </div>
 
-            {/* Social media */}
-            <div className="text-center md:text-left">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-black sm:text-sm">
-                Social Media
-              </h4>
-              <div className="mt-4 flex flex-row md:flex-col gap-3 justify-center md:justify-start">
-                {/* Instagram */}
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white transition transform hover:scale-110 shadow-md"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
+          {/* Contact Section (4 cols) */}
+          <div className="lg:col-span-3 text-center md:text-left">
+            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
+              Get In Touch
+            </h4>
+            <div className="space-y-4 flex md:flex-col gap-15">
+              <div className="flex items-start justify-center md:justify-start gap-3 group">
+                <div className="mt-3 md:mt-1 p-2 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:bg-green-50 transition-colors">
+                  <Mail size={16} className="text-green-800" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase font-medium">Email Us</p>
+                  <a href="mailto:hr@gkcco.com" className="text-sm text-gray-700 font-medium hover:text-green-800">hr@gkcco.com</a> <br />
+                  <a href="mailto:info@gkcco.com" className="text-sm text-gray-700 font-medium hover:text-green-800">info@gkcco.com</a>
+                </div>
+              </div>
 
-                {/* Facebook */}
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white transition transform hover:scale-110 shadow-md"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>
-
-                {/* LinkedIn */}
-                <a
-                  href="https://www.linkedin.com/company/g-k-choksi-&-co/"
-                  aria-label="LinkedIn"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition transform hover:scale-110 shadow-md"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
+              <div className="flex items-start justify-center md:justify-start gap-3 group">
+                <div className="mt-3 md:mt-1 p-2 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:bg-green-50 transition-colors">
+                  <Phone size={16} className="text-green-800" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase font-medium">Call Us</p>
+                  <p className="text-sm text-gray-700 font-medium">+91 79 68198900</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-slate-300 pt-6">
-          <p className="text-xs text-black sm:text-sm">
-            © 2026 G.K. Choksi &amp; Co. All rights reserved.
+
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-500">
+            © {new Date().getFullYear()} G.K. Choksi & Co. All rights reserved.
           </p>
+          <div className="flex items-center gap-2 text-[#0F3D2E]  md:text-lg mt-2 md:mt-0">
+            <Code2 className="w-5 h-5 text-[#c1972d]" />
+            <span>
+              Developed by{" "}
+              <a
+                href="https://digitalwebconnection.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#c1972d] font-semibold"
+              >
+                Digital Web Connection
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </motion.footer>

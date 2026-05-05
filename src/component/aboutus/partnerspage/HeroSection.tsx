@@ -33,7 +33,7 @@ const HeroSection = () => {
                     <img
                         src={img}
                         alt="background"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fill md:object-cover"
                     />
                 </div>
             ))}

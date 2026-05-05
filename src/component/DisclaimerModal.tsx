@@ -32,34 +32,23 @@ const DisclaimerModal: React.FC = () => {
         {/* Content */}
         <div className="max-h-[60vh] overflow-y-auto px-6 py-4 text-sm leading-relaxed text-gray-700">
           <p className="mb-4">
-            The information provided on this website is for general
-            informational purposes only and does not constitute
-            professional advice, solicitation, or advertisement.
+          In accordance with the provisions of the Chartered Accountants Act, 1949, the Firm is not permitted to solicit professional work or advertise its services. 
           </p>
 
           <p className="mb-4">
-            By accessing this website, you acknowledge that you are
-            seeking information on your own accord and that no form of
-            solicitation, inducement, or advertisement has been made
-            by the firm or its representatives.
+         By proceeding further, the user expressly acknowledges and confirms that 
           </p>
 
           <p className="mb-4">
-            The content on this website should not be construed as a
-            substitute for professional or legal advice. Visitors are
-            advised to seek independent professional consultation
-            before making any decision.
+          (i) no form of advertisement, personal communication, solicitation, invitation, or inducement has been made by the Firm to secure any professional engagement through this website; 
           </p>
 
           <p className="mb-4">
-            The firm shall not be responsible for any loss or damage
-            arising from reliance on the information provided on this
-            website.
+         (ii) the user is accessing the information solely for the purpose of gaining a general understanding of the Firm and its professional profile, at their own initiative;
           </p>
 
           <p>
-            All content on this website is the intellectual property
-            of the firm and is protected under applicable laws.
+            (iii) all information made available herein is provided strictly upon the user’s specific request and for informational purposes only.
           </p>
         </div>
 

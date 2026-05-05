@@ -20,7 +20,7 @@ const AboutSection = () => {
   const navigate = useNavigate(); // ✅ ADD THIS
   return (
     <section id="about" className="py-16 bg-[#F7F9F8]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2">
 
           {/* LEFT: TEXT CONTENT */}
@@ -35,7 +35,7 @@ const AboutSection = () => {
               About Us
             </p>
 
-            <h2 className="mb-6 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-4xl font-bold text-[#C2A96A] sm:text-5xl">
+            <h2 className="mb-6 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-4xl lg:text-5xl font-bold text-[#C2A96A]">
               Welcome to{" "}
               <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
                 G. K. Choksi & Co
@@ -100,53 +100,53 @@ const AboutSection = () => {
           </motion.div>
 
           {/* RIGHT: IMAGE CLUSTER */}
-      <div className="relative h-[520px] w-full">
+          <div className="relative h-[520px] w-full">
 
-  {/* MAIN IMAGE */}
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    className="relative h-full w-full rounded-4xl overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
-  >
-    <img
-      src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"
-      className="h-full w-full object-cover"
-    />
+            {/* MAIN IMAGE */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="relative h-full w-full rounded-4xl overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
+            >
+              <img
+                src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"
+                className="h-full w-full object-cover"
+              />
 
-    {/* PREMIUM OVERLAY */}
-    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
+              {/* PREMIUM OVERLAY */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
-    {/* CONTENT */}
-    <div className="absolute bottom-6 left-6 right-6 text-white">
-      <p className="text-xl uppercase tracking-[0.2em] text-[#0effb3]">
-        Client-first approach
-      </p>
+              {/* CONTENT */}
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <p className="text-xl uppercase tracking-[0.2em] text-[#0effb3]">
+                  Client-first approach
+                </p>
 
-      <p className="mt-2 text-lg font-medium leading-snug max-w-sm">
-        Long-term partnerships built on trust, transparency, and clarity.
-      </p>
-    </div>
-  </motion.div>
+                <p className="mt-2 text-lg font-medium leading-snug max-w-sm">
+                  Long-term partnerships built on trust, transparency, and clarity.
+                </p>
+              </div>
+            </motion.div>
 
-  {/* GLASS STAT CARD (INTEGRATED) */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    whileHover={{ y: -6 }}
-    className="absolute bottom-6 right-6 w-48 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
-  >
-    <p className="text-[11px] uppercase tracking-[0.2em] text-gray-200">
-      Trusted Since
-    </p>
+            {/* GLASS STAT CARD (INTEGRATED) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              className="absolute bottom-30 md:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
+            >
+              <p className="text-[11px] uppercase tracking-[0.2em] text-gray-200">
+                Trusted Since
+              </p>
 
-    <p className="text-2xl font-bold mt-1">1972</p>
+              <p className="text-2xl font-bold mt-1">1972</p>
 
-   
-  </motion.div>
 
-  {/* SOFT GLOW (DEPTH EFFECT) */}
-  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#6FAF9B]/20 blur-3xl rounded-full" />
+            </motion.div>
 
-</div>
+            {/* SOFT GLOW (DEPTH EFFECT) */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#6FAF9B]/20 blur-3xl rounded-full" />
+
+          </div>
         </div>
       </div>
     </section>

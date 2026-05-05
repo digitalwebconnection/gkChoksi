@@ -82,14 +82,14 @@ const Counter = ({ value, suffix = "" }: CounterProps) => {
 
 const StatsSection = () => {
   return (
-    <section className="bg-[#F7F9F8] py-14">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="bg-[#F7F9F8] py-14 px-6">
+      <div className="mx-auto max-w-7xl ">
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
 
 
-          <h2 className="mt-2 max-w-3xl mx-auto text-3xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] sm:text-5xl">
+          <h2 className="mt-2 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A]">
             A Legacy of Trust and Performance
           </h2>
 

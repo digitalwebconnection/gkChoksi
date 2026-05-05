@@ -82,6 +82,13 @@ const foundationItems = [
 
 export default function FeatureSection() {
   const [active, setActive] = useState(1);
+  const [flippedCards, setFlippedCards] = useState<number[]>([]);
+
+  const toggleFlip = (idx: number) => {
+    setFlippedCards((prev) =>
+      prev.includes(idx) ? prev.filter((i) => i !== idx) : [...prev, idx]
+    );
+  };
 
   // 🔁 Auto rotate
   useEffect(() => {
@@ -90,7 +97,9 @@ export default function FeatureSection() {
     }, 3500);
     return () => clearInterval(interval);
   }, []);
+  
 
+  
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -104,24 +113,24 @@ export default function FeatureSection() {
   }, [services.length]);
 
   return (
-    <section className="py-4 bg-white">
-   {/* SECTION 1: FOUNDATION (Vision/Mission) */}
+    <section className="py-4 bg-white overflow-x-hidden">
+      {/* SECTION 1: FOUNDATION (Vision/Mission) */}
       <section className="relative py-14 bg-white overflow-hidden">
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -z-10" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-50 -z-10" />
+        <div className="absolute top-0 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-amber-50 rounded-full blur-3xl opacity-50 -z-10" />
+        <div className="absolute bottom-0 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-emerald-50 rounded-full blur-3xl opacity-50 -z-10" />
 
         <div className="max-w-6xl mx-auto px-6">
 
           {/* HEADER AREA */}
           <div className="relative mb-10">
             <motion.div
-      
+
               className="flex items-center justify-center  mb-4"
             >
 
-              <h1 className="text-2xl md:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                The <span className="text-[#C2A96A]">Foundation</span> 
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+                The <span className="text-[#C2A96A]">Foundation</span>
               </h1>
             </motion.div>
 
@@ -129,7 +138,7 @@ export default function FeatureSection() {
           </div>
 
           {/* GRID ITEMS */}
-          <div className="grid md:grid-cols-2 gap-15 perspective-distant">
+          <div className="grid md:grid-cols-2 gap-8  md:gap-16 perspective-distant">
 
             {foundationItems.map((item, idx) => (
               <motion.div
@@ -138,11 +147,16 @@ export default function FeatureSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2 }}
-                className="group w-full h-80"
+                className="group w-full h-[450px] md:h-96"
               >
 
                 {/* 🔥 FLIP CONTAINER */}
-                <div className="relative w-full h-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
+                <div 
+                  onClick={() => toggleFlip(idx)}
+                  className={`relative w-full h-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)] ${
+                    flippedCards.includes(idx) ? "transform-[rotateY(180deg)]" : ""
+                  }`}
+                >
 
                   {/* ================= FRONT (IMAGE) ================= */}
                   <div className="absolute inset-0 rounded-2xl overflow-hidden backface-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
@@ -168,20 +182,20 @@ export default function FeatureSection() {
                   </div>
 
                   {/* ================= BACK (CONTENT) ================= */}
-                  <div className="absolute inset-0 rounded-[2.5rem] p-8 bg-white border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.08)] 
-                        transform-[rotateY(180deg)] backface-hidden flex flex-col justify-between">
+                  <div className="absolute inset-0 rounded-3xl p-6 md:p-8 bg-white border border-slate-200 shadow-xl 
+                        transform-[rotateY(180deg)] text-justify backface-hidden flex flex-col justify-center ">
 
                     <div>
-                      <h3 className="text-4xl font-semibold text-[#C2A96A] mb-4">
+                      <h3 className="text-2xl md:text-4xl font-semibold text-[#C2A96A] mb-4">
                         {item.title}
                       </h3>
 
-                      <p className="text-black text-lg text-justify leading-relaxed">
+                      <p className="text-slate-700 text-base md:text-lg leading-relaxed">
                         {item.content}
                       </p>
                     </div>
 
-                 
+
                   </div>
 
                 </div>
@@ -191,109 +205,109 @@ export default function FeatureSection() {
         </div>
       </section>
 
-      
-        {/* ✨ Soft Background Glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-linear-to-br from-blue-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-40" />
-        </div>
 
-        {/* 🔥 Heading */}
-        <div className="text-center mb-16 relative z-10">
-         
-<h3 className="text-2xl md:text-5xl font-serif font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-snug max-w-2xl mx-auto text-center">
-            Clarity Creates Confidence
-          </h3>
-        </div>
+      {/* ✨ Soft Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-linear-to-br from-blue-100 via-purple-100 to-pink-100 rounded-full blur-3xl opacity-40" />
+      </div>
 
-        {/* 💎 Cards */}
-        <div className="flex flex-col max-w-7xl mx-auto md:flex-row gap-6 relative z-10">
+      {/* 🔥 Heading */}
+      <div className="text-center mb-16 relative z-10">
 
-          {EXPERTISE.map((item, i) => {
-            const isActive = i === active;
-            const Icon = item.icon;
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-snug max-w-2xl mx-auto text-center">
+          Clarity Creates Confidence
+        </h3>
+      </div>
 
-            return (
-              <div
-                key={i}
-                onMouseEnter={() => setActive(i)}
-                className={`relative flex-1 rounded-3xl overflow-hidden cursor-pointer transition-all duration-700
+      {/* 💎 Cards */}
+      <div className="flex flex-col px-6 max-w-7xl mx-auto md:flex-row gap-6 relative z-10">
+
+        {EXPERTISE.map((item, i) => {
+          const isActive = i === active;
+          const Icon = item.icon;
+
+          return (
+            <div
+              key={i}
+              onMouseEnter={() => setActive(i)}
+              className={`relative flex-1 rounded-3xl overflow-hidden cursor-pointer transition-all duration-700
         ${isActive ? "flex-3" : "flex-1"}`}
-              >
+            >
 
-                {/* Image */}
-                <img
-                  src={item.image}
-                  className={`w-full h-[420px] object-cover transition-all duration-700
+              {/* Image */}
+              <img
+                src={item.image}
+                className={`w-full h-[420px] object-cover transition-all duration-700
           ${isActive ? "scale-105" : ""}`}
-                />
+              />
 
-                {/* Overlay */}
-                <div className={`absolute inset-0 transition-all duration-500
+              {/* Overlay */}
+              <div className={`absolute inset-0 transition-all duration-500
           ${isActive ? "bg-black/70" : "bg-black/50"}`} />
 
-                {/* 🔥 ICON BADGE */}
-                <div className="absolute top-6 left-6 z-20">
-                  <div
-                    className={`w-12 h-12 flex items-center justify-center rounded-xl backdrop-blur-md border transition-all duration-500
+              {/* 🔥 ICON BADGE */}
+              <div className="absolute top-6 left-6 z-20">
+                <div
+                  className={`w-12 h-12 flex items-center justify-center rounded-xl backdrop-blur-md border transition-all duration-500
             ${isActive
-                        ? `bg-linear-to-br ${item.gradient} text-white border-white/30 shadow-lg scale-110`
-                        : "bg-white/80 text-gray-700 border-gray-200"
-                      }`}
-                  >
-                    <Icon className="w-6 h-6" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="absolute bottom-0 p-8 w-full z-10">
-
-                  <h3 className={`text-4xl font-bold transition-all duration-300
-            ${isActive ? "text-white" : "text-green-500"}`}>
-                    {item.title}
-                  </h3>
-
-                  <p className={`text-lg font-medium mt-1
-            ${isActive ? "text-white" : "text-amber-400"}`}>
-                    {item.subtitle}
-                  </p>
-
-                  {/* Expand Content */}
-                  <div className={`overflow-hidden transition-all duration-500
-            ${isActive ? "max-h-40 mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
-
-                    <p className="text-white text-lg leading-relaxed">
-                      {item.desc}
-                    </p>
-
-                    {/* Gradient Line */}
-                    <div className={`mt-4 h-1 w-12 bg-linear-to-r ${item.gradient} rounded-full`} />
-                  </div>
-
+                      ? `bg-linear-to-br ${item.gradient} text-white border-white/30 shadow-lg scale-110`
+                      : "bg-white/80 text-gray-700 border-gray-200"
+                    }`}
+                >
+                  <Icon className="w-6 h-6" />
                 </div>
               </div>
-            );
-          })}
 
-        </div>
-  <VisionMissionSection />
+              {/* Content */}
+              <div className="absolute bottom-0 p-8 w-full z-10">
+
+                <h3 className={`text-2xl md:text-4xl font-bold transition-all duration-300
+            ${isActive ? "text-white" : "text-green-500"}`}>
+                  {item.title}
+                </h3>
+
+                <p className={`text-lg font-medium mt-1
+            ${isActive ? "text-white" : "text-amber-400"}`}>
+                  {item.subtitle}
+                </p>
+
+                {/* Expand Content */}
+                <div className={`overflow-hidden transition-all duration-500
+            ${isActive ? "max-h-40 mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
+
+                  <p className="text-white text-lg leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* Gradient Line */}
+                  <div className={`mt-4 h-1 w-12 bg-linear-to-r ${item.gradient} rounded-full`} />
+                </div>
+
+              </div>
+            </div>
+          );
+        })}
+
+      </div>
+      <VisionMissionSection />
 
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          className="my-12 max-w-7xl mx-auto text-center"
+          className="my-8 max-w-7xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
 
           {/* 🔥 MAIN STATEMENT */}
-          
-           <h2 className="text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-black">
-            Our <span className="text-[#C2A96A]">Expertise</span> 
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-black">
+            Our <span className="text-[#C2A96A]">Expertise</span>
           </h2>
 
           {/* ✨ DESCRIPTION */}
           <p className="mt-6 text-black text-lg leading-relaxed max-w-6xl text-center mx-auto">
-            With the leadership of 8 Partners supported by a strong talent base of 185+ professionals comprising of 40+ Chartered Accountants, <br/> 5+ Company Secretaries, 4+ Advocates, 100+ Articles, and 40+ Expert Chartered Accountants engaged on an assignment basis, the firm brings together deep domain expertise and practical insights to support clientele navigating growth and transformation.
+            With the leadership of 8 Partners supported by a strong talent base of 185+ professionals comprising of 40+ Chartered Accountants, <br /> 5+ Company Secretaries, 4+ Advocates, 100+ Articles, and 40+ Expert Chartered Accountants engaged on an assignment basis, the firm brings together deep domain expertise and practical insights to support clientele navigating growth and transformation.
           </p>
 
 
