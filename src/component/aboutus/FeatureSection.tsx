@@ -62,7 +62,7 @@ const services = [
 const foundationItems = [
   {
     title: "Our Vision",
-    content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation.",
+    content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation. To empower clients with strategic guidance that drives sustainable growth and informed decision-making, while fostering long-term relationships through excellence, professionalism, and a commitment to continuous improvement.",
     image: "https://shahkar.org.af/wp-content/uploads/2024/09/Our-Vision.jpg",
     icon: <HiOutlineLightBulb />,
     color: "from-amber-400 to-orange-600",
@@ -71,7 +71,7 @@ const foundationItems = [
   },
   {
     title: "Our Mission",
-    content: "To provide high-quality Audit & Assurance, Taxation & Risk Advisory Consulting Services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth.",
+    content: "To provide high-quality Audit & Assurance, Taxation & Risk Advisory Consulting Services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth, while delivering innovative and client-centric solutions that adapt to evolving business environments.",
     image: "https://www.quantumconsumernig.com/assets/imgs/our-mission.jpg",
     icon: <HiOutlineTicket />,
     color: "from-emerald-400 to-teal-600",
@@ -331,7 +331,7 @@ export default function FeatureSection() {
                       <div
                         className={`absolute inset-0 transition-colors duration-500
                   ${isActive
-                            ? "bg-black/60"
+                            ? "bg-black/80"
                             : "bg-white/90"
                           }`}
                       />

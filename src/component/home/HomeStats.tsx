@@ -86,14 +86,14 @@ const StatsSection = () => {
       <div className="mx-auto max-w-7xl px-4">
 
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
 
 
-          <h2 className="mt-2 text-3xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] sm:text-5xl">
+          <h2 className="mt-2 max-w-3xl mx-auto text-3xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A] sm:text-5xl">
             A Legacy of Trust and Performance
           </h2>
 
-          <p className="mt-3 text-sm text-[#1F6F5B]">
+          <p className="mt-3 text-lg font-semibold text-[#0a3b2f]">
             Decades of experience delivering Assurance and Advisory Services
             with uncompromising standards.
           </p>

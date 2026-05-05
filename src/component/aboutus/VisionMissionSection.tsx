@@ -8,6 +8,9 @@ import {
   FaUsers,
   FaHandshake,
 } from "react-icons/fa6";
+import Integrity from "../../assets/aboutpage/Integrity.jpg"
+import Collaboration from "../../assets/aboutpage/Collaboration.jpg"
+import Innovation from "../../assets/aboutpage/Innovation.jpg"
 
 
 
@@ -23,7 +26,7 @@ const coreValues = [
     title: "Integrity",
     text: "Upholding the highest ethical and professional standards.",
     icon: FaShieldHalved,
-    image: "https://www.oecd.org/adobe/dynamicmedia/deliver/dm-aid--a992d87d-9d9a-4f98-a759-5f45049fe7fc/business-integrity-1494287358.jpg?quality=80&preferwebp=true", // handshake / trust / contract signing
+    image: Integrity, // handshake / trust / contract signing
     color: "#c5a059"
   },
   {
@@ -37,14 +40,14 @@ const coreValues = [
     title: "Innovation",
     text: "Leveraging technology and new thinking to deliver value.",
     icon: FaLightbulb,
-    image: "https://www.qodequay.com/wp-content/uploads/2025/09/Innovation-Accounting-Measuring-the-ROI-of-RD-Investments.png", // tech / brainstorming / modern workspace
+    image: Innovation, // tech / brainstorming / modern workspace
     color: "#c5a059"
   },
   {
     title: "Collaboration",
     text: "Working seamlessly across teams and clients.",
     icon: FaUsers,
-    image: "https://s43829.pcdn.co/wp-content/uploads/2018/07/Collaboration-at-the-Heart-of-Successful-Change-Initiatives.jpg", // teamwork / group discussion
+    image: Collaboration, // teamwork / group discussion
     color: "#c5a059"
   },
   {

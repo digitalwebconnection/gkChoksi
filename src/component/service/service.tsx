@@ -193,11 +193,11 @@ const ServicePage = () => {
         />
 
         {/* 🌑 DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-500" />
+        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-500" />
 
         {/* 📝 DEFAULT TEXT */}
         <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 ">
-          <p className="text-white text-xl font-bold">
+          <p className="text-[#C2A96A] drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-xl font-bold">
             {point.text}
           </p>
         </div>

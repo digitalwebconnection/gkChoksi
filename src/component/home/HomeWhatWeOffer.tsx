@@ -75,7 +75,7 @@ const WhatWeOffer = () => {
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <p className="text-lg font-semibold  uppercase tracking-[0.25em] text-[#6FAF9B]">
+          <p className="text-lg font-semibold  uppercase tracking-[0.25em] text-[#073325]">
             Our Core Expertise
           </p>
 
@@ -83,7 +83,7 @@ const WhatWeOffer = () => {
             Integrated Professional Solutions
           </h2>
 
-          <p className="mx-auto mt-4 text-lg text-[#1F6F5B]">
+          <p className="mx-auto mt-4 text-xl text-[#0a382d]">
             We deliver comprehensive, specialized services as follows....
           </p>
         </div>
@@ -104,10 +104,10 @@ const WhatWeOffer = () => {
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.05 }}
                 onClick={() => navigate("/services")}
-                className="cursor-pointer group relative border border-[#6FAF9B]/30 bg-white p-6 text-center
+                className="cursor-pointer group relative border border-[#6FAF9B]/40 bg-white p-6 text-center
                 shadow-[0_10px_30px_rgba(15,61,46,0.1)] 
                 hover:shadow-[0_20px_60px_rgba(15,61,46,0.2)] F
-                transition-all duration-300 rounded-xl"
+                transition-all duration-300 rounded-b-2xl"
               >
                 {/* Top Accent Line */}
                 <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]/70" />
@@ -130,7 +130,7 @@ const WhatWeOffer = () => {
                 </h3>
 
                 {/* Optional subtle hover text */}
-                <span className="block mt-2 text-xs text-[#6FAF9B] opacity-0 group-hover:opacity-100 transition">
+                <span className="block mt-2 text-xs text-[#093b2c] opacity-0 group-hover:opacity-100 transition">
                   View →
                 </span>
               </motion.div>

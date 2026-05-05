@@ -1,7 +1,7 @@
 import AboutSection from "./HomeAbout"
 import HeroSection from "./HomeHero"
 import StatsSection from "./HomeStats"
-import HomeTestimonials from "./HomeTestimonials"
+// import HomeTestimonials from "./HomeTestimonials"
 import WhatWeOffer from "./HomeWhatWeOffer"
 // import JourneySection from "./JourneySection"
 
@@ -12,7 +12,7 @@ const HomeMain = () => {
       <StatsSection/>
       <AboutSection/>
       {/* <JourneySection/> */}
-        <HomeTestimonials/>
+        {/* <HomeTestimonials/> */}
       <WhatWeOffer/>
     
     </>

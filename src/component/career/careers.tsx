@@ -4,7 +4,6 @@ import {
   Briefcase,
   MapPin,
   Clock,
-  GraduationCap,
   ChevronDown,
   CheckCircle2,
   ArrowRight,
@@ -16,70 +15,67 @@ import careerHero from "../../assets/Career/1.jpeg";
 
 
 const JOBS = [
-  {
-    title: "Manager (Audit & Assurance)",
-    type: "Full-Time",
-    location: "Ahmedabad",
-    exp: "4-5 Years",
-    icon: <Briefcase className="w-5 h-5" />,
-    description: "Lead and execute statutory audit engagements of various clients in line with auditing and accounting standards.",
-    responsibilities: [
-      "Execute Statutory Audits of Indian GAAP (AS and IND AS clients)",
-      "Review financial statements and manage client relationships.",
-      "Identify issues and offer suggestions to senior management.",
-      "Manage stringent deadlines and demanding client conditions."
-    ],
-    requirements: [
-      "Chartered Accountant (CA) qualification.",
-      "Strong knowledge of Ind AS and Standards on Auditing.",
-      "Experience handling IND AS clients is a major plus."
-    ]
-  },
-  {
-    title: "Senior Manager",
-    type: "Full-Time",
-    location: "Ahmedabad",
-    exp: "10-15 Years",
-    icon: <Users className="w-5 h-5" />,
-    description: "High-level leadership role managing complex audit portfolios and team development.",
-    details: {
-      "Designation": "Senior Manager",
-      "Qualification": "CA, FCA",
-      "Experience": "10 to 15 years",
-      "Salary": "Negotiable"
-    },
-    skillRequirement: [
-      "Mastery of Indian Accounting Standards (IND AS).",
-      "Expert drafting skills for audit working papers.",
-      "Exposure to Internal Audits is an added advantage.",
-      "Proven ability to lead large audit teams."
-    ]
-  },
-  {
-    title: "Fresher CA (Auditing)",
-    type: "Full-Time",
-    location: "Ahmedabad",
-    exp: "0-1 Years",
-    icon: <GraduationCap className="w-5 h-5" />,
-    points: [
-      "Knowledge of Ind AS, IGAAP, GST, and Income Tax Act.",
-      "Proficiency in Word, Excel, SAP ERP, and Tally.",
-      "Ability to lead articles and plan work schedules."
-    ]
-  },
-  {
-    title: "Company Secretary",
-    type: "Full-Time",
-    location: "Ahmedabad",
-    exp: "0-2 Years",
-    icon: <Sparkles className="w-5 h-5" />,
-    points: [
-      "Incorporation of Public/Private Companies & LLPs.",
-      "ROC Annual filings and XBRL conversions.",
-      "Handling Board Meetings and drafting schemes of arrangement.",
-      "Managing Charge Creation and Allotment proceedings."
-    ]
-  }
+ {
+  title: "Article Assistant - Audit",
+  type: "Full-Time",
+  location: "Ahmedabad",
+  exp: "Only fresher",
+  icon: <Briefcase className="w-5 h-5" />,
+
+  description:
+    "Kickstart your professional journey with hands-on exposure to real-world audit, taxation, and advisory engagements. Work closely with experienced professionals and build strong technical and analytical skills.",
+
+  responsibilities: [
+    "Assist in Statutory Audits of Indian GAAP (AS & IND AS) clients",
+    "Support in preparation and review of financial statements",
+    "Work on audit documentation, compliance, and reporting",
+    "Assist in handling client queries and coordination",
+    "Identify discrepancies and support senior team members with solutions",
+    "Maintain working papers and ensure timely completion of assignments"
+  ],
+
+  requirements: [
+    "CA Intermediate (Both Groups cleared)",
+    "Strong interest in Audit, Accounting, and Financial Reporting",
+    "Basic knowledge of Ind AS and Standards on Auditing",
+    "Good understanding of MS Excel and MS Office tools",
+    "Strong analytical and problem-solving skills",
+    "Willingness to learn and adapt in a professional environment",
+    "Good communication and teamwork abilities"
+  ],
+
+},
+{
+  title: "Article Assistant - Tax",
+  type: "Full-Time",
+  location: "Ahmedabad",
+  exp: "Only fresher", 
+  icon: <Briefcase className="w-5 h-5" />,
+
+  description:
+    "Gain real-time exposure to income tax litigation, advisory, and compliance. Work on high-impact tax matters and develop strong legal, analytical, and drafting skills in a professional environment.",
+
+  responsibilities: [
+    "Assist in handling income tax proceedings including assessment, reassessment, and appeals",
+    "Support in tax litigation matters and advisory assignments",
+    "Prepare submissions, replies, and legal documents",
+    "Conduct research on tax laws, case laws, and interpretations",
+    "Assist in transfer pricing, search & survey related matters",
+    "Work closely with seniors on complex tax cases"
+  ],
+
+  requirements: [
+    "CA Intermediate (Both Groups cleared in recent attempts)",
+    "Strong interest in Direct Tax Litigation & Advisory",
+    "Passion for legal drafting and tax interpretation",
+    "Good research and analytical skills",
+    "Proficiency in MS Word & Excel (data analysis, reconciliations)",
+    "Logical thinking and problem-solving mindset",
+    "Willingness to learn and grow in taxation domain"
+  ],
+
+
+}
 ];
 
 // --- Animation Variants ---
@@ -235,11 +231,11 @@ const CareersPage = () => {
 
                         <div className="grid md:grid-cols-2 mb-10 gap-10">
                           {/* Section: Responsibilities */}
-                          {(job.responsibilities || job.points) && (
+                          {job.responsibilities && (
                             <div>
                               <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Key Focus Areas</h4>
                               <ul className="space-y-4">
-                                {(job.responsibilities || job.points).map((item, i) => (
+                                {job.responsibilities.map((item, i) => (
                                   <li key={i} className="flex gap-3 text-sm text-black/80">
                                     <CheckCircle2 className="w-5 h-5 text-[#064631] shrink-0" />
                                     {item}
@@ -252,7 +248,7 @@ const CareersPage = () => {
                           {/* Section: Requirements */}
                           {job.requirements && (
                             <div>
-                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Experience Needed</h4>
+                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Requirement</h4>
                               <ul className="space-y-4">
                                 {job.requirements.map((item, i) => (
                                   <li key={i} className="flex gap-3 text-sm text-black/80">
