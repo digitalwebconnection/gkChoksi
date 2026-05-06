@@ -19,14 +19,14 @@ const stats = [
     icon: HiOutlineGlobeAlt,
   },
   {
-    label: "Industries Served",
+    label: "Broad Industrial Sectors Served",
     value: 23, // change this number as needed
     suffix: "+",
     icon: HiOutlineBriefcase,
   },
   {
     label: "Happy Clients",
-    value: 1500,
+    value: 3000,
     suffix: "+",
     icon: HiOutlineUsers,
   },

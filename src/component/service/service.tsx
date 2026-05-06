@@ -1,4 +1,5 @@
 import { easeOut, motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 import {
@@ -7,6 +8,7 @@ import {
   HiOutlineChartBar,
   HiOutlineUserGroup,
 } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
 
 interface Service {
   slug: string;
@@ -136,6 +138,7 @@ const fadeUp = {
 
 // ================= COMPONENT =================
 const ServicePage = () => {
+  const navigate = useNavigate(); // ✅ ADD THIS
     const [selectedService, setSelectedService] = useState<Service | null>(null);
   return (
     <>
@@ -166,6 +169,18 @@ const ServicePage = () => {
           <p className="mt-6 text-white text-xl">
             Delivering clarity, precision, and strategic insight across every engagement.
           </p>
+              <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={() => {
+                navigate("/contact");
+                window.scrollTo(0, 0); // ✅ scroll top
+              }}
+              className="inline-flex items-center mt-10 rounded-full bg-[#0F3D2E] px-10 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </motion.button>
         </motion.div>
       </section>
 

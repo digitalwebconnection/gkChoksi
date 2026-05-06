@@ -412,10 +412,6 @@ export default function FeatureSection() {
 
         </motion.div>
 
-
-
-
-
       </div>
 
     </section>
