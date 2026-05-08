@@ -293,10 +293,7 @@ const ContactSection: React.FC = () => {
                                 </span>
                             </h2>
 
-                            <p className="mt-6 text-white font-bold max-w-md leading-relaxed text-justify">
-                                Located at ONE42, North Tower -
-                                a landmark corporate destination
-                            </p>
+                         
 
 
                         </div>

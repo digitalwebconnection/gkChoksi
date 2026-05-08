@@ -140,7 +140,7 @@ export const TEAM: TeamMember[] = [
         role: "B. Com., LL. B., FCA, DISA, PGDBM [Fin.]",
         department: "Audit",
         image: CAshwetangPujara,
-        details: undefined,
+        details: "A Chartered Accountant with over 20 years of post-qualification experience, Shwetang Hariprasad Pujara has been associated with the firm since his articleship, reflecting strong institutional continuity and a sustained contribution to its audit and assurance practice. He is a key member of the firm’s core team.\n\n He brings extensive experience across statutory, tax, and internal audits for a diverse client base, including listed and unlisted companies, public sector undertakings, and other business structures. His exposure also includes audits of branch and project offices of foreign companies, Special Audits under Section 142(2A) of the Income-tax Act, 1961, and IPO-related assignments as an Independent Chartered Accountant. \n\n He is relied upon for critical and time-sensitive assignments involving complex technical and regulatory matters, bringing a structured, solution-oriented approach with a strong focus on quality and timelines. He is also proactive in leveraging technology to enhance audit efficiency, supported by disciplined execution and effective team coordination.",
         status: "Open"
     },
     {

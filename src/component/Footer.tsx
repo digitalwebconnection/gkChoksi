@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, Code2 } from "lucide-react";
+import { Linkedin,  Mail, Phone, MapPin, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -46,12 +46,8 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/g-k-choksi-&-co/" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#0077B5] hover:border-[#0077B5] transition-all shadow-sm">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#E1306C] hover:border-[#E1306C] transition-all shadow-sm">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#1877F2] hover:border-[#1877F2] transition-all shadow-sm">
-                <Facebook size={18} />
-              </a>
+            
+       
             </div>
           </div>
 
