@@ -1,6 +1,6 @@
-import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Phone, Mail, MapPin, CheckCircle2, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 /* =========================
    Branch Data
@@ -73,8 +73,98 @@ const openMap = (address: string) => {
 
 
 const ContactSection: React.FC = () => {
+    const [result, setResult] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
+
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+        setResult("Sending....");
+        const formData = new FormData(event.currentTarget);
+
+        formData.append("access_key", "147bc68b-90f2-46b1-8ff7-2b83e5845e33");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                (event.target as HTMLFormElement).reset();
+                setShowPopup(true); // Show popup on success
+            } else {
+                console.log("Error", data);
+                setResult(data.message || "Error submitting form");
+            }
+        } catch (error) {
+            console.error("Error", error);
+            setResult("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
-        <section className="bg-[#F7F9F8] py-24">
+        <section className="bg-[#F7F9F8] py-24 relative">
+            {/* Thank You Popup */}
+            <AnimatePresence>
+                {showPopup && (
+                    <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowPopup(false)}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                        />
+                        
+                        {/* Popup Content */}
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            className="relative bg-white rounded-3xl p-8 md:p-12 max-w-lg w-full shadow-2xl overflow-hidden text-center"
+                        >
+                            {/* Decorative Background Blob */}
+                            <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-green-50 opacity-50 blur-3xl" />
+                            
+                            <button 
+                                onClick={() => setShowPopup(false)}
+                                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                            >
+                                <X size={24} />
+                            </button>
+
+                            <div className="relative z-10">
+                                <div className="w-20 h-20 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+                                    <CheckCircle2 size={40} />
+                                </div>
+
+                                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                                    Message Sent!
+                                </h3>
+                                
+                                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                                    Thank you for reaching out. Your inquiry has been received, and one of our senior advisors will contact you shortly.
+                                </p>
+
+                                <button
+                                    onClick={() => setShowPopup(false)}
+                                    className="w-full py-4 bg-[#0F3D2E] hover:bg-[#1F6F5B] text-white rounded-2xl font-bold tracking-wide transition shadow-lg hover:shadow-xl"
+                                >
+                                    Done
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
             <section className="bg-slate-50 pb-24">
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -109,7 +199,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Form */}
-                            <form className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <form onSubmit={onSubmit} className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
 
                                 {/* Full Name */}
                                 <div>
@@ -118,6 +208,8 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        required
                                         placeholder="Your full name"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
@@ -130,6 +222,8 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        required
                                         placeholder="name@company.com"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
@@ -142,6 +236,7 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <input
                                         type="text"
+                                        name="company"
                                         placeholder="Registered entity name"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
@@ -152,7 +247,10 @@ const ContactSection: React.FC = () => {
                                     <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
                                         Required Service
                                     </label>
-                                    <select className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100">
+                                    <select 
+                                        name="service"
+                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                    >
                                         <option>Select a service</option>
                                         <option>Taxation & Compliance</option>
                                         <option>Audit & Assurance</option>
@@ -168,6 +266,7 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <input
                                         type="text"
+                                        name="designation"
                                         placeholder="e.g. Director, CFO, Founder"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
@@ -181,15 +280,24 @@ const ContactSection: React.FC = () => {
                                         and reviewed only by senior advisors.
                                     </p>
 
-                                    <button
-                                        type="submit"
-                                        className="inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
-              hover:bg-[#1F6F5B] 
-              text-white px-4  md:px-14 py-4  font-semibold tracking-wide transition  hover:shadow-2xl"
-                                    >
-                                        Request Consultation
-                                        <span className="text-lg">→</span>
-                                    </button>
+                                    <div className="flex flex-col items-end gap-2">
+                                        <button
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className={`inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
+                                                hover:bg-[#1F6F5B] 
+                                                text-white px-4 md:px-14 py-4 font-semibold tracking-wide transition hover:shadow-2xl
+                                                ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                                        >
+                                            {isSubmitting ? "Sending..." : "Request Consultation"}
+                                            {!isSubmitting && <span className="text-lg">→</span>}
+                                        </button>
+                                        {result && (
+                                            <p className={`text-sm font-medium ${result.includes("Successfully") ? "text-green-600" : "text-red-600"}`}>
+                                                {result}
+                                            </p>
+                                        )}
+                                    </div>
 
                                 </div>
 
