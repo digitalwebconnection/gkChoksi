@@ -93,7 +93,7 @@ const Footer = () => {
             <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
               Get In Touch
             </h4>
-            <div className="space-y-4 flex flex-col md:gap-15">
+            <div className="space-y-4 flex flex-col md:gap-3">
               <div className="flex items-start justify-center md:justify-start gap-3 group">
                 <div className="mt-3 md:mt-1 p-2 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:bg-green-50 transition-colors">
                   <Mail size={16} className="text-green-800" />
@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase font-medium">Call Us</p>
-                  <p className="text-sm text-gray-700 font-medium">+91 79 68198900</p>
+                  <p className="text-sm text-gray-700 font-medium">+91 79681 98900</p>
                 </div>
               </div>
             </div>

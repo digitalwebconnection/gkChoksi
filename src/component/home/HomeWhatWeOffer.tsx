@@ -23,7 +23,7 @@ const services = [
     color: "#3B82F6", // blue
     bg: "#DBEAFE",
   },
-  
+
   {
     title: "Mergers & Acquisition",
     icon: GitMerge,
@@ -102,12 +102,33 @@ const WhatWeOffer = () => {
               <motion.div
                 key={service.title}
                 variants={cardVariants}
-                whileHover={{ y: -8, scale: 1.05 }}
+                whileHover={{
+                  y: -10,
+                  scale: 1.04,
+                  transition: {
+                    duration: 0.2,
+                  },
+                }}
+                transition={{
+                  duration: 0,
+                }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => navigate("/services")}
-                className="cursor-pointer group relative border border-[#6FAF9B]/40 bg-white p-6 text-center
-                shadow-[0_10px_30px_rgba(15,61,46,0.1)] 
-                hover:shadow-[0_20px_60px_rgba(15,61,46,0.2)] F
-                transition-all duration-300 rounded-b-2xl"
+                className="
+    cursor-pointer
+    group
+    relative
+    overflow-hidden
+    rounded-b-2xl
+    border border-[#6FAF9B]/40
+    bg-white
+    p-6
+    text-center
+    shadow-[0_10px_30px_rgba(0,0,0,0.10)]
+    hover:shadow-[0_20px_60px_rgba(15,61,46,0.20)]
+    transition-shadow
+    duration-200
+  "
               >
                 {/* Top Accent Line */}
                 <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]/70" />
