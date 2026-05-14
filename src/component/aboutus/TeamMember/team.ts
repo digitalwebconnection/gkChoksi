@@ -36,6 +36,7 @@ import CSShambhuBhikhadia from "../../../assets/Core Team Photos/CS Shambhu Bhik
 import AnilKumarSeth from "../../../assets/Core Team Photos/Anil Kumar Seth.png"
 import Priteshdudani from "../../../assets/Core Team Photos/Pritesh dudani.png"
 import Ullas from "../../../assets/Core Team Photos/ullash.png"
+import VijayRanjan from "../../../assets/Core Team Photos/Vijay Ranjan.png"
 
 
 export const TEAM: TeamMember[] = [
@@ -94,7 +95,7 @@ export const TEAM: TeamMember[] = [
         name: "Vijay Ranjan",
         role: "IRS (Retd)",
         department: "Legal",
-        image: "https://www.gkcco.com/wp-content/uploads/2025/12/Untitled-1_06-150x150.png",
+        image: VijayRanjan,
         details: undefined,
         status: "Open",
     },

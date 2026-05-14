@@ -83,12 +83,25 @@ const ContactSection: React.FC = () => {
         setResult("Sending....");
         const formData = new FormData(event.currentTarget);
 
-        formData.append("access_key", "147bc68b-90f2-46b1-8ff7-2b83e5845e33");
+        // Use .set to avoid duplicates if fields exist in JSX
+        formData.set("access_key", "147bc68b-90f2-46b1-8ff7-2b83e5845e33");
+        formData.set("subject", `New Inquiry from ${formData.get("name") || "GK Choksi Website"}`);
+        formData.set("from_name", "GK Choksi Website");
+        formData.set("replyto", formData.get("email") as string);
+        
+        // Ensure botcheck is handled
+        if (!formData.has("botcheck")) {
+            formData.append("botcheck", "");
+        }
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                body: formData
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
             });
 
             const data = await response.json();
@@ -96,13 +109,13 @@ const ContactSection: React.FC = () => {
             if (data.success) {
                 setResult("Form Submitted Successfully");
                 (event.target as HTMLFormElement).reset();
-                setShowPopup(true); // Show popup on success
+                setShowPopup(true);
             } else {
-                console.log("Error", data);
-                setResult(data.message || "Error submitting form");
+                console.error("Web3Forms Error:", data);
+                setResult(data.message || "Error submitting form. Please try again.");
             }
         } catch (error) {
-            console.error("Error", error);
+            console.error("Submission Error:", error);
             setResult("Something went wrong. Please try again.");
         } finally {
             setIsSubmitting(false);
@@ -180,7 +193,7 @@ const ContactSection: React.FC = () => {
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
                         {/* RIGHT – Contact Form */}
-                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-5 md:p-14 overflow-hidden">
+                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-5 md:p-8 overflow-hidden">
 
                             {/* Decorative Accent */}
                             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-green-100 opacity-40 blur-3xl" />
@@ -200,6 +213,11 @@ const ContactSection: React.FC = () => {
 
                             {/* Form */}
                             <form onSubmit={onSubmit} className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
+                                {/* Web3Forms hidden required fields */}
+                                <input type="hidden" name="access_key" value="147bc68b-90f2-46b1-8ff7-2b83e5845e33" />
+                                <input type="hidden" name="subject" value="New Inquiry from GK Choksi & Co. Website" />
+                                <input type="hidden" name="from_name" value="GK Choksi Website" />
+                                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
                                 {/* Full Name */}
                                 <div>
@@ -242,25 +260,8 @@ const ContactSection: React.FC = () => {
                                     />
                                 </div>
 
-                                {/* Service */}
-                                <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
-                                        Required Service
-                                    </label>
-                                    <select 
-                                        name="service"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
-                                    >
-                                        <option>Select a service</option>
-                                        <option>Taxation & Compliance</option>
-                                        <option>Audit & Assurance</option>
-                                        <option>Accounting & Bookkeeping</option>
-                                        <option>Corporate Advisory</option>
-                                    </select>
-                                </div>
-
                                 {/* Designation */}
-                                <div className="md:col-span-2">
+                                <div>
                                     <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
                                         Designation / Role
                                     </label>
@@ -272,8 +273,54 @@ const ContactSection: React.FC = () => {
                                     />
                                 </div>
 
+                                {/* Service */}
+                                <div>
+                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                        Required Service
+                                    </label>
+                                    <select 
+                                        name="service"
+                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                    >
+                                        <option value="">Select a service</option>
+                                        <option value="Taxation & Compliance">Taxation & Compliance</option>
+                                        <option value="Audit & Assurance">Audit & Assurance</option>
+                                        <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+                                        <option value="Corporate Advisory">Corporate Advisory</option>
+                                    </select>
+                                </div>
+
+                                {/* Branch Selection */}
+                                <div>
+                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                        Preferred Branch
+                                    </label>
+                                    <select 
+                                        name="preferred_branch"
+                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                    >
+                                        <option value="Ahmedabad (Head Office)">Ahmedabad (Head Office)</option>
+                                        {branches.map((b) => (
+                                            <option key={b.city} value={b.city}>{b.city}</option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                {/* Message */}
+                                <div className="md:col-span-2">
+                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                        Message / Inquiry Details
+                                    </label>
+                                    <textarea
+                                        name="message"
+                                        rows={2}
+                                        placeholder="How can we assist you today?"
+                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100 resize-none"
+                                    ></textarea>
+                                </div>
+
                                 {/* CTA */}
-                                <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-gray-100">
+                                <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2 border-t border-gray-100">
 
                                     <p className="text-sm text-gray-500 max-w-md">
                                         Your information is kept strictly confidential <br />
@@ -305,7 +352,7 @@ const ContactSection: React.FC = () => {
                         </div>
 
                         {/* LEFT – Contact Cards */}
-                        <div className="lg:col-span-1 space-y-4 animate-slideUp">
+                        <div className="lg:col-span-1 space-y-10 animate-slideUp">
 
                             {/* Call Card */}
                             <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all

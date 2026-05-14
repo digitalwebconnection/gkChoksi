@@ -29,7 +29,7 @@ const Footer = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-16 lg:pt-14">
+      <div className="max-w-7xl mx-auto px-6 py-10 lg:pt-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-8">
 
           {/* Brand Column - Wider (4 cols) */}
@@ -93,7 +93,7 @@ const Footer = () => {
             <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
               Get In Touch
             </h4>
-            <div className="space-y-4 flex md:flex-col gap-15">
+            <div className="space-y-4 flex flex-col md:gap-15">
               <div className="flex items-start justify-center md:justify-start gap-3 group">
                 <div className="mt-3 md:mt-1 p-2 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:bg-green-50 transition-colors">
                   <Mail size={16} className="text-green-800" />
