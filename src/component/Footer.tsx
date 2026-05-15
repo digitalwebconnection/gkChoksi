@@ -105,15 +105,15 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex items-start justify-center md:justify-start gap-3 group">
+              <a href="tel:+917968198900" className="flex items-start justify-center md:justify-start gap-3 group transition-colors">
                 <div className="mt-3 md:mt-1 p-2 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:bg-green-50 transition-colors">
                   <Phone size={16} className="text-green-800" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase font-medium">Call Us</p>
-                  <p className="text-sm text-gray-700 font-medium">+91 79681 98900</p>
+                  <p className="text-sm text-gray-700 font-medium group-hover:text-green-800 transition-colors">+91 79 681 98900</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

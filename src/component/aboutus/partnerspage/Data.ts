@@ -10,7 +10,7 @@ import nehalImg from "../../../assets/patner/Nehal.jpeg";
 export const partners = [
   {
     id: 1,
-    name: "Rohit K Choski",
+    name: "Rohit K Choksi",
     designation: "Partner - FCA, B. Com",
     email: "rkc@gkcco.com",
     image: rohitImg,

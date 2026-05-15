@@ -369,7 +369,7 @@ const ContactSection: React.FC = () => {
                                 </p>
 
                                 <a href="tel:+917968198900" className="font-medium text-gray-900 hover:text-[#1F6F5B]">
-                                    +91 79 68198900
+                                    +91 79 681 98900
                                 </a>
                             </div>
 
@@ -394,8 +394,13 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Office Card */}
-                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
-          hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
+                            <a 
+                                href="https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+Ahmedabad+Gujarat+380058"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group bg-white block shadow-xl border border-gray-800/10 p-6 transition-all
+          hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white"
+                            >
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
                                     <MapPin size={22} />
@@ -409,7 +414,7 @@ const ContactSection: React.FC = () => {
                                     Billionaires Street, off Ambli Road,<br />
                                     Ahmedabad, Gujarat – 380058
                                 </p>
-                            </div>
+                            </a>
 
                         </div>
 
