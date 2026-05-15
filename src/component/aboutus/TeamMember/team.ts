@@ -17,7 +17,7 @@ import CAArjunAkruwala from "../../../assets/Core Team Photos/CA Arjun Akruwala.
 import CAAshaSindhi from "../../../assets/Core Team Photos/CA Asha Sindhi.jpg"
 import CAAsmaShaikh from "../../../assets/Core Team Photos/CA Asma Shaikh.jpg"
 import CABhavikShah from "../../../assets/Core Team Photos/CA Bhavik Shah.jpg"
-import CAHarshParikh from "../../../assets/Core Team Photos/CA Harsh Parikh.jpg"
+import CAHarshParikh from "../../../assets/Core Team Photos/harsh-Parikh.jpeg"
 import CAKamleshShah from "../../../assets/Core Team Photos/CA Kamlesh Shah.jpg"
 import CAMananShah from "../../../assets/Core Team Photos/CA Manan Shah.jpg"
 import CAMukeshDholakiya from "../../../assets/Core Team Photos/CA Mukesh Dholakiya.jpg"

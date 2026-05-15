@@ -235,30 +235,7 @@ const ServicePage = () => {
             Areas of Focus
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
-            {SERVICES.map((service: any) => (
-              <motion.div
-                key={service.slug}
-                variants={item}
-                whileHover={{ y: -5 }}
-                className="relative group"
-              >
-                {/* Glow Layer */}
-                <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] blur-md opacity-0 group-hover:opacity-60 transition duration-500" />
-
-                {/* Chip */}
-                <div className="relative z-10 px-5 md:px-10 py-3 rounded-full text-sm font-semibold bg-white border border-[#6FAF9B]/50 shadow-md transition-all duration-300 group-hover:bg-[#1C1C1C] group-hover:text-white group-hover:border-transparent">
-
-                  {/* Animated underline */}
-                  <span className="relative">
-                    {service.title}
-                    <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] transition-all duration-300 group-hover:w-full" />
-                  </span>
-
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        
         </motion.div>
       </div>
 

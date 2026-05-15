@@ -38,7 +38,7 @@ const AboutSection = () => {
             <h2 className="mb-6 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-4xl lg:text-5xl font-bold text-[#C2A96A]">
               Welcome to{" "}
               <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
-                G. K. Choksi & Co
+                G. K. Choksi & Co.
               </span>
             </h2>
 
