@@ -62,7 +62,7 @@ const AboutSection = () => {
                   icon: HiOutlineBadgeCheck, // changed icon
                 },
                 {
-                  text: "Personalized Service Approach",
+                  text: "Partner Led & Client Focused",
                   icon: HiOutlineUserGroup, // better icon
                 },
 

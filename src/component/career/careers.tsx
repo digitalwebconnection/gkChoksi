@@ -306,7 +306,7 @@ const CareersPage = () => {
             className="text-gray-500 text-lg mb-12 leading-relaxed"
           >
             We are always looking for exceptional talent. If you don't see a role that fits,
-            send us your resume anyway.
+            send us your resume anyway for future opportunities..
           </motion.p>
 
 

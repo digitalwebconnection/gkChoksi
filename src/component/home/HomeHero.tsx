@@ -81,12 +81,12 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
             onClick={() => {
-              navigate("/contact");
+              navigate("/core-team");
               window.scrollTo(0, 0); // ✅ smooth top
             }}
             className="flex items-center justify-center rounded-full bg-[#0F3D2E] px-8 py-3 text-sm font-semibold text-white shadow-lg hover:bg-[#1F6F5B]"
           >
-            Schedule Consultation
+            Schedule Core Team
             <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
 

@@ -293,7 +293,7 @@ const IndustryPage = () => {
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
                             <span className="text-[#583f05] font-bold tracking-[0.2em] text-xl uppercase block mb-6">
-                                Specialized Advisory
+                               Specialized Advisory Gold
                             </span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#1C1C1C] leading-[0.9] mb-10">
                                 Our   <span className="text-green-900">Presence</span>
