@@ -3,7 +3,7 @@ import i1 from "../../../assets/team/WhatsApp Image 2026-04-16 at 2.39.13 PM.jpe
 const AboutHero = () => {
   return (
     <section className="relative h-[70vh] overflow-hidden">
-      
+
       {/* FIXED BACKGROUND */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
@@ -15,13 +15,13 @@ const AboutHero = () => {
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col justify-center items-center text-center px-6 text-white">
-        
+
         {/* HEADER */}
         <div className="mb-4">
           <div className="flex items-center justify-center gap-3 mb-3">
-        
-            <span className="text-white drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase tracking-widest text-3xl md:text-4xl lg:text-5xl font-bold">
-              About Our Team
+
+            <span className="text-white drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase  text-3xl md:text-4xl lg:text-6xl font-bold font-serif">
+              About Our  <br /><span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]"> Team </span>
             </span>
           </div>
 

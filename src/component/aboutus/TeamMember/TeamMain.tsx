@@ -71,7 +71,7 @@ export default function TeamSection() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-3xl md:text-5xl lg:text-6xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-serif font-bold text-gray-900"
+                            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
                         >
                             Our <span className="text-[#C2A96A]  ">Team</span>
                         </motion.h2> <motion.div
@@ -187,7 +187,7 @@ export default function TeamSection() {
                                 onClick={() => setFilter(item)}
                                 className={`px-3 md:px-8 py-2 rounded-lg text-md font-medium transition
         ${filter === item
-                                        ? "bg-[#289572] text-white "
+                                        ? "bg-[#0F3D2E] text-white "
                                         : "bg-gray-100 border border-gray-800/30 text-gray-700 hover:bg-[#289572] hover:text-white"
                                     }`}
                             >

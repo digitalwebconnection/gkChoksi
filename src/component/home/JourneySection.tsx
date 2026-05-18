@@ -47,7 +47,7 @@ const timeline = [
     side: "left",
     image: "https://www.webintravel.com/wp-content/uploads/2012/11/chart_growth.png",
   },
-]; 
+];
 
 const container = {
   hidden: {},
@@ -133,7 +133,7 @@ const TimelineSection = () => {
                 >
                   <div className="rounded-2xl border border-[#6FAF9B]/30 bg-white p-6 shadow-[0_20px_50px_rgba(15,61,46,0.15)]">
 
-                    <span className="mb-3 inline-block rounded-full bg-[#6FAF9B]/10 px-3 py-1 text-[13px] font-semibold uppercase tracking-widest text-[#0a2e25]">
+                    <span className="mb-3 inline-block rounded-full bg-[#6FAF9B]/10 px-3 py-1 text-[13px] font-semibold uppercase  text-[#0a2e25]">
                       {item.chapter} • {item.period}
                     </span>
 
@@ -151,12 +151,12 @@ const TimelineSection = () => {
                           {item.desc}
                         </p>
 
-                        {/* <p className="mt-3 text-[11px] font-medium uppercase tracking-widest text-[#6FAF9B]">
+                        {/* <p className="mt-3 text-[11px] font-medium uppercase  text-[#6FAF9B]">
                           {item.meta}
                         </p> */}
 
                         <div className="mt-4 flex items-center gap-3">
-                          <span className="text-xs font-semibold uppercase tracking-widest text-[#0F3D2E]">
+                          <span className="text-xs font-semibold uppercase  text-[#0F3D2E]">
                             Core Focus
                           </span>
                           <span className="h-px flex-1 bg-linear-to-r from-[#6FAF9B] to-transparent" />

@@ -46,20 +46,20 @@ export default function AlumniPage() {
 
                 {/* Content */}
                 <div className="relative max-w-7xl mx-auto px-6 pt-52 text-center">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-6">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]">
                         Connections That Endure
                     </h1>
-                    <p className="text-lg md:text-xl text-[#47f0ba] max-w-4xl mx-auto">
+                    <p className="text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2 max-w-5xl mx-auto">
                         A lifelong bond that continues beyond time, built on shared journeys and lasting impact.
                     </p>
                 </div>
             </section>
             {/* INTRO SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-10 text-center">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#0F3D2E] mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-centermb-6">
                     Our Alumni Community
                 </h2>
-                <p className="text-lg leading-relaxed">
+                <p className=" text-xl font-semibold text-[#0F3D2E]">
                     Our alumni remain an integral part of our extended community. Individuals who have contributed to our journey and continue to carry our values into diverse paths and industries.
                 </p>
 
@@ -76,7 +76,7 @@ export default function AlumniPage() {
                 </div>
 
                 <div className=" pt-20">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#0F3D2E] mb-4">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug  mb-4">
                         Shared Experiences, Strong Bonds
                     </h3>
                     <p className="mb-4 text-justify ">
@@ -86,7 +86,7 @@ export default function AlumniPage() {
                     </p>
                     <button
                         onClick={() => setOpen(true)}
-                        className="border px-8 py-2 rounded-lg bg-[#0F3D2E] text-white"
+                        className="border px-810 py-2 rounded-lg bg-[#0F3D2E] text-white"
                     >
                         Get In Touch
                     </button>
@@ -98,7 +98,7 @@ export default function AlumniPage() {
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold pb-5 text-center text-[#0F3D2E] mb-10">
+                <h3 className="ttext-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center mb-10">
                     Alumni Moments
                 </h3>
 

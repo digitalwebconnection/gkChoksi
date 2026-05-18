@@ -63,10 +63,10 @@ const HeroSection = () => {
       >
 
         {/* Title */}
-        <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-5xl lg:text-7xl font-bold font-serif">
+        <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-5xl lg:text-6xl font-bold font-serif">
           G.K. Choksi & Co.
         </h1>
-        <p className="text-[#f5cd55] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
+        <p className="text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
           Chartered Accountants
         </p>
 
@@ -84,9 +84,9 @@ const HeroSection = () => {
               navigate("/core-team");
               window.scrollTo(0, 0); // ✅ smooth top
             }}
-            className="flex items-center justify-center rounded-full bg-[#0F3D2E] px-8 py-3 text-sm font-semibold text-white shadow-lg hover:bg-[#1F6F5B]"
+            className="flex items-center justify-center rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg "
           >
-       Core Team
+            Core Team
             <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
 

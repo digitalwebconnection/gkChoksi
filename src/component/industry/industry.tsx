@@ -98,7 +98,7 @@ const CATEGORIES = [
         img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
         desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
     },
-  
+
     {
         title: "Oil & Gas",
         img: "https://eco-cdn.iqpc.com/eco/images/channel_content/images/biggest_oil_and_gas_companies.jpg",
@@ -245,10 +245,10 @@ const IndustryPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-[#C2A96A] font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-3xl md:text-4xl lg:text-5xl  tracking-wide"
+                        className="text-white font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-3xl md:text-4xl lg:text-6xl "
                     >
                         Understanding Business, <br />
-                        <span className=" text-white">Beyond Numbers</span>
+                        <span className=" text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">Beyond Numbers</span>
                     </motion.h1>
 
                 </div>
@@ -261,7 +261,7 @@ const IndustryPage = () => {
                         <button
                             onClick={() => setSelectedFilter("All")}
                             className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedFilter === "All"
-                                ? "bg-[#9e7201] text-white shadow-lg"
+                                ? "bg-[#0F3D2E] text-white shadow-lg"
                                 : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-900"
                                 }`}
                         >
@@ -272,7 +272,7 @@ const IndustryPage = () => {
                                 key={module.module}
                                 onClick={() => setSelectedFilter(module.module)}
                                 className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap ${selectedFilter === module.module
-                                    ? "bg-[#C2A96A] text-white shadow-lg"
+                                    ? "bg-[#0F3D2E] text-white shadow-lg"
                                     : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-200"
                                     }`}
                             >
@@ -288,33 +288,33 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#583f05] font-bold tracking-[0.2em] text-xl uppercase block mb-6">
-                               Specialized Advisory Gold
+                            <span className="text-[#0F3D2E] font-bold  text-xl uppercase block mb-2">
+                                Specialized Advisory Gold
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#1C1C1C] leading-[0.9] mb-10">
-                                Our   <span className="text-green-900">Presence</span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center] mb-10">
+                                Our   Presence
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
                             <div className="space-y-6">
-                                <p className="text-lg text-gray-900 text-justify leading-relaxed font-light">
+                                <p className="text-lg text-gray-950 text-justify leading-relaxed font-light">
                                     Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
                                 </p>
                             </div>
                             <div className="max-w-5xl mx-auto my-5 px-8 py-10 border-t border-b border-gray-200 relative">
-                            {/* Decorative corner brackets for a unique look */}
-                            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
-                            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
+                                {/* Decorative corner brackets for a unique look */}
+                                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
+                                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
 
-                            <div className="text-center px-4">
-                                <p className="text-[#1C1C1C] text-xl text-justify md:text-2xl  font-light leading-relaxed tracking-tight">
-                                    Our approach is not to merely understand the industry,
-                                    but to understand your position within it
-                                    and to provide guidance that is both practical and forward-looking.
-                                </p>
+                                <div className="text-center px-4">
+                                    <p className="text-[#1C1C1C] text-xl text-justify md:text-2xl  font-light leading-relaxed tracking-tight">
+                                        Our approach is not to merely understand the industry,
+                                        but to understand your position within it
+                                        and to provide guidance that is both practical and forward-looking.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                        
+
                     </aside>
 
                     {/* RIGHT: SCROLLING ITEMS (No Numbers) */}

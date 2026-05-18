@@ -75,7 +75,7 @@ const WhatWeOffer = () => {
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <p className="text-lg font-semibold  uppercase tracking-[0.25em] text-[#073325]">
+          <p className="text-lg font-semibold  font-serif uppercase tracking- text-[#0F3D2E]">
             Our Core Expertise
           </p>
 
@@ -83,7 +83,7 @@ const WhatWeOffer = () => {
             Comprehensive Professional Services
           </h2>
 
-          <p className="mx-auto mt-4 text-xl text-[#0a382d]">
+          <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">
             We deliver comprehensive, specialized services as follows....
           </p>
         </div>

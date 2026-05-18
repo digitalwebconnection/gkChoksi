@@ -129,8 +129,8 @@ export default function FeatureSection() {
               className="flex items-center justify-center  mb-4"
             >
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                The <span className="text-[#C2A96A]">Foundation</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
+                The Foundation
               </h1>
             </motion.div>
 
@@ -214,7 +214,7 @@ export default function FeatureSection() {
       {/* 🔥 Heading */}
       <div className="text-center mb-16 relative z-10">
 
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-snug max-w-2xl mx-auto text-center">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
           Clarity Creates Confidence
         </h3>
       </div>
@@ -301,12 +301,12 @@ export default function FeatureSection() {
 
           {/* 🔥 MAIN STATEMENT */}
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-black">
-            Our <span className="text-[#C2A96A]">Expertise</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-[#C2A96A]">
+            Our Expertise
           </h2>
 
           {/* ✨ DESCRIPTION */}
-          <p className="mt-6 text-black text-lg leading-relaxed max-w-6xl text-center mx-auto">
+          <p className="mt-6 text-xl font-semibold text-[#0F3D2E] leading-relaxed max-w-7xl text-center mx-auto">
             With the leadership of 8 Partners supported by a strong talent base of 185+ professionals comprising of 40+ Chartered Accountants, <br /> 5+ Company Secretaries, 4+ Advocates, 100+ Articles, and 40+ Expert Chartered Accountants engaged on an assignment basis, the firm brings together deep domain expertise and practical insights to support clientele navigating growth and transformation.
           </p>
 
@@ -363,7 +363,7 @@ export default function FeatureSection() {
                       <div
                         className={`w-12 h-12 flex items-center justify-center rounded-xl mb-5 transition-all duration-300
                   ${isActive
-                            ? "bg-amber-500 text-white"
+                            ? "bg-[#C2A96A] text-white"
                             : "bg-amber-50"
                           }`}
                       >
@@ -371,7 +371,7 @@ export default function FeatureSection() {
                           className={`w-6 h-6 transition-colors
                     ${isActive
                               ? "text-white"
-                              : "text-[#079264]"
+                              : "text-[#0F3D2E]"
                             }`}
                         />
                       </div>
@@ -401,7 +401,7 @@ export default function FeatureSection() {
 
                     {/* Bottom Line */}
                     <div
-                      className={`absolute bottom-0 left-0 h-1 bg-amber-500 transition-all duration-700 z-30
+                      className={`absolute bottom-0 left-0 h-1 bg-[#C2A96A] transition-all duration-700 z-30
                 ${isActive ? "w-full" : "w-0"}`}
                     />
                   </div>

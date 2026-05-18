@@ -5,7 +5,7 @@ import i1 from "../../../assets/patner/patner.jpeg";
 
 const images = [
     i1,
-  
+
 ];
 
 const HeroSection = () => {
@@ -46,19 +46,11 @@ const HeroSection = () => {
                 <div className="max-w-3xl mx-auto pb-15   text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] tracking-widest text-white text-3xl  mb-4">
-                        Leadership That Delivers
+                    <p className="uppercase font-bold font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-white text-6xl  mb-4">
+                        Leadership That <span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]"> Delivers</span>
                     </p>
 
-                    {/* HEADING */}
-                    {/* <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        Experience That Leads. <br />
-                        Insight That Drives Results.
-                    </h1> */}
 
-
-
-                    
                 </div>
             </div>
 

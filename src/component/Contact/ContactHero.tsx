@@ -1,4 +1,4 @@
-import { motion, AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 
@@ -32,7 +32,7 @@ const ContactHeroSection = () => {
 
   return (
     <section
-      
+
       className="relative h-150 flex items-center justify-center overflow-hidden "
     >
 
@@ -43,7 +43,7 @@ const ContactHeroSection = () => {
           className="absolute inset-0 bg-cover  bg-center"
           style={{
             backgroundImage: `url(${images[current]})`,
-      
+
           }}
           initial={{ opacity: 0, scale: 1.15 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -66,13 +66,13 @@ const ContactHeroSection = () => {
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2 }}
-          className="text-3xl md:text-5xl lg:text-7xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold tracking-tight"
+          className="text-3xl md:text-5xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold tracking-tight"
         >
           {text}
           <motion.span
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
-            className="inline-block ml-1 text-[#C2A96A]"
+            className="inline-block ml-1 text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] "
           >
             .
           </motion.span>
@@ -96,7 +96,7 @@ const ContactHeroSection = () => {
           {images.map((_, i) => (
             <motion.span
               key={i}
-              className="h-1 rounded-full bg-white/40"
+              className="h-1 rounded-full bg-[#C2A96A]"
               animate={{
                 width: current === i ? 32 : 12,
                 opacity: current === i ? 1 : 0.4,

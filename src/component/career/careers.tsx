@@ -115,33 +115,34 @@ const CareersPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <span className=" text-[#0bd390] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
+            <span className=" text-[#0F3D2E] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  py-1 rounded-full text-lg font-bold tracking-[0.3em] uppercase mb-2 inline-block">
               Work With Us
             </span>
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white tracking-tighter leading-none mb-6">
               A Place to Grow, <br />
-              <span className="text-[#079264]">Thoughtfully.</span>
+              <span className="text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  mt-2">Thoughtfully.</span>
             </h1>
           </motion.div>
         </div>
       </section>
 
       {/* 2. CULTURE & LISTING SECTION */}
-      <section className="py-24 px-6 lg:px-5 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16">
+      <section className="py-14 px-6 lg:px-5 max-w-7xl mx-auto">
+                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug  text-center">
+              Why Our Firm Is The Right <br /> Fit For You.
+            </h2>
+        <div className="grid lg:grid-cols-12 gap-16 mt-10">
 
           {/* Left: Why Us */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 h-fit">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold mb-8 leading-tight">
-              Why Our Firm Is The <span className="text-[#C2A96A]">Right Fit</span> For You.
-            </h2>
+   
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#064631]/10 flex items-center justify-center shrink-0 text-[#064631]">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold  text-xl">Growth First</h4>
+                  <h4 className="font-bold text-[#0F3D2E]  text-xl">Growth First</h4>
                   <p className="text-black/90 text-justify text-md">At our firm, individuals are encouraged to think independently, take ownership, and contribute meaningfully from the outset.</p> <br />
 
                   <p className="text-black/90 text-justify text-md">We foster an environment that values curiosity, discipline, and integrity where questions are welcomed, ideas are respected, and excellence is quietly pursued.</p>
@@ -151,11 +152,11 @@ const CareersPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#C2A96A]/10 flex items-center justify-center shrink-0 text-[#C2A96A]">
+                <div className="w-12 h-12 rounded-2xl bg-[#C2A96A]/10 flex items-center justify-center shrink-0 text-[#0F3D2E]">
                   <Users className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">Collaborative Culture</h4>
+                  <h4 className="font-bold text-[#0F3D2E]  text-lg">Collaborative Culture</h4>
                   <p className="text-black/60 text-sm">Join us, and build a career defined by substance, not just scale.</p>
                 </div>
               </div>
@@ -163,7 +164,7 @@ const CareersPage = () => {
 
             <motion.button
               whileHover={{ x: 10 }}
-              className="mt-12 flex items-center gap-3 text-[#064631] text-lg font-bold group"
+              className="mt-12 flex items-center gap-3 text-[#0F3D2E] text-lg font-bold group"
             >
               Learn more about our values
               <ArrowRight className="w-5 h-5 group-hover:text-[#C2A96A] transition-colors" />
@@ -179,7 +180,7 @@ const CareersPage = () => {
             className="lg:col-span-8 space-y-6"
           >
             <div className="flex items-center justify-between mb-8">
-              <h3 className="uppercase tracking-widest text-lg font-bold text-black">Open Roles</h3>
+              <h3 className="uppercase  text-lg font-bold text-black">Open Roles</h3>
               <div className="h-px flex-1 mx-6 bg-black/5" />
             </div>
 
@@ -233,7 +234,7 @@ const CareersPage = () => {
                           {/* Section: Responsibilities */}
                           {job.responsibilities && (
                             <div>
-                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Key Focus Areas</h4>
+                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase  mb-6">Key Focus Areas</h4>
                               <ul className="space-y-4">
                                 {job.responsibilities.map((item, i) => (
                                   <li key={i} className="flex gap-3 text-sm text-black/80">
@@ -248,7 +249,7 @@ const CareersPage = () => {
                           {/* Section: Requirements */}
                           {job.requirements && (
                             <div>
-                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase tracking-widest mb-6">Requirement</h4>
+                              <h4 className="text-[#C2A96A] text-xs font-bold uppercase  mb-6">Requirement</h4>
                               <ul className="space-y-4">
                                 {job.requirements.map((item, i) => (
                                   <li key={i} className="flex gap-3 text-sm text-black/80">
@@ -264,7 +265,7 @@ const CareersPage = () => {
                         <div className="mt-12 flex justify-center md:justify-start">
                           <a
                             href="mailto:hr@gkcco.com"
-                            className="bg-[#1A1A1A] text-white px-8 md:px-10 py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-[#C2A96A] transition-colors shadow-lg"
+                            className="bg-[#1A1A1A] text-white px-8 md:px-10 py-4 rounded-full font-bold text-xs md:text-sm uppercase  hover:bg-[#C2A96A] transition-colors shadow-lg"
                           >
                             Apply for this position
                           </a>
@@ -293,9 +294,9 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#1C1C1C]"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
           >
-            Ready to <span className="text-[#C2A96A] ">make your mark?</span>
+            Ready to make your mark?
           </motion.h2>
 
           {/* Subtext */}
@@ -303,7 +304,7 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 text-lg mb-12 leading-relaxed"
+            className="text-xl font-semibold text-[#0F3D2E]"
           >
             We are always looking for exceptional talent. If you don't see a role that fits,
             send us your resume anyway for future opportunities..

@@ -51,7 +51,7 @@ const TimelineSection = () => {
     <section className="relative bg-white py-24 px-4 overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="relative">
-          
+
           {/* Central Horizontal Axis (Desktop) */}
           <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-500 -translate-y-1/2 hidden lg:block" />
 
@@ -61,7 +61,7 @@ const TimelineSection = () => {
 
               return (
                 <div key={index} className="relative flex flex-col items-center">
-                  
+
                   {/* --- TOP CONTENT (Desktop: Even | Mobile: All) --- */}
                   <motion.div
                     initial={{ opacity: 0, y: isEven ? -70 : 20 }}
@@ -72,7 +72,7 @@ const TimelineSection = () => {
                       ${isEven ? "lg:mb-1" : "lg:mt-90 lg:order-last"} 
                       mb-8 lg:mb-0`}
                   >
-                    <div 
+                    <div
                       className="w-32 h-32 rounded-full overflow-hidden border-4 bg-white shadow-xl mb-4"
                       style={{ borderColor: item.color }}
                     >
@@ -88,19 +88,19 @@ const TimelineSection = () => {
                   <div className="relative flex flex-col items-center justify-center h-12 w-full lg:absolute lg:top-1/2 lg:-translate-y-1/2">
                     {/* Vertical line for mobile */}
                     <div className="absolute h-full w-0.5 bg-gray-200 lg:hidden top-0" />
-                    
+
                     {/* The Connecting Dot */}
-                    <motion.div 
+                    <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       className="w-6 h-6 rounded-full border-4 bg-white z-20"
                       style={{ borderColor: item.color }}
                     />
-                    
+
                     {/* Year Label */}
                     <div className="absolute mt-16 lg:mt-20">
-                      <span className="text-sm font-black text-gray-900 tracking-widest uppercase">
+                      <span className="text-sm font-black text-gray-900  uppercase">
                         {item.period}
                       </span>
                     </div>

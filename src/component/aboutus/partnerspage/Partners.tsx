@@ -13,22 +13,22 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 const blocks = [
   {
     icon: HiOutlineUserGroup,
-    color: "#289572",
-    bg: "bg-[#289572]/10",
+    color: "#C2A96A",
+    bg: "bg-[#0F3D2E]/10",
     title: "Technical Excellence",
     text: "Our Partners bring with them a blend of technical excellence and seasoned judgement. Each engagement is led with personal involvement, ensuring experience is delivered, not delegated.",
   },
   {
     icon: HiOutlineLightBulb,
-    color: "#3B82F6",
-    bg: "bg-[#3B82F6]/10",
+    color: "#C2A96A",
+    bg: "bg-[#0F3D2E]/10",
     title: "Strategic Direction",
     text: "With diverse backgrounds across industries, the leadership team provides direction that is both strategic and grounded, offering clarity in complexity.",
   },
   {
     icon: HiOutlineScale,
     color: "#C2A96A",
-    bg: "bg-[#C2A96A]/10",
+    bg: "bg-[#0F3D2E]/10",
     highlight: true,
     title: "Integrity & Responsibility",
     text: "Beyond capability, the Partners share a common philosophy — to lead with integrity, to listen with intent, and to advise with responsibility.",
@@ -107,14 +107,14 @@ const Partners = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-gray-900"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
             >
-              Our <span className="text-[#C2A96A]  ">Partners</span>
+              Our Partners
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: 100 }}
-              className="h-1 bg-linear-to-r from-[#289572] to-[#C2A96A] mx-auto mt-6"
+              className="h-1 bg-linear-to-r from-[#0F3D2E] to-[#C2A96A] mx-auto mt-6"
             />
           </div>
 
@@ -162,7 +162,7 @@ const Partners = () => {
 
                   {/* CONTENT */}
                   <div className="p-6 text-center">
-                    <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#289572] transition-colors">
+                    <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#0F3D2E ] transition-colors">
                       {partner.name}
                     </h3>
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">

@@ -139,7 +139,7 @@ const fadeUp = {
 // ================= COMPONENT =================
 const ServicePage = () => {
   const navigate = useNavigate(); // ✅ ADD THIS
-    const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
   return (
     <>
       {/* HERO */}
@@ -160,27 +160,27 @@ const ServicePage = () => {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="relative z-10 text-center px-6 max-w-3xl"
+          className="relative z-10 text-center px-6 max-w-6xl"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A]">
-            Our Professional Services
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white ">
+            Our Professional  Services
           </h1>
 
-          <p className="mt-6 text-white text-xl">
+          <p className="mt-6 text-[#C2A96A] text-2xl">
             Delivering clarity, precision, and strategic insight across every engagement.
           </p>
-              <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              onClick={() => {
-                navigate("/contact");
-                window.scrollTo(0, 0); // ✅ scroll top
-              }}
-              className="inline-flex items-center mt-10 rounded-full bg-[#0F3D2E] px-10 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
-            >
-              Get in Touch
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            onClick={() => {
+              navigate("/contact");
+              window.scrollTo(0, 0); // ✅ scroll top
+            }}
+            className="inline-flex items-center mt-10 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-md transition-transform duration-300 "
+          >
+            Get in Touch
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </motion.button>
         </motion.div>
       </section>
 
@@ -191,38 +191,38 @@ const ServicePage = () => {
         {/* <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#C2A96A]/20 blur-[120px] rounded-full" /> */}
 
         {/* ================= BOTTOM POINTS ================= */}
-  <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6">
 
-  {BOTTOM_POINTS.map((point, i) => {
-    
+          {BOTTOM_POINTS.map((point, i) => {
 
-    return (
-      <div
-        key={i}
-        className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
-      >
-        {/* 🖼️ IMAGE */}
-        <img
-          src={point.image}
-          className="w-full h-[260px] object-cover transition-all duration-500 group-hover:scale-105"
-        />
 
-        {/* 🌑 DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-500" />
+            return (
+              <div
+                key={i}
+                className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
+              >
+                {/* 🖼️ IMAGE */}
+                <img
+                  src={point.image}
+                  className="w-full h-[260px] object-cover transition-all duration-500 group-hover:scale-105"
+                />
 
-        {/* 📝 DEFAULT TEXT */}
-        <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 ">
-          <p className="text-[#C2A96A] drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-xl font-bold">
-            {point.text}
-          </p>
+                {/* 🌑 DARK OVERLAY */}
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-500" />
+
+                {/* 📝 DEFAULT TEXT */}
+                <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 ">
+                  <p className="text-[#C2A96A] drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-xl font-bold">
+                    {point.text}
+                  </p>
+                </div>
+
+
+              </div>
+            );
+          })}
+
         </div>
-
-
-      </div>
-    );
-  })}
-
-</div>
         {/* ================= AREAS OF FOCUS ================= */}
         <motion.div
           variants={container}
@@ -231,17 +231,17 @@ const ServicePage = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-black mb-6 font-semibold">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
             Areas of Focus
           </p>
 
-        
+
         </motion.div>
       </div>
 
 
 
-   <section className="py-14 bg-[#F7F9F8]">
+      <section className="py-14 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* HEADER SAME */}
@@ -282,10 +282,10 @@ const ServicePage = () => {
 
                 {/* READ MORE */}
                 <div className="p-4 flex justify-between items-center">
-                  <span className="text-sm text-gray-600">
+                  <span className="text-lg text-gray-900">
                     Explore details
                   </span>
-                  <span className="text-[#289572] font-semibold group-hover:underline">
+                  <span className="text-[#0F3D2E] font-semibold text-lg group-hover:underline">
                     Read More →
                   </span>
                 </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin,  Mail, Phone, MapPin, Code2 } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-slate-50 border-t border-gray-200 font-sans"
+      className="bg-slate-50 border-t border-[#0F3D2E] font-sans"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -46,8 +46,8 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/g-k-choksi-&-co/" className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#0077B5] hover:border-[#0077B5] transition-all shadow-sm">
                 <Linkedin size={18} />
               </a>
-            
-       
+
+
             </div>
           </div>
 
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="lg:col-span-5 flex flex-row justify-between gap-8 md:contents">
             {/* Quick Links (2 cols) */}
             <div className="lg:col-span-2 text-left">
-              <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
+              <h4 className="text-sm font-bold text-gray-900 uppercase  mb-6">
                 Quick Links
               </h4>
               <ul className="space-y-4">
@@ -63,7 +63,7 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       to={item.to}
-                      className="text-sm text-gray-600 hover:text-green-800 hover:underline underline-offset-4 transition-all"
+                      className="text-sm text-gray-900 hover:text-green-800 hover:underline underline-offset-4 transition-all"
                     >
                       {item.label}
                     </Link>
@@ -74,13 +74,13 @@ const Footer = () => {
 
             {/* Locations (2 cols) */}
             <div className="lg:col-span-2 text-left">
-              <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
+              <h4 className="text-sm font-bold text-gray-900 uppercase  mb-6">
                 Locations
               </h4>
               <ul className="space-y-4">
                 {locations.map((loc) => (
                   <li key={loc} className="flex items-center justify-start gap-2 text-sm text-gray-600">
-                    <MapPin size={14} className="text-gray-400" />
+                    <MapPin size={14} className="text-gray-900" />
                     {loc}
                   </li>
                 ))}
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Contact Section (4 cols) */}
           <div className="lg:col-span-3 text-center md:text-left">
-            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-6">
+            <h4 className="text-sm font-bold text-gray-900 uppercase  mb-6">
               Get In Touch
             </h4>
             <div className="space-y-4 flex flex-col md:gap-3">
@@ -99,7 +99,7 @@ const Footer = () => {
                   <Mail size={16} className="text-green-800" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-medium">Email Us</p>
+                  <p className="text-xs text-gray-900 uppercase font-medium">Email Us</p>
                   <a href="mailto:hr@gkcco.com" className="text-sm text-gray-700 font-medium hover:text-green-800">hr@gkcco.com</a> <br />
                   <a href="mailto:info@gkcco.com" className="text-sm text-gray-700 font-medium hover:text-green-800">info@gkcco.com</a>
                 </div>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <Phone size={16} className="text-green-800" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase font-medium">Call Us</p>
+                  <p className="text-xs text-gray-900 uppercase font-medium">Call Us</p>
                   <p className="text-sm text-gray-700 font-medium group-hover:text-green-800 transition-colors">+91 79 681 98900</p>
                 </div>
               </a>
@@ -120,7 +120,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-900">
             © {new Date().getFullYear()} G.K. Choksi & Co. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-[#0F3D2E]  md:text-lg mt-2 md:mt-0">
@@ -131,7 +131,7 @@ const Footer = () => {
                 href="https://digitalwebconnection.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#c1972d] font-semibold"
+                className="text-[#C2A96A]  font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)]  font-serif leading-snug "
               >
                 Digital Web Connection
               </a>

@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
+import h1 from "../../assets/aboutuspage/h1.webp"
+import h2 from "../../assets/aboutuspage/h2.jpg"
+import h3 from "../../assets/aboutuspage/h3.jpg"
 
 const SLIDES = [
-  { image: "https://zxaccotax.com/wp-content/uploads/2024/05/accounting-outsourcing.jpg" },
-  { image: "https://www.salesforce.com/blog/wp-content/uploads/sites/2/2020/08/About-Us-Page.jpg?w=861" },
-  { image: "https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-05/shutterstock_264409757_0.jpg?h=265e640d&itok=qRj3l4JW" },
+  { image: h1 },
+  { image: h2 },
+  { image: h3 },
 ];
 
 export default function HeroSection() {
@@ -46,39 +49,28 @@ export default function HeroSection() {
 
         <div className="max-w-3xl mx-auto text-center">
 
-
           {/* MAIN HEADING */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.2)]">
             Clarity in Thinking <br />
-            <span className="text-[#079264] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]">
+            <span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]">
               Confidence in Execution
             </span>
           </h1>
-
-
 
           {/* BUTTONS */}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
 
             <Link
               to="/services"
-              className="group flex items-center gap-3 px-7 py-3 text-white bg-[#1d8665] hover:bg-[#1f7559] transition rounded-md font-semibold"
+              className="group flex items-center gap-3 px-10 py-2 text-md text-white bg-[#0F3D2E] hover:bg-[#1F6F5B] transition rounded-lg font-semibold"
             >
               Explore Services
               <HiOutlineArrowRight className="group-hover:translate-x-1 transition" />
             </Link>
 
-            <Link
-              to="/contact"
-              className="px-7 py-3 border border-white text-white hover:bg-white/10 transition rounded-md font-semibold"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }

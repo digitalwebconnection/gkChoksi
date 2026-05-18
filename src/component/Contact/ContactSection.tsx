@@ -88,7 +88,7 @@ const ContactSection: React.FC = () => {
         formData.set("subject", `New Inquiry from ${formData.get("name") || "GK Choksi Website"}`);
         formData.set("from_name", "GK Choksi Website");
         formData.set("replyto", formData.get("email") as string);
-        
+
         // Ensure botcheck is handled
         if (!formData.has("botcheck")) {
             formData.append("botcheck", "");
@@ -136,7 +136,7 @@ const ContactSection: React.FC = () => {
                             onClick={() => setShowPopup(false)}
                             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
                         />
-                        
+
                         {/* Popup Content */}
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -146,8 +146,8 @@ const ContactSection: React.FC = () => {
                         >
                             {/* Decorative Background Blob */}
                             <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-green-50 opacity-50 blur-3xl" />
-                            
-                            <button 
+
+                            <button
                                 onClick={() => setShowPopup(false)}
                                 className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
                             >
@@ -162,7 +162,7 @@ const ContactSection: React.FC = () => {
                                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                                     Message Sent!
                                 </h3>
-                                
+
                                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                     Thank you for reaching out. Your inquiry has been received, and one of our senior advisors will contact you shortly.
                                 </p>
@@ -184,7 +184,7 @@ const ContactSection: React.FC = () => {
                     {/* Heading */}
 
 
-                    <p className="mt-4 text-center  text-xl text-gray-600 max-w-3xl mx-auto animate-slideUp delay-100">
+                    <p className="mt-4 text-center  text-xl font-semibold text-[#0F3D2E] max-w-3xl mx-auto animate-slideUp delay-100">
                         Have a question about accounting, taxation, audit or compliance?
                         Our team will guide you with clarity and professional expertise.
                     </p>
@@ -200,11 +200,11 @@ const ContactSection: React.FC = () => {
 
                             {/* Header */}
                             <div className="relative mb-12">
-                                <span className="inline-block text-xs font-semibold uppercase tracking-widest text-green-800 mb-3">
+                                <span className="inline-block text-lg font-semibold uppercase  text-[#0F3D2E] mb-3">
                                     Confidential Advisory
                                 </span>
 
-                                <h3 className="text-3xl md:text-4xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
+                                <h3 className="text-3xl md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
                                     Speak With Our Experts
                                 </h3>
 
@@ -221,7 +221,7 @@ const ContactSection: React.FC = () => {
 
                                 {/* Full Name */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Full Name
                                     </label>
                                     <input
@@ -235,7 +235,7 @@ const ContactSection: React.FC = () => {
 
                                 {/* Email */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Business Email
                                     </label>
                                     <input
@@ -249,7 +249,7 @@ const ContactSection: React.FC = () => {
 
                                 {/* Company */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Company Name
                                     </label>
                                     <input
@@ -262,7 +262,7 @@ const ContactSection: React.FC = () => {
 
                                 {/* Designation */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Designation / Role
                                     </label>
                                     <input
@@ -275,10 +275,10 @@ const ContactSection: React.FC = () => {
 
                                 {/* Service */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Required Service
                                     </label>
-                                    <select 
+                                    <select
                                         name="service"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     >
@@ -292,10 +292,10 @@ const ContactSection: React.FC = () => {
 
                                 {/* Branch Selection */}
                                 <div>
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Preferred Branch
                                     </label>
-                                    <select 
+                                    <select
                                         name="preferred_branch"
                                         className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     >
@@ -308,7 +308,7 @@ const ContactSection: React.FC = () => {
 
                                 {/* Message */}
                                 <div className="md:col-span-2">
-                                    <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">
+                                    <label className="block text-xs font-semibold uppercase  text-gray-500 mb-2">
                                         Message / Inquiry Details
                                     </label>
                                     <textarea
@@ -322,7 +322,7 @@ const ContactSection: React.FC = () => {
                                 {/* CTA */}
                                 <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2 border-t border-gray-100">
 
-                                    <p className="text-sm text-gray-500 max-w-md">
+                                    <p className="text-md text-gray-900 max-w-md">
                                         Your information is kept strictly confidential <br />
                                         and reviewed only by senior advisors.
                                     </p>
@@ -332,7 +332,7 @@ const ContactSection: React.FC = () => {
                                             type="submit"
                                             disabled={isSubmitting}
                                             className={`inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
-                                                hover:bg-[#1F6F5B] 
+                                  
                                                 text-white px-4 md:px-14 py-4 font-semibold tracking-wide transition hover:shadow-2xl
                                                 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                                         >
@@ -394,7 +394,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Office Card */}
-                            <a 
+                            <a
                                 href="https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+Ahmedabad+Gujarat+380058"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -435,32 +435,32 @@ const ContactSection: React.FC = () => {
                     />
 
                     {/* Luxury Overlay */}
-                    <div className="absolute inset-0 bg-linear-to-br from-black/70 via-black/40 to-black/80" />
+                    <div className="absolute inset-0 bg-linear-to-br from-black/70 via-black/60 to-black/80" />
 
                     {/* Content Grid */}
                     <div className="relative z-10 grid lg:grid-cols-2 gap-10 p-12 lg:p-16 h-full items-center">
 
                         {/* Left – Brand Presence */}
                         <div>
-                            <span className="inline-block text-lg tracking-[0.3em] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase text-emerald-400 font-semibold">
+                            <span className="inline-block text-lg  drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] uppercase text-white font-semibold">
                                 Office Headquarters
                             </span>
 
-                            <h2 className="mt-4 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug ">
                                 G.K. Choksi & Co.
                                 <span className="block text-gray-300 text-xl md:text-2xl mt-2">
                                     Ahmedabad
                                 </span>
                             </h2>
 
-                         
+
 
 
                         </div>
 
                         {/* Right – Glass Location Card */}
                         <div className="bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 p-8 lg:p-10 max-w-md ml-auto">
-                            <p className="text-xs tracking-widest uppercase text-emerald-300 font-semibold">
+                            <p className="text-lg  uppercase text-white font-semibold">
                                 Visit Our Office
                             </p>
 
@@ -481,7 +481,7 @@ const ContactSection: React.FC = () => {
                                 }}
                                 className="inline-flex items-center gap-2 text-sm font-semibold
           text-white bg-[#0F3D2E] px-4 py-2 rounded-full
-          hover:bg-[#1F6F5B] hover:rounded-tr-3xl hover:rounded-bl-3xl
+          hover:rounded-tr-3xl hover:rounded-bl-3xl
           transition-all duration-300"
                             >
                                 <MapPin size={18} />
@@ -507,7 +507,7 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-extrabold text-[#C2A96A]">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
                             Our Branches
                         </h2>
 
@@ -573,7 +573,7 @@ const ContactSection: React.FC = () => {
                                     <button
                                         onClick={() => openMap(branch.address)}
                                         className="inline-flex items-center gap-2 text-md font-semibold
-                               text-white bg-[#6FAF9B] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl  hover:bg-[#1F6F5B] hover:text-white transition-colors"
+                               text-white bg-[#0F3D2E] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl   hover:text-white transition-colors"
                                     >
                                         <MapPin size={20} />
                                         View on Map

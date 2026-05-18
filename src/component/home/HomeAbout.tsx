@@ -31,11 +31,11 @@ const AboutSection = () => {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 text-lg font-semibold uppercase tracking-[0.25em] text-[#6FAF9B]">
+            <p className="mb-3 text-lg font-semibold uppercase  font-serif text-[#0F3D2E]">
               About Us
             </p>
 
-            <h2 className="mb-6 font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-4xl lg:text-5xl font-bold text-[#C2A96A]">
+            <h2 className="mb-6 mt-2 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A]">
               Welcome to{" "}
               <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
                 G. K. Choksi & Co.
@@ -92,7 +92,7 @@ const AboutSection = () => {
                 navigate("/contact");
                 window.scrollTo(0, 0); // ✅ scroll top
               }}
-              className="inline-flex items-center rounded-full bg-[#0F3D2E] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-transform duration-300 hover:bg-[#1F6F5B]"
+              className="inline-flex items-center text-sm  transition-transform duration-300 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -117,11 +117,11 @@ const AboutSection = () => {
 
               {/* CONTENT */}
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <p className="text-xl uppercase tracking-[0.2em] text-[#0effb3]">
+                <p className="text-xl uppercase font-serif  text-white">
                   Client-first approach
                 </p>
 
-                <p className="mt-2 text-lg font-medium leading-snug max-w-sm">
+                <p className="mt-2 text-lg text-white font-medium leading-snug max-w-sm">
                   Long-term partnerships built on trust, transparency, and clarity.
                 </p>
               </div>
@@ -132,13 +132,13 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -6 }}
-              className="absolute bottom-30 md:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
+              className="absolute bottom-30 md:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
             >
-              <p className="text-[11px] uppercase tracking-[0.2em] text-gray-200">
+              <p className="text-lg uppercase font-serif  text-[#0F3D2E]">
                 Trusted Since
               </p>
 
-              <p className="text-2xl font-bold mt-1">1972</p>
+              <p className="text-2xl font-bold text-[#0F3D2E] mt-1">1972</p>
 
 
             </motion.div>
