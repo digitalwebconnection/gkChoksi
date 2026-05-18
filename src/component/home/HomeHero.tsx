@@ -86,7 +86,7 @@ const HeroSection = () => {
             }}
             className="flex items-center justify-center rounded-full bg-[#0F3D2E] px-8 py-3 text-sm font-semibold text-white shadow-lg hover:bg-[#1F6F5B]"
           >
-            Schedule Core Team
+       Core Team
             <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
 

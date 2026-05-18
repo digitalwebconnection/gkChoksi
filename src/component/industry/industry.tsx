@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
-
 const images = [
     "https://www.shutterstock.com/image-photo/collage-movie-various-field-technology-600nw-2491000037.jpg",
     "https://print-packagingblog.com/wp-content/uploads/2014/11/Collage-KUM.jpg",
     "https://astromachineworks.com/wp-content/uploads/collage.webp"
 ];
-
 
 const CATEGORIES = [
     {
@@ -192,7 +189,6 @@ const INDUSTRY_MODULES = [
             "Retail & E-commerce",
         ],
     },
-
 
     {
         module: "Services",
