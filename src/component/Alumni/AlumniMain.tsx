@@ -86,7 +86,7 @@ export default function AlumniPage() {
                     </p>
                     <button
                         onClick={() => setOpen(true)}
-                        className="border px-810 py-2 rounded-lg bg-[#0F3D2E] text-white"
+                        className="border px-10 py-2 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] text-white"
                     >
                         Get In Touch
                     </button>

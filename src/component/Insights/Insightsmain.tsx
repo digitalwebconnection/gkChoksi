@@ -128,9 +128,9 @@ const InsightsMain: React.FC = () => {
 
                             {/* CTA */}
                             <motion.button
-                                whileHover={{ scale: 1.10 }}
+                                whileHover={{ scale: 1.01 }}
                                 whileTap={{ scale: 0.90 }}
-                                className="group flex items-center gap-4 bg-slate-900 text-white px-6 py-4 rounded-xl w-fit transition-all duration-300 hover:bg-green-900  shadow-lg"
+                                className="group flex items-center gap-4     w-fit transition-all duration-300 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg"
                             >
                                 Explore Now
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

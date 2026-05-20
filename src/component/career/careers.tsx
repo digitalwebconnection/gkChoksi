@@ -188,7 +188,7 @@ const CareersPage = () => {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`rounded-3xl border transition-all duration-500 overflow-hidden ${openIndex === idx
+                className={`rounded-lg border transition-all duration-500 overflow-hidden ${openIndex === idx
                   ? "border-[#815f09] bg-white shadow-2xl shadow-[#C2A96A]/10"
                   : "border-black/50 bg-[#F8F9FA] hover:border-[#C2A96A]/40"
                   }`}
@@ -265,7 +265,7 @@ const CareersPage = () => {
                         <div className="mt-12 flex justify-center md:justify-start">
                           <a
                             href="mailto:hr@gkcco.com"
-                            className="bg-[#1A1A1A] text-white px-8 md:px-10 py-4 rounded-full font-bold text-xs md:text-sm uppercase  hover:bg-[#C2A96A] transition-colors shadow-lg"
+                            className="bg-[#0F3D2E] hover:bg-[#1F6F5B] text-white px-8 md:px-10 py-4 rounded-lg font-bold text-xs md:text-sm uppercase  transition-colors shadow-lg"
                           >
                             Apply for this position
                           </a>

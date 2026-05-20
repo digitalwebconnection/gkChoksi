@@ -2,6 +2,7 @@ import { useState } from "react";
 import { partners } from "./Data";
 import PartnerModal from "./PartnerModal";
 import HeroSection from "./HeroSection";
+
 import {
   HiOutlineUserGroup,
   HiOutlineLightBulb,
@@ -130,8 +131,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-gray-900">Leadership Team</h3>
-
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">Leadership Team</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -165,7 +165,7 @@ const Partners = () => {
                     <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#0F3D2E ] transition-colors">
                       {partner.name}
                     </h3>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-1">
+                    <p className="text-xs font-semibold text-gray-900 uppercase tracking-wider mt-1">
                       {partner.designation}
                     </p>
 
