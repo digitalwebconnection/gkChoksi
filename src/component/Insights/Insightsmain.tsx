@@ -113,11 +113,11 @@ const InsightsMain: React.FC = () => {
 
 
                             {/* Heading */}
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug">
                                 Articles &
                                 <br />
                
-                                    Publications
+                                    <span className=" text-[#0F3D2E]"> Publications</span>
               
                             </h2>
 
@@ -166,8 +166,8 @@ const InsightsMain: React.FC = () => {
                     {/* LEFT */}
 
                     <div className="w-full  text-center  mb-8">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Key Authorities
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+                            Key <span className=" text-[#0F3D2E]">Authorities</span>
                         </h1>
                         <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">
                             {insightCards[1].description}

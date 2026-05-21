@@ -128,8 +128,8 @@ const CareersPage = () => {
 
       {/* 2. CULTURE & LISTING SECTION */}
       <section className="py-14 px-6 lg:px-5 max-w-7xl mx-auto">
-                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug  text-center">
-              Why Our Firm Is The Right <br /> Fit For You.
+                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug  text-center">
+              Why Our Firm Is <span className=" text-[#0F3D2E]">The Right <br />  Fit For You.</span>
             </h2>
         <div className="grid lg:grid-cols-12 gap-16 mt-10">
 
@@ -294,9 +294,9 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
           >
-            Ready to make your mark?
+            Ready to make <span className=" text-[#0F3D2E]">  your mark?</span>
           </motion.h2>
 
           {/* Subtext */}

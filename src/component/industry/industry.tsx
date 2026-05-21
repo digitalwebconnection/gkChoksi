@@ -288,11 +288,11 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#0F3D2E] font-bold  text-xl uppercase block mb-2">
-                                Specialized Advisory Gold
+                            <span className="text-[#C2A96A] font-bold  text-xl uppercase block mb-2">
+                                Specialized Advisory
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center] mb-10">
-                                Our   Presence
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-10">
+                                Our   <span className=" text-[#0F3D2E]"> Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
                             <div className="space-y-6">

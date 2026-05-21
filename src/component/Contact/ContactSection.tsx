@@ -205,7 +205,7 @@ const ContactSection: React.FC = () => {
                                 </span>
 
                                 <h3 className="text-3xl md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
-                                    Speak With Our Experts
+                                    Speak With Our  <span className=" text-[#0F3D2E]"> Experts</span>
                                 </h3>
 
 
@@ -446,7 +446,7 @@ const ContactSection: React.FC = () => {
                                 Office Headquarters
                             </span>
 
-                            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug ">
+                            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-white font-serif leading-snug ">
                                 G.K. Choksi & Co.
                                 <span className="block text-gray-300 text-xl md:text-2xl mt-2">
                                     Ahmedabad
@@ -507,8 +507,8 @@ const ContactSection: React.FC = () => {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Our Branches
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+                            Our  <span className=" text-[#0F3D2E]">Branches</span>
                         </h2>
 
                     </motion.div>

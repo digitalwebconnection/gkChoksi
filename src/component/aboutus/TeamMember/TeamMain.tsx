@@ -58,8 +58,6 @@ export default function TeamSection() {
         <>
             <AboutHero />
 
-
-
             <section className="bg-[#F7F9F8] pb-16 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 py-20">
 
@@ -71,9 +69,9 @@ export default function TeamSection() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
+                            className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
                         >
-                            Our <span className="text-[#C2A96A]  ">Team</span>
+                            Our <span className="text-[#0F3D2E]  ">Team</span>
                         </motion.h2> <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: 100 }}
@@ -83,7 +81,7 @@ export default function TeamSection() {
 
                     {/* MAIN CONTENT */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-
+                        
                         {/* LEFT IMAGE */}
                         <div className="relative rounded-lg overflow-hidden shadow-lg">
                             <img
@@ -94,7 +92,7 @@ export default function TeamSection() {
                         </div>
 
                         {/* RIGHT CONTENT */}
-                        <div className="space-y-6 text-gray-700 leading-relaxed">
+                        <div className="space-y-6 text-gray-900 leading-relaxed">
 
                             <p>
                                 At the heart of the firm is a strong core team of Chartered Accountants,
@@ -150,8 +148,8 @@ export default function TeamSection() {
                             return (
                                 <div
                                     key={item.text}
-                                    className="group rounded-xl p-6 text-center transition-all duration-300 border border-gray-200
-        hover:shadow-xl hover:-translate-y-1"
+                                    className="group rounded-xl p-6 text-center transition-all duration-300 border-2 border-gray-300
+   shadow-lg     hover:shadow-xl shadow-black/50 hover:-translate-y-1"
                                     style={{ backgroundColor: item.bg }}
                                 >
                                     {/* ICON BOX */}
@@ -209,21 +207,21 @@ export default function TeamSection() {
                                         }
                                     }}
                                     className={`group ${isClickable
-                                            ? "cursor-pointer"
-                                            : "cursor-default "
+                                        ? "cursor-pointer"
+                                        : "cursor-default "
                                         }`}
                                 >
                                     <div
-                                        className={`bg-white border border-black/30 rounded-xl overflow-hidden shadow-sm transition ${isClickable ? "hover:shadow-xl" : ""
+                                        className={`bg-white border border-black/30 rounded-xl overflow-hidden shadow-lg shadow-black/50 transition ${isClickable ? "hover:shadow-xl" : ""
                                             }`}
                                     >
                                         {/* IMAGE */}
                                         <div className="relative h-80 md:h-60 overflow-hidden">
                                             <img
                                                 src={member.image}
-                                                className={`w-full h-full object-fill transition duration-500 ${isClickable
-                                                        ? "grayscale-100 group-hover:grayscale-0 group-hover:scale-105"
-                                                        : "grayscale"
+                                                className={`w-full h-full object-fill  transition duration-500 ${isClickable
+                                                    ? "grayscale-100 group-hover:grayscale-0 group-hover:scale-105"
+                                                    : "grayscale"
                                                     }`}
                                             />
                                             <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />

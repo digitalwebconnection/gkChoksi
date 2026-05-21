@@ -65,9 +65,9 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { x.set(0); y.set(0); }}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="group h-full"
+      className="group h-full shadow-lg shadow-black/50 rounded-lg "
     >
-      <div className={`relative h-full p-6 rounded-xl bg-white border border-gray-900/20 transition-all duration-500 
+      <div className={`relative h-full p-6 rounded-lg bg-white border border-gray-900/30 transition-all duration-500 
         ${block.highlight ? "shadow-[0_20px_50px_rgba(194,169,106,0.15)] border-[#C2A96A]/20" : "shadow-xl shadow-gray-200/40"}`}>
 
         {/* Hover Gradient Blob */}
@@ -108,9 +108,9 @@ const Partners = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
             >
-              Our Partners
+              Our <span className=" text-[#0F3D2E]">Partners</span>
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}
@@ -131,7 +131,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">Leadership Team</h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">Leadership <span className=" text-[#0F3D2E]"> Team</span></h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

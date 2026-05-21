@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <div className="max-w-3xl mx-auto pb-15   text-white">
 
                     {/* LABEL */}
-                    <p className="uppercase font-bold font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-white text-6xl  mb-4">
+                    <p className=" font-bold font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-white text-6xl  mb-4">
                         Leadership That <span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]"> Delivers</span>
                     </p>
 

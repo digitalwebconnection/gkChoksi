@@ -86,8 +86,8 @@ const VisionMissionSection = () => {
         {/* <div className="absolute top-0 right-0 w-1/3 h-full bg-[#79590a]/5 skew-x-12 translate-x-20" /> */}
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center py-10">
-            Our Excellence<br />is Driven by Values
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center py-10">
+            Our <span className=" text-[#C2A96A]">Excellence</span> <br />is Driven by <span className=" text-[#0F3D2E]">Values</span>
           </h2>
           <div className="grid lg:grid-cols-12 gap-10 items-center">
 

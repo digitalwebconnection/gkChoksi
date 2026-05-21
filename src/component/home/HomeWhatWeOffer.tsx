@@ -79,8 +79,8 @@ const WhatWeOffer = () => {
             Our Core Expertise
           </p>
 
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-[#C2A96A]">
-            Comprehensive Professional Services
+          <h2 className="mt-3 font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-black">
+            Comprehensive <span className=" text-[#0F3D2E]">Professional Services</span>
           </h2>
 
           <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">

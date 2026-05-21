@@ -56,8 +56,8 @@ export default function AlumniPage() {
             </section>
             {/* INTRO SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-10 text-center">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-centermb-6">
-                    Our Alumni Community
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-centermb-6">
+                    Our Alumni <span className=" text-[#0F3D2E]"> Community</span>
                 </h2>
                 <p className=" text-xl font-semibold text-[#0F3D2E]">
                     Our alumni remain an integral part of our extended community. Individuals who have contributed to our journey and continue to carry our values into diverse paths and industries.
@@ -77,7 +77,7 @@ export default function AlumniPage() {
 
                 <div className=" pt-20">
                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug  mb-4">
-                        Shared Experiences, Strong Bonds
+                        Shared Experiences, <span className=" text-[#0F3D2E]"> Strong Bonds</span>
                     </h3>
                     <p className="mb-4 text-justify ">
                         We take pride in these relationships, built on shared experiences and mutual respect.   </p>
@@ -98,8 +98,8 @@ export default function AlumniPage() {
 
             {/* GALLERY SECTION */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <h3 className="ttext-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center mb-10">
-                    Alumni Moments
+                <h3 className="ttext-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center mb-10">
+                    Alumni  <span className=" text-[#0F3D2E]"> Moments</span>
                 </h3>
 
                 <div className="flex  max-w-7xl mx-auto text-center justify-center   gap-10">

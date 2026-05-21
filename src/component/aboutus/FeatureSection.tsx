@@ -129,8 +129,8 @@ export default function FeatureSection() {
               className="flex items-center justify-center  mb-4"
             >
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
-                The Foundation
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+                The <span className=" text-[#0F3D2E]">Foundation</span>
               </h1>
             </motion.div>
 
@@ -214,8 +214,8 @@ export default function FeatureSection() {
       {/* 🔥 Heading */}
       <div className="text-center mb-16 relative z-10">
 
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
-          Clarity Creates Confidence
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+          Clarity Creates <span className=" text-[#0F3D2E]">Confidence</span>
         </h3>
       </div>
 
@@ -301,8 +301,8 @@ export default function FeatureSection() {
 
           {/* 🔥 MAIN STATEMENT */}
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-[#C2A96A]">
-            Our Expertise
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-black">
+            Our  <span className=" text-[#0F3D2E]">Expertise</span>
           </h2>
 
           {/* ✨ DESCRIPTION */}

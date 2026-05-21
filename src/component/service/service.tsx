@@ -231,8 +231,8 @@ const ServicePage = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] font-serif leading-snug max-w-2xl mx-auto text-center">
-            Areas of Focus
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
+            Areas of <span className=" text-[#0F3D2E]"> Focus</span>
           </p>
 
 
@@ -241,7 +241,7 @@ const ServicePage = () => {
 
 
 
-      <section className="py-14 bg-[#F7F9F8]">
+      <section className="py-10 bg-[#F7F9F8]">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* HEADER SAME */}
