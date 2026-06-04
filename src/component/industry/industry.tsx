@@ -261,7 +261,7 @@ const IndustryPage = () => {
                         <button
                             onClick={() => setSelectedFilter("All")}
                             className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${selectedFilter === "All"
-                                ? "bg-[#0F3D2E] text-white shadow-lg"
+                                ? "bg-[#19603B] text-white shadow-lg"
                                 : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-900"
                                 }`}
                         >
@@ -272,7 +272,7 @@ const IndustryPage = () => {
                                 key={module.module}
                                 onClick={() => setSelectedFilter(module.module)}
                                 className={`px-6 md:px-8 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap ${selectedFilter === module.module
-                                    ? "bg-[#0F3D2E] text-white shadow-lg"
+                                    ? "bg-[#19603B] text-white shadow-lg"
                                     : "bg-gray-100 text-[#1C1C1C] hover:bg-gray-200"
                                     }`}
                             >
@@ -288,22 +288,22 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#C2A96A] font-bold  text-xl uppercase block mb-2">
+                            <span className="text-[#C2A96A] font-bold  text-xl font-serif uppercase block mb-2">
                                 Specialized Advisory
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-10">
-                                Our   <span className=" text-[#0F3D2E]"> Presence</span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-5">
+                                Our   <span className=" text-[#C2A96A]"> Presence</span>
                             </h2>
-                            <div className="w-20 h-[3px] bg-[#C2A96A] mb-10" />
+                            <div className="w-20 h-[3px] bg-[#C2A96A] mb-5" />
                             <div className="space-y-6">
                                 <p className="text-lg text-gray-950 text-justify leading-relaxed font-light">
                                     Every industry carries its own rhythm, its own set of risks, regulations, and opportunities. Our experience across diverse sectors has taught us that effective advice is never generic; it is shaped by context, informed by nuance, and delivered with an appreciation of the realities each industry presents.
                                 </p>
                             </div>
-                            <div className="max-w-5xl mx-auto my-5 px-8 py-10 border-t border-b border-gray-200 relative">
+                            <div className="max-w-5xl mx-auto my-5 px-4 py-6  relative">
                                 {/* Decorative corner brackets for a unique look */}
-                                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C2A96A]" />
-                                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C2A96A]" />
+                                <div className="absolute top-0 left-0 w-8 h-8 border-t-3 border-l-3 border-[#C2A96A]" />
+                                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-3 border-r-3 border-[#C2A96A]" />
 
                                 <div className="text-center px-4">
                                     <p className="text-[#1C1C1C] text-xl text-justify md:text-2xl  font-light leading-relaxed tracking-tight">
@@ -333,18 +333,18 @@ const IndustryPage = () => {
                                 className="group flex flex-col md:flex-row gap-8 items-start border-b border-gray-800/40 pb-12"
                             >
                                 {/* IMAGE WITH SHADOW */}
-                                <div className="w-full md:w-[220px] h-[150px] shrink-0 overflow-hidden rounded-lg shadow-[0_20px_50px_rgba(10,19,106,0.2)] group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
+                                <div className="w-full md:w-[220px] shadow-xl shadow-[#19603B]/60 h-[150px] shrink-0 overflow-hidden rounded-lg group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
                                     <motion.img
                                         whileHover={{ scale: 1.05 }}
                                         src={item.img}
                                         alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 grayscale-100 group-hover:grayscale-0"
+                                        className="w-full h-full  object-cover transition-transform duration-700 grayscale-100 group-hover:grayscale-0"
                                     />
                                 </div>
 
                                 {/* CONTENT AREA */}
                                 <div className=" py-10 justify-center  items-center">
-                                    <h3 className="text-xl lg:text-2xl font-bold text-[#1C1C1C] group-hover:text-[#C2A96A] transition-colors duration-300 mb-3">
+                                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-[#1C1C1C] group-hover:text-[#C2A96A] transition-colors duration-300 mb-3">
                                         {item.title}
                                     </h3>
 

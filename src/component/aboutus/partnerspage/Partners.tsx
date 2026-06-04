@@ -15,21 +15,21 @@ const blocks = [
   {
     icon: HiOutlineUserGroup,
     color: "#C2A96A",
-    bg: "bg-[#0F3D2E]/10",
+    bg: "bg-[#19603B]/10",
     title: "Technical Excellence",
     text: "Our Partners bring with them a blend of technical excellence and seasoned judgement. Each engagement is led with personal involvement, ensuring experience is delivered, not delegated.",
   },
   {
     icon: HiOutlineLightBulb,
     color: "#C2A96A",
-    bg: "bg-[#0F3D2E]/10",
+    bg: "bg-[#19603B]/10",
     title: "Strategic Direction",
     text: "With diverse backgrounds across industries, the leadership team provides direction that is both strategic and grounded, offering clarity in complexity.",
   },
   {
     icon: HiOutlineScale,
     color: "#C2A96A",
-    bg: "bg-[#0F3D2E]/10",
+    bg: "bg-[#19603B]/10",
     highlight: true,
     title: "Integrity & Responsibility",
     text: "Beyond capability, the Partners share a common philosophy — to lead with integrity, to listen with intent, and to advise with responsibility.",
@@ -65,10 +65,10 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { x.set(0); y.set(0); }}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="group h-full shadow-lg shadow-black/50 rounded-lg "
+      className="group h-full shadow-xl shadow-[#19603B]/60 rounded-lg "
     >
       <div className={`relative h-full p-6 rounded-lg bg-white border border-gray-900/30 transition-all duration-500 
-        ${block.highlight ? "shadow-[0_20px_50px_rgba(194,169,106,0.15)] border-[#C2A96A]/20" : "shadow-xl shadow-gray-200/40"}`}>
+        ${block.highlight ? " border-[#C2A96A]/20" : ""}`}>
 
         {/* Hover Gradient Blob */}
         <div
@@ -76,11 +76,11 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
           style={{ backgroundColor: block.color }}
         />
 
-        <div style={{ transform: "translateZ(40px)" }} className={`w-14 h-14 ${block.bg} rounded-2xl flex items-center justify-center mb-6`}>
-          <Icon className="w-7 h-7" style={{ color: block.color }} />
+        <div style={{ transform: "translateZ(40px)" }} className={`w-14 h-14 bg-[#fffff0] rounded-2xl flex items-center justify-center mb-6`}>
+          <Icon className="w-7 h-7 text-[#19603B]" />
         </div>
 
-        <h3 style={{ transform: "translateZ(30px)" }} className="text-2xl font-bold text-gray-900 mb-3">
+        <h3 style={{ transform: "translateZ(30px)" }} className="text-2xl  font-serif font-bold text-gray-900 mb-3">
           {block.title}
         </h3>
 
@@ -88,7 +88,7 @@ const FeatureCard = ({ block, i }: FeatureCardProps) => {
           {block.text}
         </p>
 
-        <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-700" style={{ backgroundColor: block.color }} />
+   
       </div>
     </motion.div>
   );
@@ -110,12 +110,12 @@ const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
             >
-              Our <span className=" text-[#0F3D2E]">Partners</span>
+              Our <span className=" text-[#C2A96A]">Partners</span>
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: 100 }}
-              className="h-1 bg-linear-to-r from-[#0F3D2E] to-[#C2A96A] mx-auto mt-6"
+              className="h-1 bg-[#19603B] mx-auto mt-6"
             />
           </div>
 
@@ -131,7 +131,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">Leadership <span className=" text-[#0F3D2E]"> Team</span></h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">Leadership <span className=" text-[#C2A96A]"> Team</span></h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -144,7 +144,7 @@ const Partners = () => {
                 onClick={() => setSelectedPartner(partner)}
                 className="group cursor-pointer"
               >
-                <div className="bg-white rounded-xl overflow-hidden border border-gray-500/20 shadow-gray-300 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="bg-white rounded-xl overflow-hidden border border-gray-500/20 shadow-xl shadow-[#19603B]/60 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
 
                   {/* IMAGE with Color Overlay */}
                   <div className="relative aspect-4/5 overflow-hidden bg-gray-100">
@@ -162,7 +162,7 @@ const Partners = () => {
 
                   {/* CONTENT */}
                   <div className="p-6 text-center">
-                    <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#0F3D2E ] transition-colors">
+                    <h3 className="font-bold text-gray-900 font-serif text-lg group-hover:text-[#19603B ] transition-colors">
                       {partner.name}
                     </h3>
                     <p className="text-xs font-semibold text-gray-900 uppercase tracking-wider mt-1">

@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-slate-50 border-t border-[#0F3D2E] font-sans"
+      className="bg-slate-50 border-t border-[#19603B] font-sans"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           {/* WRAPPER FOR MOBILE SIDE-BY-SIDE */}
-          <div className="lg:col-span-5 flex flex-row justify-between gap-8 md:contents">
+          <div className="lg:col-span-5 font-serif flex flex-row justify-between gap-8 md:contents">
             {/* Quick Links (2 cols) */}
             <div className="lg:col-span-2 text-left">
               <h4 className="text-sm font-bold text-gray-900 uppercase  mb-6">
@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Section (4 cols) */}
-          <div className="lg:col-span-3 text-center md:text-left">
+          <div className="lg:col-span-3 font-serif text-center md:text-left">
             <h4 className="text-sm font-bold text-gray-900 uppercase  mb-6">
               Get In Touch
             </h4>
@@ -119,11 +119,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-gray-400 font-serif flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-900">
             © {new Date().getFullYear()} G.K. Choksi & Co. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-[#0F3D2E]  md:text-lg mt-2 md:mt-0">
+          <div className="flex items-center gap-2 text-[#19603B]  md:text-lg mt-2 md:mt-0">
             <Code2 className="w-5 h-5 text-[#c1972d]" />
             <span>
               Developed by{" "}

@@ -63,15 +63,12 @@ export default function TeamSection() {
 
                     {/* HEADER */}
                     <div className="text-center max-w-3xl mx-auto mb-14">
-
-
-
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
                         >
-                            Our <span className="text-[#0F3D2E]  ">Team</span>
+                            Our <span className="text-[#C2A96A]  ">Team</span>
                         </motion.h2> <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: 100 }}
@@ -81,7 +78,7 @@ export default function TeamSection() {
 
                     {/* MAIN CONTENT */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-                        
+
                         {/* LEFT IMAGE */}
                         <div className="relative rounded-lg overflow-hidden shadow-lg">
                             <img
@@ -121,26 +118,26 @@ export default function TeamSection() {
                             {
                                 text: "Precision in execution",
                                 icon: HiOutlineCheckCircle,
-                                color: "#16A34A",
+                                color: "#19603B",
                                 bg: "#EAF7EF",
                             },
                             {
                                 text: "Independent thinking",
                                 icon: HiOutlineLightBulb,
-                                color: "#F59E0B",
-                                bg: "#FFF7E6",
+                                color: "#19603B",
+                                bg: "#EAF7EF",
                             },
                             {
                                 text: "Ownership-driven culture",
                                 icon: HiOutlineUserGroup,
-                                color: "#3B82F6",
-                                bg: "#EAF2FF",
+                                color: "#19603B",
+                                bg: "#EAF7EF",
                             },
                             {
                                 text: "Consistent delivery",
                                 icon: HiOutlineSparkles,
-                                color: "#8B5CF6",
-                                bg: "#F3EDFF",
+                                color: "#19603B",
+                                bg: "#EAF7EF",
                             },
                         ].map((item) => {
                             const Icon = item.icon;
@@ -164,7 +161,7 @@ export default function TeamSection() {
                                     </div>
 
                                     {/* TEXT */}
-                                    <p className="text-gray-800 font-semibold text-sm leading-snug">
+                                    <p className="text-gray-800 font-serif font-semibold text-sm leading-snug">
                                         {item.text}
                                     </p>
 
@@ -185,8 +182,8 @@ export default function TeamSection() {
                                 onClick={() => setFilter(item)}
                                 className={`px-3 md:px-8 py-2 rounded-lg text-md font-medium transition
         ${filter === item
-                                        ? "bg-[#0F3D2E] text-white "
-                                        : "bg-gray-100 border border-gray-800/30 text-gray-700 hover:bg-[#289572] hover:text-white"
+                                        ? "bg-[#19603B] text-white "
+                                        : "bg-gray-100 border border-gray-800/30 text-gray-700 hover:bg-[#19603B] hover:text-white"
                                     }`}
                             >
                                 {item}
@@ -212,7 +209,7 @@ export default function TeamSection() {
                                         }`}
                                 >
                                     <div
-                                        className={`bg-white border border-black/30 rounded-xl overflow-hidden shadow-lg shadow-black/50 transition ${isClickable ? "hover:shadow-xl" : ""
+                                        className={`bg-white border border-black/30 rounded-xl overflow-hidden shadow-xl shadow-[#19603B]/50 transition ${isClickable ? "hover:shadow-xl" : ""
                                             }`}
                                     >
                                         {/* IMAGE */}
@@ -229,7 +226,7 @@ export default function TeamSection() {
 
                                         {/* CONTENT */}
                                         <div className="p-4 text-center">
-                                            <h3 className="font-semibold text-gray-900 text-sm">
+                                            <h3 className="font-semibold font-serif text-gray-900 text-sm">
                                                 {member.name}
                                             </h3>
 
@@ -298,12 +295,12 @@ export default function TeamSection() {
                                     </div>
 
                                     {/* CONTENT */}
-                                    <div className="p-8 col-span-12 md:col-span-8 bg-[#0F3D2E] text-white">
+                                    <div className="p-8 col-span-12 md:col-span-8 bg-[#19603B] text-white">
                                         <p className="text-xs uppercase tracking-widest">
                                             {activeMember.department}
                                         </p>
 
-                                        <h3 className="text-2xl font-bold mt-2">
+                                        <h3 className="text-2xl font-serif font-bold mt-2">
                                             {activeMember.name}
                                         </h3>
 

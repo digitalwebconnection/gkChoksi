@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
 
   /* ---------------- LINK STYLE ---------------- */
   const linkBase =
-    "text-lg text-[#0F3D2E] hover:text-black transition-all duration-300";
+    "text-lg text-[#19603B] hover:text-black transition-all duration-300";
 
   const getLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: isVisible ? 0 : -80, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.35 }}
-        className={`fixed top-0 left-0 z-50 w-full ${isScrolled ? "bg-white/90 backdrop-blur shadow-lg" : "bg-white"
+        className={`fixed top-0  left-0 z-50 w-full ${isScrolled ? "bg-white/90 backdrop-blur shadow-lg" : "bg-white"
           }`}
       >
         <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-50 shadow-2xl p-6 flex flex-col"
+              className="fixed top-0 right-0 w-80 max-w-full h-full font-serif bg-white z-50 shadow-2xl p-6 flex flex-col"
             >
               {/* HEADER */}
               <div className="flex items-center justify-between mb-8">

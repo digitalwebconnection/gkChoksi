@@ -50,7 +50,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
                   className="w-48 h-48 md:w-72 md:h-72 shadow-2xl rounded-lg object-fill mb-2"
                 />
 
-                <h2 className="text-xl font-bold mt-4 text-[#0F3D2E]">
+                <h2 className="text-xl font-serif font-bold mt-4 text-[#19603B]">
                   {partner.name}
                 </h2>
 
@@ -62,7 +62,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="bg-[#0F3D2E] text-justify col-span-12 md:col-span-8 text-white px-8 md:px-12 py-10 md:py-12 overflow-y-auto">
+              <div className="bg-[#19603B] text-justify col-span-12 md:col-span-8 text-white px-8 md:px-12 py-10 md:py-12 overflow-y-auto">
 
                 {[partner.description1, partner.description2, partner.description3, partner.description4]
                   .filter(Boolean)

@@ -19,7 +19,7 @@ const PartnerDetail = () => {
           <p className="text-lg text-[#1C1C1C] mb-6">Partner not found.</p>
           <Link
             to="/about/partners"
-            className="text-[#0F3D2E] font-medium underline underline-offset-4 hover:text-[#C2A96A]"
+            className="text-[#19603B] font-medium underline underline-offset-4 hover:text-[#C2A96A]"
           >
             Back to partners
           </Link>
@@ -34,7 +34,7 @@ const PartnerDetail = () => {
       <div className="max-w-5xl mx-auto px-6 py-12">
         <Link
           to="/about/partners"
-          className="inline-block text-sm text-[#0F3D2E] font-medium mb-8 hover:text-[#C2A96A]"
+          className="inline-block text-sm text-[#19603B] font-medium mb-8 hover:text-[#C2A96A]"
         >
           ← All partners
         </Link>
@@ -46,11 +46,11 @@ const PartnerDetail = () => {
               alt={partner.name}
               className="w-64 h-64 shadow-xl object-cover mx-auto"
             />
-            <h1 className="text-xl font-bold mt-6 text-[#0F3D2E]">{partner.name}</h1>
+            <h1 className="text-xl font-bold mt-6 font-serif text-[#19603B]">{partner.name}</h1>
             <p className="text-gray-600 mt-1">{partner.designation}</p>
             <p className="text-[#1F6F5B] mt-3 text-sm">{partner.email}</p>
           </div>
-          <div className="bg-[#0F3D2E] md:col-span-8 text-white p-8">
+          <div className="bg-[#19603B] md:col-span-8 text-white p-8">
             {[partner.description1, partner.description2, partner.description3]
               .filter(Boolean)
               .map((text, i) => (

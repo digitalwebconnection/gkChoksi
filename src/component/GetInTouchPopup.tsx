@@ -50,7 +50,7 @@ const GetInTouchModal = ({ open, setOpen }: any) => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#0F3D2E] outline-none"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#19603B] outline-none"
                 />
               </div>
 
@@ -60,7 +60,7 @@ const GetInTouchModal = ({ open, setOpen }: any) => {
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#0F3D2E] outline-none"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#19603B] outline-none"
                 />
               </div>
 
@@ -70,47 +70,47 @@ const GetInTouchModal = ({ open, setOpen }: any) => {
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#0F3D2E] outline-none"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:border-[#19603B] outline-none"
                 />
               </div>
 
               {/* POSITION */}
-             <div className="space-y-1">
-  <label className="text-sm text-gray-600">
-    Department Worked In
-  </label>
+              <div className="space-y-1">
+                <label className="text-sm text-gray-600">
+                  Department Worked In
+                </label>
 
-  <div className="relative">
-    <select
-      defaultValue=""
-      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0F3D2E] outline-none text-gray-700 bg-white appearance-none"
-    >
-      <option value="" disabled>
-        Select Department
-      </option>
-      <option value="audit">Audit</option>
-      <option value="legal">Legal</option>
-      <option value="tax">Tax</option>
-    </select>
+                <div className="relative">
+                  <select
+                    defaultValue=""
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#19603B] outline-none text-gray-700 bg-white appearance-none"
+                  >
+                    <option value="" disabled>
+                      Select Department
+                    </option>
+                    <option value="audit">Audit</option>
+                    <option value="legal">Legal</option>
+                    <option value="tax">Tax</option>
+                  </select>
 
-    {/* Custom arrow */}
-    <div className="absolute right-3 top-3 text-gray-400 pointer-events-none">
-      ▼
-    </div>
-  </div>
-</div>
+                  {/* Custom arrow */}
+                  <div className="absolute right-3 top-3 text-gray-400 pointer-events-none">
+                    ▼
+                  </div>
+                </div>
+              </div>
 
               {/* MESSAGE */}
               <textarea
                 rows={3}
                 placeholder="Your Message"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#0F3D2E] outline-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#19603B] outline-none"
               />
 
               {/* SUBMIT */}
               <button
                 type="submit"
-                className="w-full py-3 bg-linear-to-r from-[#0F3D2E] to-[#C2A96A] text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition"
+                className="w-full py-3 bg-linear-to-r from-[#19603B] to-[#C2A96A] text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition"
               >
                 Submit Inquiry
               </button>

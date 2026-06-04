@@ -104,7 +104,7 @@ const TimelineSection = () => {
 
                 {/* CENTER ICON (REPLACED DOT 🔥) */}
                 <div className="absolute left-4 top-8 -translate-x-1/2 lg:left-1/2">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0F3D2E] text-white shadow-[0_10px_30px_rgba(15,61,46,0.5)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#19603B] text-white shadow-[0_10px_30px_rgba(15,61,46,0.5)]">
                     <Icon className="h-5 w-5" />
                   </div>
                 </div>
@@ -138,7 +138,7 @@ const TimelineSection = () => {
                     </span>
 
                     <div className="flex gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#6FAF9B]/20 text-[#0F3D2E]">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#6FAF9B]/20 text-[#19603B]">
                         <Icon className="h-5 w-5" />
                       </div>
 
@@ -156,7 +156,7 @@ const TimelineSection = () => {
                         </p> */}
 
                         <div className="mt-4 flex items-center gap-3">
-                          <span className="text-xs font-semibold uppercase  text-[#0F3D2E]">
+                          <span className="text-xs font-semibold uppercase  text-[#19603B]">
                             Core Focus
                           </span>
                           <span className="h-px flex-1 bg-linear-to-r from-[#6FAF9B] to-transparent" />

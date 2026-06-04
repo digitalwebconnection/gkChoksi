@@ -166,7 +166,7 @@ const ServicePage = () => {
             Our Professional  Services
           </h1>
 
-          <p className="mt-6 text-[#C2A96A] text-2xl">
+          <p className="mt-6 text-[#C2A96A] font-serif text-2xl">
             Delivering clarity, precision, and strategic insight across every engagement.
           </p>
           <motion.button
@@ -176,7 +176,7 @@ const ServicePage = () => {
               navigate("/contact");
               window.scrollTo(0, 0); // ✅ scroll top
             }}
-            className="inline-flex items-center mt-10 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-md transition-transform duration-300 "
+            className="inline-flex items-center mt-10 rounded-lg bg-[#19603B]  px-10 py-2 text-md font-semibold text-white shadow-md transition-transform duration-300 "
           >
             Get in Touch
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -199,7 +199,7 @@ const ServicePage = () => {
             return (
               <div
                 key={i}
-                className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
+                className="group relative rounded-lg  shadow-[#19603B]/80 overflow-hidden  shadow-lg"
               >
                 {/* 🖼️ IMAGE */}
                 <img
@@ -208,11 +208,11 @@ const ServicePage = () => {
                 />
 
                 {/* 🌑 DARK OVERLAY */}
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all duration-500" />
+                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-all duration-500" />
 
                 {/* 📝 DEFAULT TEXT */}
                 <div className="absolute bottom-4 left-4 z-10 transition-all duration-500 ">
-                  <p className="text-[#C2A96A] drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-xl font-bold">
+                  <p className="text-[#C2A96A] font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-xl font-bold">
                     {point.text}
                   </p>
                 </div>
@@ -232,7 +232,7 @@ const ServicePage = () => {
           className="mt-20 text-center"
         >
           <p className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-            Areas of <span className=" text-[#0F3D2E]"> Focus</span>
+            Areas of <span className=" text-[#C2A96A]"> Focus</span>
           </p>
 
 
@@ -260,7 +260,7 @@ const ServicePage = () => {
                 variants={item}
                 whileHover={{ y: -10, scale: 1.02 }}
                 onClick={() => setSelectedService(service)}
-                className="group cursor-pointer relative rounded-lg overflow-hidden border border-black/20 shadow-lg bg-white hover:shadow-xl transition-all duration-500"
+                className="group cursor-pointer relative rounded-lg overflow-hidden border border-black/20 shadow-xl shadow-[#19603B]/80 bg-white hover:shadow-xl transition-all duration-500"
               >
 
                 {/* IMAGE */}
@@ -274,7 +274,7 @@ const ServicePage = () => {
                   <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
 
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-xl font-semibold">
+                    <h3 className="text-xl font-serif font-semibold">
                       {service.title}
                     </h3>
                   </div>
@@ -285,7 +285,7 @@ const ServicePage = () => {
                   <span className="text-lg text-gray-900">
                     Explore details
                   </span>
-                  <span className="text-[#0F3D2E] font-semibold text-lg group-hover:underline">
+                  <span className="text-[#19603B] font-semibold text-lg group-hover:underline">
                     Read More →
                   </span>
                 </div>
@@ -335,11 +335,11 @@ const ServicePage = () => {
 
               {/* CONTENT */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-[#1C1C1C]">
+                <h2 className="text-2xl font-serif font-bold text-[#1C1C1C]">
                   {selectedService.title}
                 </h2>
 
-                <h4 className="text-lg text-[#289572] mt-2">
+                <h4 className="text-lg text-[#19603B] mt-2">
                   {selectedService.subtitle}
                 </h4>
 

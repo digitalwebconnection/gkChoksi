@@ -63,17 +63,25 @@ const VisionMissionSection = () => {
   const [activeValue, setActiveValue] = useState(0);
   const [progress, setProgress] = useState(0);
 
+  // Auto-switch card every 5 seconds
   useEffect(() => {
-    const timer = setInterval(() => {
+    setProgress(0);
+
+    const progressInterval = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
-          setActiveValue((current) => (current + 1) % coreValues.length);
-          return 0;
-        }
-        return prev + 0.5; // Controls speed of auto-switch
+        if (prev >= 100) return 100;
+        return prev + 1;
       });
-    }, 20);
-    return () => clearInterval(timer);
+    }, 50); // 50ms × 100 = 5000ms
+
+    const cardTimer = setTimeout(() => {
+      setActiveValue((prev) => (prev + 1) % coreValues.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(progressInterval);
+      clearTimeout(cardTimer);
+    };
   }, [activeValue]);
 
   return (
@@ -87,18 +95,18 @@ const VisionMissionSection = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center py-10">
-            Our <span className=" text-[#C2A96A]">Excellence</span> <br />is Driven by <span className=" text-[#0F3D2E]">Values</span>
+            Our <span className=" text-[#C2A96A]">Excellence</span> <br />is Driven by <span className=" text-[#C2A96A]">Values</span>
           </h2>
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 items-stretch">
 
             {/* Left Column: Visual Content */}
-            <div className="lg:col-span-7 ">
-              <div className="relative aspect-video h-full  rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+            <div className="lg:col-span-7 flex">
+              <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden shadow-xl shadow-[#19603B]/80">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeValue}
                     src={coreValues[activeValue].image}
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.8 }}
@@ -116,35 +124,68 @@ const VisionMissionSection = () => {
                 {coreValues.map((val, i) => (
                   <button
                     key={i}
-                    onClick={() => { setActiveValue(i); setProgress(0); }}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 group flex items-center gap-4 ${activeValue === i ? "bg-[#032509] " : "hover:bg-[#c5a059]"
+                    onClick={() => {
+                      setActiveValue(i);
+                      setProgress(0);
+                    }}
+                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 group flex items-center gap-4 ${activeValue === i
+                        ? "bg-[#19603B]"
+                        : "hover:bg-[#c5a059]"
                       }`}
                   >
                     <div className="relative">
-                      {/* Mini Progress Circle */}
                       <svg className="w-10 h-10 transform -rotate-90">
-                        <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" fill="transparent" className="text-white/10" />
+                        <circle
+                          cx="20"
+                          cy="20"
+                          r="18"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          fill="transparent"
+                          className="text-white/10"
+                        />
+
                         {activeValue === i && (
                           <motion.circle
-                            cx="20" cy="20" r="18"
-                            stroke="#c5a059" strokeWidth="2"
+                            cx="20"
+                            cy="20"
+                            r="18"
+                            stroke="#c5a059"
+                            strokeWidth="2"
                             fill="transparent"
                             strokeDasharray="113.1"
-                            animate={{ strokeDashoffset: 113.1 - (113.1 * progress) / 100 }}
+                            animate={{
+                              strokeDashoffset:
+                                113.1 - (113.1 * progress) / 100,
+                            }}
+                            transition={{ ease: "linear" }}
                           />
                         )}
                       </svg>
-                      <val.icon className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 ${activeValue === i ? "text-[#c5a059]" : "text-black"}`} />
+
+                      <val.icon
+                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 ${activeValue === i
+                            ? "text-[#c5a059]"
+                            : "text-black"
+                          }`}
+                      />
                     </div>
 
                     <div>
-                      <h4 className={`font-bold tracking-wide ${activeValue === i ? "text-white" : "text-slate-700"}`}>
+                      <h4
+                        className={`font-bold font-serif tracking-wide ${activeValue === i
+                            ? "text-white"
+                            : "text-slate-700"
+                          }`}
+                      >
                         {val.title}
                       </h4>
+
                       {activeValue === i && (
                         <motion.p
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
                           className="text-sm text-slate-300 mt-1 pr-4 leading-snug"
                         >
                           {val.text}

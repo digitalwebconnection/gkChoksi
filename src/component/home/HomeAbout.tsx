@@ -31,13 +31,13 @@ const AboutSection = () => {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 text-lg font-semibold uppercase  font-serif text-[#0F3D2E]">
+            <p className="mb-3 text-lg font-semibold uppercase  font-serif text-[#19603B]">
               About Us
             </p>
 
             <h2 className="mb-6 mt-2 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-[#C2A96A]">
               Welcome to{" "}
-              <span className="inline-block rounded-lg bg-[#0F3D2E] px-2 text-white">
+              <span className="inline-block rounded-lg bg-[#19603B] px-2 text-white">
                 G. K. Choksi & Co.
               </span>
             </h2>
@@ -70,15 +70,15 @@ const AboutSection = () => {
                 const Icon = item.icon;
 
                 return (
-                  <li key={idx} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-xl border border-gray-900/60">
+                  <li key={idx} className="flex items-center gap-3 font-serif bg-white p-4 rounded-lg shadow-xl border border-gray-900/60">
 
                     {/* Icon */}
-                    <div className="flex h-15 w-15 items-center justify-center rounded-xl bg-[#03251b] text-[#C2A96A]">
+                    <div className="flex h-15 w-15 items-center justify-center rounded-xl bg-[#19603B] text-[#C2A96A]">
                       <Icon className="h-10 w-10" />
                     </div>
 
                     {/* Text */}
-                    <span className="text-black font-medium">
+                    <span className="text-black font-serif  text-lg   ">
                       {item.text}
                     </span>
                   </li>
@@ -92,7 +92,7 @@ const AboutSection = () => {
                 navigate("/contact");
                 window.scrollTo(0, 0); // ✅ scroll top
               }}
-              className="inline-flex items-center text-sm  transition-transform duration-300 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg"
+              className="inline-flex items-center text-sm  transition-transform duration-300 rounded-lg bg-[#19603B]  px-10 py-2 text-md font-semibold text-white shadow-lg"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -105,7 +105,7 @@ const AboutSection = () => {
             {/* MAIN IMAGE */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="relative h-full w-full rounded-4xl overflow-hidden shadow-[0_30px_80px_rgba(15,61,46,0.35)]"
+              className="relative h-full w-full rounded-lg overflow-hidden shadow-lg shadow-[#19603B]"
             >
               <img
                 src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"
@@ -134,11 +134,11 @@ const AboutSection = () => {
               whileHover={{ y: -6 }}
               className="absolute bottom-30 md:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
             >
-              <p className="text-lg uppercase font-serif  text-[#0F3D2E]">
+              <p className="text-lg uppercase font-serif  text-[#19603B]">
                 Trusted Since
               </p>
 
-              <p className="text-2xl font-bold text-[#0F3D2E] mt-1">1972</p>
+              <p className="text-2xl font-bold text-[#19603B] mt-1 font-serif">1972</p>
 
 
             </motion.div>

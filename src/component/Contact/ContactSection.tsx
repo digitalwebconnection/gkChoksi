@@ -169,7 +169,7 @@ const ContactSection: React.FC = () => {
 
                                 <button
                                     onClick={() => setShowPopup(false)}
-                                    className="w-full py-4 bg-[#0F3D2E] hover:bg-[#1F6F5B] text-white rounded-2xl font-bold tracking-wide transition shadow-lg hover:shadow-xl"
+                                    className="w-full py-4 bg-[#19603B] hover:bg-[#1F6F5B] text-white rounded-2xl font-bold tracking-wide transition shadow-lg hover:shadow-xl"
                                 >
                                     Done
                                 </button>
@@ -184,7 +184,7 @@ const ContactSection: React.FC = () => {
                     {/* Heading */}
 
 
-                    <p className="mt-4 text-center  text-xl font-semibold text-[#0F3D2E] max-w-3xl mx-auto animate-slideUp delay-100">
+                    <p className="mt-4 text-center  text-xl font-semibold text-black max-w-3xl mx-auto animate-slideUp delay-100">
                         Have a question about accounting, taxation, audit or compliance?
                         Our team will guide you with clarity and professional expertise.
                     </p>
@@ -193,19 +193,19 @@ const ContactSection: React.FC = () => {
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
                         {/* RIGHT – Contact Form */}
-                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-[0_30px_80px_rgba(0,0,0,0.15)] p-5 md:p-8 overflow-hidden">
+                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-lg shadow-[#19603B]/80      p-5 md:p-8 overflow-hidden">
 
                             {/* Decorative Accent */}
                             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-green-100 opacity-40 blur-3xl" />
 
                             {/* Header */}
                             <div className="relative mb-12">
-                                <span className="inline-block text-lg font-semibold uppercase  text-[#0F3D2E] mb-3">
+                                <span className="inline-block font-serif text-lg font-semibold uppercase  text-[#C2A96A] mb-3">
                                     Confidential Advisory
                                 </span>
 
-                                <h3 className="text-3xl md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
-                                    Speak With Our  <span className=" text-[#0F3D2E]"> Experts</span>
+                                <h3 className="text-3xl font-serif md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
+                                    Speak With Our  <span className=" text-black"> Experts</span>
                                 </h3>
 
 
@@ -229,7 +229,7 @@ const ContactSection: React.FC = () => {
                                         name="name"
                                         required
                                         placeholder="Your full name"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
                                 </div>
 
@@ -243,7 +243,7 @@ const ContactSection: React.FC = () => {
                                         name="email"
                                         required
                                         placeholder="name@company.com"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
                                 </div>
 
@@ -256,7 +256,7 @@ const ContactSection: React.FC = () => {
                                         type="text"
                                         name="company"
                                         placeholder="Registered entity name"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
                                 </div>
 
@@ -269,7 +269,7 @@ const ContactSection: React.FC = () => {
                                         type="text"
                                         name="designation"
                                         placeholder="e.g. Director, CFO, Founder"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     />
                                 </div>
 
@@ -280,7 +280,7 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <select
                                         name="service"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     >
                                         <option value="">Select a service</option>
                                         <option value="Taxation & Compliance">Taxation & Compliance</option>
@@ -297,7 +297,7 @@ const ContactSection: React.FC = () => {
                                     </label>
                                     <select
                                         name="preferred_branch"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100"
                                     >
                                         <option value="Ahmedabad (Head Office)">Ahmedabad (Head Office)</option>
                                         {branches.map((b) => (
@@ -315,7 +315,7 @@ const ContactSection: React.FC = () => {
                                         name="message"
                                         rows={2}
                                         placeholder="How can we assist you today?"
-                                        className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100 resize-none"
+                                        className="w-full rounded-xl border border-gray-300 px-5 py-4 text-gray-900 outline-none transition focus:border-green-800 focus:ring-2 focus:ring-green-100 resize-none"
                                     ></textarea>
                                 </div>
 
@@ -331,7 +331,7 @@ const ContactSection: React.FC = () => {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className={`inline-flex items-center gap-3 rounded-2xl bg-[#0F3D2E] 
+                                            className={`inline-flex items-center gap-3 rounded-2xl bg-[#19603B] 
                                   
                                                 text-white px-4 md:px-14 py-4 font-semibold tracking-wide transition hover:shadow-2xl
                                                 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
@@ -355,7 +355,7 @@ const ContactSection: React.FC = () => {
                         <div className="lg:col-span-1 space-y-10 animate-slideUp">
 
                             {/* Call Card */}
-                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
+                            <div className="group bg-white  shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] group-hover:text-[#1c1c1c] mb-4">
@@ -363,7 +363,7 @@ const ContactSection: React.FC = () => {
                                 </div>
 
                                 <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Call</p>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Talk to our team</h3>
+                                <h3 className="text-xl font-bold text-gray-900 font-serif mb-2">Talk to our team</h3>
                                 <p className="text-gray-600 text-sm mb-3">
                                     For quick queries and consultation scheduling.
                                 </p>
@@ -374,7 +374,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Email Card */}
-                            <div className="group bg-white  shadow-xl border border-gray-800/10 p-6 transition-all
+                            <div className="group bg-white shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
@@ -382,7 +382,7 @@ const ContactSection: React.FC = () => {
                                 </div>
 
                                 <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Email</p>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Write to us</h3>
+                                <h3 className="text-xl font-bold text-gray-900 font-serif mb-2">Write to us</h3>
 
                                 <a href="mailto:hr@gkcco.com" className="block font-medium text-gray-900 hover:underline">
                                     hr@gkcco.com
@@ -398,7 +398,7 @@ const ContactSection: React.FC = () => {
                                 href="https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+Ahmedabad+Gujarat+380058"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white block shadow-xl border border-gray-800/10 p-6 transition-all
+                                className="group bg-white block shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white"
                             >
 
@@ -407,7 +407,7 @@ const ContactSection: React.FC = () => {
                                 </div>
 
                                 <p className="text-xs font-semibold text-[#1F6F5B] uppercase mb-2">Head Office</p>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit our office</h3>
+                                <h3 className="text-xl font-bold text-gray-900 font-serif mb-2">Visit our office</h3>
 
                                 <p className="text-gray-600 text-sm leading-relaxed">
                                     12th Floor, North Tower, ONE42,<br />
@@ -460,15 +460,15 @@ const ContactSection: React.FC = () => {
 
                         {/* Right – Glass Location Card */}
                         <div className="bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 p-8 lg:p-10 max-w-md ml-auto">
-                            <p className="text-lg  uppercase text-white font-semibold">
+                            <p className="text-xl font-serif uppercase text-white font-semibold">
                                 Visit Our Office
                             </p>
 
-                            <h4 className="text-xl font-bold text-white mt-2">
+                            <h4 className="text-xl font-bold font-serif text-white mt-2">
                                 ONE42, North Tower
                             </h4>
 
-                            <p className="text-sm text-gray-300 mt-3 leading-relaxed">
+                            <p className="text-sm text-gray-100 mt-3 leading-relaxed">
                                 Off Ambli Road,
                                 Ahmedabad – 380058
                                 Gujarat, India
@@ -480,7 +480,7 @@ const ContactSection: React.FC = () => {
                                     openMap("12th Floor, North Tower, ONE42, Billionaires Street, off Ambli Road, Ahmedabad, Gujarat – 380058");
                                 }}
                                 className="inline-flex items-center gap-2 text-sm font-semibold
-          text-white bg-[#0F3D2E] px-4 py-2 rounded-full
+          text-white bg-[#19603B] px-4 py-2 rounded-full
           hover:rounded-tr-3xl hover:rounded-bl-3xl
           transition-all duration-300"
                             >
@@ -508,7 +508,7 @@ const ContactSection: React.FC = () => {
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Our  <span className=" text-[#0F3D2E]">Branches</span>
+                            Our  <span className=" text-[#19603B]">Branches</span>
                         </h2>
 
                     </motion.div>
@@ -519,15 +519,15 @@ const ContactSection: React.FC = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-12"
+                        className="my-14 grid grid-cols-1 md:grid-cols-3 gap-12"
                     >
                         {branches.map((branch, index) => (
                             <motion.div
                                 key={index}
                                 variants={card}
                                 whileHover={{ y: -12 }}
-                                className="relative rounded-3xl p-8 bg-white/70 backdrop-blur-xl
-                                border border-white/60 hover:shadow-2xl
+                                className="relative rounded-b-lg  p-8 bg-white/70 backdrop-blur-xl
+                                border border-white/60 shadow-lg shadow-[#19603B] hover:shadow-2xl
                                 transition-all duration-500"
                             >
                                 {/* Top Accent */}
@@ -549,7 +549,7 @@ const ContactSection: React.FC = () => {
                                     <MapPin />
                                 </motion.div>
 
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
                                     {branch.city}
                                 </h3>
                                 <div className="space-y-5 text-gray-700">
@@ -573,7 +573,7 @@ const ContactSection: React.FC = () => {
                                     <button
                                         onClick={() => openMap(branch.address)}
                                         className="inline-flex items-center gap-2 text-md font-semibold
-                               text-white bg-[#0F3D2E] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl   hover:text-white transition-colors"
+                               text-white bg-[#19603B] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl   hover:text-white transition-colors"
                                     >
                                         <MapPin size={20} />
                                         View on Map

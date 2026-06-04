@@ -66,7 +66,7 @@ const HeroSection = () => {
         <h1 className="text-[#F7F9F8] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-3xl md:text-5xl lg:text-6xl font-bold font-serif">
           G.K. Choksi & Co.
         </h1>
-        <p className="text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
+        <p className="text-[#C2A96A] font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">
           Chartered Accountants
         </p>
 
@@ -84,7 +84,7 @@ const HeroSection = () => {
               navigate("/core-team");
               window.scrollTo(0, 0); // ✅ smooth top
             }}
-            className="flex items-center justify-center rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg "
+            className="flex items-center justify-center rounded-lg bg-[#19603B]  px-10 py-2 text-md font-semibold text-white shadow-lg "
           >
             Core Team
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -102,7 +102,7 @@ const HeroSection = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2.5 rounded-full transition-all ${index === currentSlide
-              ? "w-10 bg-[#6FAF9B]"
+              ? "w-10 bg-[#19603B]"
               : "w-3 bg-white/40"
               }`}
           />

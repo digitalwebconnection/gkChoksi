@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             {/* CONTENT */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex  items-end text-center ">
-                <div className="max-w-3xl mx-auto pb-15   text-white">
+                <div className="max-w-6xl mx-auto pb-15   text-white">
 
                     {/* LABEL */}
                     <p className=" font-bold font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]  text-white text-6xl  mb-4">
@@ -55,7 +55,7 @@ const HeroSection = () => {
             </div>
 
             {/* OPTIONAL GRADIENT BOTTOM FADE */}
-            {/* <div className="absolute bottom-0 w-full h-32 bg-linear-to-t from-[#0F3D2E] to-transparent"></div> */}
+            {/* <div className="absolute bottom-0 w-full h-32 bg-linear-to-t from-[#19603B] to-transparent"></div> */}
         </section>
     );
 };

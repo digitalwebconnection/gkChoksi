@@ -4,7 +4,7 @@ import imgThought from "/src/assets/ofcimages/20.jpeg"
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import mca from "../../assets/mcalogo.png";
-import { ArrowRight } from "lucide-react";
+
 
 const insightCards = [
     {
@@ -80,12 +80,12 @@ const InsightsMain: React.FC = () => {
                 <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(https://behaveglobal.com/wp-content/uploads/2023/10/insight-driven-marketing-banner.png)` }} />
                 <div className="absolute inset-0 bg-[#1C1C1C]/70" />
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
-                    <div className="max-w-3xl text-center text-white">
+                    <div className="max-w-3xl mx-auto text-center text-white">
                         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                             <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] font-bold text-white">
                                 Our Insights
                             </h1>
-                            <p className="text-[#C2A96A] drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">Publications & Regulatory</p>
+                            <p className="text-[#C2A96A] font-serif drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-2xl font-semibold mt-2">Publications & Regulatory</p>
 
                         </motion.div>
                     </div>
@@ -116,9 +116,9 @@ const InsightsMain: React.FC = () => {
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug">
                                 Articles &
                                 <br />
-               
-                                    <span className=" text-[#0F3D2E]"> Publications</span>
-              
+
+                                <span className=" text-[#C2A96A]"> Publications</span>
+
                             </h2>
 
                             {/* Description */}
@@ -126,15 +126,7 @@ const InsightsMain: React.FC = () => {
                                 {insightCards[0].description}
                             </p>
 
-                            {/* CTA */}
-                            <motion.button
-                                whileHover={{ scale: 1.01 }}
-                                whileTap={{ scale: 0.90 }}
-                                className="group flex items-center gap-4     w-fit transition-all duration-300 rounded-lg bg-[#0F3D2E] hover:bg-[#1F6F5B] px-10 py-2 text-md font-semibold text-white shadow-lg"
-                            >
-                                Explore Now
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </motion.button>
+                          
 
                         </motion.div>
 
@@ -144,7 +136,7 @@ const InsightsMain: React.FC = () => {
                             className="relative h-[500px] md:h-[600px] flex items-center justify-center"
                         >
                             {/* Main Image */}
-                            <div className="absolute w-full h-[75%] shadow-black  overflow-hidden shadow-2xl">
+                            <div className="absolute w-full h-[75%] shadow-2xl shadow-[#19603B]/80  overflow-hidden ">
                                 <img
                                     src="https://thewritelife.com/wp-content/uploads/2019/07/get-paid-to-write-articles.jpg"
                                     className="w-full h-full object-cover"
@@ -167,9 +159,9 @@ const InsightsMain: React.FC = () => {
 
                     <div className="w-full  text-center  mb-8">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Key <span className=" text-[#0F3D2E]">Authorities</span>
+                            Key <span className=" text-[#C2A96A]">Authorities</span>
                         </h1>
-                        <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">
+                        <p className="mt-3 text-xl font-semibold text-black">
                             {insightCards[1].description}
                         </p>
                     </div>
@@ -190,7 +182,7 @@ const InsightsMain: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                     whileHover="hovered" // Trigger child animations
-                                    className="relative group p-0.5 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden transition-all duration-500"
+                                    className="relative group p-0.5 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]  shadow-lg shadow-[#19603B]/50 rounded-xl  overflow-hidden transition-all duration-500"
                                 >
                                     {/* THE GRADIENT BORDER EFFECT */}
                                     {/* This div acts as the moving gradient border */}
@@ -205,7 +197,7 @@ const InsightsMain: React.FC = () => {
                                     />
 
                                     {/* Card Content */}
-                                    <div className="relative z-10 bg-white rounded-[calc(1rem-1px)] h-full p-8 flex flex-col items-center justify-center transition-all duration-500 group-hover:rounded-xl">
+                                    <div className="relative z-10 bg-white rounded-xl h-full p-8 flex flex-col items-center justify-center transition-all duration-500 group-hover:rounded-lg  ">
 
                                         {/* Logo Container */}
                                         <motion.div
@@ -222,7 +214,7 @@ const InsightsMain: React.FC = () => {
                                         </motion.div>
 
                                         {/* Name */}
-                                        <span className="block text-xl font-bold text-[#1C1C1C] group-hover:text-[#1F6F5B] transition-colors duration-300">
+                                        <span className="block text-xl font-bold text-[#1C1C1C] group-hover:text-[#19603B] transition-colors font-serif duration-300">
                                             {item.name}
                                         </span>
 

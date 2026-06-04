@@ -21,7 +21,7 @@ const AboutHero = () => {
           <div className="flex items-center justify-center gap-3 mb-3">
 
             <span className="text-white drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)]   text-3xl md:text-4xl lg:text-6xl font-bold font-serif">
-              About Our  <br /><span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]"> Team </span>
+              About Our  <span className="text-[#C2A96A] drop-shadow-[0_2px_5px_rgba(0,0,0,20.8)]"> Team </span>
             </span>
           </div>
 

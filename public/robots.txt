@@ -1,0 +1,12 @@
+# robots.txt for GK Choksi & Co.
+# https://www.gkchoksi.com
+
+# Allow all web crawlers full access
+User-agent: *
+Allow: /
+
+# Disallow admin or private routes (none currently, reserved for future use)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.gkchoksi.com/sitemap.xml

@@ -90,10 +90,10 @@ const StatsSection = () => {
 
 
           <h2 className="mt-2 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-black">
-            A Legacy of <span className=" text-[#0F3D2E]">Trust and Performance</span> 
+            A Legacy of <span className=" text-[#C2A96A]">Trust and Performance</span>
           </h2>
 
-          <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">
+          <p className="mt-3 text-xl font-semibold text-black">
             Decades of experience delivering Assurance and Advisory Services
             with uncompromising standards.
           </p>
@@ -112,13 +112,13 @@ const StatsSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -8, scale: 1.03 }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="group relative overflow-hidden rounded-2xl border border-[#6FAF9B]/20 bg-white px-6 py-7 text-center shadow-[0_20px_60px_rgba(15,61,46,0.15)] transition-all duration-300 hover:shadow-[0_25px_80px_rgba(15,61,46,0.25)]"
+                className="group relative overflow-hidden rounded-xl border border-[#6FAF9B]/20 bg-white px-6 py-7 text-center shadow-xl shadow-[#19603B]/60 transition-all duration-300 hover:shadow-2xl"
               >
                 {/* Top Accent */}
-                <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]" />
+                <div className="absolute top-0 left-0 h-1 w-full bg-[#19603B]" />
 
                 {/* Icon Badge 🔥 */}
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#6FAF9B]/15 text-[#0F3D2E] group-hover:bg-[#0F3D2E] group-hover:text-white transition-all">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#6FAF9B]/15 text-[#19603B] group-hover:bg-[#19603B] group-hover:text-white transition-all">
                   <Icon size={22} />
                 </div>
 

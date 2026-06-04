@@ -62,7 +62,7 @@ export default function HeroSection() {
 
             <Link
               to="/services"
-              className="group flex items-center gap-3 px-10 py-2 text-md text-white bg-[#0F3D2E] hover:bg-[#1F6F5B] transition rounded-lg font-semibold"
+              className="group flex items-center gap-3 px-10 py-2 text-md text-white bg-[#19603B]  transition rounded-lg font-semibold"
             >
               Explore Services
               <HiOutlineArrowRight className="group-hover:translate-x-1 transition" />

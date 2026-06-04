@@ -75,15 +75,15 @@ const WhatWeOffer = () => {
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <p className="text-lg font-semibold  font-serif uppercase tracking- text-[#0F3D2E]">
+          <p className="text-lg font-semibold  font-serif uppercase  text-[#C2A96A]">
             Our Core Expertise
           </p>
 
           <h2 className="mt-3 font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-black">
-            Comprehensive <span className=" text-[#0F3D2E]">Professional Services</span>
+            Comprehensive <span className=" text-[#C2A96A]">Professional Services</span>
           </h2>
 
-          <p className="mt-3 text-xl font-semibold text-[#0F3D2E]">
+          <p className="mt-3 text-xl font-semibold text-black">
             We deliver comprehensive, specialized services as follows....
           </p>
         </div>
@@ -124,14 +124,14 @@ const WhatWeOffer = () => {
     bg-white
     p-6
     text-center
-    shadow-[0_10px_30px_rgba(0,0,0,0.10)]
+    shadow-xl shadow-[#19603B]/60
     hover:shadow-[0_20px_60px_rgba(15,61,46,0.20)]
     transition-shadow
     duration-200
   "
               >
                 {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 h-1 w-full bg-[#0F3D2E]/70" />
+                <div className="absolute top-0 left-0 h-1 w-full bg-[#19603B]/70" />
 
                 {/* Icon */}
                 <div
@@ -146,7 +146,7 @@ const WhatWeOffer = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-[#1C1C1C] group-hover:text-[#0F3D2E] transition">
+                <h3 className="text-lg font-semibold font-serif text-[#1C1C1C] group-hover:text-[#19603B] transition">
                   {service.title}
                 </h3>
 
