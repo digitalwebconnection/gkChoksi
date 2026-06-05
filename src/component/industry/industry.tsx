@@ -289,7 +289,7 @@ const IndustryPage = () => {
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
                           
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-5">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mb-5">
                                 Our   <span className=" text-black"> Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-5" />
