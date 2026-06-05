@@ -123,15 +123,15 @@ const Footer = () => {
           <p className="text-xs text-gray-900">
             © {new Date().getFullYear()} G.K. Choksi & Co. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-[#19603B]  md:text-lg mt-2 md:mt-0">
-            <Code2 className="w-5 h-5 text-[#c1972d]" />
+          <div className="flex items-center gap-2 text-black  md:text-sm mt-2 md:mt-0">
+            <Code2 className="w-5 h-5 text-black" />
             <span>
               Developed by{" "}
               <a
                 href="https://digitalwebconnection.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C2A96A]  font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)]  font-serif leading-snug "
+                className=" font-serif  "
               >
                 Digital Web Connection
               </a>

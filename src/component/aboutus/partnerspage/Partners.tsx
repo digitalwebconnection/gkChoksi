@@ -110,7 +110,7 @@ const Partners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
             >
-              Our <span className=" text-[#C2A96A]">Partners</span>
+              Our <span className=" text-black">Partners</span>
             </motion.h2>
             <motion.div
               initial={{ width: 0 }}
@@ -131,7 +131,7 @@ const Partners = () => {
       <section className="py-10 px-6 bg-[#FBFBFB]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">Leadership <span className=" text-[#C2A96A]"> Team</span></h3>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">Leadership <span className=" text-black"> Team</span></h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

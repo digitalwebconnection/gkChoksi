@@ -105,7 +105,7 @@ const AboutSection = () => {
             {/* MAIN IMAGE */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="relative h-full w-full rounded-lg overflow-hidden shadow-lg shadow-[#19603B]"
+              className="relative h-full w-full rounded-lg overflow-hidden shadow-lg "
             >
               <img
                 src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.jpg"

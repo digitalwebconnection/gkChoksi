@@ -193,18 +193,18 @@ const ContactSection: React.FC = () => {
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
                         {/* RIGHT – Contact Form */}
-                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white  shadow-lg shadow-[#19603B]/80      p-5 md:p-8 overflow-hidden">
+                        <div className="lg:col-span-2 relative bg-linear-to-br from-gray-50 to-white      p-5 md:p-8 overflow-hidden">
 
                             {/* Decorative Accent */}
                             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-green-100 opacity-40 blur-3xl" />
 
                             {/* Header */}
                             <div className="relative mb-12">
-                                <span className="inline-block font-serif text-lg font-semibold uppercase  text-[#C2A96A] mb-3">
+                                <span className="inline-block font-serif text-lg font-semibold uppercase  text-black mb-3">
                                     Confidential Advisory
                                 </span>
 
-                                <h3 className="text-3xl font-serif md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-[#C2A96A] leading-tight">
+                                <h3 className="text-3xl font-serif md:text-5xl font-bold drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] text-black leading-tight">
                                     Speak With Our  <span className=" text-black"> Experts</span>
                                 </h3>
 
@@ -355,7 +355,7 @@ const ContactSection: React.FC = () => {
                         <div className="lg:col-span-1 space-y-10 animate-slideUp">
 
                             {/* Call Card */}
-                            <div className="group bg-white  shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
+                            <div className="group bg-white   border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] group-hover:text-[#1c1c1c] mb-4">
@@ -374,7 +374,7 @@ const ContactSection: React.FC = () => {
                             </div>
 
                             {/* Email Card */}
-                            <div className="group bg-white shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
+                            <div className="group bg-white  border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white">
 
                                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-100 text-[#1F6F5B] mb-4 group-hover:text-[#1c1c1c]">
@@ -398,7 +398,7 @@ const ContactSection: React.FC = () => {
                                 href="https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+Ahmedabad+Gujarat+380058"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white block shadow-lg shadow-[#19603B]/80 border border-gray-800/10 p-6 transition-all
+                                className="group bg-white block  border border-gray-800/10 p-6 transition-all
           hover:-translate-y-2 hover:shadow-2xl hover:bg-linear-to-br hover:from-green-100 hover:to-white"
                             >
 
@@ -453,9 +453,6 @@ const ContactSection: React.FC = () => {
                                 </span>
                             </h2>
 
-
-
-
                         </div>
 
                         {/* Right – Glass Location Card */}
@@ -508,7 +505,7 @@ const ContactSection: React.FC = () => {
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Our  <span className=" text-[#19603B]">Branches</span>
+                            Our  <span className=" text-black">Branches</span>
                         </h2>
 
                     </motion.div>
@@ -527,7 +524,7 @@ const ContactSection: React.FC = () => {
                                 variants={card}
                                 whileHover={{ y: -12 }}
                                 className="relative rounded-b-lg  p-8 bg-white/70 backdrop-blur-xl
-                                border border-white/60 shadow-lg shadow-[#19603B] hover:shadow-2xl
+                                border border-white/60  hover:shadow-2xl
                                 transition-all duration-500"
                             >
                                 {/* Top Accent */}

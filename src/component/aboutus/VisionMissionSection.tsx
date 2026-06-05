@@ -95,13 +95,13 @@ const VisionMissionSection = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center py-10">
-            Our <span className=" text-[#C2A96A]">Excellence</span> <br />is Driven by <span className=" text-[#C2A96A]">Values</span>
+            Our <span className=" text-black">Excellence</span> <br />is Driven by <span className=" text-black">Values</span>
           </h2>
           <div className="grid lg:grid-cols-12 gap-10 items-stretch">
 
             {/* Left Column: Visual Content */}
             <div className="lg:col-span-7 flex">
-              <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden shadow-xl shadow-[#19603B]/80">
+              <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden ">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeValue}

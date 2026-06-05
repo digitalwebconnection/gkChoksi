@@ -288,11 +288,11 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-[#C2A96A] font-bold  text-xl font-serif uppercase block mb-2">
+                            <span className="text-black font-bold  text-xl font-serif  block mb-2">
                                 Specialized Advisory
                             </span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-5">
-                                Our   <span className=" text-[#C2A96A]"> Presence</span>
+                                Our   <span className=" text-black"> Presence</span>
                             </h2>
                             <div className="w-20 h-[3px] bg-[#C2A96A] mb-5" />
                             <div className="space-y-6">
@@ -333,7 +333,7 @@ const IndustryPage = () => {
                                 className="group flex flex-col md:flex-row gap-8 items-start border-b border-gray-800/40 pb-12"
                             >
                                 {/* IMAGE WITH SHADOW */}
-                                <div className="w-full md:w-[220px] shadow-xl shadow-[#19603B]/60 h-[150px] shrink-0 overflow-hidden rounded-lg group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
+                                <div className="w-full md:w-[220px] shadow-xl shadow-[#19603B]/20 h-[150px] shrink-0 overflow-hidden rounded-lg group-hover:shadow-[0_40px_90px_rgba(194,169,106,0.2)] transition-shadow duration-500">
                                     <motion.img
                                         whileHover={{ scale: 1.05 }}
                                         src={item.img}

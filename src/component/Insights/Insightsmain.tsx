@@ -5,8 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import mca from "../../assets/mcalogo.png";
 
-
-const insightCards = [
+const insightCards = [              
     {
         image: imgArticles,
         title: "Articles / Publications",
@@ -109,24 +108,19 @@ const InsightsMain: React.FC = () => {
                         {/* 🧠 LEFT CONTENT */}
                         <motion.div style={{ y: textY }} className="flex flex-col gap-8">
 
-                            {/* Tag */}
-
-
                             {/* Heading */}
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug">
                                 Articles &
                                 <br />
 
-                                <span className=" text-[#C2A96A]"> Publications</span>
+                                <span className=" text-black"> Publications</span>
 
                             </h2>
 
                             {/* Description */}
                             <p className="text-slate-900 text-lg text-justify leading-relaxed max-w-lg">
                                 {insightCards[0].description}
-                            </p>
-
-                          
+                            </p>                          
 
                         </motion.div>
 
@@ -143,10 +137,6 @@ const InsightsMain: React.FC = () => {
                                 />
                             </div>
 
-
-
-
-
                         </motion.div>
 
                     </div>
@@ -159,7 +149,7 @@ const InsightsMain: React.FC = () => {
 
                     <div className="w-full  text-center  mb-8">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                            Key <span className=" text-[#C2A96A]">Authorities</span>
+                            Key <span className=" text-black">Authorities</span>
                         </h1>
                         <p className="mt-3 text-xl font-semibold text-black">
                             {insightCards[1].description}
@@ -182,7 +172,7 @@ const InsightsMain: React.FC = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                     whileHover="hovered" // Trigger child animations
-                                    className="relative group p-0.5 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]  shadow-lg shadow-[#19603B]/50 rounded-xl  overflow-hidden transition-all duration-500"
+                                    className="relative group p-0.5 drop-shadow-[0_2px_5px_rgba(0,0,0,0.8)]   rounded-lg  overflow-hidden transition-all duration-500"
                                 >
                                     {/* THE GRADIENT BORDER EFFECT */}
                                     {/* This div acts as the moving gradient border */}
@@ -219,7 +209,7 @@ const InsightsMain: React.FC = () => {
                                         </span>
 
                                         {/* Decorative Gradient Line */}
-                                        <div className="mt-4 h-1 w-0 bg-linear-to-r from-[#6FAF9B] to-[#C2A96A] group-hover:w-16 transition-all duration-500 rounded-full" />
+                                        <div className="mt-4 h-1 w-0 bg-[#19603B] group-hover:w-16 transition-all duration-500 rounded-full" />
 
                                         {/* Subtle Shine Effect on Hover */}
                                         <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-linear-to-r from-transparent to-white opacity-20 group-hover:animate-shine" />

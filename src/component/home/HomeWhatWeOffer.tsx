@@ -75,12 +75,12 @@ const WhatWeOffer = () => {
 
         {/* Heading */}
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <p className="text-lg font-semibold  font-serif uppercase  text-[#C2A96A]">
+          <p className="text-lg font-semibold  font-serif uppercase  text-black">
             Our Core Expertise
           </p>
 
           <h2 className="mt-3 font-serif text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_2px_0px_rgba(0,0,0,0.8)] max-w-3xl mx-auto font-bold text-black">
-            Comprehensive <span className=" text-[#C2A96A]">Professional Services</span>
+            Comprehensive <span className=" text-black">Professional Services</span>
           </h2>
 
           <p className="mt-3 text-xl font-semibold text-black">
@@ -124,7 +124,7 @@ const WhatWeOffer = () => {
     bg-white
     p-6
     text-center
-    shadow-xl shadow-[#19603B]/60
+
     hover:shadow-[0_20px_60px_rgba(15,61,46,0.20)]
     transition-shadow
     duration-200

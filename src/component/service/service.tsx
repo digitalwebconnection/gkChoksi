@@ -232,7 +232,7 @@ const ServicePage = () => {
           className="mt-20 text-center"
         >
           <p className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-            Areas of <span className=" text-[#C2A96A]"> Focus</span>
+            Areas of <span className=" text-black"> Focus</span>
           </p>
 
 
@@ -260,7 +260,7 @@ const ServicePage = () => {
                 variants={item}
                 whileHover={{ y: -10, scale: 1.02 }}
                 onClick={() => setSelectedService(service)}
-                className="group cursor-pointer relative rounded-lg overflow-hidden border border-black/20 shadow-xl shadow-[#19603B]/80 bg-white hover:shadow-xl transition-all duration-500"
+                className="group cursor-pointer relative rounded-lg overflow-hidden border border-black/20 shadow-xl shadow-black/20 bg-white hover:shadow-xl transition-all duration-500"
               >
 
                 {/* IMAGE */}

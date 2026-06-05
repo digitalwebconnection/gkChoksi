@@ -99,8 +99,6 @@ export default function FeatureSection() {
   }, []);
 
 
-
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   // 🔁 Auto change every 3 seconds
@@ -130,7 +128,7 @@ export default function FeatureSection() {
             >
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-                The <span className=" text-[#C2A96A]">Foundation</span>
+                The <span className=" text-black">Foundation</span>
               </h1>
             </motion.div>
 
@@ -194,7 +192,6 @@ export default function FeatureSection() {
                       </p>
                     </div>
 
-
                   </div>
 
                 </div>
@@ -214,7 +211,7 @@ export default function FeatureSection() {
       <div className="text-center mb-16 relative z-10">
 
         <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center">
-          Clarity Creates <span className=" text-[#C2A96A]">Confidence</span>
+          Clarity Creates <span className=" text-black">Confidence</span>
         </h3>
       </div>
 
@@ -229,7 +226,7 @@ export default function FeatureSection() {
             <div
               key={i}
               onMouseEnter={() => setActive(i)}
-              className={`relative flex-1 rounded-lg shadow-xl shadow-[#19603B]/60 overflow-hidden cursor-pointer transition-all duration-700
+              className={`relative flex-1 rounded-lg  overflow-hidden cursor-pointer transition-all duration-700
         ${isActive ? "flex-3" : "flex-1"}`}
             >
 
@@ -301,11 +298,11 @@ export default function FeatureSection() {
           {/* 🔥 MAIN STATEMENT */}
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] tracking-tight text-black">
-            Our  <span className=" text-[#C2A96A]">Expertise</span>
+            Our  <span className=" text-black">Expertise</span>
           </h2>
 
           {/* ✨ DESCRIPTION */}
-          <p className="mt-6 text-xl font-semibold text-black leading-relaxed max-w-7xl text-center mx-auto">
+          <p className="mt-6 text-xl  text-black leading-relaxed max-w-7xl text-center mx-auto">
             With the leadership of 8 Partners supported by a strong talent base of 185+ professionals comprising of 40+ Chartered Accountants, <br /> 5+ Company Secretaries, 4+ Advocates, 100+ Articles, and 40+ Expert Chartered Accountants engaged on an assignment basis, the firm brings together deep domain expertise and practical insights to support clientele navigating growth and transformation.
           </p>
 
@@ -325,7 +322,7 @@ export default function FeatureSection() {
                 >
                   {/* Card Container */}
                   <div
-                    className={`relative h-full p-7 rounded-lg bg-white border  shadow-xl shadow-[#19603B]/50 border-slate-500/60  transition-all duration-500 overflow-hidden
+                    className={`relative h-full p-7 rounded-lg bg-white border   border-slate-500/60  transition-all duration-500 overflow-hidden
               ${isActive ? "shadow-2xl" : ""}`}
                   >
                     {/* 🖼️ Background Image */}

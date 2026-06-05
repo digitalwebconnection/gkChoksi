@@ -68,11 +68,11 @@ export default function TeamSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center"
                         >
-                            Our <span className="text-[#C2A96A]  ">Team</span>
+                            Our <span className="text-black  ">Team</span>
                         </motion.h2> <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: 100 }}
-                            className="h-1 bg-linear-to-r from-[#289572] to-[#C2A96A] mx-auto mt-6"
+                            className="h-1 bg-[#19603B] mx-auto mt-6"
                         />
                     </div>
 
@@ -105,7 +105,7 @@ export default function TeamSection() {
                                 and contribute meaningfully.
                             </p>
 
-                            <p className="font-semibold text-[#1C1C1C] border-l-4 border-[#289572] pl-4">
+                            <p className="font-semibold text-[#1C1C1C] border-l-4 border-[#19603B] pl-4">
                                 Together, they form a team that is capable and dependable.
                             </p>
 
@@ -287,26 +287,27 @@ export default function TeamSection() {
 
                                 <div className="grid grid-cols-12">
                                     {/* IMAGE */}
-                                    <div className="bg-[#F7F9F8] flex items-center col-span-12 md:col-span-4 justify-center p-6">
+                                    <div className="bg-[#F7F9F8]  text-center items-center col-span-12 md:col-span-4 justify-center p-6">
                                         <img
                                             src={activeMember.image}
                                             className="w-70 h-80 object-fill shadow-xl shadow-black/50"
                                         />
+                                        <p className="text-xs uppercase tracking-widest mt-2 text-black">
+                                            {activeMember.department}
+                                        </p>
+
+                                        <h3 className="text-2xl font-serif font-bold mt-1">
+                                            {activeMember.name}
+                                        </h3>
+
+                                        <p className="text-sm mt-1">
+                                            {activeMember.role}
+                                        </p>
                                     </div>
 
                                     {/* CONTENT */}
                                     <div className="p-8 col-span-12 md:col-span-8 bg-[#19603B] text-white">
-                                        <p className="text-xs uppercase tracking-widest">
-                                            {activeMember.department}
-                                        </p>
 
-                                        <h3 className="text-2xl font-serif font-bold mt-2">
-                                            {activeMember.name}
-                                        </h3>
-
-                                        <p className="text-sm mt-2">
-                                            {activeMember.role}
-                                        </p>
 
                                         {/* DETAILS */}
                                         <motion.div

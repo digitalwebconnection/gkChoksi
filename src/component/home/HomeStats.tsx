@@ -90,7 +90,7 @@ const StatsSection = () => {
 
 
           <h2 className="mt-2 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] font-bold text-black">
-            A Legacy of <span className=" text-[#C2A96A]">Trust and Performance</span>
+            A Legacy of <span className=" text-black">Trust and Performance</span>
           </h2>
 
           <p className="mt-3 text-xl font-semibold text-black">
