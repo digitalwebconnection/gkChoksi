@@ -90,8 +90,6 @@ const HeroSection = () => {
             <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
 
-
-
         </motion.div>
       </motion.div>
 

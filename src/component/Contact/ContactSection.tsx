@@ -69,9 +69,6 @@ const openMap = (address: string) => {
     );
 };
 
-
-
-
 const ContactSection: React.FC = () => {
     const [result, setResult] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);

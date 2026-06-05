@@ -288,9 +288,7 @@ const IndustryPage = () => {
                     {/* LEFT: STATIC CONTENT */}
                     <aside className="w-full lg:w-[40%]">
                         <div className="lg:sticky lg:top-32 pr-4 lg:pr-12">
-                            <span className="text-black font-bold  text-xl font-serif  block mb-2">
-                                Specialized Advisory
-                            </span>
+                          
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-[0_1px_0px_rgba(0,0,0,0.8)] text-black font-serif leading-snug max-w-2xl mx-auto text-center] mb-5">
                                 Our   <span className=" text-black"> Presence</span>
                             </h2>
