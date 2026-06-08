@@ -10,6 +10,7 @@ import {
   Sparkles,
   Users
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import careerHero from "../../assets/Career/1.jpeg";
 
 
@@ -162,13 +163,15 @@ const CareersPage = () => {
               </div>
             </div>
 
-            <motion.button
-              whileHover={{ x: 10 }}
-              className="mt-12 flex items-center gap-3 text-[#19603B] text-lg font-bold group"
-            >
-              Learn more about our values
-              <ArrowRight className="w-5 h-5 group-hover:text-[#C2A96A] transition-colors" />
-            </motion.button>
+            <motion.div whileHover={{ x: 10 }} className="mt-12 inline-block">
+              <Link
+                to="/about"
+                className="flex items-center gap-3 text-[#19603B] text-lg font-bold group"
+              >
+                Learn more about our values
+                <ArrowRight className="w-5 h-5 group-hover:text-[#C2A96A] transition-colors" />
+              </Link>
+            </motion.div>
           </div>
 
           {/* Right: Modern Jobs Accordion */}
@@ -309,7 +312,7 @@ const CareersPage = () => {
             className="text-xl font-semibold text-black"
           >
             We are always looking for exceptional talent. If you don't see a role that fits,
-            send us your resume anyway for future opportunities..
+            send us your resume anyway for future opportunities.
           </motion.p>
 
 

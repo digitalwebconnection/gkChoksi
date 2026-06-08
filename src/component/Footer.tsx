@@ -18,7 +18,28 @@ const Footer = () => {
     { label: "Careers", to: "/careers" },
   ];
 
-  const locations = ["Mumbai", "Ahmedabad", "Delhi NCR", "Petlad, Gujarat"];
+  const locations = [
+    {
+      city: "Ahmedabad",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+ONE42+North+Tower+Ambli+Road+Ahmedabad+Gujarat+380058",
+      directUrl: "https://www.google.com/maps/search/?api=1&query=G.K.+Choksi+%26+Co.+ONE42+North+Tower+Ambli+Road+Ahmedabad+Gujarat+380058",
+    },
+    {
+      city: "New Delhi",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=514+515+Fifth+Floor+Tolstoy+House+Tolstoy+Marg+Janpath+New+Delhi+110001",
+      directUrl: "https://www.google.com/maps/search/?api=1&query=514+515+Fifth+Floor+Tolstoy+House+Tolstoy+Marg+Janpath+New+Delhi+110001",
+    },
+    {
+      city: "Mumbai",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=708+Raheja+Chambers+Free+Press+Journal+Road+Nariman+Point+Mumbai+400021",
+      directUrl: "https://www.google.com/maps/search/?api=1&query=708+Raheja+Chambers+Free+Press+Journal+Road+Nariman+Point+Mumbai+400021",
+    },
+    {
+      city: "Petlad, Gujarat",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Surya+Bhawan+Station+Road+Petlad+Gujarat+388450",
+      directUrl: "https://www.google.com/maps/search/?api=1&query=Surya+Bhawan+Station+Road+Petlad+Gujarat+388450",
+    },
+  ];
 
   return (
     <motion.footer
@@ -79,9 +100,16 @@ const Footer = () => {
               </h4>
               <ul className="space-y-4">
                 {locations.map((loc) => (
-                  <li key={loc} className="flex items-center justify-start gap-2 text-sm text-gray-600">
-                    <MapPin size={14} className="text-gray-900" />
-                    {loc}
+                  <li key={loc.city}>
+                    <a
+                      href={loc.directUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-start gap-2 text-sm text-gray-600 hover:text-green-800 transition-colors group"
+                    >
+                      <MapPin size={14} className="text-gray-900 group-hover:text-green-800 transition-colors shrink-0" />
+                      {loc.city}
+                    </a>
                   </li>
                 ))}
               </ul>
