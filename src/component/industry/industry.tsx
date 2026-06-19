@@ -1,150 +1,180 @@
+import img_collage_movie_variou_edac1d26 from "/src/assets/images/collage-movie-variou_edac1d26.jpg";
+import img_Collage_KUM_f3963227 from "/src/assets/images/Collage-KUM_f3963227.jpg";
+import img_collage_64a13bf7 from "/src/assets/images/collage_64a13bf7.webp";
+import img_img_f46dad33 from "/src/assets/images/img_f46dad33.jpg";
+import img_img_bac95c89 from "/src/assets/images/img_bac95c89.jpg";
+import img_img_2bc8359e from "/src/assets/images/img_2bc8359e.jpg";
+import img_img_9936dc9e from "/src/assets/images/img_9936dc9e.jpg";
+import img_img_fa481680 from "/src/assets/images/img_fa481680.jpg";
+import img_img_f4c3a1b6 from "/src/assets/images/img_f4c3a1b6.jpg";
+import img_img_9e0d639b from "/src/assets/images/img_9e0d639b.jpg";
+import img_img_c615ff8d from "/src/assets/images/img_c615ff8d.jpg";
+import img_img_f6e23852 from "/src/assets/images/img_f6e23852.jpg";
+import img_img_11fb8a46 from "/src/assets/images/img_11fb8a46.jpg";
+import img_img_bfa184fd from "/src/assets/images/img_bfa184fd.jpg";
+import img_cd028ec0_0590_4918_b_5725fb88 from "/src/assets/images/cd028ec0-0590-4918-b_5725fb88.png";
+import img_img_95d9b7e0 from "/src/assets/images/img_95d9b7e0.jpg";
+import img_img_e5b2d05f from "/src/assets/images/img_e5b2d05f.jpg";
+import img_img_d4571e8c from "/src/assets/images/img_d4571e8c.jpg";
+import img_damil_gettyimages_48_baa5df60 from "/src/assets/images/damil-gettyimages-48_baa5df60.jpg";
+import img_img_4d388424 from "/src/assets/images/img_4d388424.jpg";
+import img_img_20bc162b from "/src/assets/images/img_20bc162b.jpg";
+import img_biggest_oil_and_gas__2674ad54 from "/src/assets/images/biggest_oil_and_gas__2674ad54.jpg";
+import img_img_bdf0b7c2 from "/src/assets/images/img_bdf0b7c2.jpg";
+import img_img_4eea6e87 from "/src/assets/images/img_4eea6e87.jpg";
+import img_img_d4a20e9c from "/src/assets/images/img_d4a20e9c.jpg";
+import img_img_5813ef3f from "/src/assets/images/img_5813ef3f.jpg";
+import img_advisory_guidelines__23aba7cf from "/src/assets/images/advisory-guidelines-_23aba7cf.png";
+import img_img_19011ed0 from "/src/assets/images/img_19011ed0.jpg";
+import img_img_64770f73 from "/src/assets/images/img_64770f73.jpg";
+import img_1768565449gfdsgsdghf_72e09e4e from "/src/assets/images/1768565449gfdsgsdghf_72e09e4e.jpg";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-    "https://www.shutterstock.com/image-photo/collage-movie-various-field-technology-600nw-2491000037.jpg",
-    "https://print-packagingblog.com/wp-content/uploads/2014/11/Collage-KUM.jpg",
-    "https://astromachineworks.com/wp-content/uploads/collage.webp"
+    img_collage_movie_variou_edac1d26,
+    img_Collage_KUM_f3963227,
+    img_collage_64a13bf7
 ];
 
 const CATEGORIES = [
     {
         title: "Aviation",
-        img: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=800",
+        img: img_img_f46dad33,
         desc: "Fleet financing, safety compliance, and operational advisory for airlines and cargo operations."
     },
     {
         title: "Agriculture",
-        img: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800",
+        img: img_img_bac95c89,
         desc: "Modernizing agribusiness with sustainable financing and yield-focused advisory."
     },
     {
         title: "Automotive",
-        img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800",
+        img: img_img_2bc8359e,
         desc: "Navigating the shift toward electric vehicles and autonomous driving technology."
     },
     {
         title: "Banking & Financial Services",
-        img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+        img: img_img_9936dc9e,
         desc: "Structural clarity for property development, REITs, and commercial asset management."
     },
     {
         title: "Construction",
-        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800",
+        img: img_img_fa481680,
         desc: "Project cost controls and risk mitigation for infrastructure and civil engineering."
     },
     {
         title: "Chemicals",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGHA0xxdgMeIWGtLcbVc_uJC6neGaPPwYiQ&s",
+        img: img_img_f4c3a1b6,
         desc: "Regulatory safety standards and operational efficiency for chemical processing and distribution."
     },
     {
         title: "Education",
-        img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800",
+        img: img_img_9e0d639b,
         desc: "Institutional growth and financial planning for universities and private learning centers."
     },
     {
         title: "Food & Beverage",
-        img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800",
+        img: img_img_c615ff8d,
         desc: "Scale-up advisory for restaurants, franchises, and food production companies."
     },
     {
         title: "Healthcare",
-        img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800",
+        img: img_img_f6e23852,
         desc: "Financial strategies for hospitals and clinics to improve patient care infrastructure."
     },
 
     {
         title: "Hospitality",
-        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+        img: img_img_11fb8a46,
         desc: "Operational advisory for luxury hotels, resorts, and global tourism ventures."
     },
     {
         title: "Information Technology",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6dZPg4YEdyqoY84XgTp6Nqe2dHrHTOfYrw&s"
+        img: img_img_bfa184fd
     },
     {
         title: "Jewellery",
-        img: "https://www.ijewels.co.in/cdn/shop/files/cd028ec0-0590-4918-b22f-f09925350800_c598a80e-b5b0-433d-a081-369be3ebdc3a.png?v=1772455646&width=1024",
+        img: img_cd028ec0_0590_4918_b_5725fb88,
         desc: "Precision-led advisory for high-value luxury and gems, focusing on valuation and global compliance."
     },
     {
         title: "Logistics",
-        img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
+        img: img_img_95d9b7e0,
         desc: "Enhancing global distribution networks with smart warehousing and transportation strategy."
     },
     {
         title: "Manufacturing",
-        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800",
+        img: img_img_e5b2d05f,
         desc: "Optimizing supply chain efficiency and cost management for large-scale industrial production."
     },
 
     {
         title: "Media & Entertainment",
-        img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800",
+        img: img_img_d4571e8c,
         desc: "Content distribution rights, production tax credits, and digital media expansion."
     },
     {
         title: "Mining & Metals",
-        img: "https://www.pwc.com/gx/en/brand-simplified/teaser-images-670/industry-engineering/damil-gettyimages-482172505-670.jpg",
+        img: img_damil_gettyimages_48_baa5df60,
         desc: "Advising on natural resource extraction and global commodity market trends."
     },
     {
         title: "Non Profit Organisations",
-        img: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=800"
+        img: img_img_4d388424
     },
     {
         title: "Non Banking Financial Company",
-        img: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800",
+        img: img_img_20bc162b,
         desc: "Assisting fintech, banking, and insurance firms with risk management and compliance."
     },
 
     {
         title: "Oil & Gas",
-        img: "https://eco-cdn.iqpc.com/eco/images/channel_content/images/biggest_oil_and_gas_companies.jpg",
+        img: img_biggest_oil_and_gas__2674ad54,
         desc: ""
 
     },
     {
         title: "Pharmaceutical",
-        img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800",
+        img: img_img_bdf0b7c2,
         desc: "Navigating regulatory landscapes and R&D tax credits for life sciences and biotech sectors."
     },
 
     {
         title: "Power",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSCr4TIw5arojkhkB73UR1YRQLf5XUWM9-TA&s"
+        img: img_img_4eea6e87
     },
     {
         title: "Retail & E-commerce",
-        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
+        img: img_img_d4a20e9c,
         desc: "Digital transformation and fiscal management for modern retail and direct-to-consumer brands."
     },
     {
         title: "Renewable Energy",
-        img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800",
+        img: img_img_5813ef3f,
         desc: "Sustainable investment and regulatory support for solar, wind, and green energy projects."
     },
 
 
     {
         title: "Real Estate",
-        img: "https://www.adanirealty.com/-/media/project/realty/blogs/blog-images-30-july/advisory-guidelines-for-real-estate-sector-by-government.ashx"
+        img: img_advisory_guidelines__23aba7cf
     },
     {
         title: "Technology",
-        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
+        img: img_img_19011ed0,
         desc: "Future-ready guidance for SaaS, IT infrastructure, and innovative tech enterprises."
     },
     {
         title: "Textiles & Fashion",
-        img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800",
+        img: img_img_64770f73,
         desc: "Strategic sourcing and retail expansion for global apparel and designer labels."
     },
 
     {
         title: "Telecom",
-        img: "https://bureaucrat.news/assets/news/1768565449gfdsgsdghfgh.jpg",
+        img: img_1768565449gfdsgsdghf_72e09e4e,
         desc: "Connectivity infrastructure and strategic market positioning for regional and global carriers."
     },
 

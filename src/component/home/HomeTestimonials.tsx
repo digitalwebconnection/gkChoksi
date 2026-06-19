@@ -1,44 +1,50 @@
+import img_img_121d69f0 from "/src/assets/images/img_121d69f0.jpg";
+import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.jpg";
+import img_img_d8940eaa from "/src/assets/images/img_d8940eaa.jpg";
+import img_img_7a0b22ad from "/src/assets/images/img_7a0b22ad.jpg";
+import img_img_c8c57b32 from "/src/assets/images/img_c8c57b32.jpg";
+import img_img_c69df18b from "/src/assets/images/img_c69df18b.jpg";
 
 import { motion } from "framer-motion";
 
 const timeline = [
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0n5S96TkRXdMIj9mlW_b52jl9JkIh6BnFQ&s",
+    image: img_img_121d69f0,
     period: "2018",
     title: "The Beginning",
     desc: "Early work with closely-held businesses and emerging enterprises.",
     color: "#12632A",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSko2M7te0So4PgD3HmdqFqGo3uHPmBorSEQ&s",
+    image: img_img_25ba1ca3,
     period: "2020",
     title: "Expansion",
     desc: "New partners, sector specialisation and long-term client relationships.",
     color: "#D9A20D",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrEEmoaotDHa4iHKDGGUjURb9fAoZZH0C-Rg&s",
+    image: img_img_d8940eaa,
     period: "2021",
     title: "Scaling Up",
     desc: "Listed entities, regulatory assignments and complex group audits.",
     color: "#12632A",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC376xP-vqAynxnEpfjgQ6u94XQOvNQb3HZQ&s",
+    image: img_img_7a0b22ad,
     period: "2022",
     title: "Innovation",
     desc: "Analytics-led audits and cross-border assignments.",
     color: "#D9A20D",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5vJOPMjpulD-SEuCmpI7i1CR6jtFq-lv1Aw&s",
+    image: img_img_c8c57b32,
     period: "2024",
     title: "Global Reach",
     desc: "Core work in specific industries across multiple continents.",
     color: "#12632A",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWi9xoGGdSwY920b33n8zXWlFQXiRbQ7Oxcw&s",
+    image: img_img_c69df18b,
     period: "2026",
     title: "Future Ready",
     desc: "Ongoing innovation and client success in a digital world.",

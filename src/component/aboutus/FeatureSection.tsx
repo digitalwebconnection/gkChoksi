@@ -1,3 +1,11 @@
+import img_img_fedaa393 from "/src/assets/images/img_fedaa393.jpg";
+import img_img_afed4a8c from "/src/assets/images/img_afed4a8c.jpg";
+import img_img_c3ea3f95 from "/src/assets/images/img_c3ea3f95.jpg";
+import img_Enron_Financial_Audi_8e386644 from "/src/assets/images/Enron-Financial-Audi_8e386644.png";
+import img_6956321139809_tax_bu_933bc46c from "/src/assets/images/6956321139809-tax-bu_933bc46c.jpg";
+import img_img_ef626005 from "/src/assets/images/img_ef626005.jpg";
+import img_Our_Vision_5e951f26 from "/src/assets/images/Our-Vision_5e951f26.jpg";
+import img_our_mission_4f21dc2f from "/src/assets/images/our-mission_4f21dc2f.jpg";
 import { useState, useEffect } from "react";
 
 import { Users, Briefcase, ShieldCheck } from "lucide-react";
@@ -17,7 +25,7 @@ export const EXPERTISE = [
     title: "Precision",
     subtitle: "Technical Excellence",
     desc: "Achieving accuracy through rigorous standards and engineering mastery that ensures zero compromise.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTflY5SWwQakiHYIDqdbbUpt3daAf0-gYF35A&s",
+    image: img_img_fedaa393,
     gradient: "bg-[#19603B]",
     icon: HiOutlineDotsHorizontal,
   },
@@ -25,7 +33,7 @@ export const EXPERTISE = [
     title: "Perspective",
     subtitle: "Strategic Foresight",
     desc: "Seeing beyond the present to unlock hidden opportunities and minimize future risks.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgW0s05K23B7L0_3VCpmqar5eEY3dZEzf7mQ&s",
+    image: img_img_afed4a8c,
     gradient: "bg-[#19603B]",
     icon: HiOutlineEye,
   },
@@ -33,7 +41,7 @@ export const EXPERTISE = [
     title: "Performance",
     subtitle: "Proven Results",
     desc: "Driving measurable growth through data-backed decisions and high-impact execution.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_SSMRvMgHTdIPwFHP8HYU1A4uvS5f9EPIwQ&s",
+    image: img_img_c3ea3f95,
     gradient: "bg-[#19603B]",
     icon: HiOutlineChartSquareBar,
   },
@@ -43,19 +51,19 @@ const services = [
     icon: ShieldCheck,
     title: "Audit & Assurance",
     desc: "Ensuring accuracy, compliance, and transparency across financials.",
-    image: "https://i0.wp.com/avanopti.com/wp-content/uploads/2024/03/Enron-Financial-Audit.png?fit=2240%2C1260&ssl=1",
+    image: img_Enron_Financial_Audi_8e386644,
   },
   {
     icon: Briefcase,
     title: "Taxation - Direct & Indirect",
     desc: "Strategic tax planning aligned with regulations and growth goals.",
-    image: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202601/6956321139809-tax-burden-013627631-16x9.jpg?size=948:533",
+    image: img_6956321139809_tax_bu_933bc46c,
   },
   {
     icon: Users,
     title: "Risk Advisory & Consulting",
     desc: "Practical insights to support smarter business decisions.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMUVy__cHyUmW1WVXOkNiYy-GmVw5gpmHvmQ&s",
+    image: img_img_ef626005,
   },
 ];
 
@@ -63,7 +71,7 @@ const foundationItems = [
   {
     title: "Our Vision",
     content: "To be a trusted, forward-looking professional services firm delivering value through insight, integrity and innovation. To empower clients with strategic guidance that drives sustainable growth and informed decision-making, while fostering long-term relationships through excellence, professionalism, and a commitment to continuous improvement.",
-    image: "https://shahkar.org.af/wp-content/uploads/2024/09/Our-Vision.jpg",
+    image: img_Our_Vision_5e951f26,
     icon: <HiOutlineLightBulb />,
     color: "bg-[#19603B]",
     accent: "#e2b43e",
@@ -72,7 +80,7 @@ const foundationItems = [
   {
     title: "Our Mission",
     content: "To provide high-quality Audit & Assurance, Taxation & Risk Advisory Consulting Services through a partner-driven approach, combining technical excellence with commercial understanding to support clients in achieving sustainable growth, while delivering innovative and client-centric solutions that adapt to evolving business environments.",
-    image: "https://www.quantumconsumernig.com/assets/imgs/our-mission.jpg",
+    image: img_our_mission_4f21dc2f,
     icon: <HiOutlineTicket />,
     color: "bg-[#19603B]",
     accent: "#10b981",

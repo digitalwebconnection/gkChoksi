@@ -1,3 +1,6 @@
+import img_foundation_Logo_Desi_ede715e3 from "/src/assets/images/foundation-Logo-Desi_ede715e3.jpg";
+import img_img_195c4f27 from "/src/assets/images/img_195c4f27.jpg";
+import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.jpg";
 import { motion } from "framer-motion";
 import { Landmark, Users, ShieldCheck, Globe2 } from "lucide-react";
 import { easeOut } from "framer-motion";
@@ -12,7 +15,7 @@ const timeline = [
       "G.K. Choksi & Co. was established with a clear focus on audit, taxation and assurance, building a reputation for integrity and independence.",
     meta: "Early work with closely-held businesses and emerging enterprises.",
     side: "right",
-    image: "https://www.logodee.com/wp-content/uploads/2017/10/foundation-Logo-Design.jpg",
+    image: img_foundation_Logo_Desi_ede715e3,
   },
   {
     icon: Users,
@@ -23,7 +26,7 @@ const timeline = [
       "The firm grew its presence across major Indian cities, serving larger corporates, banks and institutions with multi-location audit and advisory services.",
     meta: "New partners, sector specialisation and long-term client relationships.",
     side: "left",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_hjR0SrpuQ-iN-zF_iY2VsxylGdAdbbm4w&s",
+    image: img_img_195c4f27,
   },
   {
     icon: ShieldCheck,
@@ -34,7 +37,7 @@ const timeline = [
       "With evolving regulations and global standards, we strengthened our focus on risk, governance, compliance and internal control frameworks.",
     meta: "Listed entities, regulatory assignments and complex group audits.",
     side: "right",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSko2M7te0So4PgD3HmdqFqGo3uHPmBorSEQ&s",
+    image: img_img_25ba1ca3,
   },
   {
     icon: Globe2,

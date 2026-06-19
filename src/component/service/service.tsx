@@ -1,3 +1,13 @@
+import img_audit_accounting_fin_542b62f1 from "/src/assets/images/audit-accounting-fin_542b62f1.jpg";
+import img_business_advisory_ba_be194641 from "/src/assets/images/business-advisory-ba_be194641.jpg";
+import img_Hand_shake_WEBSITE_A_87f5a137 from "/src/assets/images/Hand-shake-WEBSITE-A_87f5a137.jpg";
+import img_img_c0ac8b80 from "/src/assets/images/img_c0ac8b80.png";
+import img_person_interacts_dig_5ce8f661 from "/src/assets/images/person-interacts-dig_5ce8f661.jpg";
+import img_the_role_of_process__dd6b2d5b from "/src/assets/images/the-role-of-process-_dd6b2d5b.jpg";
+import img_AI_and_Automation_fa6b1c95 from "/src/assets/images/AI-and-Automation_fa6b1c95.png";
+import img_How_can_Organization_6bb6fe53 from "/src/assets/images/How-can-Organization_6bb6fe53.webp";
+import img_getty_1160000498_mxfuqs from "/src/assets/images/getty_1160000498_mxfuqs.jpg";
+import img_1200x800_placeholder_153ec13f from "/src/assets/images/1200x800-placeholder_153ec13f.webp";
 import { easeOut, motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
@@ -23,7 +33,7 @@ export const SERVICES: Service[] = [
     slug: "audit-assurance",
     title: "Audit & Assurance",
     subtitle: "Confidence & Reliability for Stakeholders",
-    image: "https://img.freepik.com/premium-photo/audit-accounting-finance-business-report-concept-accountant-financial-budget-tax-document-ana_926199-3832559.jpg",
+    image: img_audit_accounting_fin_542b62f1,
     paragraphs: [
       "Assurance, in its truest sense, goes beyond verification - it builds trust where it matters most. Our audit approach is defined by independence of thought, depth of analysis, and an uncompromising commitment to quality.",
       "Across External and Internal Audits, Forensic Reviews, Due Diligence, Tax and Stock Audits, Departmental and Special Audits, we bring precision and perspective together.",
@@ -36,7 +46,7 @@ export const SERVICES: Service[] = [
     slug: "business-advisory",
     title: "Business Advisory",
     subtitle: "Strategy, made executable",
-    image: "https://ap-as.com/wp-content/uploads/2022/01/business-advisory-banner.jpg",
+    image: img_business_advisory_ba_be194641,
     paragraphs: [
       "In a dynamic business environment, decisions demand both clarity and conviction. Our advisory practice is designed to provide exactly that measured with guidance backed by technical depth and commercial insight.",
       "Through Valuation, Strategic Advisory, ESG, Governance, Risk & Compliance, and Succession Planning, we provide a comprehensive advisory framework aligned with evolving business needs..",
@@ -48,7 +58,7 @@ export const SERVICES: Service[] = [
     slug: "mergers-acquisition",
     title: "Mergers & Acquisition",
     subtitle: "Every deal, thoughtfully shaped",
-    image: "https://windes.com/wp-content/uploads/2021/05/Hand-shake-WEBSITE-April-28-2021.jpg",
+    image: img_Hand_shake_WEBSITE_A_87f5a137,
     paragraphs: [
       "Merger & Amalgamation are not merely financial events, they are defining milestones. Our M&A services combine analytical rigour with strategic perspective to support clients across the entire deal lifecycle.",
       "Our services include Transaction Advisory, Deal Evaluation, Analytics and Closure Support and Due Diligence ensuring that decisions are informed, risks are understood, and outcomes are executed with precision.",
@@ -59,7 +69,7 @@ export const SERVICES: Service[] = [
     slug: "regulatory",
     title: "Regulatory",
     subtitle: "Complexity, made navigable",
-    image: "https://media.licdn.com/dms/image/v2/D5612AQEcT2QKWdWCXg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1708749475563?e=2147483647&v=beta&t=l5ITstMpXF-a3rsK7EKc4ce93tJxy4f7Jzp0BpKU_sw",
+    image: img_img_c0ac8b80,
     paragraphs: [
       "In an environment shaped by evolving laws and expectations, clarity in compliance becomes essential. Our regulatory services are designed to guide clients by simplifying complexity and ensuring absolute compliance.",
       "We advise across Corporate Law, Securities Regulations, and Insolvency & Turnaround, ensuring that obligations are met while business continuity remains uninterrupted.",
@@ -69,7 +79,7 @@ export const SERVICES: Service[] = [
     slug: "taxation",
     title: "Taxation",
     subtitle: "Structured for precisional advantage",
-    image: "https://www.shutterstock.com/image-photo/person-interacts-digital-interface-displaying-600nw-2710079451.jpg",
+    image: img_person_interacts_dig_5ce8f661,
     paragraphs: [
       "Taxation, when approached thoughtfully, becomes a tool of efficiency rather than a burden of compliance. Our tax practice is built on this understanding.",
       "With expertise in Corporate Tax, International Tax, Indirect Tax, and Transfer Pricing, we provide solutions that are technically sound, commercially viable, and aligned with long-term objectives.",
@@ -88,25 +98,25 @@ export const BOTTOM_POINTS = [
     text: "Integrated approach",
     icon: HiOutlinePuzzlePiece,
     gradient: "from-[#6FAF9B] to-[#289572]",
-    image: "https://www.isotracker.com/wp-content/uploads/the-role-of-process-approach-in-quality-management-featured.jpg",
+    image: img_the_role_of_process__dd6b2d5b,
   },
   {
     text: "Industry-focused delivery",
     icon: HiOutlineBuildingOffice2,
     gradient: "from-[#3B82F6] to-[#1D4ED8]",
-    image: "https://controllerscouncil.org/wp-content/uploads/2026/03/AI-and-Automation.png",
+    image: img_AI_and_Automation_fa6b1c95,
   },
   {
     text: "Insight-driven decisions",
     icon: HiOutlineChartBar,
     gradient: "from-[#F59E0B] to-[#C2A96A]",
-    image: "https://nextgeninvent.com/wp-content/uploads/2022/09/How-can-Organizations-transform-to-be-Data-Led-and-Insight-driven.jpg",
+    image: img_How_can_Organization_6bb6fe53,
   },
   {
     text: "Partner-led execution",
     icon: HiOutlineUserGroup,
     gradient: "from-[#8B5CF6] to-[#6D28D9]",
-    image: "https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/getty_1160000498_mxfuqs.jpg",
+    image: img_getty_1160000498_mxfuqs,
   },
 ];
 
@@ -148,7 +158,7 @@ const ServicePage = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/5a6f6bfbd55b4125e5d8169b/1532366196509-7ROUHLAKCU2YOYGQAOZI/1200x800-placeholder.jpg)`,
+            backgroundImage: `url(${img_1200x800_placeholder_153ec13f})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

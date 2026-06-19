@@ -1,11 +1,13 @@
+import img_accounting_b39e2581 from "/src/assets/images/accounting_b39e2581.jpg";
+import img_featured_image_1_bed56495 from "/src/assets/images/featured-image-1_bed56495.jpg";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "./heroAnimations.css";
 
-const images = ["https://cdn.corporatefinanceinstitute.com/assets/accounting.jpeg",
-  "https://www.deskera.com/blog/content/images/2020/11/featured-image-1.jpg",
+const images = [img_accounting_b39e2581,
+  img_featured_image_1_bed56495,
   "https://www.theaccountant-online.com/wp-content/uploads/sites/10/2025/01/ICAI-shutterstock_2477239405.jpg"];
 
 const fadeIn = {

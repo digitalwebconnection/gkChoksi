@@ -1,3 +1,8 @@
+import img_logo_icai1_2dd8231a from "/src/assets/images/logo-icai1_2dd8231a.png";
+import img_Logo_of_Income_Tax_D_695ffa41 from "/src/assets/images/Logo_of_Income_Tax_D_695ffa41.png";
+import img_CBIC_logo_5ee659a1 from "/src/assets/images/CBIC_logo_5ee659a1.png";
+import img_Securities_Exchange__3b65e3b5 from "/src/assets/images/Securities_Exchange__3b65e3b5.jpg";
+import img_insight_driven_marke_2b3028b4 from "/src/assets/images/insight-driven-marke_2b3028b4.png";
 import imgArticles from "/src/assets/ofcimages/8.jpeg"
 import imgRegulatory from "/src/assets/ofcimages/1.jpeg"
 import imgThought from "/src/assets/ofcimages/20.jpeg"
@@ -24,17 +29,17 @@ const insightCards = [
         portals: [
             {
                 name: "ICAI",
-                logo: "https://cdnicai.s3.ap-south-1.amazonaws.com/images/New%20folder/logo-icai1.png",
+                logo: img_logo_icai1_2dd8231a,
                 href: "https://www.icai.org"
             },
             {
                 name: "CBDT",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/1/13/Logo_of_Income_Tax_Department_India.png",
+                logo: img_Logo_of_Income_Tax_D_695ffa41,
                 href: "https://www.incometax.gov.in"
             },
             {
                 name: "CBIC",
-                logo: "https://www.cbic.gov.in/content/images/CBIC_logo.png",
+                logo: img_CBIC_logo_5ee659a1,
                 href: "https://www.cbic.gov.in"
             },
 
@@ -45,7 +50,7 @@ const insightCards = [
             },
             {
                 name: "SEBI",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/Securities_Exchange_Board_of_India.jpg",
+                logo: img_Securities_Exchange__3b65e3b5,
                 href: "https://www.sebi.gov.in"
             }
         ]
@@ -76,7 +81,7 @@ const InsightsMain: React.FC = () => {
 
             {/* HERO */}
             <section className="relative h-150 w-full overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(https://behaveglobal.com/wp-content/uploads/2023/10/insight-driven-marketing-banner.png)` }} />
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${img_insight_driven_marke_2b3028b4})` }} />
                 <div className="absolute inset-0 bg-[#1C1C1C]/70" />
                 <div className="relative z-10 flex h-full items-center justify-center px-6">
                     <div className="max-w-3xl mx-auto text-center text-white">
@@ -132,7 +137,7 @@ const InsightsMain: React.FC = () => {
                             {/* Main Image */}
                             <div className="absolute w-full h-[75%] shadow-2xl shadow-[#19603B]/80  overflow-hidden ">
                                 <img
-                                    src="https://thewritelife.com/wp-content/uploads/2019/07/get-paid-to-write-articles.jpg"
+                                    src={insightCards[0].image}
                                     className="w-full h-full object-cover"
                                 />
                             </div>

@@ -1,3 +1,6 @@
+import img_img_9484b10c from "/src/assets/images/img_9484b10c.jpg";
+import img_img_7c97bc41 from "/src/assets/images/img_7c97bc41.jpg";
+import img_Aug_11_Customer_cent_c60441db from "/src/assets/images/Aug-11_Customer-cent_c60441db.jpg";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -19,7 +22,7 @@ const coreValues = [
     title: "Leadership",
     text: "Taking ownership and driving outcomes with accountability.",
     icon: FaUserTie,
-    image: "https://media.licdn.com/dms/image/v2/C4E12AQEFYVINMz89CA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1625057746510?e=2147483647&v=beta&t=b4-ofp_obfwrjjLGXHuLncsrZNeREaHzbrk6Jda6IWk", // team leader / boardroom leadership
+    image: img_img_9484b10c, // team leader / boardroom leadership
     color: "#c5a059"
   },
   {
@@ -33,7 +36,7 @@ const coreValues = [
     title: "Empathy",
     text: "Understanding client needs with a solution-oriented mindset.",
     icon: FaHeart,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1gdVRTubyONuHjczEpjTMMn18MtBiJUGaLw&s", // conversation / listening / support
+    image: img_img_7c97bc41, // conversation / listening / support
     color: "#c5a059"
   },
   {
@@ -54,7 +57,7 @@ const coreValues = [
     title: "Client Centricity",
     text: "Prioritising long-term relationships over short-term gains.",
     icon: FaHandshake,
-    image: "https://think360.ai/wp-content/uploads/2023/01/Aug-11_Customer-centricity.jpg", // client meeting / trust / partnership
+    image: img_Aug_11_Customer_cent_c60441db, // client meeting / trust / partnership
     color: "#c5a059"
   },
 ];

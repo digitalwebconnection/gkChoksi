@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const DisclaimerModal: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   const [checked, setChecked] = useState<boolean>(false);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("disclaimerAccepted");
-    if (!accepted) {
-      setIsOpen(true);
-    }
-  }, []);
 
   const handleProceed = (): void => {
     if (!checked) return;
-    localStorage.setItem("disclaimerAccepted", "true");
     setIsOpen(false);
   };
 

@@ -1,8 +1,9 @@
+import img_contact_us_scaled_1_b1964309 from "/src/assets/images/contact-us-scaled-1_b1964309.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 
-const images = ["https://reflectiveit.com/wp-content/uploads/2025/12/contact-us-scaled-1.jpg"];
+const images = [img_contact_us_scaled_1_b1964309];
 const fullText = "Contact Us";
 
 const ContactHeroSection = () => {
