@@ -132,7 +132,7 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -6 }}
-              className="absolute bottom-30 md:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
+              className="absolute bottom-30 lg:bottom-6 right-1 md:right-6 w-48 rounded-2xl bg-white backdrop-blur-lg border border-white/20 p-5 text-white shadow-xl"
             >
               <p className="text-lg uppercase font-serif  text-[#19603B]">
                 Trusted Since

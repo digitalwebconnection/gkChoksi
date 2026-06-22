@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const branches = [
     {
         city: "New Delhi",
-        address: `514...515 / FIFTH FLOOR TOLSTOY HOUSE, TOLSTOY MARG, JANPATH, 
+        address: `514,515 / FIFTH FLOOR TOLSTOY HOUSE, TOLSTOY MARG, JANPATH, 
 NEW DELHI, DELHI, INDIA,
  110001`,
-        phone: "+91 11 43717773",
+        phone: "+91 11 4371 7773",
         email: "delhi@gkcco.com",
         mapQuery: "Tolstoy House Janpath New Delhi",
     },
@@ -20,8 +20,8 @@ NEW DELHI, DELHI, INDIA,
         address: `708, RAHEJA CHAMBERS, FREE PRESS JOURNAL ROAD, NARIMAN POINT,
 MUMBAI,MAHARASHTRA, INDIA,
  400021`,
-        phone: `+91 22 6632444
-+91 22 22826087`,
+        phone: `+91 22 6632 4447
++91 22 2282 6087`,
         email: "gkcmumbai@gmail.com",
         mapQuery: "Raheja Chambers Nariman Point Mumbai",
     },
@@ -31,8 +31,8 @@ MUMBAI,MAHARASHTRA, INDIA,
  PETLAD,GUJARAT, 
  INDIA,
 388450`,
-        phone: `+91 2697 224383
-+91 2697 224108`,
+        phone: `+91 26 9722 4383
++91 26 9722 4108`,
         email: "petlad@gkcco.com",
         mapQuery: "Surya Bhavan Petlad Gujarat",
     },
@@ -366,7 +366,7 @@ const ContactSection: React.FC = () => {
                                 </p>
 
                                 <a href="tel:+917968198900" className="font-medium text-gray-900 hover:text-[#1F6F5B]">
-                                    +91 79 681 98900
+                                    +91 79 6819 8900
                                 </a>
                             </div>
 

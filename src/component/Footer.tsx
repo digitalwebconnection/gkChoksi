@@ -148,7 +148,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-gray-400 font-serif flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-900">
+ <p className="text-sm text-gray-900">
             © {new Date().getFullYear()} G.K. Choksi & Co. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-black  md:text-sm mt-2 md:mt-0">
@@ -159,12 +159,13 @@ const Footer = () => {
                 href="https://digitalwebconnection.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" font-serif  "
+                className="   "
               >
                 Digital Web Connection
               </a>
             </span>
           </div>
+         
         </div>
       </div>
     </motion.footer>
