@@ -33,7 +33,7 @@ import CASudhaGupta from "../../../assets/Core Team Photos/CA Sudha Gupta ---.jp
 import CATanupriyaPatel from "../../../assets/Core Team Photos/CA Tanupriya Patel.jpg"
 import CAZankrutiMehta from "../../../assets/Core Team Photos/Zankruti Mehta.png"
 import CSShambhuBhikhadia from "../../../assets/Core Team Photos/CS Shambhu Bhikhadia.jpg"
-import AnilKumarSeth from "../../../assets/Core Team Photos/Anil Kumar Seth.png"
+import AnilKumarSeth from "../../../assets/Core Team Photos/anilsir.jpeg"
 import Priteshdudani from "../../../assets/Core Team Photos/Pritesh dudani.png"
 import Ullas from "../../../assets/Core Team Photos/ullash.png"
 import VijayRanjan from "../../../assets/Core Team Photos/Vijay Ranjan.png"

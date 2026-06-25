@@ -17,13 +17,14 @@ NEW DELHI, DELHI, INDIA,
     },
     {
         city: "Mumbai",
-        address: `708, RAHEJA CHAMBERS, FREE PRESS JOURNAL ROAD, NARIMAN POINT,
-MUMBAI,MAHARASHTRA, INDIA,
- 400021`,
+        address: `Bldg. No. B-1, Office No. 107/108,
+1st Floor, Koldongri Co-op. Hsg. Soc.,
+Parsiwada, Sahar Road, Andheri (East), Mumbai –
+ 400 099.`,
         phone: `+91 22 6632 4447
 +91 22 2282 6087`,
         email: "gkcmumbai@gmail.com",
-        mapQuery: "Raheja Chambers Nariman Point Mumbai",
+        mapQuery: "Bldg. No. B-1, Office No. 107/108, 1st Floor, Koldongri Co-op. Hsg. Soc., Parsiwada, Sahar Road, Andheri (East), Mumbai - 400 099.",
     },
     {
         city: "Petlad, Gujarat",
@@ -565,7 +566,7 @@ const ContactSection: React.FC = () => {
                                     </div>
                                     {/* View on Map */}
                                     <button
-                                        onClick={() => openMap(branch.address)}
+                                        onClick={() => openMap(branch.mapQuery || branch.address)}
                                         className="inline-flex items-center gap-2 text-md font-semibold
                                text-white bg-[#19603B] px-4 py-1 rounded-full   hover:rounded-tr-3xl hover:rounded-bl-3xl   hover:text-white transition-colors"
                                     >

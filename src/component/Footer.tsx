@@ -31,8 +31,8 @@ const Footer = () => {
     },
     {
       city: "Mumbai",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=708+Raheja+Chambers+Free+Press+Journal+Road+Nariman+Point+Mumbai+400021",
-      directUrl: "https://www.google.com/maps/search/?api=1&query=708+Raheja+Chambers+Free+Press+Journal+Road+Nariman+Point+Mumbai+400021",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Bldg.+No.+B-1%2C+Office+No.+107%2F108%2C+1st+Floor%2C+Koldongri+Co-op.+Hsg.+Soc.%2C+Parsiwada%2C+Sahar+Road%2C+Andheri+%28East%29%2C+Mumbai+-+400+099.",
+      directUrl: "https://www.google.com/maps/search/?api=1&query=Bldg.+No.+B-1%2C+Office+No.+107%2F108%2C+1st+Floor%2C+Koldongri+Co-op.+Hsg.+Soc.%2C+Parsiwada%2C+Sahar+Road%2C+Andheri+%28East%29%2C+Mumbai+-+400+099.",
     },
     {
       city: "Petlad, Gujarat",
