@@ -47,6 +47,7 @@ const PartnerModal = ({ partner, onClose }: PartnerModalProps) => {
                 <img
                   src={partner.image}
                   alt={partner.name}
+                  loading="lazy"
                   className="w-48 h-48 md:w-72 md:h-72 shadow-2xl rounded-lg object-fill mb-2"
                 />
 

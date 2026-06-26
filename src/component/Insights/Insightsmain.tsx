@@ -1,14 +1,14 @@
-import img_logo_icai1_2dd8231a from "/src/assets/images/logo-icai1_2dd8231a.png";
-import img_Logo_of_Income_Tax_D_695ffa41 from "/src/assets/images/Logo_of_Income_Tax_D_695ffa41.png";
-import img_CBIC_logo_5ee659a1 from "/src/assets/images/CBIC_logo_5ee659a1.png";
-import img_Securities_Exchange__3b65e3b5 from "/src/assets/images/Securities_Exchange__3b65e3b5.jpg";
-import img_insight_driven_marke_2b3028b4 from "/src/assets/images/insight-driven-marke_2b3028b4.png";
-import imgArticles from "/src/assets/ofcimages/8.jpeg"
-import imgRegulatory from "/src/assets/ofcimages/1.jpeg"
-import imgThought from "/src/assets/ofcimages/20.jpeg"
+import img_logo_icai1_2dd8231a from "/src/assets/images/logo-icai1_2dd8231a.webp";
+import img_Logo_of_Income_Tax_D_695ffa41 from "/src/assets/images/Logo_of_Income_Tax_D_695ffa41.webp";
+import img_CBIC_logo_5ee659a1 from "/src/assets/images/CBIC_logo_5ee659a1.webp";
+import img_Securities_Exchange__3b65e3b5 from "/src/assets/images/Securities_Exchange__3b65e3b5.webp";
+import img_insight_driven_marke_2b3028b4 from "/src/assets/images/insight-driven-marke_2b3028b4.webp";
+import imgArticles from "/src/assets/ofcimages/8.webp"
+import imgRegulatory from "/src/assets/ofcimages/1.webp"
+import imgThought from "/src/assets/ofcimages/20.webp"
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import mca from "../../assets/mcalogo.png";
+import mca from "../../assets/mcalogo.webp";
 
 const insightCards = [              
     {
@@ -138,6 +138,7 @@ const InsightsMain: React.FC = () => {
                             <div className="absolute w-full h-[75%] shadow-2xl shadow-[#19603B]/80  overflow-hidden ">
                                 <img
                                     src={insightCards[0].image}
+                                    loading="lazy"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -204,6 +205,7 @@ const InsightsMain: React.FC = () => {
                                             <img
                                                 src={item.logo}
                                                 alt={item.name}
+                                                loading="lazy"
                                                 className="h-45 object-contain filter  transition-all duration-500"
                                             />
                                         </motion.div>

@@ -1,6 +1,6 @@
-import img_foundation_Logo_Desi_ede715e3 from "/src/assets/images/foundation-Logo-Desi_ede715e3.jpg";
-import img_img_195c4f27 from "/src/assets/images/img_195c4f27.jpg";
-import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.jpg";
+import img_foundation_Logo_Desi_ede715e3 from "/src/assets/images/foundation-Logo-Desi_ede715e3.webp";
+import img_img_195c4f27 from "/src/assets/images/img_195c4f27.webp";
+import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.webp";
 import { motion } from "framer-motion";
 import { Landmark, Users, ShieldCheck, Globe2 } from "lucide-react";
 import { easeOut } from "framer-motion";
@@ -48,7 +48,7 @@ const timeline = [
       "Today, we combine technology, data-driven insights and decades of domain expertise to support clients in a global and digital environment.",
     meta: "Analytics-led audits and cross-border assignments.",
     side: "left",
-    image: "https://www.webintravel.com/wp-content/uploads/2012/11/chart_growth.png",
+    image: "https://www.webintravel.com/wp-content/uploads/2012/11/chart_growth.webp",
   },
 ];
 
@@ -121,6 +121,7 @@ const TimelineSection = () => {
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
                       className="h-[230px] w-full object-fill"
                     />
                   </div>

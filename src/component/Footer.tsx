@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Mail, Phone, MapPin, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -60,6 +60,7 @@ const Footer = () => {
                 src={logo}
                 alt="G.K. Choksi & Co."
                 className="h-14 sm:h-18 w-auto object-contain mx-auto md:mx-0"
+                loading="lazy"
               />
             </Link>
 

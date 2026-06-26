@@ -1,12 +1,12 @@
-import img_audit_accounting_fin_542b62f1 from "/src/assets/images/audit-accounting-fin_542b62f1.jpg";
-import img_business_advisory_ba_be194641 from "/src/assets/images/business-advisory-ba_be194641.jpg";
-import img_Hand_shake_WEBSITE_A_87f5a137 from "/src/assets/images/Hand-shake-WEBSITE-A_87f5a137.jpg";
-import img_img_c0ac8b80 from "/src/assets/images/img_c0ac8b80.png";
-import img_person_interacts_dig_5ce8f661 from "/src/assets/images/person-interacts-dig_5ce8f661.jpg";
-import img_the_role_of_process__dd6b2d5b from "/src/assets/images/the-role-of-process-_dd6b2d5b.jpg";
-import img_AI_and_Automation_fa6b1c95 from "/src/assets/images/AI-and-Automation_fa6b1c95.png";
+import img_audit_accounting_fin_542b62f1 from "/src/assets/images/audit-accounting-fin_542b62f1.webp";
+import img_business_advisory_ba_be194641 from "/src/assets/images/business-advisory-ba_be194641.webp";
+import img_Hand_shake_WEBSITE_A_87f5a137 from "/src/assets/images/Hand-shake-WEBSITE-A_87f5a137.webp";
+import img_img_c0ac8b80 from "/src/assets/images/img_c0ac8b80.webp";
+import img_person_interacts_dig_5ce8f661 from "/src/assets/images/person-interacts-dig_5ce8f661.webp";
+import img_the_role_of_process__dd6b2d5b from "/src/assets/images/the-role-of-process-_dd6b2d5b.webp";
+import img_AI_and_Automation_fa6b1c95 from "/src/assets/images/AI-and-Automation_fa6b1c95.webp";
 import img_How_can_Organization_6bb6fe53 from "/src/assets/images/How-can-Organization_6bb6fe53.webp";
-import img_getty_1160000498_mxfuqs from "/src/assets/images/getty_1160000498_mxfuqs.jpg";
+import img_getty_1160000498_mxfuqs from "/src/assets/images/getty_1160000498_mxfuqs.webp";
 import img_1200x800_placeholder_153ec13f from "/src/assets/images/1200x800-placeholder_153ec13f.webp";
 import { easeOut, motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -214,6 +214,7 @@ const ServicePage = () => {
                 {/* 🖼️ IMAGE */}
                 <img
                   src={point.image}
+                  loading="lazy"
                   className="w-full h-[260px] object-cover transition-all duration-500 group-hover:scale-105"
                 />
 
@@ -278,6 +279,7 @@ const ServicePage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
                   />
 
@@ -339,6 +341,7 @@ const ServicePage = () => {
                 <img
                   src={selectedService.image}
                   alt={selectedService.title}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>

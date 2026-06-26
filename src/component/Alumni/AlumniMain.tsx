@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import alumni from "../../assets//alumini/5.jpeg"
+import alumni from "../../assets//alumini/5.webp"
 
 
 
-import g1 from "../../assets/alumini/1.jpeg"
-import g2 from "../../assets/alumini/2.jpeg"
-// import g3 from "../../assets/alumini/3.jpeg"
-import g4 from "../../assets/alumini/4.jpeg"
+import g1 from "../../assets/alumini/1.webp"
+import g2 from "../../assets/alumini/2.webp"
+// import g3 from "../../assets/alumini/3.webp"
+import g4 from "../../assets/alumini/4.webp"
 import GetInTouchModal from "../GetInTouchPopup";
 
 export default function AlumniPage() {
@@ -35,6 +35,7 @@ export default function AlumniPage() {
                             key={index}
                             src={img}
                             alt="Alumni"
+                            loading="lazy"
                             className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
                                 }`}
                         />
@@ -71,6 +72,7 @@ export default function AlumniPage() {
                     <img
                         src={alumni}
                         alt="Alumni Meet"
+                        loading="lazy"
                         className=" w-130 h-110"
                     />
                 </div>
@@ -106,6 +108,7 @@ export default function AlumniPage() {
                     <img
                         src={g1}
                         className="     w-80 h-50 object-cover"
+                        loading="lazy"
                         alt=""
                     />
                     {/* <img

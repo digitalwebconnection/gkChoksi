@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
 import h1 from "../../assets/aboutuspage/h1.webp"
-import h2 from "../../assets/aboutuspage/h2.jpg"
-import h3 from "../../assets/aboutuspage/h3.jpg"
+import h2 from "../../assets/aboutuspage/h2.webp"
+import h3 from "../../assets/aboutuspage/h3.webp"
 
 const SLIDES = [
   { image: h1 },
@@ -35,6 +35,7 @@ export default function HeroSection() {
           <img
             src={slide.image}
             alt=""
+            loading="lazy"
             className={`w-full h-full object-cover transition-transform duration-6000 ${i === index ? "scale-110" : "scale-100"
               }`}
           />

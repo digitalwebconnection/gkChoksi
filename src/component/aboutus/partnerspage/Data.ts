@@ -1,11 +1,11 @@
-import rohitImg from "../../../assets/patner/rohitChoksi.jpeg";
-import jayvantImg from "../../../assets/patner/Jayvant.jpeg";
-import shaunakImg from "../../../assets/patner/Shaunak.jpeg";
-import sandipImg from "../../../assets/patner/Sandip.jpeg";
-import vartikImg from "../../../assets/patner/Vartik.jpeg";
-import rajendraImg from "../../../assets/patner/Rajendra.jpeg";
-import naileshImg from "../../../assets/patner/Nailesh.jpeg";
-import nehalImg from "../../../assets/patner/Nehal.jpeg";
+import rohitImg from "../../../assets/patner/rohitChoksi.webp";
+import jayvantImg from "../../../assets/patner/Jayvant.webp";
+import shaunakImg from "../../../assets/patner/Shaunak.webp";
+import sandipImg from "../../../assets/patner/Sandip.webp";
+import vartikImg from "../../../assets/patner/Vartik.webp";
+import rajendraImg from "../../../assets/patner/Rajendra.webp";
+import naileshImg from "../../../assets/patner/Nailesh.webp";
+import nehalImg from "../../../assets/patner/Nehal.webp";
 
 export const partners = [
   {

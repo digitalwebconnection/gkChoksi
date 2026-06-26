@@ -1,33 +1,33 @@
-import img_collage_movie_variou_edac1d26 from "/src/assets/images/collage-movie-variou_edac1d26.jpg";
-import img_Collage_KUM_f3963227 from "/src/assets/images/Collage-KUM_f3963227.jpg";
+import img_collage_movie_variou_edac1d26 from "/src/assets/images/collage-movie-variou_edac1d26.webp";
+import img_Collage_KUM_f3963227 from "/src/assets/images/Collage-KUM_f3963227.webp";
 import img_collage_64a13bf7 from "/src/assets/images/collage_64a13bf7.webp";
-import img_img_f46dad33 from "/src/assets/images/img_f46dad33.jpg";
-import img_img_bac95c89 from "/src/assets/images/img_bac95c89.jpg";
-import img_img_2bc8359e from "/src/assets/images/img_2bc8359e.jpg";
-import img_img_9936dc9e from "/src/assets/images/img_9936dc9e.jpg";
-import img_img_fa481680 from "/src/assets/images/img_fa481680.jpg";
-import img_img_f4c3a1b6 from "/src/assets/images/img_f4c3a1b6.jpg";
-import img_img_9e0d639b from "/src/assets/images/img_9e0d639b.jpg";
-import img_img_c615ff8d from "/src/assets/images/img_c615ff8d.jpg";
-import img_img_f6e23852 from "/src/assets/images/img_f6e23852.jpg";
-import img_img_11fb8a46 from "/src/assets/images/img_11fb8a46.jpg";
-import img_img_bfa184fd from "/src/assets/images/img_bfa184fd.jpg";
-import img_cd028ec0_0590_4918_b_5725fb88 from "/src/assets/images/cd028ec0-0590-4918-b_5725fb88.png";
-import img_img_95d9b7e0 from "/src/assets/images/img_95d9b7e0.jpg";
-import img_img_e5b2d05f from "/src/assets/images/img_e5b2d05f.jpg";
-import img_img_d4571e8c from "/src/assets/images/img_d4571e8c.jpg";
-import img_damil_gettyimages_48_baa5df60 from "/src/assets/images/damil-gettyimages-48_baa5df60.jpg";
-import img_img_4d388424 from "/src/assets/images/img_4d388424.jpg";
-import img_img_20bc162b from "/src/assets/images/img_20bc162b.jpg";
-import img_biggest_oil_and_gas__2674ad54 from "/src/assets/images/biggest_oil_and_gas__2674ad54.jpg";
-import img_img_bdf0b7c2 from "/src/assets/images/img_bdf0b7c2.jpg";
-import img_img_4eea6e87 from "/src/assets/images/img_4eea6e87.jpg";
-import img_img_d4a20e9c from "/src/assets/images/img_d4a20e9c.jpg";
-import img_img_5813ef3f from "/src/assets/images/img_5813ef3f.jpg";
-import img_advisory_guidelines__23aba7cf from "/src/assets/images/advisory-guidelines-_23aba7cf.png";
-import img_img_19011ed0 from "/src/assets/images/img_19011ed0.jpg";
-import img_img_64770f73 from "/src/assets/images/img_64770f73.jpg";
-import img_1768565449gfdsgsdghf_72e09e4e from "/src/assets/images/1768565449gfdsgsdghf_72e09e4e.jpg";
+import img_img_f46dad33 from "/src/assets/images/img_f46dad33.webp";
+import img_img_bac95c89 from "/src/assets/images/img_bac95c89.webp";
+import img_img_2bc8359e from "/src/assets/images/img_2bc8359e.webp";
+import img_img_9936dc9e from "/src/assets/images/img_9936dc9e.webp";
+import img_img_fa481680 from "/src/assets/images/img_fa481680.webp";
+import img_img_f4c3a1b6 from "/src/assets/images/img_f4c3a1b6.webp";
+import img_img_9e0d639b from "/src/assets/images/img_9e0d639b.webp";
+import img_img_c615ff8d from "/src/assets/images/img_c615ff8d.webp";
+import img_img_f6e23852 from "/src/assets/images/img_f6e23852.webp";
+import img_img_11fb8a46 from "/src/assets/images/img_11fb8a46.webp";
+import img_img_bfa184fd from "/src/assets/images/img_bfa184fd.webp";
+import img_cd028ec0_0590_4918_b_5725fb88 from "/src/assets/images/cd028ec0-0590-4918-b_5725fb88.webp";
+import img_img_95d9b7e0 from "/src/assets/images/img_95d9b7e0.webp";
+import img_img_e5b2d05f from "/src/assets/images/img_e5b2d05f.webp";
+import img_img_d4571e8c from "/src/assets/images/img_d4571e8c.webp";
+import img_damil_gettyimages_48_baa5df60 from "/src/assets/images/damil-gettyimages-48_baa5df60.webp";
+import img_img_4d388424 from "/src/assets/images/img_4d388424.webp";
+import img_img_20bc162b from "/src/assets/images/img_20bc162b.webp";
+import img_biggest_oil_and_gas__2674ad54 from "/src/assets/images/biggest_oil_and_gas__2674ad54.webp";
+import img_img_bdf0b7c2 from "/src/assets/images/img_bdf0b7c2.webp";
+import img_img_4eea6e87 from "/src/assets/images/img_4eea6e87.webp";
+import img_img_d4a20e9c from "/src/assets/images/img_d4a20e9c.webp";
+import img_img_5813ef3f from "/src/assets/images/img_5813ef3f.webp";
+import img_advisory_guidelines__23aba7cf from "/src/assets/images/advisory-guidelines-_23aba7cf.webp";
+import img_img_19011ed0 from "/src/assets/images/img_19011ed0.webp";
+import img_img_64770f73 from "/src/assets/images/img_64770f73.webp";
+import img_1768565449gfdsgsdghf_72e09e4e from "/src/assets/images/1768565449gfdsgsdghf_72e09e4e.webp";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -366,6 +366,7 @@ const IndustryPage = () => {
                                         whileHover={{ scale: 1.05 }}
                                         src={item.img}
                                         alt={item.title}
+                                        loading="lazy"
                                         className="w-full h-full  object-cover transition-transform duration-700 grayscale-100 group-hover:grayscale-0"
                                     />
                                 </div>

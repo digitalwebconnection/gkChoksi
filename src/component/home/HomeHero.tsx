@@ -1,5 +1,5 @@
-import img_accounting_b39e2581 from "/src/assets/images/accounting_b39e2581.jpg";
-import img_featured_image_1_bed56495 from "/src/assets/images/featured-image-1_bed56495.jpg";
+import img_accounting_b39e2581 from "/src/assets/images/accounting_b39e2581.webp";
+import img_featured_image_1_bed56495 from "/src/assets/images/featured-image-1_bed56495.webp";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -8,7 +8,7 @@ import "./heroAnimations.css";
 
 const images = [img_accounting_b39e2581,
   img_featured_image_1_bed56495,
-  "https://www.theaccountant-online.com/wp-content/uploads/sites/10/2025/01/ICAI-shutterstock_2477239405.jpg"];
+  "https://www.theaccountant-online.com/wp-content/uploads/sites/10/2025/01/ICAI-shutterstock_2477239405.webp"];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 25 },

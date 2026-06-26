@@ -1,6 +1,6 @@
-import img_img_9484b10c from "/src/assets/images/img_9484b10c.jpg";
-import img_img_7c97bc41 from "/src/assets/images/img_7c97bc41.jpg";
-import img_Aug_11_Customer_cent_c60441db from "/src/assets/images/Aug-11_Customer-cent_c60441db.jpg";
+﻿import img_img_9484b10c from "/src/assets/images/img_9484b10c.webp";
+import img_img_7c97bc41 from "/src/assets/images/img_7c97bc41.webp";
+import img_Aug_11_Customer_cent_c60441db from "/src/assets/images/Aug-11_Customer-cent_c60441db.webp";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -11,9 +11,9 @@ import {
   FaUsers,
   FaHandshake,
 } from "react-icons/fa6";
-import Integrity from "../../assets/aboutpage/Integrity.jpg"
-import Collaboration from "../../assets/aboutpage/Collaboration.jpg"
-import Innovation from "../../assets/aboutpage/Innovation.jpg"
+import Integrity from "../../assets/aboutpage/Integrity.webp"
+import Collaboration from "../../assets/aboutpage/Collaboration.webp"
+import Innovation from "../../assets/aboutpage/Innovation.webp"
 
 
 
@@ -75,7 +75,7 @@ const VisionMissionSection = () => {
         if (prev >= 100) return 100;
         return prev + 1;
       });
-    }, 50); // 50ms × 100 = 5000ms
+    }, 50); // 50ms Ã— 100 = 5000ms
 
     const cardTimer = setTimeout(() => {
       setActiveValue((prev) => (prev + 1) % coreValues.length);
@@ -113,6 +113,7 @@ const VisionMissionSection = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.8 }}
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </AnimatePresence>

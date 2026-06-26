@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import i1 from "../../../assets/patner/patner.jpeg";
+import i1 from "../../../assets/patner/patner.webp";
 
 
 
@@ -33,6 +33,7 @@ const HeroSection = () => {
                     <img
                         src={img}
                         alt="background"
+                        loading="lazy"
                         className="w-full h-full object-fill md:object-cover"
                     />
                 </div>

@@ -1,4 +1,4 @@
-import i1 from "../../../assets/team/WhatsApp Image 2026-04-16 at 2.39.13 PM.jpeg";
+import i1 from "../../../assets/team/WhatsApp Image 2026-04-16 at 2.39.13 PM.webp";
 
 const AboutHero = () => {
   return (

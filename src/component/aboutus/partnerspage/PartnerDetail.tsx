@@ -44,6 +44,7 @@ const PartnerDetail = () => {
             <img
               src={partner.image}
               alt={partner.name}
+              loading="lazy"
               className="w-64 h-64 shadow-xl object-cover mx-auto"
             />
             <h1 className="text-xl font-bold mt-6 font-serif text-[#19603B]">{partner.name}</h1>

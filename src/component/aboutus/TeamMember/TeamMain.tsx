@@ -10,7 +10,7 @@ import {
     HiOutlineCheckCircle,
 } from "react-icons/hi2";
 
-import teamImg from "../../../assets/Career/2.jpeg"; // add your image
+import teamImg from "../../../assets/Career/2.webp"; // add your image
 
 export default function TeamSection() {
     const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
@@ -83,6 +83,7 @@ export default function TeamSection() {
                         <div className="relative rounded-lg overflow-hidden shadow-lg">
                             <img
                                 src={teamImg}
+                                loading="lazy"
                                 className="w-full h-[300px] object-fill md:object-cover"
                             />
                             {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" /> */}
@@ -216,6 +217,7 @@ export default function TeamSection() {
                                         <div className="relative h-80 md:h-60 overflow-hidden">
                                             <img
                                                 src={member.image}
+                                                loading="lazy"
                                                 className={`w-full h-full object-fill  transition duration-500 ${isClickable
                                                     ? "grayscale-100 group-hover:grayscale-0 group-hover:scale-105"
                                                     : "grayscale"
@@ -290,6 +292,7 @@ export default function TeamSection() {
                                     <div className="bg-[#F7F9F8]  text-center items-center col-span-12 md:col-span-4 justify-center p-6">
                                         <img
                                             src={activeMember.image}
+                                            loading="lazy"
                                             className="w-70 h-80 object-fill shadow-xl shadow-black/50"
                                         />
                                         <p className="text-xs uppercase tracking-widest mt-2 text-black">

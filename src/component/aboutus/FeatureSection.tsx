@@ -1,11 +1,11 @@
-import img_img_fedaa393 from "/src/assets/images/img_fedaa393.jpg";
-import img_img_afed4a8c from "/src/assets/images/img_afed4a8c.jpg";
-import img_img_c3ea3f95 from "/src/assets/images/img_c3ea3f95.jpg";
-import img_Enron_Financial_Audi_8e386644 from "/src/assets/images/Enron-Financial-Audi_8e386644.png";
-import img_6956321139809_tax_bu_933bc46c from "/src/assets/images/6956321139809-tax-bu_933bc46c.jpg";
-import img_img_ef626005 from "/src/assets/images/img_ef626005.jpg";
-import img_Our_Vision_5e951f26 from "/src/assets/images/Our-Vision_5e951f26.jpg";
-import img_our_mission_4f21dc2f from "/src/assets/images/our-mission_4f21dc2f.jpg";
+import img_img_fedaa393 from "/src/assets/images/img_fedaa393.webp";
+import img_img_afed4a8c from "/src/assets/images/img_afed4a8c.webp";
+import img_img_c3ea3f95 from "/src/assets/images/img_c3ea3f95.webp";
+import img_Enron_Financial_Audi_8e386644 from "/src/assets/images/Enron-Financial-Audi_8e386644.webp";
+import img_6956321139809_tax_bu_933bc46c from "/src/assets/images/6956321139809-tax-bu_933bc46c.webp";
+import img_img_ef626005 from "/src/assets/images/img_ef626005.webp";
+import img_Our_Vision_5e951f26 from "/src/assets/images/Our-Vision_5e951f26.webp";
+import img_our_mission_4f21dc2f from "/src/assets/images/our-mission_4f21dc2f.webp";
 import { useState, useEffect } from "react";
 
 import { Users, Briefcase, ShieldCheck } from "lucide-react";
@@ -169,6 +169,7 @@ export default function FeatureSection() {
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
                       className="w-full h-full object-fill md:object-cover"
                     />
 
@@ -241,6 +242,7 @@ export default function FeatureSection() {
               {/* Image */}
               <img
                 src={item.image}
+                loading="lazy"
                 className={`w-full h-[420px] object-cover transition-all duration-700
           ${isActive ? "scale-105" : ""}`}
               />
@@ -338,6 +340,7 @@ export default function FeatureSection() {
                       <motion.img
                         src={item.image}
                         alt={item.title}
+                        loading="lazy"
                         className={`w-full h-full object-cover transition-all duration-700 ease-out
                   ${isActive
                             ? "opacity-100 scale-110"

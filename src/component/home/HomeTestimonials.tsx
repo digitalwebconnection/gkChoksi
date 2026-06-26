@@ -1,9 +1,9 @@
-import img_img_121d69f0 from "/src/assets/images/img_121d69f0.jpg";
-import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.jpg";
-import img_img_d8940eaa from "/src/assets/images/img_d8940eaa.jpg";
-import img_img_7a0b22ad from "/src/assets/images/img_7a0b22ad.jpg";
-import img_img_c8c57b32 from "/src/assets/images/img_c8c57b32.jpg";
-import img_img_c69df18b from "/src/assets/images/img_c69df18b.jpg";
+import img_img_121d69f0 from "/src/assets/images/img_121d69f0.webp";
+import img_img_25ba1ca3 from "/src/assets/images/img_25ba1ca3.webp";
+import img_img_d8940eaa from "/src/assets/images/img_d8940eaa.webp";
+import img_img_7a0b22ad from "/src/assets/images/img_7a0b22ad.webp";
+import img_img_c8c57b32 from "/src/assets/images/img_c8c57b32.webp";
+import img_img_c69df18b from "/src/assets/images/img_c69df18b.webp";
 
 import { motion } from "framer-motion";
 
@@ -82,7 +82,7 @@ const TimelineSection = () => {
                       className="w-32 h-32 rounded-full overflow-hidden border-4 bg-white shadow-xl mb-4"
                       style={{ borderColor: item.color }}
                     >
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <h3 className="text-xl font-bold" style={{ color: item.color }}>{item.title}</h3>
                     <p className="text-gray-900 text-sm mt-2 max-w-[180px] leading-relaxed">

@@ -11,7 +11,7 @@ import {
   Users
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import careerHero from "../../assets/Career/1.jpeg";
+import careerHero from "../../assets/Career/1.webp";
 
 
 

@@ -1,4 +1,4 @@
-import img_contact_us_scaled_1_b1964309 from "/src/assets/images/contact-us-scaled-1_b1964309.jpg";
+import img_contact_us_scaled_1_b1964309 from "/src/assets/images/contact-us-scaled-1_b1964309.webp";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
