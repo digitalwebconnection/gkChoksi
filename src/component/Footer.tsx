@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Mail, Phone, MapPin, Code2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.webp";
+import logo from "../assets/logo-removebg.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },

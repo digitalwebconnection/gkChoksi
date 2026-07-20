@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
+import image from "../../assets/homeaboutimage.jpg"
 
 
 import {
@@ -108,7 +108,7 @@ const AboutSection = () => {
               className="relative h-full w-full rounded-lg overflow-hidden shadow-lg "
             >
               <img
-                src="https://www.investopedia.com/thmb/Rebcc164zCkwcI8H9H8Q22w1VlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/WhatIsTurnoverinBusiness-b83f04d7d27a456abe8625fa1916df93.webp"
+                src={image}
                 className="h-full w-full object-cover"
               />
 
